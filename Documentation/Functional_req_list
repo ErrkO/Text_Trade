@@ -1,0 +1,33 @@
+This is an outline of the functional requirements I can think of. Maybe it helps in creating the requirement list 
+
+Requirements List
+I.	Functional
+1.	User creates account
+2.	User login
+3.	Authenticate login information
+4.	After login, prompt user for personal info such as Name, A#, phone number, campus email, etc.
+5.	User options to buy or to sell
+6.	If to buy, prompt user for schedule input if one hasn’t existed, 2 fields: course code (i.e. CSCI), and course level (I.e. 4600); can skip if desired
+7.	User can view listings with matched classes
+8.	User can manually searches for textbooks by typing string into search box
+9.	User can save desired listings (like “Watch” option on eBay)
+10.	User can sort results (Newest, Cheapest, etc.)
+11.	User can filter results (based on Prices, etc.)
+12.	User can message seller internally (Text Trade message system)
+13.	User can edit schedule
+14.	If to sell, user fill out fields for each book:
+a.	Book title
+b.	Author
+c.	Edition
+d.	ISBN
+e.	Class used for (i.e. CSCI 4600)
+f.	Semester used for (i.e. Spring 2017)
+g.	Condition (Acceptable, Good, Like New)
+h.	Asking price 
+15.	Seller can remove own listings
+16.	Seller can edit own listings
+17.	User can reply to internal messages
+18.	Admin can ban users 
+19.	Admin can remove or edit seller’s listings
+20.	Admin can access and manage Database
+21.	Users can report foul play to Admin
