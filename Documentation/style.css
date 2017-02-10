@@ -41,14 +41,7 @@ p
 	
 }
 
-a:link
-{
-	
-	color: black;
-	
-}
-
-a:visited
+a:link, a:visited
 {
 	
 	color: black;
