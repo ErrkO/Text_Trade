@@ -48,17 +48,40 @@
 				<li id="list_header"> Buyer </li>
 				<ol>
 				<br/>
-					<li> Name: view_Listings <br/>
-						Type: Functional <br/>
-						Summary: Buyers must be able to view listings
-					</li>
-					<br/>
+					
 					<li> Name: manage_Schedule <br/>
 						Type: Functional <br/>
-						Summary: Buyers shoudl be able to add and drop classes from their schedule
+						Summary: If users are looking to buy textbooks, they should input their class schedule. Each schedule
+						entry consists of 2 fields: course code (i.e. CSCI) and course level (i.e. 4600)
+						
+					</li>
+					<br/>
+					<li> Name: view_Listings <br/>
+						Type: Functional <br/>
+						Summary: Buyers shall be able to view listings automatically generated based on their schedule input
 					</li>
 					<br/>
 					
+					<li> Name: save_listing <br/>
+						Type: Functional <br/>
+						Summary: Buyers shall be able to save listings of interest into their watch list
+					</li>
+					<br/>
+					<li> Name: sort_results <br/>
+						Type: Functional <br/>
+						Summary: Buyers shall be able to sort results based on criteria such as "Cheapest", "Most Recent", etc.
+					</li>
+					<br/>
+					<li> Name: filter_results <br/>
+						Type: Functional <br/>
+						Summary: Buyers shall be able to filter results based on criteria such as "Price", "Condition", etc.
+					</li>
+					<br/>
+					<li> Name: message_user <br/>
+						Type: Functional <br/>
+						Summary: Users shall be able to communicate via internal message system
+					</li>
+					<br/>
 					
 				</ol>
 				<li id="list_header"> Seller </li>
@@ -66,12 +89,20 @@
 				<br/>
 					<li> Name: add_Listing_Seller <br/>
 						Type: Functional <br/>
-						Summary: Sellers must be able to put up listings
+						Summary: Sellers shall be able to create new listing. For each book, the following fields should be
+						filled out: Book title, Author, Edition, ISBN, Class used for, Semester used for, Condition, Price
 					</li>
 					<br/>
 					<li> Name: remove_Listing_Seller <br/>
 						Type: Functional <br/>
-						Summary: Sellers must be able to remove their own listings
+						Summary: Sellers shall be able to remove their own listings. 
+		
+					</li>
+					<br/>
+					<li> Name: edit_Listing_Seller <br/>
+						Type: Functional <br/>
+						Summary: Sellers shall be able to edit their own listings info. 
+		
 					</li>
 					<br/>
 					
@@ -80,25 +111,37 @@
 				<li id="list_header"> Moderator </li>
 				<ol>
 				<br/>
+					<li> Name: remove_user_Mod <br/>
+						Type: Functional <br/>
+						Summary: Moderators shall be able to ban users who commit foul play
+					</li>
+					<br/>
 					<li> Name: remove_Listing_Mod <br/>
 						Type: Functional <br/>
-						Summary: Moderators must be able to remove listings
+						Summary: Moderators shall be able to remove listings deemed inappropriate
 					</li>
 					<br/>
 				</ol>
 				
 				
-				<li> Name: search_Table <br/>
+				<li> Name: search_manually <br/>
 					Type: Functional <br/>
-					Summary: Application must allow for users to search through the table
+					Summary: Users shall search for desired textbooks by manually typing string into search bar
 				</li>
 				<br/>
 				
-				<li> Name: create_Account <br/>
+				<li> Name: create_account <br/>
 					Type: Functional <br/>
-					Summary: Users must create accounts to store personal info
+					Summary: Users shall create an account to participate in Text Trade marketplace
 				</li>
 				<br/>
+				<li> Name: edit_profile <br/>
+					Type: Functional <br/>
+					Summary: Users should complete their profile page, filling out fields such as full name, DOB, phone 
+					number, campus email address, major, concentration, etc.
+						
+					</li>
+					<br/>
 			</ul>
 			<p> <a href="#TOC">Top</a> </p>
 		<a name="SysArch"></a>
