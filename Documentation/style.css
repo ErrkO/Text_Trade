@@ -5,6 +5,16 @@
 	border-radius: 5px;
 	background-color:#aeb0b2;
 	width: 500px;
+	text-align: center;
+	
+}
+
+p
+{
+	
+	text-indent: 2em;
+	margin-left: 2em;
+	margin-right: 2em;
 	
 }
 
@@ -22,6 +32,29 @@
 	
 }
 
+#list_header
+{
+	
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 16pt;
+	
+}
+
+a:link, a:visited
+{
+	
+	color: black;
+	
+}
+
+a:hover
+{
+	
+	color: blue;
+	
+}
+
 header
 {
 	
@@ -32,12 +65,27 @@ header
 	height: 200px;
 	width: 600px;
 	text-align: center;
+	line-height: 20px;
+	
+}
+
+header h1
+{
+	
+	line-height: 1px;
+	
+}
+
+header h2
+{
+	
+	line-height: 10px;
 	
 }
 
 body
 {
 	
-	background-color: #606163;
+	background-color: #d6d7d8;
 	
 }

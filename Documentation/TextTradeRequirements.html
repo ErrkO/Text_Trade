@@ -1,6 +1,7 @@
 
 <HTML>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<header>
 		<h1> Text Trade Requirements </h1>
 		<h2> Trifecta Team: </h2>
@@ -11,7 +12,7 @@
 	<body>
 		<a name="TOC"></a>
 		<h1 class="parts"> Table Of Contents </h1>
-			<ol class="lists" id="TOC">
+			<ol class="lists">
 				<li> <a href="#Preface">Preface</a> </li>
 				<li> <a href="#Introduction">Introduction</a> </li>
 				<li> <a href="#Glossary">Glossary</a> </li>
@@ -29,13 +30,16 @@
 			<p> <a href="#TOC">Top</a> </p>
 		<a name="Introduction"></a>
 		<h1 class="parts"> Introduction </h1>
-			<p> Our team plans to keep the application simple and easy to use. There will be two essential GUIs: one for users, and one for moderators. 
-			Each user has to register an account in order to start trading on Text Trade. The user then can create a list of books he wants to buy and/or 
-			sells. Each textbook entry must include all the necessary information such as title, author, edition, ISBN, associated course(s) that the textbook 
-			is used for, and book condition. A user can search for a book in the marketplace, find potential buyers, communicate with other traders, and 
-			report misdeeds to moderator. To keep things neat, we plan to implement the search algorithm based on ISBN numbers and course numbers. As for the 
-			moderator’s GUI, there are additional features that allow a moderator to manage the database, ban a disruptive user, or remove postings that sell 
-			non-textbook merchandises, etc. 
+			<p> Our project is an application named Text Trade that is basically a textbook marketplace and allows Austin Peay
+			students to come together and buy or sell their used textbooks. 
+			Our team plans to keep the application simple and easy to use. There will be two essential GUIs: one for users, 
+			and one for moderators. Each user has to register an account in order to start trading on Text Trade. The user 
+			then can create a list of books he wants to buy and/or sells. Each textbook entry must include all the necessary 
+			information such as title, author, edition, ISBN, associated course(s) that the textbook is used for, and book 
+			condition. A user can search for a book in the marketplace, find potential buyers, communicate with other traders, 
+			and report misdeeds to moderator. To keep things neat, we plan to implement the search algorithm based on ISBN 
+			numbers and course numbers. As for the moderator’s GUI, there are additional features that allow a moderator to 
+			manage the database, ban a disruptive user, or remove postings that sell non-textbook merchandises, etc. 
 			</p>
 			<p> <a href="#TOC">Top</a> </p>
 		<a name="Glossary"></a>
@@ -44,63 +48,66 @@
 			<p> <a href="#TOC">Top</a> </p>
 		<a name="URD"></a>
 		<h1 class="parts"> User Requirements Definition </h1>
-			<ol class="lists">
-				<li> Name: view_listings <br/>
-					Type: Functional <br/>
-					Summary: Buyers must be able to view listings
-				</li>
+		<ul class="lists">
+				<li id="list_header"> Buyer </li>
+				<ol>
 				<br/>
-				<li> Name: add_listing <br/>
-					Type: Functional <br/>
-					Summary: Sellers must be able to put up listings
-				</li>
+					<li> Name: view_Listings <br/>
+						Type: Functional <br/>
+						Summary: Buyers must be able to view listings
+					</li>
+					<br/>
+					<li> Name: manage_Schedule <br/>
+						Type: Functional <br/>
+						Summary: Buyers shoudl be able to add and drop classes from their schedule
+					</li>
+					<br/>
+				</ol>
+				<li id="list_header"> Seller </li>
+				<ol>
 				<br/>
-				<li> Name: remove_listing <br/>
-					Type: Functional <br/>
-					Summary: Moderators must be able to remove listings
-				</li>
+					<li> Name: manipulate_Listings <br/>
+						Type: Functional <br/>
+						Summary: Sellers must be able to add, remove, or change listings
+					</li>
+					<br/>
+				</ol>
+				<li id="list_header"> Moderator </li>
+				<ol>
 				<br/>
-				<li> Name: add_class <br/>
-					Type: Functional <br/>
-					Summary: Users must be able to add classes to their schedule
-				</li>
+					<li> Name: moderator_Powers <br/>
+						Type: Functional <br/>
+						Summary: Moderators must be able to manipulate the table, message users, and ban users
+					</li>
+					<br/>
+				</ol>
+				<li id="list_header"> System </li>
+				<ol>
 				<br/>
-				<li> Name: remove_class <br/>
-					Type: Functional <br/>
-					Summary: Users must be able to remove classes from their schedule
-				</li>
-				<br/>
-				<li> Name: search_table <br/>
-					Type: Functional <br/>
-					Summary: Application must allow for users to search through the table
-				</li>
-				<br/>
-				<li> Name: add_account <br/>
-					Type: Functional <br/>
-					Summary: Users must be able to create a new account
-				</li>
-				<br/>
-				<li> Name: remove_own_account <br/>
-					Type: Functional <br/>
-					Summary: Users must be able to delete their account
-				</li>
-				<br/>
-				<li> Name: approve_listing <br/>
-					Type: Functional <br/>
-					Summary: Administrators must be able to approve acceptable listings
-				</li>
-				<br/>
-				<li> Name: deny_listing <br/>
-					Type: Functional <br/>
-					Summary: Administrators must be able to deny listings based on certain criteria
-				</li>
-				<br/>
-				<li> Name: remove_account <br/>
-					Type: Functional <br/>
-					Summary: Administrators must be able to delete user's accounts based on certain criteria
-				</li>
-				<br/>
-			</ol>
+					<li> Name: search_Table <br/>
+						Type: Functional <br/>
+						Summary: Application must allow for users to search through the table
+					</li>
+					<br/>
+					<li> Name: create_Account <br/>
+						Type: Functional <br/>
+						Summary: Users must create accounts to store personal info
+					</li>
+					<br/>
+					<li> Name: edit_profile <br/>
+						Type: Functional <br/>
+						Summary: Users should complete their profile page, filling out fields such as full name, DOB, 
+						phone number, campus email address, major, concentration, etc.
+					</li>
+					<br/>
+					<li> Name: report_user <br/>
+						Type: Functional <br/>
+						Summary: Users should be able to report inapproriate activities to Moderators.
+						
+					</li>
+					<br/>
+				</ol>
+			</ul>
 			<p> <a href="#TOC">Top</a> </p>
 		<a name="SysArch"></a>
 		<h1 class="parts"> System Architecture </h1>
@@ -108,29 +115,91 @@
 			<p> <a href="#TOC">Top</a> </p>
 		<a name="SRS"></a>
 		<h1 class="parts"> System Requirements Specifications </h1>
-			<ol class="lists">
-				<li> Name: listing_table <br/>
-					Type: Functional <br/>
-					Summary: Database must hold a table of the listing
-				</li>
+			<ul class="lists">
+				<li id="list_header"> Buyer </li>
+				<ol>
 				<br/>
-				<li> Name: password_encryption <br/>
-					Type: Risk <br/>
-					Summary: Passwords must be stored encrypted
-				</li>
+					<li> Name: save_listing <br/>
+						Type: Functional <br/>
+						Summary: Buyers shall be able to save listings of interest into their watch list
+					</li>
+					<br/>
+					<li> Name: sort_results <br/>
+						Type: Functional <br/>
+						Summary: Buyers shall be able to sort results based on criteria such as "Cheapest", "Most Recent",
+						etc.
+					</li>
+					<br/>
+					<li> Name: filter_results <br/>
+						Type: Functional <br/>
+						Summary: Buyers shall be able to filter results based on criteria such as "Price", "Condition",
+						etc.
+					</li>
+					<br/>
+					<li> Name: message_user <br/>
+						Type: Functional <br/>
+						Summary: Users shall be able to communicate via internal message system
+					</li>
+					<br/>
+				</ol>
+				<li id="list_header"> Seller </li>
+				<ol>
 				<br/>
-				<li> Name: phonenumber_encryption <br/>
-					Type: Risk <br/>
-					Summary: Phone numbers must be stored encrypted
-				</li>
+					<li> Name: add_Listing_Seller <br/>
+						Type: Functional <br/>
+						Summary: Sellers must be able to put up listings
+					</li>
+					<br/>
+					<li> Name: remove_Listing_Seller <br/>
+						Type: Functional <br/>
+						Summary: Sellers must be able to remove their own listings
+					</li>
+					<br/>
+					<li> Name: edit_Listing_Seller <br/>
+						Type: Functional <br/>
+						Summary: Sellers shall be able to edit their own listings info. 
+					</li>
+					<br/>
+				</ol>
+				<li id="list_header"> Moderator </li>
+				<ol>
 				<br/>
-				<li> Name: password_security <br/>
-					Type: Constraint
-					Summary: Passwords should adhere to minimum security requirements
-				</li>
+					<li> Name: remove_Listing_Mod <br/>
+						Type: Functional <br/>
+						Summary: Moderators must be able to remove listings
+					</li>
+					<br/>
+					<li> Name: remove_user_Mod <br/>
+						Type: Functional <br/>
+						Summary: Moderators shall be able to ban users who commit foul play
+					</li>
+					<br/>
+				</ol>
+				<li id="list_header"> System </li>
+				<ol>
 				<br/>
-				
-			</ol>
+					<li> Name: listing_Table <br/>
+						Type: Functional <br/>
+						Summary: Database must hold a table of the listing
+					</li>
+					<br/>
+					<li> Name: personal_Information <br/>
+						Type: Functional <br/>
+						Summary: Users must enter in personal Information on first time login
+					</li>
+					<br/>
+					<li> Name: login_Storage <br/>
+						Type: Risk <br/>
+						Summary: login information must be encrypted
+					</li>
+					<br/>
+					<li> Name: password_Requirements <br/>
+						Type: Constraint <br/>
+						Summary: Passwords must contain atleast 1 uppercase, 1 lowercase, be atleast 6 characters long, and 1 number
+					</li>
+					<br/>
+				</ol>
+			</ul>
 			<p> <a href="#TOC">Top</a> </p>
 		<a name="SysMod"></a>
 		<h1 class="parts"> System Models </h1>
