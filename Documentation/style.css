@@ -22,6 +22,36 @@
 	
 }
 
+#list_header
+{
+	
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 16pt;
+	
+}
+
+a:link
+{
+	
+	color: black;
+	
+}
+
+a:visited
+{
+	
+	color: black;
+	
+}
+
+a:hover
+{
+	
+	color: blue;
+	
+}
+
 header
 {
 	
@@ -38,6 +68,6 @@ header
 body
 {
 	
-	background-color: #606163;
+	background-color: #d6d7d8;
 	
 }
