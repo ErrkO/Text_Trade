@@ -79,6 +79,11 @@
 						Summary: Moderators must be able to manipulate the table, message users, and ban users
 					</li>
 					<br/>
+					<li> New - Name: moderator_restriction <br/>
+						   Type: Constraint <br/>
+						   Summary: Moderators will not be able to post their own listings
+					</li>
+					<br/>
 				</ol>
 				<li id="list_header"> System </li>
 				<ol>
@@ -103,6 +108,11 @@
 						Type: Functional <br/>
 						Summary: Users should be able to report inapproriate activities to Moderators.
 						
+					</li>
+					<br/>
+					<li> New - Name: email_notification <br/>
+						   Type: Functional <br/>
+						   Summary: Users should be notified by email when transactions are approved, listings responded to, etc.
 					</li>
 					<br/>
 				</ol>
@@ -180,6 +190,11 @@
 					<li> Name: listing_Table <br/>
 						Type: Functional <br/>
 						Summary: Database must hold a table of the listing
+					</li>
+					<br/>
+					<li> New - Name: inactive_listings <br/>
+						   Type: Functional <br/>
+						   Summary: Listings will be removed after 30 days unless renewed by user
 					</li>
 					<br/>
 					<li> Name: personal_Information <br/>
