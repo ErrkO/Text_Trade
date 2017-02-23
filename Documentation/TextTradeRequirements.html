@@ -78,7 +78,7 @@
 						Summary: Users shall be able to add, remove, or edit their own listings
 					</li>
 					<br/>
-					<li> Name: communicate_internally <br/>
+					<li> New - Name: communicate_internally <br/>
 						Type: Functional <br/>
 						Summary: Users shall be able to communicate with other traders/moderators via Text Trade internal messaging system
 					</li>
@@ -106,9 +106,19 @@
 				<li id="list_header"> System </li>
 				<ol>
 				<br/>
-					<li> Name: search_Table <br/>
+					<li> New - Name: store_data <br/>
 						Type: Functional <br/>
-						Summary: Application shall allow for users to search through the database table
+						Summary: System shall retain data such as user info, listings, internal messages, system stats, etc.
+					</li>
+					<br/>
+					<li> New - Name: database_access_restriction <br/>
+						Type: Constraint <br/>
+						Summary: Regular user's access to database is restricted to certain domain. Moderator has greater access and control over databse
+					</li>
+					<br/>
+					<li> Name: search_database<br/>
+						Type: Functional <br/>
+						Summary: Application shall be able to search through database table for target data as requested
 					</li>
 					<br/>
 					<li> Name: create_Account <br/>
@@ -116,7 +126,11 @@
 						Summary: Users shall create accounts to access Text Trade marketplace
 					</li>
 					<br/>
-					
+					<li> New - Name: distinct_GUI <br/>
+						Type: Users and Moderators shall have separate interfaces <br/>
+						Summary: 
+					</li>
+					<br/>
 					<li> New - Name: email_notification <br/>
 						   Type: Functional <br/>
 						   Summary: Users should be notified by email when transactions are approved, listings responded to, etc.
