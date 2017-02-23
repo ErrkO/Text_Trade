@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="57f6c3c0-8f8f-4d04-95b2-2b10a8d827d1"
+  name="Text_Trade_Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="ce93740e-18f7-4c79-9a8b-824e3ef5501e"
+        name="Moderator"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="e524b345-cff4-4491-b35e-d4d30382aa36"
+        name="Post_Listing_ActivityDiagram"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="18ab5d93-b3c5-4885-a89c-1d776205cdaf"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ea91c346-3b53-4f1d-8873-d99beae2d151"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1796db22-ddfc-4a2f-aff4-01212b397b30"
+                  LastKnownName="Enter Book Information"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="1796db22-ddfc-4a2f-aff4-01212b397b30"
+            name="Enter Book Information"
+            isLeaf="false">
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin
+                  Id="d6eabc62-1589-42df-93f7-47f62d311674"
+                  name="Book Information"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <objectFlowTargets>
+                    <objectFlow
+                      Id="239d9d34-86bb-4604-a5cb-10a9a78fbdd8"
+                      isLeaf="false"
+                      isMulticast="false"
+                      isMultireceive="false">
+                      <objectNodeMoniker
+                        Id="ff323383-cd6e-43b7-b998-d905a16ef7f7"
+                        LastKnownName="Book Listing"
+                        LastKnownLocation="Text_Trade_Modeling.uml" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger
+                      Id="007ead03-7c8e-4466-a33d-d6e194d589cd"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction
+            Id="b3b4320c-6593-432a-97d0-8d563ab9c728"
+            name="Listing Posted"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c1a4a30b-d19d-46e2-9c0b-91229060149b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cbab78c3-adbf-45d7-90e7-7662a903c854"
+                  LastKnownName="Wait For Response"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="e7cb1865-e580-496c-a781-89028ba7b361"
+                  name="Book Listing"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="3f338c0a-cb43-4aa4-afc9-446cabfc38c0"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode
+            Id="ff323383-cd6e-43b7-b998-d905a16ef7f7"
+            name="Book Listing"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="344f2d1e-665f-4052-9d2c-a74618f13859"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="e7cb1865-e580-496c-a781-89028ba7b361"
+                  LastKnownName="Book Listing"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="09750ce2-5ead-4182-a263-282c75eab556"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <decisionNode
+            Id="3e255647-1fab-48ba-95b5-d421d0e46d4e"
+            name="Listing Response"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3a7e0276-a437-409e-bf86-3668550bc204"
+                guard="No Response"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="113eeab8-839e-4c20-bd2e-6385a46e1071"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="3f4881a1-31bd-4196-a8a5-22ddbba33739"
+                guard="Response"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="97bf7697-20b8-4c6b-b0e0-98bbe2047f97"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="113eeab8-839e-4c20-bd2e-6385a46e1071"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5d5a5970-d093-4efa-bd58-4960ce78a755"
+                guard="Renew Option Accepted"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b3b4320c-6593-432a-97d0-8d563ab9c728"
+                  LastKnownName="Listing Posted"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="f349da1b-d22b-48fd-9c08-fac0be1e4891"
+                guard="Renew Option Declined"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="192f6b76-9a94-4b6b-b61a-885db61a0095"
+                  LastKnownName="Listing Removed"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="192f6b76-9a94-4b6b-b61a-885db61a0095"
+            name="Listing Removed"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c0c5c8c6-7800-4a87-941e-9596f64d8d07"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="87af8dc1-3ce9-4699-aa10-eede0ebf33cf"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="97bf7697-20b8-4c6b-b0e0-98bbe2047f97"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="db765bde-2df0-4eda-b26e-eab78f80764a"
+                guard="Declines Response"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cbab78c3-adbf-45d7-90e7-7662a903c854"
+                  LastKnownName="Wait For Response"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="5ec98ce7-b39d-4111-805a-f850bbee3b1d"
+                guard="Accepts Response"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="883a6ad4-76af-4e28-8dfd-165bd466ad6b"
+                  LastKnownName="Contact Information Revealed"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="cbab78c3-adbf-45d7-90e7-7662a903c854"
+            name="Wait For Response"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2ef2d008-9dc5-4e95-a8ad-1cc861ba2f70"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="3e255647-1fab-48ba-95b5-d421d0e46d4e"
+                  LastKnownName="Listing Response"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="883a6ad4-76af-4e28-8dfd-165bd466ad6b"
+            name="Contact Information Revealed"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="57377993-4489-49a7-b7e6-538f77e0f825"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ba5f82e5-650c-4fbe-a8d6-f4ed64075a87"
+                  LastKnownName="Listing Hidden"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="87af8dc1-3ce9-4699-aa10-eede0ebf33cf"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="ba5f82e5-650c-4fbe-a8d6-f4ed64075a87"
+            name="Listing Hidden"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bdaea6af-dfde-4a6a-b63f-bbaedef211d8"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="fa8ff721-0ff8-4c53-83ee-e1ed40d481ab"
+                  LastKnownName="Decision3"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="fa8ff721-0ff8-4c53-83ee-e1ed40d481ab"
+            name="Decision3"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7e4e826e-55aa-42d5-8c23-9f2f53ff8724"
+                guard="Successful Deal Confirmed"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="192f6b76-9a94-4b6b-b61a-885db61a0095"
+                  LastKnownName="Listing Removed"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="752b94b8-a0d3-4060-846d-4877c573fdb9"
+                guard="Deal Confirmed Unsuccessful"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b3b4320c-6593-432a-97d0-8d563ab9c728"
+                  LastKnownName="Listing Posted"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="a2bddf85-e5fb-42c2-93ca-1d286fca2c36"
+        name="Post_Listing_SequenceDiagram"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="6341cc24-2b71-46b0-8537-790b4cec4622"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="356f3099-1ce4-4f10-b988-ff26fb833f6a"
+                LastKnownName="Book Listing Constructor"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="959b8fb0-2167-4c24-9adb-c112bfc45dee"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="db3a18d9-fcf9-4a79-8a64-24acf9771b7e"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="9074c934-1a0f-4570-964d-0f8329b988be"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="db3a18d9-fcf9-4a79-8a64-24acf9771b7e"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="cb909756-affe-413b-a2a9-841a588bf45a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="356f3099-1ce4-4f10-b988-ff26fb833f6a"
+                LastKnownName="Book Listing Constructor"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1cb9506d-0ab3-4bf4-bdc3-9766920cc834"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="abad6fd3-580d-4dbd-890c-01e48355db62"
+                LastKnownName="Seller"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9074c934-1a0f-4570-964d-0f8329b988be"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="356f3099-1ce4-4f10-b988-ff26fb833f6a"
+                LastKnownName="Book Listing Constructor"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="959b8fb0-2167-4c24-9adb-c112bfc45dee"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="9db1961a-5762-46f4-a809-5af2fa3ab604"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="356f3099-1ce4-4f10-b988-ff26fb833f6a"
+                LastKnownName="Book Listing Constructor"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="abad6fd3-580d-4dbd-890c-01e48355db62"
+            name="Seller"
+            isActor="false"
+            lifelineDisplayName="Seller">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="1cb9506d-0ab3-4bf4-bdc3-9766920cc834"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="356f3099-1ce4-4f10-b988-ff26fb833f6a"
+            name="Book Listing Constructor"
+            isActor="false"
+            lifelineDisplayName="Book Listing Constructor">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="db3a18d9-fcf9-4a79-8a64-24acf9771b7e"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="959b8fb0-2167-4c24-9adb-c112bfc45dee"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="5f1983f0-07c3-47ba-9ebb-105f845b40b5"
+            name="Book Listing"
+            isActor="false"
+            lifelineDisplayName="Book Listing" />
+          <lifeline
+            Id="cd4059de-67bb-41e2-83ed-a49ed0ffb635"
+            name="Buyer"
+            isActor="false"
+            lifelineDisplayName="Buyer" />
+        </lifelines>
+        <messages>
+          <message
+            Id="e70d22b6-5ad5-48e4-91a4-2f1f8528f6f0"
+            name="Book Information"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1cb9506d-0ab3-4bf4-bdc3-9766920cc834"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9074c934-1a0f-4570-964d-0f8329b988be"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="cb909756-affe-413b-a2a9-841a588bf45a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="9db1961a-5762-46f4-a809-5af2fa3ab604"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
