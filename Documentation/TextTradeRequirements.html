@@ -94,12 +94,12 @@
 				<br/>
 					<li> Name: moderator_Powers <br/>
 						Type: Functional <br/>
-						Summary: Moderators shall be able to manipulate the database, communicate with other users, remove listings, view users' protected info, and ban/block users
+						Summary: Moderators shall be able to manipulate the database, communicate with other users, remove listings, view users' protected info, issue warnings, ban/block users, and view system stats
 					</li>
 					<br/>
 					<li> New - Name: moderator_restriction <br/>
 						   Type: Constraint <br/>
-						   Summary: Moderators will not be able to post their own listings
+						   Summary: Moderators shall not be able to post their own listings
 					</li>
 					<br/>
 				</ol>
@@ -108,12 +108,12 @@
 				<br/>
 					<li> Name: search_Table <br/>
 						Type: Functional <br/>
-						Summary: Application must allow for users to search through the database table
+						Summary: Application shall allow for users to search through the database table
 					</li>
 					<br/>
 					<li> Name: create_Account <br/>
 						Type: Functional <br/>
-						Summary: Users must create accounts to access Text Trade marketplace
+						Summary: Users shall create accounts to access Text Trade marketplace
 					</li>
 					<br/>
 					
@@ -155,7 +155,7 @@
 					</li>
 					<br/>
 					<li> Name: edit_schedule <br/>
-						Type: functional<br/>
+						Type: Functional<br/>
 						Summary: User can edit his own schedule; remove, change, or add class
 					</li>
 					<br/>	
@@ -167,7 +167,7 @@
 					
 					<li> Name: create_Listing_User <br/>
 						Type: Functional <br/>
-						Summary: user who wants to sell a textbook may create a listing by filling the following fields and publish it. <br/>
+						Summary: User who wants to sell a textbook may create a listing by filling the following fields and publish it. <br/>
 						•	Book title (required field) <br/>
 						•	Author (required field) <br/>
 						•	Edition (required field) <br/>
@@ -193,17 +193,17 @@
 					<br/>
 					
 					<li> New - Name: send_message <br/>
-						Type: functional <br/>
+						Type: Functional <br/>
 						Summary: Text Trade user/moderator can send messages to other Text Trade users/moderators
 					</li>
 					<br/>
 					<li> New - Name: message_length_constraint <br/>
-						Type: constraint <br/>
+						Type: Constraint <br/>
 						Summary: Each message can contain 1000 characters max
 					</li>
 					<br/>
 					<li> New - Name: receive_message <br/>
-						Type: functional <br/>
+						Type: Functional <br/>
 						Summary: User/moderator can receive messages from other users/moderators
 					</li>
 					<br/>
@@ -213,7 +213,7 @@
 					</li>
 					<br/>
 					<li> New - Name: delete_message <br/>
-						Type: functional <br/>
+						Type: Functional <br/>
 						Summary: User/moderator can delete messages from personal inbox
 					</li>
 					<br/>
@@ -223,12 +223,12 @@
 					</li>
 					<br/>
 					<li> New - Name: renew_listing_life <br/>
-						Type: functional <br/>
-						Summary: anytime, the user can choose to renew an active listing life (of his or hers) for another 30 days
+						Type: Functional <br/>
+						Summary: Anytime, the user can choose to renew an active listing life (of his or hers) for another 30 days
 					</li>
 					<br/>
 					<li> New - Name: search_manually <br/>
-						Type: functional <br/>
+						Type: Functional <br/>
 						Summary: User/moderator can manually type strings into search box to search for an item/textbook
 					</li>
 					<br/>
@@ -238,34 +238,34 @@
 					</li>
 					<br/>
 					<li> New - Name: search_by_isbn<br/>
-						Type: functional <br/>
-						Summary: user/moderator can search for listings using isbn by picking “Search by ISBN” option and entering ISBN number of the desired book.
+						Type: Functional <br/>
+						Summary: User/moderator can search for listings using isbn by picking “Search by ISBN” option and entering ISBN number of the desired book.
 					</li>
 					<br/>
 					<li> New - Name: search_from_schedule <br/>
-						Type: functional <br/>
-						Summary: user has the option to let the system automatically generates search results based on each schedule input/class (results are matched by listing’s “Associated course” field)
+						Type: Functional <br/>
+						Summary: User has the option to let the system automatically generates search results based on each schedule input/class (results are matched by listing’s “Associated course” field)
 					</li>
 					<br/>
 					<li> New - Name: delete_saved_listing <br/>
-						Type: functional <br/>
-						Summary: user may remove active listings from Watch list as desired
+						Type: Functional <br/>
+						Summary: User may remove active listings from Watch list as desired
 					</li>
 					<br/>
 					<li> New - Name: inquiry_seller <br/>
-						Type: functional <br/>
-						Summary: as user views a listing, he has the option to contact the seller via internal messaging system. (maybe include a button labeled “Contact Seller” on the listing page)
+						Type: Functional <br/>
+						Summary: As user views a listing, he has the option to contact the seller via internal messaging system. (maybe include a button labeled “Contact Seller” on the listing page)
 					</li>
 					<br/>
 					<li> New - Name: report_listing <br/>
-						Type: functional <br/>
-						Summary: user may report an inappropriate listing to moderators. (maybe include a button labeled “Report this Listing” on the listing page)
+						Type: Functional <br/>
+						Summary: User may report an inappropriate listing to moderators. (maybe include a button labeled “Report this Listing” on the listing page)
 					</li>
 					<br/>
 
 					<li> New - Name: report_user <br/>
-						Type: functional <br/>
-						Summary: as user views another user’s profile page, he has the option to report that user to moderators. (maybe include a button with flag icon on the user profile page)
+						Type: Functional <br/>
+						Summary: As user views another user’s profile page, he has the option to report that user to moderators. (maybe include a button with flag icon on the user profile page)
 					</li>
 					<br/>
 
@@ -319,12 +319,12 @@
 					</li>
 					<br/>
 					<li> New - Name: register_email_constraint <br/>
-						Type: constraint <br/>
+						Type: Constraint <br/>
 						Summary: User shall register with APSU email address
 					</li>
 					<br/>
 					<li> New - Name: username_constraint <br/>
-						Type: constraint <br/>
+						Type: Constraint <br/>
 						Summary: User shall pick a unique username that contains at least 5 characters that are either alphabet letters or numerical
 					</li>
 					<br/>
@@ -340,7 +340,7 @@
 					<br/>
 					<li> Name: filter_results <br/>
 						Type: Functional <br/>
-						Summary: results can be filtered based on: <br/>
+						Summary: Results can be filtered based on: <br/>
 						•	Price threshold: less than X $ or greater than X $ <br/>
 						•	Condition: New or Used (Like New, Great, Good, Acceptable)
 						
