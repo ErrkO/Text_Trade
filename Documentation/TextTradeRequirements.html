@@ -227,11 +227,6 @@
 						Summary: Text Trade user/moderator can send messages to other Text Trade users/moderators
 					</li>
 					<br/>
-					<li> * - Name: message_length_constraint <br/>
-						Type: Constraint <br/>
-						Summary: Each message can contain 1000 characters max
-					</li>
-					<br/>
 					<li> * - Name: receive_message <br/>
 						Type: Functional <br/>
 						Summary: User/moderator can receive messages from other users/moderators
@@ -240,11 +235,6 @@
 					<li> * - Name: reply_message <br/>
 						Type: functional <br/>
 						Summary: User/moderator can reply to messages from other users/moderators
-					</li>
-					<br/>
-					<li> * - Name: delete_message <br/>
-						Type: Functional <br/>
-						Summary: User/moderator can delete messages from personal inbox
 					</li>
 					<br/>
 					<li> * - Name: listing_life_constraint <br/>
@@ -264,7 +254,7 @@
 					<br/>
 					<li> * - Name: search_by_course <br/>
 						Type: functional
-						Summary: Uer/moderator can search for listings by associated course by picking “Search by course” option, then field out “Subject” and “Level” fields (Ex: MATH 1910)
+						Summary: Uer/moderator can search for listings by associated course by picking “Search by course” option, then field out “Course Code” and “Course Level” fields (Ex: MATH 1910)
 					</li>
 					<br/>
 					<li> * - Name: search_by_isbn<br/>
@@ -284,21 +274,31 @@
 					<br/>
 					<li> * - Name: inquiry_seller <br/>
 						Type: Functional <br/>
-						Summary: As user views a listing, he has the option to contact the seller via internal messaging system. (maybe include a button labeled “Contact Seller” on the listing page)
+						Summary: As user views a listing, he has the option to contact the seller via message.
 					</li>
 					<br/>
 					<li> * - Name: report_listing <br/>
 						Type: Functional <br/>
-						Summary: User may report an inappropriate listing to moderators. (maybe include a button labeled “Report this Listing” on the listing page)
+						Summary: User may report an inappropriate listing to moderators.
 					</li>
 					<br/>
 
 					<li> * - Name: report_user <br/>
 						Type: Functional <br/>
-						Summary: As user views another user’s profile page, he has the option to report that user to moderators. (maybe include a button with flag icon on the user profile page)
+						Summary: As user views another user’s profile page, he has the option to report that user to moderators.
 					</li>
 					<br/>
-
+					<li>* - Name:  register_email_constraint <br/>
+						Type: constraint <br/>
+						Summary: User shall register with APSU email address
+					</li>
+					<br/>
+					<li>* - Name: username_constraint <br/>
+						Type: constraint <br/>
+						Summary: User shall pick a unique username that contains at least 5 characters that are either alphabet letters or numerical
+					</li>
+					<br/>
+					
 				</ol>
 				<li id="list_header"> Moderator </li>
 				<ol>
