@@ -155,20 +155,19 @@
 					        major, concentration, etc.
 					</li>
 					<br/>
-					<li> Name: report_user <br/>
+					<li> Updated - Name: report_user <br/>
 						Type: Functional <br/>
 						Summary: As user views another user’s profile page, he has the option to report that user to moderators. 
-						(maybe include a button with flag icon on the user profile page)
 					</li>
 					<br/>
-					<li> Name: create_class_schedule <br/>
+					<li> Updated - Name: create_class_schedule <br/>
 						Type: Functional <br/>
 						Summary: User can create a list of his currently registered classes for which he needs to buy textbooks. 
 						He may label the schedule (Ex: Spring 2017 schedule) and add each class by filling out “Subject” and 
 						“Level” fields (Ex: #1 ENGL 1010, #2 MATH 1920, #3 HIST 2030)
 					</li>
 					<br/>
-					<li> Name: edit_schedule <br/>
+					<li> Updated - Name: edit_schedule <br/>
 						Type: Functional<br/>
 						Summary: User may edit his own schedule; remove, change, or add class
 					</li>
@@ -183,7 +182,7 @@
 						Summary: User may view his own Watch list
 					</li>
 					<br/>
-					<li> Name: create_Listing_User <br/>
+					<li> Updated - Name: create_Listing_User <br/>
 						Type: Functional <br/>
 						Summary: User who wants to sell a textbook may create a listing by filling the following fields and publish it. <br/>
 						•	Book title (required field) <br/>
@@ -199,12 +198,12 @@
 
 					</li>
 					<br/>
-					<li> Name: remove_Listing_User <br/>
+					<li> Updated - Name: remove_Listing_User <br/>
 						Type: Functional <br/>
 						Summary: User may remove their own listing before the expiration date
 					</li>
 					<br/>
-					<li> Name: edit_Listing_User <br/>
+					<li> Updated - Name: edit_Listing_User <br/>
 						Type: Functional <br/>
 						Summary: User may make amends to their published listing
 					</li>
@@ -291,14 +290,14 @@
 				<li id="list_header"> Moderator </li>
 				<ol>
 				<br/>
-					<li> Name: remove_Listing_Mod <br/>
+					<li> Updated - Name: remove_Listing_Mod <br/>
 						Type: Functional <br/>
 						Summary: Moderator may remove listings deemed inappropriate
 					</li>
 					<br/>
-					<li> Name: ban_User_Mod <br/>
+					<li> Updated - Name: ban_User_Mod <br/>
 						Type: Functional <br/>
-						Summary: Moderator may ban a disruptive user/trader temporarily or eternally. 
+						Summary: Moderator may ban a disruptive user/trader temporarily or permanently. 
 						Ban duration can be determined flexibly by the moderator
 					</li>
 					<br/>
@@ -346,7 +345,7 @@
 						Summary: User shall pick a unique username that contains at least 5 characters that are either alphabet letters or numerical
 					</li>
 					<br/>
-					<li> Name: sort_results <br/>
+					<li> Updated - Name: sort_results <br/>
 						Type: Functional <br/>
 						Summary: Results can be sorted based on criteria such as: <br/>
 						•	Time: Newest listing first <br/>
@@ -356,18 +355,12 @@
 
 					</li>
 					<br/>
-					<li> Name: filter_results <br/>
+					<li> Updated - Name: filter_results <br/>
 						Type: Functional <br/>
 						Summary: Results can be filtered based on: <br/>
 						•	Price threshold: less than X $ or greater than X $ <br/>
 						•	Condition: New or Used (Like New, Great, Good, Acceptable)
 						
-					</li>
-					<br/>
-					
-					<li> Name: listing_Table <br/>
-						Type: Functional <br/>
-						Summary: Database must hold a table of the listing
 					</li>
 					<br/>
 			
@@ -386,14 +379,14 @@
 						Summary: Login information must be encrypted
 					</li>
 					<br/>
-					<li> Name: password_Requirements <br/>
+					<li> Updated - Name: password_Requirements <br/>
 						Type: Constraint <br/>
-						Summary: Passwords must contain atleast 1 uppercase, 1 lowercase, be atleast 6 characters long, and 1 number
+						Summary: Passwords must contain atleast 1 uppercase, 1 lowercase, be atleast 6 characters long, 1 number, and allow special characters
 					</li>
 					<br/>
 					<li> New - Name: get_report_reason <br/>
 						Type: Functional <br/>
-						Summary: As user clicks the report button, he is prompted to enter the reason for reporting a listing or another user into a text box
+						Summary: User is prompted to enter the reason for reporting a listing or another user
 					</li>
 					<br/>
 
@@ -414,7 +407,7 @@
 					<br/>
 					<li> New - Name: store_message <br/>
 						Type: Functional <br/>
-						Summary: All received and sent messages shall be stored in an inbox
+						Summary: All received and sent messages shall be stored in an inbox.
 					</li>
 					<br/>
 					<li> New - Name: count_warning <br/>
