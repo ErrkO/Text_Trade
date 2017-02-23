@@ -48,7 +48,7 @@
 		<a name="URD"></a>
 		<h1 class="parts"> User Requirements Definition </h1>
 		<ul class="lists">
-				<li id="list_header"> User </li>
+				<li id="list_header"> User/Trader </li>
 				<ol>
 				<br/>
 					
@@ -269,17 +269,6 @@
 					</li>
 					<br/>
 
-					<li> New - Name: get_report_reason <br/>
-						Type: functional <br/>
-						Summary: as user clicks the report button, he is prompted to enter the reason for reporting a listing or another user into a text box
-					</li>
-					<br/>
-
-					<li> New - Name: report_constraint <br/>
-						Type: constraint <br/>
-						Summary: without entering a reason, the user cannot send report.
-					</li>
-					<br/>
 				</ol>
 				<li id="list_header"> Moderator </li>
 				<ol>
@@ -357,6 +346,7 @@
 						
 					</li>
 					<br/>
+					
 					<li> Name: listing_Table <br/>
 						Type: Functional <br/>
 						Summary: Database must hold a table of the listing
@@ -375,12 +365,23 @@
 					<br/>
 					<li> Name: login_Storage <br/>
 						Type: Risk <br/>
-						Summary: login information must be encrypted
+						Summary: Login information must be encrypted
 					</li>
 					<br/>
 					<li> Name: password_Requirements <br/>
 						Type: Constraint <br/>
 						Summary: Passwords must contain atleast 1 uppercase, 1 lowercase, be atleast 6 characters long, and 1 number
+					</li>
+					<br/>
+					<li> New - Name: get_report_reason <br/>
+						Type: Functional <br/>
+						Summary: As user clicks the report button, he is prompted to enter the reason for reporting a listing or another user into a text box
+					</li>
+					<br/>
+
+					<li> New - Name: report_constraint <br/>
+						Type: Constraint <br/>
+						Summary: Without entering a reason, the user cannot send report.
 					</li>
 					<br/>
 					<li> New - Name: remove_expired_listing_system <br/>
