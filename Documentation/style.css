@@ -1,0 +1,100 @@
+.parts
+{
+	
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color:#aeb0b2;
+	width: 500px;
+	text-align: center;
+	box-shadow: 10px 10px 5px #000000
+	
+}
+
+p
+{
+	
+	text-indent: 2em;
+	margin-left: 2em;
+	margin-right: 2em;
+	
+}
+
+.lists
+{
+	
+	
+	
+}
+
+#TOC
+{
+	
+	
+	
+}
+
+#list_header
+{
+	
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 16pt;
+	
+}
+
+a:link, a:visited
+{
+	
+	color: black;
+	
+}
+
+a:hover
+{
+	
+	color: blue;
+	
+}
+
+header
+{
+	
+	margin: auto;
+	border: 1px solid black;
+	border-radius: 25px;
+	background-color:#aeb0b2;
+	height: 200px;
+	width: 600px;
+	text-align: center;
+	line-height: 20px;
+	box-shadow: 10px 10px 5px #000000
+	
+}
+
+header h1
+{
+	
+	line-height: 1px;
+	
+}
+
+header h2
+{
+	
+	line-height: 10px;
+	
+}
+
+body
+{
+	
+	background-color: #d6d7d8;
+	
+}
+
+strong
+{
+	
+	color: #e80b0b;
+	
+}
