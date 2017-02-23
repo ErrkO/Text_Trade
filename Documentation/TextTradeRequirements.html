@@ -125,7 +125,7 @@
 		<a name="SRS"></a>
 		<h1 class="parts"> System Requirements Specifications </h1>
 			<ul class="lists">
-				<li id="list_header"> Buyer </li>
+				<li id="list_header"> User/Trader </li>
 				<ol>
 				<br/>
 					<li> Name: create_class_schedule <br/>
@@ -163,15 +163,6 @@
 						
 					</li>
 					<br/>
-					<li> Name: message_user <br/>
-						Type: Functional <br/>
-						Summary: Users shall be able to communicate via internal message system
-					</li>
-					<br/>
-				</ol>
-				<li id="list_header"> Seller </li>
-				<ol>
-				<br/>
 					<li> Name: create_Listing_User <br/>
 						Type: Functional <br/>
 						Summary: user who wants to sell a textbook may create a listing by filling the following fields and publish it. <br/>
@@ -196,6 +187,104 @@
 					<li> Name: edit_Listing_User <br/>
 						Type: Functional <br/>
 						Summary: User may make amends to their published listing
+					</li>
+					<br/>
+					<li> New - Name: register_email_constraint <br/>
+						Type: constraint <br/>
+						Summary: User shall register with APSU email address
+					</li>
+					<br/>
+					<li> New - Name: username_constraint <br/>
+						Type: constraint <br/>
+						Summary: User shall pick a unique username that contains at least 5 characters that are either alphabet letters or numerical
+					</li>
+					<br/>
+					<li> New - Name: send_message <br/>
+						Type: functional <br/>
+						Summary: Text Trade user/moderator can send messages to other Text Trade users/moderators
+					</li>
+					<br/>
+					<li> New - Name: message_length_constraint <br/>
+						Type: constraint <br/>
+						Summary: Each message can contain 1000 characters max
+					</li>
+					<br/>
+					<li> New - Name: receive_message <br/>
+						Type: functional <br/>
+						Summary: User/moderator can receive messages from other users/moderators
+					</li>
+					<br/>
+					<li> New - Name: reply_message <br/>
+						Type: functional <br/>
+						Summary: User/moderator can reply to messages from other users/moderators
+					</li>
+					<br/>
+					<li> New - Name: delete_message <br/>
+						Type: functional <br/>
+						Summary: User/moderator can delete messages from personal inbox
+					</li>
+					<br/>
+					<li> New - Name: listing_life_constraint <br/>
+						Type: constraint <br/>
+						Summary: All listings have a life span of 30 days. A listing is expired after 30 days
+					</li>
+					<br/>
+					<li> New - Name: renew_listing_life <br/>
+						Type: functional <br/>
+						Summary: anytime, the user can choose to renew an active listing life (of his or hers) for another 30 days
+					</li>
+					<br/>
+					<li> New - Name: search_manually <br/>
+						Type: functional <br/>
+						Summary: User/moderator can manually type strings into search box to search for an item/textbook
+					</li>
+					<br/>
+					<li> New - Name: search_by_course <br/>
+						Type: functional
+						Summary: Uer/moderator can search for listings by associated course by picking “Search by course” option, then field out “Subject” and “Level” fields (Ex: MATH 1910)
+					</li>
+					<br/>
+					<li> New - Name: search_by_isbn<br/>
+						Type: functional <br/>
+						Summary: user/moderator can search for listings using isbn by picking “Search by ISBN” option and entering ISBN number of the desired book.
+					</li>
+					<br/>
+					<li> New - Name: search_from_schedule <br/>
+						Type: functional <br/>
+						Summary: user has the option to let the system automatically generates search results based on each schedule input/class (results are matched by listing’s “Associated course” field)
+					</li>
+					<br/>
+					<li> New - Name: delete_saved_listing <br/>
+						Type: functional <br/>
+						Summary: user may remove active listings from Watch list as desired
+					</li>
+					<br/>
+					<li> New - Name: inquiry_seller <br/>
+						Type: functional <br/>
+						Summary: as user views a listing, he has the option to contact the seller via internal messaging system. (maybe include a button labeled “Contact Seller” on the listing page)
+					</li>
+					<br/>
+					<li> New - Name: report_listing <br/>
+						Type: functional <br/>
+						Summary: user may report an inappropriate listing to moderators. (maybe include a button labeled “Report this Listing” on the listing page)
+					</li>
+					<br/>
+
+					<li> New - Name: report_user <br/>
+						Type: functional <br/>
+						Summary: as user views another user’s profile page, he has the option to report that user to moderators. (maybe include a button with flag icon on the user profile page)
+					</li>
+					<br/>
+
+					<li> New - Name: get_report_reason <br/>
+						Type: functional <br/>
+						Summary: as user clicks the report button, he is prompted to enter the reason for reporting a listing or another user into a text box
+					</li>
+					<br/>
+
+					<li> New - Name: report_constraint <br/>
+						Type: constraint <br/>
+						Summary: without entering a reason, the user cannot send report.
 					</li>
 					<br/>
 				</ol>
