@@ -90,18 +90,18 @@
 				<br/>
 					<li> Name: search_Table <br/>
 						Type: Functional <br/>
-						Summary: Application must allow for users to search through the table
+						Summary: Application must allow for users to search through the database table
 					</li>
 					<br/>
 					<li> Name: create_Account <br/>
 						Type: Functional <br/>
-						Summary: Users must create accounts to store personal info
+						Summary: Users must create accounts to access Text Trade marketplace
 					</li>
 					<br/>
 					<li> Name: edit_profile <br/>
 						Type: Functional <br/>
 						Summary: Users should complete their profile page, filling out fields such as full name, DOB, 
-						phone number, campus email address, major, concentration, etc.
+					        major, concentration, etc.
 					</li>
 					<br/>
 					<li> Name: report_user <br/>
@@ -302,6 +302,31 @@
 						Ban duration can be determined flexibly by the moderator
 					</li>
 					<br/>
+					<li> New - Name: ban_user_mod_constraint <br/>
+						Type: Constraint <br/>
+						Summary: moderator can only ban regular users/traders, he cannot ban another moderator
+					</li>
+					<br/>
+					<li> New - Name: issue_warning_mod <br/>
+						Type: Functional <br/>
+						Summary: Moderator may issue warnings to user(s) upon violation
+					</li>
+					<br/>
+					<li> New - Name: search_user_mod <br/>
+						Type: Functional <br/>
+						Summary: Moderator can search for a user in the system to view his/her information
+					</li>
+					<br/>
+					<li> New - Name: view_user_info_mod <br/>
+						Type: Functional <br/>
+						Summary: Moderator can view a user's information, including registered APSU email address, password, and count of warnings
+					</li>
+					<br/>
+					<li> New - Name: view_system_stats_mod <br/>
+						Type: Functional <br/>
+						Summary: Moderator can view certain system statistics such as # of new accounts created last month, # of users total, # of listings created last month, # of active listings, etc.
+					</li>
+					<br/>
 				</ol>
 				<li id="list_header"> System </li>
 				<ol>
@@ -311,11 +336,7 @@
 						Summary: Database must hold a table of the listing
 					</li>
 					<br/>
-					<li> New - Name: inactive_listings <br/>
-						   Type: Functional <br/>
-						   Summary: Listings will be removed after 30 days unless renewed by user
-					</li>
-					<br/>
+			
 					<li> Name: personal_Information <br/>
 						Type: Functional <br/>
 						Summary: Users must enter in personal Information on first time login
