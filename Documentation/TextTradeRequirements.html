@@ -95,7 +95,7 @@
 					<br/>
 					<li> * - Name: communicate_internally <br/>
 						Type: Functional <br/>
-						Summary: Users shall be able to communicate with other traders/moderators via Text Trade internal messaging system
+						Summary: Users shall be able to communicate with other traders/moderators via message
 					</li>
 					<br/>
 					<li> Name: report_misdeed <br/>
@@ -109,7 +109,8 @@
 				<br/>
 					<li> Name: moderator_Powers <br/>
 						Type: Functional <br/>
-						Summary: Moderators shall be able to manipulate the database, communicate with other users, remove listings, view users' protected info, issue warnings, ban/block users, and view system stats
+						Summary: Moderators shall be able to manipulate the database, communicate with other users, remove listings, view users' 
+						protected info, issue warnings, ban/block users, and view system stats
 					</li>
 					<br/>
 					<li> * - Name: moderator_restriction <br/>
@@ -207,7 +208,8 @@
 							<li>Author (required field)</li>
 							<li>Edition (required field)</li>
 							<li>ISBN (reguired field)</li>
-							<li>Associated APSU course by <a href="#CourseCode">Course Code</a> and <a href="#CourseLevel">Course Level</a> (reguired field)</li>
+							<li>Associated APSU course by <a href="#CourseCode">Course Code</a> and <a href="#CourseLevel">Course Level</a> 
+							(reguired field)</li>
 							<li>When the book was used for that class (Semester: ____, Year: ____; ex: Semester: Spring, Year: 2017) (optional)</li> 
 							<li>Book condition (required field)</li>
 							<li>Asking price or best offer (required)</li>
@@ -249,7 +251,12 @@
 					<br/>
 					<li> * - Name: renew_listing_life <br/>
 						Type: Functional <br/>
-						Summary: Anytime, the user can choose to renew an active listing life (of his or hers) for another 30 days
+						Summary: the user can choose to renew an active listing for another 30 days
+					</li>
+					<br/>
+					<li> * - Name: renew_constraint <br/>
+						Type: Constraint <br/>
+						Summary: the user can only renew the listing on its last 7 days
 					</li>
 					<br/>
 					<li> * - Name: search_manually <br/>
@@ -259,17 +266,20 @@
 					<br/>
 					<li> * - Name: search_by_course <br/>
 						Type: functional
-						Summary: Uer/moderator can search for listings by associated course by picking “Search by course” option, then field out “<a href="#CourseCode">Course Code</a>” and “<a href="#CourseLevel">Course Level</a>” fields (Ex: MATH 1910)
+						Summary: User/moderator can search for listings by associated course by picking “Search by course” option, then 
+						fill out “<a href="#CourseCode">Course Code</a>” or “<a href="#CourseLevel">Course Level</a>” fields (Ex: MATH 1910)
 					</li>
 					<br/>
 					<li> * - Name: search_by_isbn<br/>
 						Type: Functional <br/>
-						Summary: User/moderator can search for listings using isbn by picking “Search by ISBN” option and entering ISBN number of the desired book.
+						Summary: User/moderator can search for listings using isbn by picking “Search by ISBN” option and entering ISBN number 
+						of the desired book.
 					</li>
 					<br/>
 					<li> * - Name: search_from_schedule <br/>
 						Type: Functional <br/>
-						Summary: User has the option to let the system automatically generates search results based on each schedule input/class (results are matched by listing’s “Associated course” field)
+						Summary: User has the option to let the system automatically generates search results based on each schedule input/class 
+						(results are matched by listing’s “Associated course” field)
 					</li>
 					<br/>
 					<li> * - Name: delete_saved_listing <br/>
@@ -341,7 +351,8 @@
 					<br/>
 					<li> * - Name: view_system_stats_mod <br/>
 						Type: Functional <br/>
-						Summary: Moderator can view certain system statistics such as # of new accounts created last month, # of users total, # of listings created last month, # of active listings, etc.
+						Summary: Moderator can view certain system statistics such as # of new accounts created last month, # of users total, # of 
+						listings created last month, # of active listings, etc.
 					</li>
 					<br/>
 				</ol>
@@ -401,7 +412,8 @@
 					<br/>
 					<li> # - Name: password_Requirements <br/>
 						Type: Constraint <br/>
-						Summary: Passwords must contain atleast 1 uppercase, 1 lowercase, be atleast 6 characters long, 1 number, and allow special characters
+						Summary: Passwords must contain atleast 1 uppercase, 1 lowercase, be atleast 6 characters long, 1 number, and allow special 
+						characters
 					</li>
 					<br/>
 					<li> * - Name: get_report_reason <br/>
