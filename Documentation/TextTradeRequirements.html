@@ -48,10 +48,11 @@
 		<a name="URD"></a>
 		<h1 class="parts"> User Requirements Definition </h1>
 		<ul class="lists">
+		<p> "*" for new Additions, "#" for updated </p>
+		<br/>
 				<li id="list_header"> User/Trader </li>
 				<ol>
 				<br/>
-					
 					<li> Name: search_marketplace <br/>
 						Type: Functional <br/>
 						Summary: Users shall be able to search Text Trade marketplace for textbooks using book title, ISBN, associated courses, etc.
@@ -78,7 +79,7 @@
 						Summary: Users shall be able to add, remove, or edit their own listings
 					</li>
 					<br/>
-					<li> New - Name: communicate_internally <br/>
+					<li> * - Name: communicate_internally <br/>
 						Type: Functional <br/>
 						Summary: Users shall be able to communicate with other traders/moderators via Text Trade internal messaging system
 					</li>
@@ -97,7 +98,7 @@
 						Summary: Moderators shall be able to manipulate the database, communicate with other users, remove listings, view users' protected info, issue warnings, ban/block users, and view system stats
 					</li>
 					<br/>
-					<li> New - Name: moderator_restriction <br/>
+					<li> * - Name: moderator_restriction <br/>
 						   Type: Constraint <br/>
 						   Summary: Moderators shall not be able to post their own listings
 					</li>
@@ -106,12 +107,12 @@
 				<li id="list_header"> System </li>
 				<ol>
 				<br/>
-					<li> New - Name: store_data <br/>
+					<li> * - Name: store_data <br/>
 						Type: Functional <br/>
 						Summary: System shall retain data such as user info, listings, internal messages, system stats, etc.
 					</li>
 					<br/>
-					<li> New - Name: database_access_restriction <br/>
+					<li> * - Name: database_access_restriction <br/>
 						Type: Constraint <br/>
 						Summary: Regular user's access to database is restricted to certain domain. Moderator has greater access and control over databse
 					</li>
@@ -126,12 +127,12 @@
 						Summary: Users shall create accounts to access Text Trade marketplace
 					</li>
 					<br/>
-					<li> New - Name: distinct_GUI <br/>
+					<li> * - Name: distinct_GUI <br/>
 						Type: Users and Moderators shall have separate interfaces <br/>
 						Summary: 
 					</li>
 					<br/>
-					<li> New - Name: email_notification <br/>
+					<li> * - Name: email_notification <br/>
 						   Type: Functional <br/>
 						   Summary: Users should be notified by email when transactions are approved, listings responded to, etc.
 					</li>
@@ -146,6 +147,8 @@
 		<a name="SRS"></a>
 		<h1 class="parts"> System Requirements Specifications </h1>
 			<ul class="lists">
+			<p> "*" for new Additions, "#" for updated </p>
+			<br/>
 				<li id="list_header"> User/Trader </li>
 				<ol>
 				<br/>
@@ -155,19 +158,19 @@
 					        major, concentration, etc.
 					</li>
 					<br/>
-					<li> Updated - Name: report_user <br/>
+					<li> # - Name: report_user <br/>
 						Type: Functional <br/>
 						Summary: As user views another user’s profile page, he has the option to report that user to moderators. 
 					</li>
 					<br/>
-					<li> Updated - Name: create_class_schedule <br/>
+					<li> # - Name: create_class_schedule <br/>
 						Type: Functional <br/>
 						Summary: User can create a list of his currently registered classes for which he needs to buy textbooks. 
 						He may label the schedule (Ex: Spring 2017 schedule) and add each class by filling out “Subject” and 
 						“Level” fields (Ex: #1 ENGL 1010, #2 MATH 1920, #3 HIST 2030)
 					</li>
 					<br/>
-					<li> Updated - Name: edit_schedule <br/>
+					<li> # - Name: edit_schedule <br/>
 						Type: Functional<br/>
 						Summary: User may edit his own schedule; remove, change, or add class
 					</li>
@@ -177,12 +180,12 @@
 						Summary: User may save listings of interest into his Watch list 
 					</li>
 					<br/>
-					<li> New - Name: view_own_Watch_list <br/>
+					<li> * - Name: view_own_Watch_list <br/>
 						Type: Functional <br/>
 						Summary: User may view his own Watch list
 					</li>
 					<br/>
-					<li> Updated - Name: create_Listing_User <br/>
+					<li> # - Name: create_Listing_User <br/>
 						Type: Functional <br/>
 						Summary: User who wants to sell a textbook may create a listing by filling the following fields and publish it. <br/>
 						•	Book title (required field) <br/>
@@ -198,89 +201,89 @@
 
 					</li>
 					<br/>
-					<li> Updated - Name: remove_Listing_User <br/>
+					<li> # - Name: remove_Listing_User <br/>
 						Type: Functional <br/>
 						Summary: User may remove their own listing before the expiration date
 					</li>
 					<br/>
-					<li> Updated - Name: edit_Listing_User <br/>
+					<li> # - Name: edit_Listing_User <br/>
 						Type: Functional <br/>
 						Summary: User may make amends to their published listing
 					</li>
 					<br/>
 					
-					<li> New - Name: send_message <br/>
+					<li> * - Name: send_message <br/>
 						Type: Functional <br/>
 						Summary: Text Trade user/moderator can send messages to other Text Trade users/moderators
 					</li>
 					<br/>
-					<li> New - Name: message_length_constraint <br/>
+					<li> * - Name: message_length_constraint <br/>
 						Type: Constraint <br/>
 						Summary: Each message can contain 1000 characters max
 					</li>
 					<br/>
-					<li> New - Name: receive_message <br/>
+					<li> * - Name: receive_message <br/>
 						Type: Functional <br/>
 						Summary: User/moderator can receive messages from other users/moderators
 					</li>
 					<br/>
-					<li> New - Name: reply_message <br/>
+					<li> * - Name: reply_message <br/>
 						Type: functional <br/>
 						Summary: User/moderator can reply to messages from other users/moderators
 					</li>
 					<br/>
-					<li> New - Name: delete_message <br/>
+					<li> * - Name: delete_message <br/>
 						Type: Functional <br/>
 						Summary: User/moderator can delete messages from personal inbox
 					</li>
 					<br/>
-					<li> New - Name: listing_life_constraint <br/>
+					<li> * - Name: listing_life_constraint <br/>
 						Type: constraint <br/>
 						Summary: All listings have a life span of 30 days. A listing is expired after 30 days
 					</li>
 					<br/>
-					<li> New - Name: renew_listing_life <br/>
+					<li> * - Name: renew_listing_life <br/>
 						Type: Functional <br/>
 						Summary: Anytime, the user can choose to renew an active listing life (of his or hers) for another 30 days
 					</li>
 					<br/>
-					<li> New - Name: search_manually <br/>
+					<li> * - Name: search_manually <br/>
 						Type: Functional <br/>
 						Summary: User/moderator can manually type strings into search box to search for an item/textbook
 					</li>
 					<br/>
-					<li> New - Name: search_by_course <br/>
+					<li> * - Name: search_by_course <br/>
 						Type: functional
 						Summary: Uer/moderator can search for listings by associated course by picking “Search by course” option, then field out “Subject” and “Level” fields (Ex: MATH 1910)
 					</li>
 					<br/>
-					<li> New - Name: search_by_isbn<br/>
+					<li> * - Name: search_by_isbn<br/>
 						Type: Functional <br/>
 						Summary: User/moderator can search for listings using isbn by picking “Search by ISBN” option and entering ISBN number of the desired book.
 					</li>
 					<br/>
-					<li> New - Name: search_from_schedule <br/>
+					<li> * - Name: search_from_schedule <br/>
 						Type: Functional <br/>
 						Summary: User has the option to let the system automatically generates search results based on each schedule input/class (results are matched by listing’s “Associated course” field)
 					</li>
 					<br/>
-					<li> New - Name: delete_saved_listing <br/>
+					<li> * - Name: delete_saved_listing <br/>
 						Type: Functional <br/>
 						Summary: User may remove active listings from Watch list as desired
 					</li>
 					<br/>
-					<li> New - Name: inquiry_seller <br/>
+					<li> * - Name: inquiry_seller <br/>
 						Type: Functional <br/>
 						Summary: As user views a listing, he has the option to contact the seller via internal messaging system. (maybe include a button labeled “Contact Seller” on the listing page)
 					</li>
 					<br/>
-					<li> New - Name: report_listing <br/>
+					<li> * - Name: report_listing <br/>
 						Type: Functional <br/>
 						Summary: User may report an inappropriate listing to moderators. (maybe include a button labeled “Report this Listing” on the listing page)
 					</li>
 					<br/>
 
-					<li> New - Name: report_user <br/>
+					<li> * - Name: report_user <br/>
 						Type: Functional <br/>
 						Summary: As user views another user’s profile page, he has the option to report that user to moderators. (maybe include a button with flag icon on the user profile page)
 					</li>
@@ -290,38 +293,38 @@
 				<li id="list_header"> Moderator </li>
 				<ol>
 				<br/>
-					<li> Updated - Name: remove_Listing_Mod <br/>
+					<li> # - Name: remove_Listing_Mod <br/>
 						Type: Functional <br/>
 						Summary: Moderator may remove listings deemed inappropriate
 					</li>
 					<br/>
-					<li> Updated - Name: ban_User_Mod <br/>
+					<li> # - Name: ban_User_Mod <br/>
 						Type: Functional <br/>
 						Summary: Moderator may ban a disruptive user/trader temporarily or permanently. 
 						Ban duration can be determined flexibly by the moderator
 					</li>
 					<br/>
-					<li> New - Name: ban_user_mod_constraint <br/>
+					<li> * - Name: ban_user_mod_constraint <br/>
 						Type: Constraint <br/>
 						Summary: moderator can only ban regular users/traders, he cannot ban another moderator
 					</li>
 					<br/>
-					<li> New - Name: issue_warning_mod <br/>
+					<li> * - Name: issue_warning_mod <br/>
 						Type: Functional <br/>
 						Summary: Moderator may issue warnings to user(s) upon violation
 					</li>
 					<br/>
-					<li> New - Name: search_user_mod <br/>
+					<li> * - Name: search_user_mod <br/>
 						Type: Functional <br/>
 						Summary: Moderator can search for a user in the system to view his/her information
 					</li>
 					<br/>
-					<li> New - Name: view_user_info_mod <br/>
+					<li> * - Name: view_user_info_mod <br/>
 						Type: Functional <br/>
 						Summary: Moderator can view a user's information, including registered APSU email address, password, and count of warnings
 					</li>
 					<br/>
-					<li> New - Name: view_system_stats_mod <br/>
+					<li> * - Name: view_system_stats_mod <br/>
 						Type: Functional <br/>
 						Summary: Moderator can view certain system statistics such as # of new accounts created last month, # of users total, # of listings created last month, # of active listings, etc.
 					</li>
@@ -335,17 +338,17 @@
 						Summary: Users must create accounts to access Text Trade marketplace
 					</li>
 					<br/>
-					<li> New - Name: register_email_constraint <br/>
+					<li> * - Name: register_email_constraint <br/>
 						Type: Constraint <br/>
 						Summary: User shall register with APSU email address
 					</li>
 					<br/>
-					<li> New - Name: username_constraint <br/>
+					<li> * - Name: username_constraint <br/>
 						Type: Constraint <br/>
 						Summary: User shall pick a unique username that contains at least 5 characters that are either alphabet letters or numerical
 					</li>
 					<br/>
-					<li> Updated - Name: sort_results <br/>
+					<li> # - Name: sort_results <br/>
 						Type: Functional <br/>
 						Summary: Results can be sorted based on criteria such as: <br/>
 						•	Time: Newest listing first <br/>
@@ -355,7 +358,7 @@
 
 					</li>
 					<br/>
-					<li> Updated - Name: filter_results <br/>
+					<li> # - Name: filter_results <br/>
 						Type: Functional <br/>
 						Summary: Results can be filtered based on: <br/>
 						•	Price threshold: less than X $ or greater than X $ <br/>
@@ -369,7 +372,7 @@
 						Summary: Users should enter in personal Information on first time login
 					</li>
 					<br/>
-					<li> New - Name: email_notification <br/>
+					<li> * - Name: email_notification <br/>
 						   Type: Functional <br/>
 						   Summary: Users should be notified by email when transactions are approved, listings responded to, etc.
 					</li>
@@ -379,38 +382,38 @@
 						Summary: Login information must be encrypted
 					</li>
 					<br/>
-					<li> Updated - Name: password_Requirements <br/>
+					<li> # - Name: password_Requirements <br/>
 						Type: Constraint <br/>
 						Summary: Passwords must contain atleast 1 uppercase, 1 lowercase, be atleast 6 characters long, 1 number, and allow special characters
 					</li>
 					<br/>
-					<li> New - Name: get_report_reason <br/>
+					<li> * - Name: get_report_reason <br/>
 						Type: Functional <br/>
 						Summary: User is prompted to enter the reason for reporting a listing or another user
 					</li>
 					<br/>
 
-					<li> New - Name: report_constraint <br/>
+					<li> * - Name: report_constraint <br/>
 						Type: Constraint <br/>
 						Summary: Without entering a reason, the user cannot send report.
 					</li>
 					<br/>
-					<li> New - Name: remove_expired_listing_system <br/>
+					<li> * - Name: remove_expired_listing_system <br/>
 						Type: Functional <br/>
 						Summary: An expired listing will be removed automatically by the system
 					</li>
 					<br/>
-					<li> New - Name: display_listing_remaining_life <br/>
+					<li> * - Name: display_listing_remaining_life <br/>
 						Type: Functional <br/>
 						Summary: Display how many days are left until expiration for each listing
 					</li>
 					<br/>
-					<li> New - Name: store_message <br/>
+					<li> * - Name: store_message <br/>
 						Type: Functional <br/>
 						Summary: All received and sent messages shall be stored in an inbox.
 					</li>
 					<br/>
-					<li> New - Name: count_warning <br/>
+					<li> * - Name: count_warning <br/>
 						Type: Functional <br/>
 						Summary: System keeps track of how many warnings each user has received. This information is visible only to moderators.
 					</li>
