@@ -106,8 +106,8 @@
 					<br/>
 					<li> Name: report_user <br/>
 						Type: Functional <br/>
-						Summary: Users should be able to report inapproriate activities to Moderators.
-						
+						Summary: As user views another user’s profile page, he has the option to report that user to moderators. 
+						(maybe include a button with flag icon on the user profile page)
 					</li>
 					<br/>
 					<li> New - Name: email_notification <br/>
@@ -128,21 +128,39 @@
 				<li id="list_header"> Buyer </li>
 				<ol>
 				<br/>
+					<li> Name: create_class_schedule <br/>
+						Type: Functional <br/>
+						Summary: User can create a list of his currently registered classes for which he needs to buy textbooks. 
+						He may label the schedule (Ex: Spring 2017 schedule) and add each class by filling out “Subject” and 
+						“Level” fields (Ex: #1 ENGL 1010, #2 MATH 1920, #3 HIST 2030)
+					</li>
+					<br/>
+					<li> Name: edit_schedule <br/>
+						Type: functional<br/>
+						Summary: User can edit his own schedule; remove, change, or add class
+					</li>
+					<br/>	
 					<li> Name: save_listing <br/>
 						Type: Functional <br/>
-						Summary: Buyers shall be able to save listings of interest into their watch list
+						Summary: Users shall be able to save listings of interest into their Watch list 
 					</li>
 					<br/>
 					<li> Name: sort_results <br/>
 						Type: Functional <br/>
-						Summary: Buyers shall be able to sort results based on criteria such as "Cheapest", "Most Recent",
-						etc.
+						Summary: User can sort results based on criteria such as: <br/>
+						•	Time: Newest listing first <br/>
+						•	Time: Ending soonest first <br/>
+						•	Price: Cheapest first <br/>
+						•	Price: Highest first 
+
 					</li>
 					<br/>
 					<li> Name: filter_results <br/>
 						Type: Functional <br/>
-						Summary: Buyers shall be able to filter results based on criteria such as "Price", "Condition",
-						etc.
+						Summary: results can be filtered based on: <br/>
+						•	Price threshold: less than X $ or greater than X $ <br/>
+						•	Condition: New or Used (Like New, Great, Good, Acceptable)
+						
 					</li>
 					<br/>
 					<li> Name: message_user <br/>
@@ -154,19 +172,30 @@
 				<li id="list_header"> Seller </li>
 				<ol>
 				<br/>
-					<li> Name: add_Listing_Seller <br/>
+					<li> Name: create_Listing_User <br/>
 						Type: Functional <br/>
-						Summary: Sellers must be able to put up listings
+						Summary: user who wants to sell a textbook may create a listing by filling the following fields and publish it. <br/>
+						•	Book title (required field) <br/>
+						•	Author (required field) <br/>
+						•	Edition (required field) <br/>
+						•	ISBN (optional) <br/>
+						•	Associated APSU course (Subject: ____, Level: ____ ; ex: Subject: CSCI, Level: 4600) (optional) <br/>
+						•	When the book was used for that class (Semester: ____, Year: ____; ex: Semester: Spring, Year: 2017) (optional) <br/> 
+						•	Book condition (required field) <br/>
+						•	Asking price or best offer (required) <br/>
+						•	Picture of the textbook (optional) <br/>
+						•	Additional note/description – text box (optional) 
+
 					</li>
 					<br/>
-					<li> Name: remove_Listing_Seller <br/>
+					<li> Name: remove_Listing_User <br/>
 						Type: Functional <br/>
-						Summary: Sellers must be able to remove their own listings
+						Summary: User may remove their own listing before the expiration date
 					</li>
 					<br/>
-					<li> Name: edit_Listing_Seller <br/>
+					<li> Name: edit_Listing_User <br/>
 						Type: Functional <br/>
-						Summary: Sellers shall be able to edit their own listings info. 
+						Summary: User may make amends to their published listing
 					</li>
 					<br/>
 				</ol>
@@ -175,12 +204,13 @@
 				<br/>
 					<li> Name: remove_Listing_Mod <br/>
 						Type: Functional <br/>
-						Summary: Moderators must be able to remove listings
+						Summary: Moderator may remove listings deemed inappropriate
 					</li>
 					<br/>
-					<li> Name: remove_user_Mod <br/>
+					<li> Name: ban_User_Mod <br/>
 						Type: Functional <br/>
-						Summary: Moderators shall be able to ban users who commit foul play
+						Summary: Moderator may ban a disruptive user/trader temporarily or eternally. 
+						Ban duration can be determined flexibly by the moderator
 					</li>
 					<br/>
 				</ol>
