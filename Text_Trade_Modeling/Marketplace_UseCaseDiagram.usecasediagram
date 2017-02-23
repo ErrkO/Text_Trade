@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="df1c44f5-b421-4029-9e52-feb00bfef5ab" name="UMLUseCaseDiagram1" linkedPackageId="84d5ebc2-f671-4837-8e4e-15846a5d08f7" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="6eb9ff79-1637-426e-8576-b08f79d0441e" name="Text Trade Marketplace" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="d5ac8ce0-4a68-4105-97d4-e08da6d2bf84">
+            <elementDefinition Id="019323bf-26e9-4f23-b6f1-845d17a22269" />
+            <body>Traders and Moderators use the same authentication system
+</body>
+            <annotatedElements>
+              <useCaseMoniker Id="e2276d3a-ab2c-455b-9d9b-e0bb77374e0f" LastKnownName="Log into system" />
+            </annotatedElements>
+          </comment>
+          <comment Id="a00dec52-e3f7-486f-8393-d611d4eb2a27">
+            <elementDefinition Id="1d9df6d6-35f4-46dc-8fc5-21363e8cc53d" />
+            <body>Mod may contact a listing's seller to notify the seller of errors/violations within the seller's listing,so the seller can edit it before the Mod decide to remove it</body>
+            <annotatedElements>
+              <useCaseMoniker Id="362cc115-ffca-49ad-96cb-e0fb3efd6c6a" LastKnownName="Contact listing seller" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="729f1db9-a88d-46c5-8918-d8ab3315d145" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="3b9f031b-e73b-4146-af3e-0f71125db804" name="Trader" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="84bf33c5-6554-4c32-8993-6cab4366bc95" />
+        <targetEnds>
+          <association Id="7f76e328-62e5-4a58-bf0a-f0c17b673007" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Create account" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9f695700-9b28-4997-96f7-cbbd80b12d23" LastKnownName="Create account" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fda9227f-03ec-4992-8220-3eabf4ffb49c" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d6c4056c-2dc4-4bbd-b489-07604fefddb0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a748bd43-ad2b-4c29-bbc1-dac0d2a654c7" name="Create account" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c5986320-f701-417a-a93a-00d59268be07" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7addf5b7-a2e5-4fc1-a60e-74af86d2f70d" />
+          </association>
+          <association Id="be8e7ff4-447b-4792-879a-9615591c29a7" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Edit profile" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="05362d98-99c6-4153-a985-32aa1b6771ab" LastKnownName="Edit profile" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bc6f4ce9-a430-4961-b18f-0e971647064d" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="137094be-e177-4b0f-b13a-fbd264f7be67" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3e6c6f7c-52d7-4e68-b4cd-f702a2fb0209" name="Edit profile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f4b5829d-37c7-4860-b7ae-ed2c60e20b08" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7ec89b6f-76a9-495f-8e9b-8590085a6f42" />
+          </association>
+          <association Id="3c4ee3e8-035c-4eda-896e-5b0d3fbaae72" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Create/Manage Listing" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6b9588ec-4006-4607-aab6-89d9330f620a" LastKnownName="Create/Manage Listing" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d00e7b8-c3b0-405f-b6f3-b7d2b777cb60" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="eae5b812-92ae-4cf3-bfcf-f9830e553fa4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f5be55c3-5910-43cd-9926-ac08c4f6d28f" name="Create/Manage Listing" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="44cc6c31-1799-4d3e-87dc-02c46ab38df5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="aebf9352-b7c8-4417-b869-2afb6b320bbc" />
+          </association>
+          <association Id="16cb50a2-a4b5-4dc9-b4c7-45e76da95d20" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Save listing to Watch list" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="024f28ff-988e-4afb-beaa-334e0b1b44f6" LastKnownName="Save listing to Watch list" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="21e6b0fb-e2d5-43ab-82c5-345dce411c02" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="09580706-9b82-4f54-b70f-3a66533d06e6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="00a1b6e7-4a5e-4d04-9e27-83c846b545cf" name="Save listing to Watch list" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a9d68d04-2fde-42b1-9b1b-18bf7826e747" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fca8c688-098a-46b1-8beb-aad2900034ef" />
+          </association>
+          <association Id="b6bb7124-366a-455d-820a-3680a47369a7" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="View/Manage Watch list" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9af415c4-9100-4e75-97f7-5a783f4adfdf" LastKnownName="View/Manage Watch list" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="97401d65-5bb2-4eb0-9d1b-9ca4d08837d7" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c5dbd3a3-efc7-48cd-b36e-9eba3a31755c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2cbc3a84-7ce8-48b7-bca6-ae83bf40b38b" name="View/Manage Watch list" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3d99a2e6-c965-47b9-a406-7de353829a8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="967de1e7-79c8-44cd-ace0-607058ec700e" />
+          </association>
+          <association Id="ab08d521-d6a4-4d8a-96a1-146d1f200cf8" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Create/Manage schedule" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4c8b2197-0792-4fb7-b841-98bb0966de3b" LastKnownName="Create/Manage schedule" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e87e7e7a-e59a-4e00-86ac-2810da7e230e" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a2276b26-12c1-4d3a-b824-65bad37a2345" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5b13ecff-25a4-4e72-9b89-81e3a7c79cde" name="Create/Manage schedule" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f446c4fc-adfd-4bc6-9d63-9db9c15fcb4f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f8386641-9676-4060-9a11-1587c5874242" />
+          </association>
+          <association Id="778bb005-6d80-4c48-9e51-49c5a17decde" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Log into system" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e2276d3a-ab2c-455b-9d9b-e0bb77374e0f" LastKnownName="Log into system" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="12deba13-dd2b-4deb-bb5e-b06f8105e023" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="def28022-0b6a-406d-8db9-930329989e38" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f2f82a45-4a0d-497d-9547-bfbd703d688f" name="Log into system" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bedff3cb-192a-43cd-8334-7f67517019bb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6c62372c-8c45-4a08-b593-ba7bb565a5dd" />
+          </association>
+          <association Id="76f30e8f-1be0-49b5-bd3d-44005ba2a8f0" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Communicate w/ others" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0ac3aad8-4772-4c6f-9690-21695c096064" LastKnownName="Communicate w/ others" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4e77a0ac-81cc-416f-9084-a4cbe90e5938" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9279a9c6-b3df-4ac1-82f6-08a1e907aafb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4bec57a9-bcbf-467d-b089-6b891d720392" name="Communicate w/ others" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="79e7950a-2264-4cbf-8f63-85d0d1d09813" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7702e248-0280-4652-92fd-b4075fb7b6b3" />
+          </association>
+          <association Id="287f9cb8-2201-4084-92c2-4c8807ca1f1e" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Search for textbooks" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d52e56ce-31f2-488e-9ba1-7e062428d5f2" LastKnownName="Search for textbooks" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6185f0e3-9e1d-4727-809d-fc2045a021d2" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="121979c3-4215-483d-8bcd-520005ab2a47" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="86c8946b-4422-4cb6-8743-a1e7bb695d66" name="Search for textbooks" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="99b1fd96-ce3b-4be8-a6e7-7b9176b7f3d1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="01b2278e-dbac-413b-87e2-ae83078d6d2c" />
+          </association>
+          <association Id="cdd463e9-6aeb-457d-91b7-5228b1bd02a6" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Sort/Filter search results" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6dc1399e-09cc-4d7c-8dcc-bcf1cb9afc93" LastKnownName="Sort/Filter search results" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f9a682e2-ef51-48bd-8e1e-8fe0ca8c2d6b" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e7bbf2aa-1068-4994-b4a9-4e167e9a9a23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0f4378c0-25db-4d0c-8158-b863e463a3b5" name="Sort/Filter search results" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8999a4cf-33e5-49d5-be74-907a6932a88c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7fc626c0-86cf-47c6-be8f-5cfd6cb28576" />
+          </association>
+          <association Id="35b34b1a-be38-492f-b1f1-b7272aff32b6" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Contact listing seller" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="362cc115-ffca-49ad-96cb-e0fb3efd6c6a" LastKnownName="Contact listing seller" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fcc10fcf-9390-40eb-b3a6-612f5583a939" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="af614e35-7c34-4afb-b929-fb669f7f1b21" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="be45d99a-c75e-4e1b-8f4d-944e0f83c3b7" name="Contact listing seller" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9364f493-c15f-48d4-b35f-defebb94dea5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="24655417-610a-4e89-876e-f49fd3ec0bb8" />
+          </association>
+          <association Id="273c19cf-7372-4ec7-8f93-232dd4165c7c" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Report listing/user" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="eab9a040-a9d6-4409-9034-2612f8fd7ee2" LastKnownName="Report listing/user" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d0c10c7a-6f66-457d-9ded-751719e1890e" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c5ba80ce-f0d0-42e6-bdc4-5435d258a26e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5ac96db3-81ca-4e17-adde-e493a58d3b22" name="Report listing/user" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dcdd0fa1-a88f-4ed2-a3e9-a765b1750f5b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6d08f136-d93f-4e26-9f04-b52f9bcfdf46" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="86d37334-9b8f-4b6c-898e-f0d4d24687ad" name="Moderator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8f112327-119c-429f-930b-f4c5ba9a2832" />
+        <targetEnds>
+          <association Id="77cd78be-5740-40f5-a0b5-6d8395229509" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="View system stats" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="aa2fa82b-5190-4218-8c69-f48bd6f1e182" LastKnownName="View system stats" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="34ebb3c1-3c1d-4724-9dc5-828b2b9ff0b9" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="db32fe70-fdcf-4e32-92a9-17fd0c5f8db3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fde04004-9ea5-46f8-b5d4-f60cd3a49e06" name="View system stats" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="695fc713-4c64-493a-b936-dfd0d19e0d4e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8db20f85-c2e6-4770-bbb6-18ce997dcdbf" />
+          </association>
+          <association Id="aa6115dd-50c1-4f4e-a71e-2f70a37250f9" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="Issue warning" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9774ee9b-f771-4208-9356-e57756e91636" LastKnownName="Issue warning" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c4006ce3-29e7-460d-aeba-7af5db9c6846" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2b21633d-3fc3-4e18-a68b-c7c7c48b689b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8fd1e8c8-8cda-45b7-a804-420beb61fe71" name="Issue warning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dc62c8cd-637d-4fe9-aff7-6e4d9d9b9ac3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4889ff13-91ef-47a1-8b2c-bc197985d37e" />
+          </association>
+          <association Id="af7aac34-446b-4700-8739-4b483d0689df" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="Remove listing" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="860c323b-a5c7-4c30-b218-a91888a8d36e" LastKnownName="Remove listing" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0b94b216-2a3e-4ad1-99da-25562b2eee51" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1f34cffa-ef0e-4c9d-9f3a-6e1ad3a0e6b8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8aae6bf6-3bb1-4950-ba25-a4c3014908fe" name="Remove listing" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="118541ad-8ed8-4510-9657-3785f5e67bcb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a0c2a52e-6481-4fc3-b45d-f88e946387ad" />
+          </association>
+          <association Id="9c666631-6884-4f19-8892-b154422c4ddc" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="Ban Trader" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c9ea09af-9d1e-4a26-9e29-75f546f82d0b" LastKnownName="Ban Trader" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2d7bbe6a-d20f-42d3-8020-06b2b4a2ace3" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d2c19730-6712-44e2-b173-c02c34a2343d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f1184dd9-b302-4577-b973-3a56b124bd19" name="Ban Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="393b77fe-a8b1-4550-84ad-c7d0e7a5ecba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="77bf618a-4354-4076-b5d5-2f851ba18aa0" />
+          </association>
+          <association Id="a666ee6a-ee8a-4a38-a335-16494902782d" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="View Trader's info" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="abcf9ac0-f3e0-4e53-8e02-234434582cf3" LastKnownName="View Trader's info" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f48b2da7-3a6b-4b57-a73e-d580eadf28f9" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="68d2e583-6218-4496-9045-d04a22cc49ab" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ed0d00f1-6a98-48eb-96a9-417a4424519e" name="View Trader's info" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a0243230-f7e2-4056-b85b-2ba2ec1ab626" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a6623d42-36b3-4a5b-af92-bf673ee352f9" />
+          </association>
+          <association Id="c5fe21f2-89f0-42cf-838a-1444646c9eed" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="Log into system" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e2276d3a-ab2c-455b-9d9b-e0bb77374e0f" LastKnownName="Log into system" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6976aad3-9d83-4a7c-b810-60ac376051c3" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4f324f22-4fff-420e-b02a-81936da8bbdf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1c15f94b-0a7a-403a-b852-81cfc09c7d22" name="Log into system" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="43133f82-4e4b-4d5b-a725-0808bb56de20" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1dcc8d9e-b176-453b-b221-ff0c2a979093" />
+          </association>
+          <association Id="502119a7-820e-44d5-837f-6429c5aa9632" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="Communicate w/ others" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0ac3aad8-4772-4c6f-9690-21695c096064" LastKnownName="Communicate w/ others" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b7a99c36-6685-479a-9e97-7eef62b10e41" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="68e84ded-8f21-496c-bcdb-d207c269ab6d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b1a35add-aec4-441c-8a50-8549e42dbe83" name="Communicate w/ others" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5d2c7d66-0432-4db2-8128-070427633fe8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d32f70bb-f9eb-4c78-9656-f8c4addb93b0" />
+          </association>
+          <association Id="b91d00e6-2087-4dcd-afef-945aff88ca9b" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="Search for textbooks" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d52e56ce-31f2-488e-9ba1-7e062428d5f2" LastKnownName="Search for textbooks" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d306b5c4-3725-4366-9fbf-912bd77a1e72" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="859d43ca-2cac-487c-8e7a-bb9f93d960ea" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f14aa64a-238d-4c6a-8612-488cdbc05c9d" name="Search for textbooks" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3a8e40c0-ce64-4fb8-8850-9d56504161d3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b4ec850f-74d9-4e46-877f-19ed61322dd7" />
+          </association>
+          <association Id="20f22b4a-05d1-4e61-b746-cbd55897ec9d" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="Sort/Filter search results" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6dc1399e-09cc-4d7c-8dcc-bcf1cb9afc93" LastKnownName="Sort/Filter search results" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="29b5cc62-0679-44ea-bf9e-432d4c7835f8" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b0717938-5269-470f-97b8-5631558b751f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="98e5049e-8b85-4aa2-8904-a64193b5e644" name="Sort/Filter search results" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b00d6f2f-856b-416d-97df-68f79348cd8b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="16da7966-e3b6-47b1-94ea-0d660ea91331" />
+          </association>
+          <association Id="9d73b282-0817-485f-a251-fb438a60fc6a" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="Contact listing seller" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="362cc115-ffca-49ad-96cb-e0fb3efd6c6a" LastKnownName="Contact listing seller" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e8406791-ad1a-44a6-8e60-a2a36e17af6f" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b12e9e0d-65dd-4df5-9cb2-1c6b1dcc1408" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="75ad126e-c003-4adc-8bb5-c91bbcddfb44" name="Contact listing seller" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1c678ce2-db32-4a1c-b0e3-629bbf114c11" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d78b3372-b440-4cda-980c-03e03d8226fb" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="9f695700-9b28-4997-96f7-cbbd80b12d23" name="Create account" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8c0abf3f-817a-4585-9738-93fcdea07cfa" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="05362d98-99c6-4153-a985-32aa1b6771ab" name="Edit profile" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2c2ccf76-8bc5-4db0-8a15-d82c6fc8069b" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="6b9588ec-4006-4607-aab6-89d9330f620a" name="Create/Manage Listing" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3a39d1e5-2df3-4645-9a88-04293bc43615" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="024f28ff-988e-4afb-beaa-334e0b1b44f6" name="Save listing to Watch list" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d3143708-786d-41bb-9f19-c4f9a7049e79" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9af415c4-9100-4e75-97f7-5a783f4adfdf" name="View/Manage Watch list" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f74f5809-e95d-4335-a445-abef76eca409" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="4c8b2197-0792-4fb7-b841-98bb0966de3b" name="Create/Manage schedule" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="64d0b6a5-be5a-4897-8d5f-fd20960abb3b" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e2276d3a-ab2c-455b-9d9b-e0bb77374e0f" name="Log into system" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="13ade78e-5aa8-4782-a2d5-ac70dfbd89fb" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0ac3aad8-4772-4c6f-9690-21695c096064" name="Communicate w/ others" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6195f031-c4e4-44fd-b0b9-ac4eddd0ee0e" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d52e56ce-31f2-488e-9ba1-7e062428d5f2" name="Search for textbooks" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="81ad9598-96e3-469b-8658-7ea430125b44" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="6dc1399e-09cc-4d7c-8dcc-bcf1cb9afc93" name="Sort/Filter search results" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e9c4f6ae-6b5b-458b-84fa-ef0ade6030bb" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="362cc115-ffca-49ad-96cb-e0fb3efd6c6a" name="Contact listing seller" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="01ccf87c-6b35-440d-a1be-dad77e6bcff7" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="eab9a040-a9d6-4409-9034-2612f8fd7ee2" name="Report listing/user" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c1b212d6-55bc-4aeb-9bb4-d186064cfebe" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="aa2fa82b-5190-4218-8c69-f48bd6f1e182" name="View system stats" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="021b7015-40e9-4336-b952-767f09d86b8d" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9774ee9b-f771-4208-9356-e57756e91636" name="Issue warning" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2fbaf6d9-99bf-4d7d-9203-1607f70b9009" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="860c323b-a5c7-4c30-b218-a91888a8d36e" name="Remove listing" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6173666f-7abc-40a4-86b4-acabd5e234b5" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c9ea09af-9d1e-4a26-9e29-75f546f82d0b" name="Ban Trader" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6da8d41e-abc0-4563-8866-36b148cc3fd3" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="abcf9ac0-f3e0-4e53-8e02-234434582cf3" name="View Trader's info" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3f65a621-9a86-4760-85fc-b8c7ff2964b7" />
+        <subjects>
+          <subsystemMoniker Id="6eb9ff79-1637-426e-8576-b08f79d0441e" LastKnownName="Text Trade Marketplace" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="84d5ebc2-f671-4837-8e4e-15846a5d08f7" name="Text_Trade_Modeling">
+    <elementDefinition Id="57f6c3c0-8f8f-4d04-95b2-2b10a8d827d1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="b11ac6fe-afab-4029-bd9c-b95d7c2db3bf">
+        <profileInstance Id="5c8375e8-afa9-439c-951d-56f18eece3c5" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ad0c83d9-c4ed-4d88-a394-5db764e7ca8a">
+        <profileInstance Id="da9fe7b2-912c-46a2-b79a-deec0bf8c13b" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
