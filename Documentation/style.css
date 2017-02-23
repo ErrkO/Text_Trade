@@ -6,6 +6,7 @@
 	background-color:#aeb0b2;
 	width: 500px;
 	text-align: center;
+	box-shadow: 10px 10px 5px #000000
 	
 }
 
@@ -66,6 +67,7 @@ header
 	width: 600px;
 	text-align: center;
 	line-height: 20px;
+	box-shadow: 10px 10px 5px #000000
 	
 }
 
