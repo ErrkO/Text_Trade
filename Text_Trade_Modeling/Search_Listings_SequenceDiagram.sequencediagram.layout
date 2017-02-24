@@ -3,14 +3,14 @@
   <SequenceDesignerModelMoniker Id="6eeefd97-1922-4a81-81af-cb2a335fee15" />
   <nestedChildShapes>
     <lifelineShape Id="c3b07cd3-1182-4d07-ab26-bb77b9861c80" absoluteBounds="2.3750000794728594, 1, 0.15, 8.1570833315451949" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="1274c74b-4442-45d7-a7ca-bd4e61f0de72" LastKnownName="Buyer" />
+      <lifelineMoniker Id="1274c74b-4442-45d7-a7ca-bd4e61f0de72" LastKnownName="Trader" />
       <relativeChildShapes>
         <umlLifelineHeadShape Id="d9eededf-8ca6-4c23-9b60-1738989a15dd" absoluteBounds="1.9500000794728594, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="1274c74b-4442-45d7-a7ca-bd4e61f0de72" LastKnownName="Buyer" />
+          <lifelineMoniker Id="1274c74b-4442-45d7-a7ca-bd4e61f0de72" LastKnownName="Trader" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="c871bece-ccdf-41d9-a8cf-84c171e7a153" absoluteBounds="2.3750000794728594, 1, 0, 8.125">
-          <lifelineMoniker Id="1274c74b-4442-45d7-a7ca-bd4e61f0de72" LastKnownName="Buyer" />
+          <lifelineMoniker Id="1274c74b-4442-45d7-a7ca-bd4e61f0de72" LastKnownName="Trader" />
         </lifelineHoverShape>
       </relativeChildShapes>
     </lifelineShape>
