@@ -36,6 +36,16 @@
           LastKnownLocation="Text_Trade_Modeling.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="42024016-358d-46a3-b456-b013626c663f">
+      <body>Generated upon request</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="d5daa655-c0d8-4106-8742-4f8ec10bbf61"
+          LastKnownName="View List of Flagged Listings"
+          LastKnownLocation="Text_Trade_Modeling.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -1978,6 +1988,133 @@
           </opaqueAction>
           <activityFinalNode
             Id="bff4a4c1-2e3e-4177-8657-3f5a9c575e64"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="d59bd497-2a5f-4fee-814b-3068dee86cf9"
+        name="Moderate_Listings_ActivityDiagram"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="564fbdf1-129c-4ba9-a963-062fc9a12549"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="53aa9953-5727-4eb4-a825-6d8d1887b817"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d5daa655-c0d8-4106-8742-4f8ec10bbf61"
+                  LastKnownName="View List of Flagged Listings"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="d5daa655-c0d8-4106-8742-4f8ec10bbf61"
+            name="View List of Flagged Listings"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="cdc1d021-a7b5-42bc-8537-5ca08e1fe1fe"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3426eba6-3e20-4ca7-a435-5b5979cd7dd3"
+                  LastKnownName="View Flagged Listing"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="3426eba6-3e20-4ca7-a435-5b5979cd7dd3"
+            name="View Flagged Listing"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1a1a1f3f-90fb-43e1-9af0-5153c9688976"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="ae4b77fe-1c53-4f0c-ab10-c0afd17b764b"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="ae4b77fe-1c53-4f0c-ab10-c0afd17b764b"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e40f5945-a6d9-479d-bea0-af9b41deea28"
+                guard="Violation Found"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="72f50b02-7c02-4a56-be59-922eabbdab21"
+                  LastKnownName="Listing Deleted"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="aa930050-52ec-48f5-b946-25232f114f53"
+                guard="No Violation Found"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="03186d66-8519-47a4-86e9-345e5c888d28"
+                  LastKnownName="Flag Removed From Listing"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="0bef1714-6f8f-4707-9d9a-a17d6c47e07e"
+                guard="End Moderation Session"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="b12e2e23-1ad9-4084-811b-40112dfc5c5a"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="72f50b02-7c02-4a56-be59-922eabbdab21"
+            name="Listing Deleted"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="483d5e23-1299-4418-8fbd-0908635f43c9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d5daa655-c0d8-4106-8742-4f8ec10bbf61"
+                  LastKnownName="View List of Flagged Listings"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="03186d66-8519-47a4-86e9-345e5c888d28"
+            name="Flag Removed From Listing"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6ea0bd1d-afce-40fa-9bc4-fb9ba62d5bf4"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d5daa655-c0d8-4106-8742-4f8ec10bbf61"
+                  LastKnownName="View List of Flagged Listings"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="b12e2e23-1ad9-4084-811b-40112dfc5c5a"
             name="ActivityFinal1"
             isLeaf="false" />
         </nodes>
