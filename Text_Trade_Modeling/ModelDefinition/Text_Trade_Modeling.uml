@@ -25,6 +25,16 @@
           LastKnownLocation="Text_Trade_Modeling.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="1dc20358-60bc-4aa9-9ff8-3c48ba545eac">
+      <body>User can search for textbooks by different parameters or by existing class schedule</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="81ad9598-96e3-469b-8658-7ea430125b44"
+          LastKnownName="Search for textbooks"
+          LastKnownLocation="Text_Trade_Modeling.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances

@@ -19,6 +19,13 @@
               <useCaseMoniker Id="362cc115-ffca-49ad-96cb-e0fb3efd6c6a" LastKnownName="Contact listing seller" />
             </annotatedElements>
           </comment>
+          <comment Id="a8451797-5692-466a-9888-57c3b55db827">
+            <elementDefinition Id="1dc20358-60bc-4aa9-9ff8-3c48ba545eac" />
+            <body>User can search for textbooks by different parameters or by existing class schedule</body>
+            <annotatedElements>
+              <useCaseMoniker Id="d52e56ce-31f2-488e-9ba1-7e062428d5f2" LastKnownName="Search for textbooks" />
+            </annotatedElements>
+          </comment>
         </ownedCommentsInternal>
         <elementDefinition Id="729f1db9-a88d-46c5-8918-d8ab3315d145" />
       </subsystem>
