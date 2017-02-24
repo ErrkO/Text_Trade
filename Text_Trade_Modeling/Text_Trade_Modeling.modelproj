@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Moderate_Listings_ActivityDiagram.activitydiagram</DependentUpon>
     </Content>
+    <Content Include="Moderate_Listings_SequenceDiagram.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Moderate_Listings_SequenceDiagram.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Moderate_Listings_SequenceDiagram.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="Search_Listings_ActivityDiagram.activitydiagram">
       <SubType>Content</SubType>
     </Content>
