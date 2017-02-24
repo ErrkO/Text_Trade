@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="d11364ee-2782-4618-b982-ba9a5b871784" name="Search_Listings_ActivityDiagram" linkedPackageId="01b662ca-91b9-4836-93d2-606910b4cbf1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="f0d5f841-0270-4341-8fe7-9608ae83cca3">
+      <elementDefinition Id="6eebfb3d-f994-4c32-b207-b9acf9a16d06" />
+      <body>Schedule Information can be entered prior to search</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="64713c03-a546-474a-a5d6-539b66b8efd7">
+      <profileInstance Id="9d852799-f0ad-4a9e-95b6-a811e8a58411" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="88c3ff9f-d6a6-440a-bfe8-d9dedfbe1a60">
+      <profileInstance Id="903e25a0-136b-4937-a7de-7e491466d782" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="e1d80597-295c-4eeb-a964-c30af4b1c312" name="Search_Listings_ActivityDiagram" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="b91ab868-aa99-412c-bc44-7b52fa2880aa" />
+        <nodes>
+          <initialNode Id="5bba8f51-8157-4d01-8d84-b1d82d559f3b" name="Initial1" isLeaf="false">
+            <elementDefinition Id="998616ac-82aa-408c-8dd8-34bdb82c8f9d" />
+            <flowNodeTargets>
+              <controlFlow Id="b46bf4ce-08c3-4e74-8e70-4ea2d95f1c01" isLeaf="false">
+                <decisionNodeMoniker Id="2569615e-b3e2-42d4-9870-ed916f903444" LastKnownName="Decision1" />
+                <elementDefinition Id="d21bf21c-6ebc-4761-a2c4-b969f989471e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <decisionNode Id="2569615e-b3e2-42d4-9870-ed916f903444" name="Decision1" isLeaf="false">
+            <elementDefinition Id="53a6c066-5471-4353-99f3-bbaaf3ad795e" />
+            <flowNodeTargets>
+              <controlFlow Id="85547782-e4ae-4256-99f7-7ae7656cca85" guard="Search by Parameter" isLeaf="false">
+                <opaqueActionMoniker Id="f324461e-0747-4b7a-939d-434036b7ae0c" LastKnownName="Choose Search Parameter" />
+                <elementDefinition Id="225b06df-fe2e-4bd4-9937-41da6cb37315" />
+              </controlFlow>
+              <controlFlow Id="6fd1fc30-1910-47ab-a209-0fa2ff139969" guard="Search by Schedule" isLeaf="false">
+                <opaqueActionMoniker Id="3fad3c4d-3dc4-48f9-95f3-dbed13b319e7" LastKnownName="Enter Schedule Information" />
+                <elementDefinition Id="4db351cb-0dd5-49cf-8df8-efe14b7f7476" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="f324461e-0747-4b7a-939d-434036b7ae0c" name="Choose Search Parameter" isLeaf="false">
+            <elementDefinition Id="f5af7e93-4b06-4d71-9fd6-3a61bcf9232c" />
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="8f474503-ccc0-4e7d-ba9e-ca79cb02760f" name="Chosen Parameter" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="57bf809a-7b60-4cba-9e52-51b480ff0019" />
+                  <objectFlowTargets>
+                    <objectFlow Id="0965066a-60d5-49ab-8c05-ff3a6fef7abf" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="952e3647-d1b4-44fb-b7b4-2f07aa698f66" LastKnownName="List of Related Listings" />
+                      <elementDefinition Id="e698b849-3b52-4380-8aa4-94696ad616a1" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="0d7572d5-d63a-4a13-a51c-7b38887046b6" name="2147483647" value="2147483647">
+                      <elementDefinition Id="4dcb295e-5cc2-4f60-b23d-af0ac68e2272" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction Id="3fad3c4d-3dc4-48f9-95f3-dbed13b319e7" name="Enter Schedule Information" isLeaf="false">
+            <elementDefinition Id="8b754ebf-1d8b-471a-85d1-b5eaeae06d8c" />
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="8e670709-b32f-4a7f-9d0a-c6e740050aa5" name="Schedule Information" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="446060fe-cbcc-4bb1-965b-c9b00ae3896f" />
+                  <objectFlowTargets>
+                    <objectFlow Id="8b4c1b36-6a64-402f-aec0-2fde76e98999" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="952e3647-d1b4-44fb-b7b4-2f07aa698f66" LastKnownName="List of Related Listings" />
+                      <elementDefinition Id="96d4be46-6b48-4ab1-bc90-753f88902bbe" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="e973e968-a231-4cdf-8e07-3983d3f13949" name="2147483647" value="2147483647">
+                      <elementDefinition Id="2fda85b8-ccd4-4eaf-af89-13f43fdff07a" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction Id="a4729676-078d-4fb1-ac7b-7618f9ed7f10" name="Browse List" isLeaf="false">
+            <elementDefinition Id="fac4973f-81e1-4ad1-a5a4-cfb9097f98bf" />
+            <flowNodeTargets>
+              <controlFlow Id="e9e864b8-12c0-4017-bf34-cac68fe61f7e" isLeaf="false">
+                <opaqueActionMoniker Id="c0a4b7b5-ee35-45ab-972e-6b5d45e390ad" LastKnownName="View Listing" />
+                <elementDefinition Id="58c75805-7089-4d83-a1bb-63adcf479739" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="ba8ef6ea-bcbf-4415-a38a-a6b812e2ebb8" name="List of Related Listings" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="334bcdb0-eb0b-4c6b-8ae6-ddfe3fb5b3d2" />
+                  <upperBound>
+                    <literalInteger Id="a0e8ac0e-817c-4101-b66d-8a984236846e" name="2147483647" value="2147483647">
+                      <elementDefinition Id="07e00136-fcc1-4d4e-8480-af6099528665" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasInputValues>
+                <inputPin Id="fec1c923-0351-4deb-a6db-4cc6e5bad75e" name="Filtered List of  Related Listings" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="8fe99711-424e-48d2-8894-71e7385cf03c" />
+                  <upperBound>
+                    <literalInteger Id="cf129b69-f909-4764-b25b-bd428b5ad18c" name="2147483647" value="2147483647">
+                      <elementDefinition Id="6abd7c15-3e35-4b03-8b04-b078cae8af5b" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode Id="952e3647-d1b4-44fb-b7b4-2f07aa698f66" name="List of Related Listings" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="25bdb0d7-1e4a-4519-afec-a11ebc5694ab" />
+            <objectFlowTargets>
+              <objectFlow Id="b0b41cbc-eaf6-490a-ba59-0f69277d23b7" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <decisionNodeMoniker Id="a8d4a625-dec5-46a8-a58d-ccf87a208ac1" LastKnownName="Decision3" />
+                <elementDefinition Id="e473ec98-cac6-495f-8c91-96c330df3cd7" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="af6d139c-7ac4-43a0-8f41-706d7848bcd8" name="2147483647" value="2147483647">
+                <elementDefinition Id="5ab6419a-a2a7-4c0a-b2a7-afd8551f8985" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="c0a4b7b5-ee35-45ab-972e-6b5d45e390ad" name="View Listing" isLeaf="false">
+            <elementDefinition Id="89227b24-ffff-4024-a0ef-5ba09a574b1d" />
+            <flowNodeTargets>
+              <controlFlow Id="47ce4c72-9cb1-4db5-aa2f-63dc9fa2f78a" isLeaf="false">
+                <decisionNodeMoniker Id="51c10c25-d623-45bd-a73c-e4bb440bb68a" LastKnownName="Decision2" />
+                <elementDefinition Id="a24f3023-3816-4731-8958-ffac00968840" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="51c10c25-d623-45bd-a73c-e4bb440bb68a" name="Decision2" isLeaf="false">
+            <elementDefinition Id="2cce8819-7384-412b-8254-aea01b463244" />
+            <flowNodeTargets>
+              <controlFlow Id="2940d952-d4f4-4934-9715-ec91fc3345a4" guard="Interested" isLeaf="false">
+                <opaqueActionMoniker Id="fee6b7cb-01b1-494d-9177-f4f5689dd5dc" LastKnownName="Save Listing to Watch List" />
+                <elementDefinition Id="30a19be9-8ba7-48de-86d9-dcc9b8120aa4" />
+              </controlFlow>
+              <controlFlow Id="97dd80f2-7574-4a88-8c83-17a7a50043c7" guard="Not Interested" isLeaf="false">
+                <opaqueActionMoniker Id="a4729676-078d-4fb1-ac7b-7618f9ed7f10" LastKnownName="Browse List" />
+                <elementDefinition Id="db8cd887-4114-442c-8187-3efd378ce2c0" />
+              </controlFlow>
+              <controlFlow Id="5bd03bdd-55dd-4b4e-8bf0-9b617bde5507" guard="End Search Session" isLeaf="false">
+                <activityFinalNodeMoniker Id="49c9b7c6-c41f-4907-96a1-f540fd0e6805" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="7419c7b8-db7d-4c9b-9739-aca26dfa2568" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="fee6b7cb-01b1-494d-9177-f4f5689dd5dc" name="Save Listing to Watch List" isLeaf="false">
+            <elementDefinition Id="1f648a17-90c3-4ce8-abe0-1dc5b054b969" />
+            <flowNodeTargets>
+              <controlFlow Id="2aff28d5-7acd-4891-91a2-3f66305eea9b" isLeaf="false">
+                <opaqueActionMoniker Id="c0a4b7b5-ee35-45ab-972e-6b5d45e390ad" LastKnownName="View Listing" />
+                <elementDefinition Id="0a565e54-2263-472b-94ef-0d2d3ea94e5b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="49c9b7c6-c41f-4907-96a1-f540fd0e6805" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="4ac5b6ae-303d-4c88-9df5-5df467b6a8dc" />
+          </activityFinalNode>
+          <decisionNode Id="a8d4a625-dec5-46a8-a58d-ccf87a208ac1" name="Decision3" isLeaf="false">
+            <elementDefinition Id="8ff98677-ca55-4255-9cea-b7276611d571" />
+            <objectFlowTargets>
+              <objectFlow Id="b4802707-f5ae-428e-88d5-4caaafcc7112" guard="Filter" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="ba0d7a85-0fe3-447a-b55c-60624e841dcc" LastKnownName="Filtered List of Related Listings" />
+                <elementDefinition Id="966ed43e-2f74-41f4-aee2-b2df9ca476bf" />
+              </objectFlow>
+              <objectFlow Id="74684ed1-8682-4edd-af25-0c3f9641d84b" guard="No Filter" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="ba8ef6ea-bcbf-4415-a38a-a6b812e2ebb8" LastKnownName="List of Related Listings" />
+                <elementDefinition Id="7d134bf4-750c-44e3-940b-71b9c3e4ca55" />
+              </objectFlow>
+            </objectFlowTargets>
+          </decisionNode>
+          <objectNode Id="ba0d7a85-0fe3-447a-b55c-60624e841dcc" name="Filtered List of Related Listings" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="e34c6b06-c439-44dd-979f-6a1cfa984ac9" />
+            <objectFlowTargets>
+              <objectFlow Id="e647ed8b-151b-4ea8-ba0d-33429a8798f7" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="fec1c923-0351-4deb-a6db-4cc6e5bad75e" LastKnownName="Filtered List of  Related Listings" />
+                <elementDefinition Id="be9258fb-ee4f-4db2-949e-290ed50ef92b" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="ca3b51e6-f9f6-4b31-a4a8-3f4b031fb835" name="2147483647" value="2147483647">
+                <elementDefinition Id="433e55c3-4387-48c6-a483-10bc837a8e82" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="01b662ca-91b9-4836-93d2-606910b4cbf1" name="Text_Trade_Modeling">
+    <elementDefinition Id="57f6c3c0-8f8f-4d04-95b2-2b10a8d827d1" />
+  </package>
+</activityRootModel>

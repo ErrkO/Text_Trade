@@ -1,22 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="2d7b0255-9b47-422a-9d2f-9ef4cc61a25d" name="Post_Listing_ActivityDiagram" linkedPackageId="a924c449-b4f3-45d3-808a-2bf6c05558ac" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="b3dfd334-b0ab-4b9f-9462-7e79490c517e">
-      <profileInstance Id="d4dab53b-6894-43eb-b63e-65a30a8c0dbc" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="396b00ce-4b07-464d-8b68-d18395f059e5">
-      <profileInstance Id="c614e52d-8f58-473f-b2d7-8a3c50904dcd" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="2d7b0255-9b47-422a-9d2f-9ef4cc61a25d" name="Sell_Book_ActivityDiagram" linkedPackageId="a924c449-b4f3-45d3-808a-2bf6c05558ac" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <packagedElements>
     <activityRootModelHasActivity>
-      <activity Id="d4bf9fc7-1375-4b43-814b-619d5c1166f0" name="Post_Listing_ActivityDiagram" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+      <activity Id="d4bf9fc7-1375-4b43-814b-619d5c1166f0" name="Sell_Book_ActivityDiagram" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
         <elementDefinition Id="e524b345-cff4-4491-b35e-d4d30382aa36" />
         <nodes>
           <initialNode Id="7058bdd0-04b7-4df8-a555-1e208441aedb" name="Initial1" isLeaf="false">
@@ -127,7 +113,7 @@
                 <elementDefinition Id="db765bde-2df0-4eda-b26e-eab78f80764a" />
               </controlFlow>
               <controlFlow Id="9e3c7fab-f924-4dd1-bd37-177c4038470f" guard="Accepts Response" isLeaf="false">
-                <opaqueActionMoniker Id="da6d6f8e-6d77-40f1-8dd9-47081254c110" LastKnownName="Contact Information Revealed" />
+                <opaqueActionMoniker Id="da6d6f8e-6d77-40f1-8dd9-47081254c110" LastKnownName="Trade Contact Information" />
                 <elementDefinition Id="5ec98ce7-b39d-4111-805a-f850bbee3b1d" />
               </controlFlow>
             </flowNodeTargets>
@@ -141,45 +127,37 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="da6d6f8e-6d77-40f1-8dd9-47081254c110" name="Contact Information Revealed" isLeaf="false">
+          <opaqueAction Id="da6d6f8e-6d77-40f1-8dd9-47081254c110" name="Trade Contact Information" isLeaf="false">
             <elementDefinition Id="883a6ad4-76af-4e28-8dfd-165bd466ad6b" />
             <flowNodeTargets>
-              <controlFlow Id="4dd2bf80-bdd9-4ab2-b1b7-b52078304263" isLeaf="false">
-                <opaqueActionMoniker Id="838347ee-4f18-4981-9d6b-cb262c9ba943" LastKnownName="Listing Hidden" />
-                <elementDefinition Id="57377993-4489-49a7-b7e6-538f77e0f825" />
+              <controlFlow Id="74f27019-fb66-4aa5-ac59-e4a825ce3da7" isLeaf="false">
+                <opaqueActionMoniker Id="1832341a-034b-4946-8552-f70d9651f062" LastKnownName="Listing Removed" />
+                <elementDefinition Id="f9306ce1-6f94-46db-a325-4ce21450bc62" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
           <activityFinalNode Id="6d8440d9-12f6-4575-90f1-dc587dc364ba" name="ActivityFinal1" isLeaf="false">
             <elementDefinition Id="87af8dc1-3ce9-4699-aa10-eede0ebf33cf" />
           </activityFinalNode>
-          <opaqueAction Id="838347ee-4f18-4981-9d6b-cb262c9ba943" name="Listing Hidden" isLeaf="false">
-            <elementDefinition Id="ba5f82e5-650c-4fbe-a8d6-f4ed64075a87" />
-            <flowNodeTargets>
-              <controlFlow Id="7bbe44e4-98e2-49f9-802b-d384d6df058f" isLeaf="false">
-                <decisionNodeMoniker Id="874979ed-ff49-4be0-b6b0-5b609c1fdc52" LastKnownName="Decision3" />
-                <elementDefinition Id="bdaea6af-dfde-4a6a-b63f-bbaedef211d8" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <decisionNode Id="874979ed-ff49-4be0-b6b0-5b609c1fdc52" name="Decision3" isLeaf="false">
-            <elementDefinition Id="fa8ff721-0ff8-4c53-83ee-e1ed40d481ab" />
-            <flowNodeTargets>
-              <controlFlow Id="5e3c147e-b57a-4b85-a09b-228513d01af7" guard="Successful Deal Confirmed" isLeaf="false">
-                <opaqueActionMoniker Id="1832341a-034b-4946-8552-f70d9651f062" LastKnownName="Listing Removed" />
-                <elementDefinition Id="7e4e826e-55aa-42d5-8c23-9f2f53ff8724" />
-              </controlFlow>
-              <controlFlow Id="584ebb36-431d-4203-b5ea-8aa6790c7b5e" guard="Deal Confirmed Unsuccessful" isLeaf="false">
-                <opaqueActionMoniker Id="173ee925-d91a-45de-871d-40ca5c2003b1" LastKnownName="Listing Posted" />
-                <elementDefinition Id="752b94b8-a0d3-4060-846d-4877c573fdb9" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
   </packagedElements>
   <package Id="a924c449-b4f3-45d3-808a-2bf6c05558ac" name="Text_Trade_Modeling">
     <elementDefinition Id="57f6c3c0-8f8f-4d04-95b2-2b10a8d827d1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="b3dfd334-b0ab-4b9f-9462-7e79490c517e">
+        <profileInstance Id="d4dab53b-6894-43eb-b63e-65a30a8c0dbc" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="396b00ce-4b07-464d-8b68-d18395f059e5">
+        <profileInstance Id="c614e52d-8f58-473f-b2d7-8a3c50904dcd" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </activityRootModel>
