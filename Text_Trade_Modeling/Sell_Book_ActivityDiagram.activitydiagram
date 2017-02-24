@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="2d7b0255-9b47-422a-9d2f-9ef4cc61a25d" name="Post_Listing_ActivityDiagram" linkedPackageId="a924c449-b4f3-45d3-808a-2bf6c05558ac" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="2d7b0255-9b47-422a-9d2f-9ef4cc61a25d" name="Sell_Book_ActivityDiagram" linkedPackageId="a924c449-b4f3-45d3-808a-2bf6c05558ac" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <packagedElements>
     <activityRootModelHasActivity>
-      <activity Id="d4bf9fc7-1375-4b43-814b-619d5c1166f0" name="Post_Listing_ActivityDiagram" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+      <activity Id="d4bf9fc7-1375-4b43-814b-619d5c1166f0" name="Sell_Book_ActivityDiagram" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
         <elementDefinition Id="e524b345-cff4-4491-b35e-d4d30382aa36" />
         <nodes>
           <initialNode Id="7058bdd0-04b7-4df8-a555-1e208441aedb" name="Initial1" isLeaf="false">
@@ -39,7 +39,7 @@
             <elementDefinition Id="b3b4320c-6593-432a-97d0-8d563ab9c728" />
             <flowNodeTargets>
               <controlFlow Id="3658f53a-af62-4f9f-a795-b2e31ffc16a1" isLeaf="false">
-                <opaqueActionMoniker Id="2c3d0fca-026b-48e6-b0c2-f14b9fe98e37" LastKnownName="Wait For Response" />
+                <opaqueActionMoniker Id="2c3d0fca-026b-48e6-b0c2-f14b9fe98e37" LastKnownName="Wait For A Buyer to Contact" />
                 <elementDefinition Id="c1a4a30b-d19d-46e2-9c0b-91229060149b" />
               </controlFlow>
             </flowNodeTargets>
@@ -73,24 +73,24 @@
           <decisionNode Id="c291d890-9092-4832-8e6a-6cd7ef9b0cb5" name="Listing Response" isLeaf="false">
             <elementDefinition Id="3e255647-1fab-48ba-95b5-d421d0e46d4e" />
             <flowNodeTargets>
-              <controlFlow Id="fc477b5a-4132-4a42-8b45-07fd0f35a9b9" guard="No Response" isLeaf="false">
+              <controlFlow Id="fc477b5a-4132-4a42-8b45-07fd0f35a9b9" guard="No Contact/Expires soon" isLeaf="false">
                 <decisionNodeMoniker Id="192f9f97-be92-4d0c-a420-1832d4d806f4" LastKnownName="Decision1" />
                 <elementDefinition Id="3a7e0276-a437-409e-bf86-3668550bc204" />
               </controlFlow>
-              <controlFlow Id="ed6d7b1a-11dd-4b6c-bb49-af293509f9f0" guard="Response" isLeaf="false">
-                <decisionNodeMoniker Id="3965bc5a-eb37-4d34-88bf-eceac2b86058" LastKnownName="Decision2" />
-                <elementDefinition Id="3f4881a1-31bd-4196-a8a5-22ddbba33739" />
+              <controlFlow Id="bcaa7b8e-a017-4895-ab67-39b17cc0f9dd" guard="Buyer contacts " isLeaf="false">
+                <opaqueActionMoniker Id="67643d06-2031-4cef-804d-7ee7f39cc5be" LastKnownName="Communicate via Internal Messaging System" />
+                <elementDefinition Id="00464275-f26a-44e2-bb9c-53cd57fae962" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
           <decisionNode Id="192f9f97-be92-4d0c-a420-1832d4d806f4" name="Decision1" isLeaf="false">
             <elementDefinition Id="113eeab8-839e-4c20-bd2e-6385a46e1071" />
             <flowNodeTargets>
-              <controlFlow Id="06ca004e-8a44-42ee-8674-cef03123a40f" guard="Renew Option Accepted" isLeaf="false">
+              <controlFlow Id="06ca004e-8a44-42ee-8674-cef03123a40f" guard="Listing renewed" isLeaf="false">
                 <opaqueActionMoniker Id="173ee925-d91a-45de-871d-40ca5c2003b1" LastKnownName="Listing Posted" />
                 <elementDefinition Id="5d5a5970-d093-4efa-bd58-4960ce78a755" />
               </controlFlow>
-              <controlFlow Id="cbef0590-a59a-4467-b628-0daf654a18b7" guard="Renew Option Declined" isLeaf="false">
+              <controlFlow Id="cbef0590-a59a-4467-b628-0daf654a18b7" guard="Listing not renewed/Expired" isLeaf="false">
                 <opaqueActionMoniker Id="1832341a-034b-4946-8552-f70d9651f062" LastKnownName="Listing Removed" />
                 <elementDefinition Id="f349da1b-d22b-48fd-9c08-fac0be1e4891" />
               </controlFlow>
@@ -105,20 +105,7 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <decisionNode Id="3965bc5a-eb37-4d34-88bf-eceac2b86058" name="Decision2" isLeaf="false">
-            <elementDefinition Id="97bf7697-20b8-4c6b-b0e0-98bbe2047f97" />
-            <flowNodeTargets>
-              <controlFlow Id="17104c61-c26d-451a-ab1d-0d5d4084fa27" guard="Declines Response" isLeaf="false">
-                <opaqueActionMoniker Id="2c3d0fca-026b-48e6-b0c2-f14b9fe98e37" LastKnownName="Wait For Response" />
-                <elementDefinition Id="db765bde-2df0-4eda-b26e-eab78f80764a" />
-              </controlFlow>
-              <controlFlow Id="9e3c7fab-f924-4dd1-bd37-177c4038470f" guard="Accepts Response" isLeaf="false">
-                <opaqueActionMoniker Id="da6d6f8e-6d77-40f1-8dd9-47081254c110" LastKnownName="Trade Contact Information" />
-                <elementDefinition Id="5ec98ce7-b39d-4111-805a-f850bbee3b1d" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <opaqueAction Id="2c3d0fca-026b-48e6-b0c2-f14b9fe98e37" name="Wait For Response" isLeaf="false">
+          <opaqueAction Id="2c3d0fca-026b-48e6-b0c2-f14b9fe98e37" name="Wait For A Buyer to Contact" isLeaf="false">
             <elementDefinition Id="cbab78c3-adbf-45d7-90e7-7662a903c854" />
             <flowNodeTargets>
               <controlFlow Id="eed5ed43-c958-4f0e-a6bd-c8a1088bcb2f" isLeaf="false">
@@ -139,6 +126,28 @@
           <activityFinalNode Id="6d8440d9-12f6-4575-90f1-dc587dc364ba" name="ActivityFinal1" isLeaf="false">
             <elementDefinition Id="87af8dc1-3ce9-4699-aa10-eede0ebf33cf" />
           </activityFinalNode>
+          <opaqueAction Id="67643d06-2031-4cef-804d-7ee7f39cc5be" name="Communicate via Internal Messaging System" isLeaf="false">
+            <elementDefinition Id="ca60408c-91c9-44d1-9432-2f4c251a3dda" />
+            <flowNodeTargets>
+              <controlFlow Id="2567e887-cb0a-458d-b6d3-2a602cdf1c2b" isLeaf="false">
+                <decisionNodeMoniker Id="0ff775ab-84ab-4d39-b535-901718c4508c" LastKnownName="Decision2" />
+                <elementDefinition Id="43e16052-0208-4e76-9001-c52e6a401ab5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="0ff775ab-84ab-4d39-b535-901718c4508c" name="Decision2" isLeaf="false">
+            <elementDefinition Id="17d1dbdc-b1ec-404c-bf42-042fc098ed97" />
+            <flowNodeTargets>
+              <controlFlow Id="80ac3d98-1e25-4155-b5b4-e48ce3ffb4ca" guard="Deal achieved" isLeaf="false">
+                <opaqueActionMoniker Id="da6d6f8e-6d77-40f1-8dd9-47081254c110" LastKnownName="Trade Contact Information" />
+                <elementDefinition Id="34159c44-4794-4f24-8525-ad4cdb418598" />
+              </controlFlow>
+              <controlFlow Id="ae78573b-2b50-4356-ba20-ba8680464aac" guard="Deal not achieved" isLeaf="false">
+                <opaqueActionMoniker Id="2c3d0fca-026b-48e6-b0c2-f14b9fe98e37" LastKnownName="Wait For A Buyer to Contact" />
+                <elementDefinition Id="a37b274a-6374-47c2-bcb2-73b50fbf5cf1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
