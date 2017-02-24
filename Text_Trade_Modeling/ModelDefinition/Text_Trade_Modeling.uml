@@ -26,12 +26,13 @@
       </annotatedElements>
     </comment>
     <comment
-      Id="1dc20358-60bc-4aa9-9ff8-3c48ba545eac">
-      <body>User can search for textbooks by different parameters or by existing class schedule</body>
+
+      Id="4e79cbae-44ea-49eb-be81-f7ef73cd9f1b">
+      <body>Schedule information entered prior to search session</body>
       <annotatedElements>
-        <useCaseMoniker
-          Id="81ad9598-96e3-469b-8658-7ea430125b44"
-          LastKnownName="Search for textbooks"
+        <opaqueActionMoniker
+          Id="cecd1b45-a3c7-4fcd-a727-c9faf355d175"
+          LastKnownName="Pull Schedule Information"
           LastKnownLocation="Text_Trade_Modeling.uml" />
       </annotatedElements>
     </comment>
@@ -262,7 +263,7 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="883a6ad4-76af-4e28-8dfd-165bd466ad6b"
-                  LastKnownName="Contact Information Revealed"
+                  LastKnownName="Trade Contact Information"
                   LastKnownLocation="Text_Trade_Modeling.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -284,15 +285,15 @@
           </opaqueAction>
           <opaqueAction
             Id="883a6ad4-76af-4e28-8dfd-165bd466ad6b"
-            name="Contact Information Revealed"
+            name="Trade Contact Information"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="57377993-4489-49a7-b7e6-538f77e0f825"
+                Id="05a8132f-2168-411f-a78a-4f67b27e72b1"
                 isLeaf="false">
                 <opaqueActionMoniker
-                  Id="ba5f82e5-650c-4fbe-a8d6-f4ed64075a87"
-                  LastKnownName="Listing Hidden"
+                  Id="192f6b76-9a94-4b6b-b61a-885db61a0095"
+                  LastKnownName="Listing Removed"
                   LastKnownLocation="Text_Trade_Modeling.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -301,46 +302,6 @@
             Id="87af8dc1-3ce9-4699-aa10-eede0ebf33cf"
             name="ActivityFinal1"
             isLeaf="false" />
-          <opaqueAction
-            Id="ba5f82e5-650c-4fbe-a8d6-f4ed64075a87"
-            name="Listing Hidden"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="bdaea6af-dfde-4a6a-b63f-bbaedef211d8"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="fa8ff721-0ff8-4c53-83ee-e1ed40d481ab"
-                  LastKnownName="Decision3"
-                  LastKnownLocation="Text_Trade_Modeling.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <decisionNode
-            Id="fa8ff721-0ff8-4c53-83ee-e1ed40d481ab"
-            name="Decision3"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="7e4e826e-55aa-42d5-8c23-9f2f53ff8724"
-                guard="Successful Deal Confirmed"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="192f6b76-9a94-4b6b-b61a-885db61a0095"
-                  LastKnownName="Listing Removed"
-                  LastKnownLocation="Text_Trade_Modeling.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="752b94b8-a0d3-4060-846d-4877c573fdb9"
-                guard="Deal Confirmed Unsuccessful"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="b3b4320c-6593-432a-97d0-8d563ab9c728"
-                  LastKnownName="Listing Posted"
-                  LastKnownLocation="Text_Trade_Modeling.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
         </nodes>
       </activity>
     </packageHasNamedElement>
@@ -1635,6 +1596,392 @@
             LastKnownLocation="Text_Trade_Modeling.uml" />
         </subjects>
       </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="3910e634-a72e-448f-b3e8-f36536fa4c67"
+        name="Search_Listings_ActivityDiagram"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="3a8ca550-fc30-4665-ae97-e22e31c6aa83"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="8a4971cb-347d-4a69-a93b-b7bb1565d18b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="de61b471-4c94-4fd5-bb8e-556205b49f51"
+                  LastKnownName="Search for Textbook"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="de61b471-4c94-4fd5-bb8e-556205b49f51"
+            name="Search for Textbook"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="cabfc0ac-8811-4721-b582-4f17237260ad"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="adb7b613-7220-4d2b-a5a6-3a7fe1c4e853"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="adb7b613-7220-4d2b-a5a6-3a7fe1c4e853"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f3f251fd-2c88-4107-8348-12f5e09d7cae"
+                guard="Search by Schedule"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cecd1b45-a3c7-4fcd-a727-c9faf355d175"
+                  LastKnownName="Pull Schedule Information"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="f601fea5-61a6-4e07-b4ed-0d6d8c20fa86"
+                guard="Search by Parameter"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0662122e-0302-4300-92b5-bbee292434ac"
+                  LastKnownName="Choose Search Parameter"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="cecd1b45-a3c7-4fcd-a727-c9faf355d175"
+            name="Pull Schedule Information"
+            isLeaf="false">
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin
+                  Id="3b472343-e0da-4851-b6c5-be55d2bf17fc"
+                  name="Schedule Information"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <objectFlowTargets>
+                    <objectFlow
+                      Id="62fed978-f38a-4876-9966-d08252c85ed9"
+                      isLeaf="false"
+                      isMulticast="false"
+                      isMultireceive="false">
+                      <objectNodeMoniker
+                        Id="5801fe53-cef0-4d68-b939-ec0309ac2dbf"
+                        LastKnownName="List of Related Listings"
+                        LastKnownLocation="Text_Trade_Modeling.uml" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger
+                      Id="893a83e9-9ae2-47b9-a219-41dad5f99385"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode
+            Id="5801fe53-cef0-4d68-b939-ec0309ac2dbf"
+            name="List of Related Listings"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="be29e0b2-3331-4550-ad1a-8c0f8f7e5bd5"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <decisionNodeMoniker
+                  Id="d95d81ec-fa35-416a-bfd3-4a902b41e490"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="e1b00050-7a5b-4ec4-bab2-7da51ea5a00f"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="0662122e-0302-4300-92b5-bbee292434ac"
+            name="Choose Search Parameter"
+            isLeaf="false">
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin
+                  Id="1aa40060-971a-407a-8263-07a515f7b9eb"
+                  name="Chosen Parameter"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <objectFlowTargets>
+                    <objectFlow
+                      Id="ea9d06b5-4ece-473d-a4d4-5d9b5b2e0bde"
+                      isLeaf="false"
+                      isMulticast="false"
+                      isMultireceive="false">
+                      <objectNodeMoniker
+                        Id="5801fe53-cef0-4d68-b939-ec0309ac2dbf"
+                        LastKnownName="List of Related Listings"
+                        LastKnownLocation="Text_Trade_Modeling.uml" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger
+                      Id="d8d009f2-0486-4251-bf79-9707e75b22b2"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <decisionNode
+            Id="d95d81ec-fa35-416a-bfd3-4a902b41e490"
+            name="Decision2"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="9d1146b6-6075-499c-ba08-b5d746a9f93e"
+                guard="Filter"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="a761e19b-bea3-48df-9820-efa03a4e2e37"
+                  LastKnownName="List of Related Listings"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="f51a121e-2866-48d0-ad17-1f80a3b8c379"
+                guard="No Filter"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="b83a5c1a-e684-4409-a415-f6928dcba830"
+                  LastKnownName="List of Related Listings"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="9855f0b6-d501-439c-ace4-066d918ae0ce"
+            name="Choose Filter"
+            isLeaf="false">
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="a761e19b-bea3-48df-9820-efa03a4e2e37"
+                  name="List of Related Listings"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="f8fc193c-3162-4fb8-8aa8-5d7d081e9999"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasOutputValues>
+                <outputPin
+                  Id="be2e85bf-0d5e-4a90-ac76-ec9e478bda67"
+                  name="Chosen Filter"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <objectFlowTargets>
+                    <objectFlow
+                      Id="2841df56-b2d8-424a-870f-ee51c79d2548"
+                      isLeaf="false"
+                      isMulticast="false"
+                      isMultireceive="false">
+                      <objectNodeMoniker
+                        Id="56bd17d5-dbd4-4957-ab7c-1bcc82701fa2"
+                        LastKnownName="Filtered List of Related Listings"
+                        LastKnownLocation="Text_Trade_Modeling.uml" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger
+                      Id="50c6cc59-cc87-406e-93c1-af2246361914"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode
+            Id="56bd17d5-dbd4-4957-ab7c-1bcc82701fa2"
+            name="Filtered List of Related Listings"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="ca632c1c-d755-469b-b16d-29234bd73ba4"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="a2bbe32e-dc47-4def-b3b2-56f2927f9a67"
+                  LastKnownName="Filtered List of Related Listings"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="b003bcd5-2c5f-405f-a0bf-ba0b0cc23228"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="1991566b-1d4a-490f-9577-10207de2abd6"
+            name="Browse List"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b4a69a16-5140-443a-8111-7822f8bd93b0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="76b33745-a11a-4c26-a51d-87ec4b696b60"
+                  LastKnownName="View Listing"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="a2bbe32e-dc47-4def-b3b2-56f2927f9a67"
+                  name="Filtered List of Related Listings"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="be7bf740-0a2d-403e-afdf-2b1c574c0cde"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="b83a5c1a-e684-4409-a415-f6928dcba830"
+                  name="List of Related Listings"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="e9e2af2d-720e-4908-a5e9-37b4d9022e2d"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction
+            Id="76b33745-a11a-4c26-a51d-87ec4b696b60"
+            name="View Listing"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f324b276-108f-418f-a5d5-f4129367f3d9"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="878330c2-866c-4541-8d0a-85048b4a3662"
+                  LastKnownName="Decision3"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="878330c2-866c-4541-8d0a-85048b4a3662"
+            name="Decision3"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="71941a37-5cff-43be-9e56-7252202eea34"
+                guard="Interested"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="16cc8343-d52f-493f-83fe-4bb92fdccf8f"
+                  LastKnownName="Save Listing to Watch List"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="e411c7c6-5a3d-40eb-8e56-703ea69641a8"
+                guard="Not Interested"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1991566b-1d4a-490f-9577-10207de2abd6"
+                  LastKnownName="Browse List"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="c7926f1a-d2ec-435f-8b0e-593a039ceafd"
+                guard="End Search Session"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="bff4a4c1-2e3e-4177-8657-3f5a9c575e64"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="16cc8343-d52f-493f-83fe-4bb92fdccf8f"
+            name="Save Listing to Watch List"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="818e57ff-b337-483d-9746-6c27013fa981"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="76b33745-a11a-4c26-a51d-87ec4b696b60"
+                  LastKnownName="View Listing"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="bff4a4c1-2e3e-4177-8657-3f5a9c575e64"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
