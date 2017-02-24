@@ -64,6 +64,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Marketplace_UseCaseDiagram.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="Sell_Book_SequenceDiagram.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Sell_Book_SequenceDiagram.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Sell_Book_SequenceDiagram.sequencediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\Text_Trade_Modeling.uml">
       <SubType>Content</SubType>
