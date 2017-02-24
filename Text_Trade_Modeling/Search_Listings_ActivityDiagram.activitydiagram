@@ -163,7 +163,7 @@
             <elementDefinition Id="1991566b-1d4a-490f-9577-10207de2abd6" />
             <flowNodeTargets>
               <controlFlow Id="2bc3e310-bb49-4aa6-9a10-9f692a36166a" isLeaf="false">
-                <opaqueActionMoniker Id="a44b909d-c467-408b-b659-5da7c61c1880" LastKnownName="View Listing" />
+                <opaqueActionMoniker Id="a44b909d-c467-408b-b659-5da7c61c1880" LastKnownName="View A Listing" />
                 <elementDefinition Id="b4a69a16-5140-443a-8111-7822f8bd93b0" />
               </controlFlow>
             </flowNodeTargets>
@@ -190,7 +190,7 @@
               </opaqueActionHasInputValues>
             </pins>
           </opaqueAction>
-          <opaqueAction Id="a44b909d-c467-408b-b659-5da7c61c1880" name="View Listing" isLeaf="false">
+          <opaqueAction Id="a44b909d-c467-408b-b659-5da7c61c1880" name="View A Listing" isLeaf="false">
             <elementDefinition Id="76b33745-a11a-4c26-a51d-87ec4b696b60" />
             <flowNodeTargets>
               <controlFlow Id="54b3d6b2-11a5-4d71-814d-867bd18e3437" isLeaf="false">
@@ -219,9 +219,9 @@
           <opaqueAction Id="f8593970-3453-47c5-9c1c-20d4d53e7e47" name="Save Listing to Watch List" isLeaf="false">
             <elementDefinition Id="16cc8343-d52f-493f-83fe-4bb92fdccf8f" />
             <flowNodeTargets>
-              <controlFlow Id="e8321c67-10ce-4a9e-a8bb-3846cd69d0b8" isLeaf="false">
-                <opaqueActionMoniker Id="a44b909d-c467-408b-b659-5da7c61c1880" LastKnownName="View Listing" />
-                <elementDefinition Id="818e57ff-b337-483d-9746-6c27013fa981" />
+              <controlFlow Id="d8d0adde-0244-42ea-bdcf-849bd7123028" isLeaf="false">
+                <opaqueActionMoniker Id="71d624a1-9ce4-4d0c-9228-da540845489f" LastKnownName="Browse List" />
+                <elementDefinition Id="c85991da-1808-4641-a5cb-1f6b38779698" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
