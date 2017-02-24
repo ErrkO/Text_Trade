@@ -3,6 +3,29 @@
   dslVersion="1.0.0.0"
   Id="57f6c3c0-8f8f-4d04-95b2-2b10a8d827d1"
   name="Text_Trade_Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="019323bf-26e9-4f23-b6f1-845d17a22269">
+      <body>Traders and Moderators use the same authentication system
+</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="13ade78e-5aa8-4782-a2d5-ac70dfbd89fb"
+          LastKnownName="Log into system"
+          LastKnownLocation="Text_Trade_Modeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="1d9df6d6-35f4-46dc-8fc5-21363e8cc53d">
+      <body>Mod may contact a listing's seller to notify the seller of errors/violations within the seller's listing,so the seller can edit it before the Mod decide to remove it</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="01ccf87c-6b35-440d-a1be-dad77e6bcff7"
+          LastKnownName="Contact listing seller"
+          LastKnownLocation="Text_Trade_Modeling.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -478,6 +501,1130 @@
       <executionEvent
         Id="9db1961a-5762-46f4-a809-5af2fa3ab604"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+        name="Text Trade Marketplace"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="84bf33c5-6554-4c32-8993-6cab4366bc95"
+        name="Trader"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="7addf5b7-a2e5-4fc1-a60e-74af86d2f70d"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="Create account"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8c0abf3f-817a-4585-9738-93fcdea07cfa"
+              LastKnownName="Create account"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d6c4056c-2dc4-4bbd-b489-07604fefddb0"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c5986320-f701-417a-a93a-00d59268be07"
+                  name="Create account"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7ec89b6f-76a9-495f-8e9b-8590085a6f42"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="Edit profile"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2c2ccf76-8bc5-4db0-8a15-d82c6fc8069b"
+              LastKnownName="Edit profile"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="137094be-e177-4b0f-b13a-fbd264f7be67"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f4b5829d-37c7-4860-b7ae-ed2c60e20b08"
+                  name="Edit profile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="aebf9352-b7c8-4417-b869-2afb6b320bbc"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="Create/Manage Listing"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3a39d1e5-2df3-4645-9a88-04293bc43615"
+              LastKnownName="Create/Manage Listing"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eae5b812-92ae-4cf3-bfcf-f9830e553fa4"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="44cc6c31-1799-4d3e-87dc-02c46ab38df5"
+                  name="Create/Manage Listing"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fca8c688-098a-46b1-8beb-aad2900034ef"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="Save listing to Watch list"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d3143708-786d-41bb-9f19-c4f9a7049e79"
+              LastKnownName="Save listing to Watch list"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="09580706-9b82-4f54-b70f-3a66533d06e6"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a9d68d04-2fde-42b1-9b1b-18bf7826e747"
+                  name="Save listing to Watch list"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="967de1e7-79c8-44cd-ace0-607058ec700e"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="View/Manage Watch list"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f74f5809-e95d-4335-a445-abef76eca409"
+              LastKnownName="View/Manage Watch list"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c5dbd3a3-efc7-48cd-b36e-9eba3a31755c"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3d99a2e6-c965-47b9-a406-7de353829a8a"
+                  name="View/Manage Watch list"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f8386641-9676-4060-9a11-1587c5874242"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="Create/Manage schedule"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="64d0b6a5-be5a-4897-8d5f-fd20960abb3b"
+              LastKnownName="Create/Manage schedule"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a2276b26-12c1-4d3a-b824-65bad37a2345"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f446c4fc-adfd-4bc6-9d63-9db9c15fcb4f"
+                  name="Create/Manage schedule"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6c62372c-8c45-4a08-b593-ba7bb565a5dd"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="Log into system"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="13ade78e-5aa8-4782-a2d5-ac70dfbd89fb"
+              LastKnownName="Log into system"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="def28022-0b6a-406d-8db9-930329989e38"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bedff3cb-192a-43cd-8334-7f67517019bb"
+                  name="Log into system"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7702e248-0280-4652-92fd-b4075fb7b6b3"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="Communicate w/ others"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6195f031-c4e4-44fd-b0b9-ac4eddd0ee0e"
+              LastKnownName="Communicate w/ others"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9279a9c6-b3df-4ac1-82f6-08a1e907aafb"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="79e7950a-2264-4cbf-8f63-85d0d1d09813"
+                  name="Communicate w/ others"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="01b2278e-dbac-413b-87e2-ae83078d6d2c"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="Search for textbooks"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="81ad9598-96e3-469b-8658-7ea430125b44"
+              LastKnownName="Search for textbooks"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="121979c3-4215-483d-8bcd-520005ab2a47"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="99b1fd96-ce3b-4be8-a6e7-7b9176b7f3d1"
+                  name="Search for textbooks"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7fc626c0-86cf-47c6-be8f-5cfd6cb28576"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="Sort/Filter search results"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e9c4f6ae-6b5b-458b-84fa-ef0ade6030bb"
+              LastKnownName="Sort/Filter search results"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e7bbf2aa-1068-4994-b4a9-4e167e9a9a23"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8999a4cf-33e5-49d5-be74-907a6932a88c"
+                  name="Sort/Filter search results"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="24655417-610a-4e89-876e-f49fd3ec0bb8"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="Contact listing seller"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="01ccf87c-6b35-440d-a1be-dad77e6bcff7"
+              LastKnownName="Contact listing seller"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="af614e35-7c34-4afb-b929-fb669f7f1b21"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9364f493-c15f-48d4-b35f-defebb94dea5"
+                  name="Contact listing seller"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6d08f136-d93f-4e26-9f04-b52f9bcfdf46"
+            isDerived="false"
+            sourceEndRoleName="Trader"
+            targetEndRoleName="Report listing/user"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c1b212d6-55bc-4aeb-9bb4-d186064cfebe"
+              LastKnownName="Report listing/user"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c5ba80ce-f0d0-42e6-bdc4-5435d258a26e"
+                  name="Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dcdd0fa1-a88f-4ed2-a3e9-a765b1750f5b"
+                  name="Report listing/user"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="8f112327-119c-429f-930b-f4c5ba9a2832"
+        name="Moderator"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="8db20f85-c2e6-4770-bbb6-18ce997dcdbf"
+            isDerived="false"
+            sourceEndRoleName="Moderator"
+            targetEndRoleName="View system stats"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="021b7015-40e9-4336-b952-767f09d86b8d"
+              LastKnownName="View system stats"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="db32fe70-fdcf-4e32-92a9-17fd0c5f8db3"
+                  name="Moderator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="695fc713-4c64-493a-b936-dfd0d19e0d4e"
+                  name="View system stats"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4889ff13-91ef-47a1-8b2c-bc197985d37e"
+            isDerived="false"
+            sourceEndRoleName="Moderator"
+            targetEndRoleName="Issue warning"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2fbaf6d9-99bf-4d7d-9203-1607f70b9009"
+              LastKnownName="Issue warning"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2b21633d-3fc3-4e18-a68b-c7c7c48b689b"
+                  name="Moderator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dc62c8cd-637d-4fe9-aff7-6e4d9d9b9ac3"
+                  name="Issue warning"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a0c2a52e-6481-4fc3-b45d-f88e946387ad"
+            isDerived="false"
+            sourceEndRoleName="Moderator"
+            targetEndRoleName="Remove listing"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6173666f-7abc-40a4-86b4-acabd5e234b5"
+              LastKnownName="Remove listing"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1f34cffa-ef0e-4c9d-9f3a-6e1ad3a0e6b8"
+                  name="Moderator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="118541ad-8ed8-4510-9657-3785f5e67bcb"
+                  name="Remove listing"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="77bf618a-4354-4076-b5d5-2f851ba18aa0"
+            isDerived="false"
+            sourceEndRoleName="Moderator"
+            targetEndRoleName="Ban Trader"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6da8d41e-abc0-4563-8866-36b148cc3fd3"
+              LastKnownName="Ban Trader"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d2c19730-6712-44e2-b173-c02c34a2343d"
+                  name="Moderator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="393b77fe-a8b1-4550-84ad-c7d0e7a5ecba"
+                  name="Ban Trader"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a6623d42-36b3-4a5b-af92-bf673ee352f9"
+            isDerived="false"
+            sourceEndRoleName="Moderator"
+            targetEndRoleName="View Trader's info"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3f65a621-9a86-4760-85fc-b8c7ff2964b7"
+              LastKnownName="View Trader's info"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="68d2e583-6218-4496-9045-d04a22cc49ab"
+                  name="Moderator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a0243230-f7e2-4056-b85b-2ba2ec1ab626"
+                  name="View Trader's info"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1dcc8d9e-b176-453b-b221-ff0c2a979093"
+            isDerived="false"
+            sourceEndRoleName="Moderator"
+            targetEndRoleName="Log into system"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="13ade78e-5aa8-4782-a2d5-ac70dfbd89fb"
+              LastKnownName="Log into system"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4f324f22-4fff-420e-b02a-81936da8bbdf"
+                  name="Moderator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="43133f82-4e4b-4d5b-a725-0808bb56de20"
+                  name="Log into system"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d32f70bb-f9eb-4c78-9656-f8c4addb93b0"
+            isDerived="false"
+            sourceEndRoleName="Moderator"
+            targetEndRoleName="Communicate w/ others"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6195f031-c4e4-44fd-b0b9-ac4eddd0ee0e"
+              LastKnownName="Communicate w/ others"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="68e84ded-8f21-496c-bcdb-d207c269ab6d"
+                  name="Moderator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5d2c7d66-0432-4db2-8128-070427633fe8"
+                  name="Communicate w/ others"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b4ec850f-74d9-4e46-877f-19ed61322dd7"
+            isDerived="false"
+            sourceEndRoleName="Moderator"
+            targetEndRoleName="Search for textbooks"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="81ad9598-96e3-469b-8658-7ea430125b44"
+              LastKnownName="Search for textbooks"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="859d43ca-2cac-487c-8e7a-bb9f93d960ea"
+                  name="Moderator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3a8e40c0-ce64-4fb8-8850-9d56504161d3"
+                  name="Search for textbooks"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="16da7966-e3b6-47b1-94ea-0d660ea91331"
+            isDerived="false"
+            sourceEndRoleName="Moderator"
+            targetEndRoleName="Sort/Filter search results"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e9c4f6ae-6b5b-458b-84fa-ef0ade6030bb"
+              LastKnownName="Sort/Filter search results"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b0717938-5269-470f-97b8-5631558b751f"
+                  name="Moderator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b00d6f2f-856b-416d-97df-68f79348cd8b"
+                  name="Sort/Filter search results"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d78b3372-b440-4cda-980c-03e03d8226fb"
+            isDerived="false"
+            sourceEndRoleName="Moderator"
+            targetEndRoleName="Contact listing seller"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="01ccf87c-6b35-440d-a1be-dad77e6bcff7"
+              LastKnownName="Contact listing seller"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b12e9e0d-65dd-4df5-9cb2-1c6b1dcc1408"
+                  name="Moderator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1c678ce2-db32-4a1c-b0e3-629bbf114c11"
+                  name="Contact listing seller"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8c0abf3f-817a-4585-9738-93fcdea07cfa"
+        name="Create account"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2c2ccf76-8bc5-4db0-8a15-d82c6fc8069b"
+        name="Edit profile"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3a39d1e5-2df3-4645-9a88-04293bc43615"
+        name="Create/Manage Listing"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d3143708-786d-41bb-9f19-c4f9a7049e79"
+        name="Save listing to Watch list"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f74f5809-e95d-4335-a445-abef76eca409"
+        name="View/Manage Watch list"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="64d0b6a5-be5a-4897-8d5f-fd20960abb3b"
+        name="Create/Manage schedule"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="13ade78e-5aa8-4782-a2d5-ac70dfbd89fb"
+        name="Log into system"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6195f031-c4e4-44fd-b0b9-ac4eddd0ee0e"
+        name="Communicate w/ others"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="81ad9598-96e3-469b-8658-7ea430125b44"
+        name="Search for textbooks"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e9c4f6ae-6b5b-458b-84fa-ef0ade6030bb"
+        name="Sort/Filter search results"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="01ccf87c-6b35-440d-a1be-dad77e6bcff7"
+        name="Contact listing seller"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c1b212d6-55bc-4aeb-9bb4-d186064cfebe"
+        name="Report listing/user"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="021b7015-40e9-4336-b952-767f09d86b8d"
+        name="View system stats"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2fbaf6d9-99bf-4d7d-9203-1607f70b9009"
+        name="Issue warning"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6173666f-7abc-40a4-86b4-acabd5e234b5"
+        name="Remove listing"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6da8d41e-abc0-4563-8866-36b148cc3fd3"
+        name="Ban Trader"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3f65a621-9a86-4760-85fc-b8c7ff2964b7"
+        name="View Trader's info"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="729f1db9-a88d-46c5-8918-d8ab3315d145"
+            LastKnownName="Text Trade Marketplace"
+            LastKnownLocation="Text_Trade_Modeling.uml" />
+        </subjects>
+      </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

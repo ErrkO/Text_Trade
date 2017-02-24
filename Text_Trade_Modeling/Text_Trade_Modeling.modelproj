@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Post_Listing_ActivityDiagram.activitydiagram</DependentUpon>
     </Content>
+    <Content Include="Marketplace_UseCaseDiagram.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Marketplace_UseCaseDiagram.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Marketplace_UseCaseDiagram.usecasediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\Text_Trade_Modeling.uml">
       <SubType>Content</SubType>
