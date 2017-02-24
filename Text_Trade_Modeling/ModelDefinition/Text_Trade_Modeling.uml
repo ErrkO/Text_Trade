@@ -26,7 +26,6 @@
       </annotatedElements>
     </comment>
     <comment
-
       Id="4e79cbae-44ea-49eb-be81-f7ef73cd9f1b">
       <body>Schedule information entered prior to search session</body>
       <annotatedElements>
@@ -72,7 +71,7 @@
     <packageHasNamedElement>
       <activity
         Id="e524b345-cff4-4491-b35e-d4d30382aa36"
-        name="Post_Listing_ActivityDiagram"
+        name="Sell_Book_ActivityDiagram"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false"
@@ -140,7 +139,7 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="cbab78c3-adbf-45d7-90e7-7662a903c854"
-                  LastKnownName="Wait For Response"
+                  LastKnownName="Wait For A Buyer to Contact"
                   LastKnownLocation="Text_Trade_Modeling.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -195,7 +194,7 @@
             <flowNodeTargets>
               <controlFlow
                 Id="3a7e0276-a437-409e-bf86-3668550bc204"
-                guard="No Response"
+                guard="No Contact/Expires soon"
                 isLeaf="false">
                 <decisionNodeMoniker
                   Id="113eeab8-839e-4c20-bd2e-6385a46e1071"
@@ -203,12 +202,12 @@
                   LastKnownLocation="Text_Trade_Modeling.uml" />
               </controlFlow>
               <controlFlow
-                Id="3f4881a1-31bd-4196-a8a5-22ddbba33739"
-                guard="Response"
+                Id="00464275-f26a-44e2-bb9c-53cd57fae962"
+                guard="Buyer contacts "
                 isLeaf="false">
-                <decisionNodeMoniker
-                  Id="97bf7697-20b8-4c6b-b0e0-98bbe2047f97"
-                  LastKnownName="Decision2"
+                <opaqueActionMoniker
+                  Id="ca60408c-91c9-44d1-9432-2f4c251a3dda"
+                  LastKnownName="Communicate via Internal Messaging System"
                   LastKnownLocation="Text_Trade_Modeling.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -220,7 +219,7 @@
             <flowNodeTargets>
               <controlFlow
                 Id="5d5a5970-d093-4efa-bd58-4960ce78a755"
-                guard="Renew Option Accepted"
+                guard="Listing renewed"
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="b3b4320c-6593-432a-97d0-8d563ab9c728"
@@ -229,7 +228,7 @@
               </controlFlow>
               <controlFlow
                 Id="f349da1b-d22b-48fd-9c08-fac0be1e4891"
-                guard="Renew Option Declined"
+                guard="Listing not renewed/Expired"
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="192f6b76-9a94-4b6b-b61a-885db61a0095"
@@ -253,34 +252,9 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <decisionNode
-            Id="97bf7697-20b8-4c6b-b0e0-98bbe2047f97"
-            name="Decision2"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="db765bde-2df0-4eda-b26e-eab78f80764a"
-                guard="Declines Response"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="cbab78c3-adbf-45d7-90e7-7662a903c854"
-                  LastKnownName="Wait For Response"
-                  LastKnownLocation="Text_Trade_Modeling.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="5ec98ce7-b39d-4111-805a-f850bbee3b1d"
-                guard="Accepts Response"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="883a6ad4-76af-4e28-8dfd-165bd466ad6b"
-                  LastKnownName="Trade Contact Information"
-                  LastKnownLocation="Text_Trade_Modeling.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
           <opaqueAction
             Id="cbab78c3-adbf-45d7-90e7-7662a903c854"
-            name="Wait For Response"
+            name="Wait For A Buyer to Contact"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -312,6 +286,46 @@
             Id="87af8dc1-3ce9-4699-aa10-eede0ebf33cf"
             name="ActivityFinal1"
             isLeaf="false" />
+          <opaqueAction
+            Id="ca60408c-91c9-44d1-9432-2f4c251a3dda"
+            name="Communicate via Internal Messaging System"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="43e16052-0208-4e76-9001-c52e6a401ab5"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="17d1dbdc-b1ec-404c-bf42-042fc098ed97"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="17d1dbdc-b1ec-404c-bf42-042fc098ed97"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="34159c44-4794-4f24-8525-ad4cdb418598"
+                guard="Deal achieved"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="883a6ad4-76af-4e28-8dfd-165bd466ad6b"
+                  LastKnownName="Trade Contact Information"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="a37b274a-6374-47c2-bcb2-73b50fbf5cf1"
+                guard="Deal not achieved"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cbab78c3-adbf-45d7-90e7-7662a903c854"
+                  LastKnownName="Wait For A Buyer to Contact"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
         </nodes>
       </activity>
     </packageHasNamedElement>
@@ -1883,7 +1897,7 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="76b33745-a11a-4c26-a51d-87ec4b696b60"
-                  LastKnownName="View Listing"
+                  LastKnownName="View A Listing"
                   LastKnownLocation="Text_Trade_Modeling.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -1924,7 +1938,7 @@
           </opaqueAction>
           <opaqueAction
             Id="76b33745-a11a-4c26-a51d-87ec4b696b60"
-            name="View Listing"
+            name="View A Listing"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1977,11 +1991,11 @@
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="818e57ff-b337-483d-9746-6c27013fa981"
+                Id="c85991da-1808-4641-a5cb-1f6b38779698"
                 isLeaf="false">
                 <opaqueActionMoniker
-                  Id="76b33745-a11a-4c26-a51d-87ec4b696b60"
-                  LastKnownName="View Listing"
+                  Id="1991566b-1d4a-490f-9577-10207de2abd6"
+                  LastKnownName="Browse List"
                   LastKnownLocation="Text_Trade_Modeling.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -2072,15 +2086,6 @@
                   LastKnownName="Flag Removed From Listing"
                   LastKnownLocation="Text_Trade_Modeling.uml" />
               </controlFlow>
-              <controlFlow
-                Id="0bef1714-6f8f-4707-9d9a-a17d6c47e07e"
-                guard="End Moderation Session"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="b12e2e23-1ad9-4084-811b-40112dfc5c5a"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="Text_Trade_Modeling.uml" />
-              </controlFlow>
             </flowNodeTargets>
           </decisionNode>
           <opaqueAction
@@ -2089,11 +2094,11 @@
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="483d5e23-1299-4418-8fbd-0908635f43c9"
+                Id="b540cf02-b3e9-47e8-b564-57bc586b4947"
                 isLeaf="false">
                 <opaqueActionMoniker
-                  Id="d5daa655-c0d8-4106-8742-4f8ec10bbf61"
-                  LastKnownName="View List of Flagged Listings"
+                  Id="473f4937-77fb-4204-b31b-20038465e3ee"
+                  LastKnownName="Issue warning to seller"
                   LastKnownLocation="Text_Trade_Modeling.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -2104,7 +2109,47 @@
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="6ea0bd1d-afce-40fa-9bc4-fb9ba62d5bf4"
+                Id="81e76545-db54-4010-ada1-235186358976"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="2a9d9902-e7d4-46a9-a55b-ea3e486c21fd"
+                  LastKnownName="Join1"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="473f4937-77fb-4204-b31b-20038465e3ee"
+            name="Issue warning to seller"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="abe5b0bd-e99f-4046-a266-694d589db0fe"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="2a9d9902-e7d4-46a9-a55b-ea3e486c21fd"
+                  LastKnownName="Join1"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="36dc857e-86ad-4de3-86dc-d572946a5efa"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="29706536-f4a9-4fc0-9a88-246440d3da41"
+                guard="End of list"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="c26b6318-4ff8-4b53-ba99-5b466c6ecffc"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="414af7ea-95b1-47e9-a9ca-2f2daec2e015"
+                guard="Not end of list"
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="d5daa655-c0d8-4106-8742-4f8ec10bbf61"
@@ -2112,9 +2157,24 @@
                   LastKnownLocation="Text_Trade_Modeling.uml" />
               </controlFlow>
             </flowNodeTargets>
-          </opaqueAction>
+          </decisionNode>
+          <joinNode
+            Id="2a9d9902-e7d4-46a9-a55b-ea3e486c21fd"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6f8de5f8-9109-4920-b432-e54f9aa3567e"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="36dc857e-86ad-4de3-86dc-d572946a5efa"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
           <activityFinalNode
-            Id="b12e2e23-1ad9-4084-811b-40112dfc5c5a"
+            Id="c26b6318-4ff8-4b53-ba99-5b466c6ecffc"
             name="ActivityFinal1"
             isLeaf="false" />
         </nodes>
