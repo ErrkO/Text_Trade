@@ -143,8 +143,8 @@
 					</li>
 					<br/>
 					<li> * - Name: distinct_GUI <br/>
-						Type: Users and Moderators shall have separate interfaces <br/>
-						Summary: 
+						Type: constraint <br/>
+						Summary: Users and Moderators shall have separate interfaces
 					</li>
 					<br/>
 					<li> * - Name: email_notification <br/>
@@ -261,7 +261,7 @@
 					<br/>
 					<li> * - Name: search_manually <br/>
 						Type: Functional <br/>
-						Summary: User/moderator can manually type strings into search box to search for an item/textbook
+						Summary: User/moderator can manually type strings into search box to search for an item/textbook. (input strings will be compared with Title, Author, Edition fields of each book listing)
 					</li>
 					<br/>
 					<li> * - Name: search_by_course <br/>
@@ -287,7 +287,7 @@
 						Summary: User may remove active listings from Watch list as desired
 					</li>
 					<br/>
-					<li> * - Name: inquiry_seller <br/>
+					<li> * - Name: inquire_seller <br/>
 						Type: Functional <br/>
 						Summary: As user views a listing, he has the option to contact the seller via message.
 					</li>
@@ -303,16 +303,7 @@
 						Summary: As user views another user’s profile page, he has the option to report that user to moderators.
 					</li>
 					<br/>
-					<li>* - Name:  register_email_constraint <br/>
-						Type: constraint <br/>
-						Summary: User shall register with APSU email address
-					</li>
-					<br/>
-					<li>* - Name: username_constraint <br/>
-						Type: constraint <br/>
-						Summary: User shall pick a unique username that contains at least 5 characters that are either alphabet letters or numerical
-					</li>
-					<br/>
+					
 					
 				</ol>
 				<li id="list_header"> Moderator </li>
@@ -341,7 +332,7 @@
 					<br/>
 					<li> * - Name: search_user_mod <br/>
 						Type: Functional <br/>
-						Summary: Moderator can search for a user in the system to view his/her information
+						Summary: Moderator can look up a user in the system by his username to view his/her information
 					</li>
 					<br/>
 					<li> * - Name: view_user_info_mod <br/>
