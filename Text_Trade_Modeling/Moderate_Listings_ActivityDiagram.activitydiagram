@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="7a8d0ffb-ed12-4c00-bb8d-ccebab3f24dc" name="Moderate_Listings_ActivityDiagram" linkedPackageId="bbe62587-0837-455a-92e3-4d4b9a635705" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="ec629f49-d2c1-4fb6-adb2-6fd0bcdc869a">
+      <elementDefinition Id="42024016-358d-46a3-b456-b013626c663f" />
+      <body>Generated upon request</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="785cb30a-238e-48bb-bdfa-9786bf71a03d" LastKnownName="View List of Flagged Listings" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="4f3bacde-1d7f-4f8d-802d-424cfcbfef27" name="Moderate_Listings_ActivityDiagram" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="d59bd497-2a5f-4fee-814b-3068dee86cf9" />
+        <nodes>
+          <initialNode Id="0d8e8a2c-7846-40ed-9449-f21f8d0b8330" name="Initial1" isLeaf="false">
+            <elementDefinition Id="564fbdf1-129c-4ba9-a963-062fc9a12549" />
+            <flowNodeTargets>
+              <controlFlow Id="6d548740-6898-44be-8d6e-5dc998a266a7" isLeaf="false">
+                <opaqueActionMoniker Id="785cb30a-238e-48bb-bdfa-9786bf71a03d" LastKnownName="View List of Flagged Listings" />
+                <elementDefinition Id="53aa9953-5727-4eb4-a825-6d8d1887b817" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="785cb30a-238e-48bb-bdfa-9786bf71a03d" name="View List of Flagged Listings" isLeaf="false">
+            <elementDefinition Id="d5daa655-c0d8-4106-8742-4f8ec10bbf61" />
+            <flowNodeTargets>
+              <controlFlow Id="a17e79c4-5ae0-428c-a004-862399f3b1a1" isLeaf="false">
+                <opaqueActionMoniker Id="d6ba7746-e9d8-4510-a955-363be1e714e2" LastKnownName="View Flagged Listing" />
+                <elementDefinition Id="cdc1d021-a7b5-42bc-8537-5ca08e1fe1fe" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d6ba7746-e9d8-4510-a955-363be1e714e2" name="View Flagged Listing" isLeaf="false">
+            <elementDefinition Id="3426eba6-3e20-4ca7-a435-5b5979cd7dd3" />
+            <flowNodeTargets>
+              <controlFlow Id="59dbff36-3efe-4c99-bce4-734984b45645" isLeaf="false">
+                <decisionNodeMoniker Id="8f2e47d4-6ae3-40dd-8f24-c428148cb640" LastKnownName="Decision1" />
+                <elementDefinition Id="1a1a1f3f-90fb-43e1-9af0-5153c9688976" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="8f2e47d4-6ae3-40dd-8f24-c428148cb640" name="Decision1" isLeaf="false">
+            <elementDefinition Id="ae4b77fe-1c53-4f0c-ab10-c0afd17b764b" />
+            <flowNodeTargets>
+              <controlFlow Id="2c3c9dda-d437-4fa7-992d-dd168c7f5212" guard="Violation Found" isLeaf="false">
+                <opaqueActionMoniker Id="0574a6e6-4c6f-490d-a50f-54accdcfc7a5" LastKnownName="Listing Deleted" />
+                <elementDefinition Id="e40f5945-a6d9-479d-bea0-af9b41deea28" />
+              </controlFlow>
+              <controlFlow Id="f22872b4-334e-4693-bb50-a3fde414ff59" guard="No Violation Found" isLeaf="false">
+                <opaqueActionMoniker Id="396f836a-972e-45d7-a1db-c17e01053ec4" LastKnownName="Flag Removed From Listing" />
+                <elementDefinition Id="aa930050-52ec-48f5-b946-25232f114f53" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="0574a6e6-4c6f-490d-a50f-54accdcfc7a5" name="Listing Deleted" isLeaf="false">
+            <elementDefinition Id="72f50b02-7c02-4a56-be59-922eabbdab21" />
+            <flowNodeTargets>
+              <controlFlow Id="e9e3cc23-a7d3-46a3-a03f-768d4cc57693" isLeaf="false">
+                <opaqueActionMoniker Id="2b114593-53be-43ca-9340-3c830d0a5040" LastKnownName="Issue warning to seller" />
+                <elementDefinition Id="b540cf02-b3e9-47e8-b564-57bc586b4947" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="396f836a-972e-45d7-a1db-c17e01053ec4" name="Flag Removed From Listing" isLeaf="false">
+            <elementDefinition Id="03186d66-8519-47a4-86e9-345e5c888d28" />
+            <flowNodeTargets>
+              <controlFlow Id="1cecc9e2-1aa4-421a-b453-7ef262824564" isLeaf="false">
+                <mergeNodeMoniker Id="0f8f78d8-b521-4152-9fc3-82e5c1e53313" LastKnownName="Merge1" />
+                <elementDefinition Id="bb781376-6794-4a91-9641-3f7e7d787edd" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="2b114593-53be-43ca-9340-3c830d0a5040" name="Issue warning to seller" isLeaf="false">
+            <elementDefinition Id="473f4937-77fb-4204-b31b-20038465e3ee" />
+            <flowNodeTargets>
+              <controlFlow Id="4bad22cd-73dc-40f9-bb8c-29d81badca50" isLeaf="false">
+                <mergeNodeMoniker Id="0f8f78d8-b521-4152-9fc3-82e5c1e53313" LastKnownName="Merge1" />
+                <elementDefinition Id="6ce2bd78-ce25-468a-9a40-5dee7ad7cca5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="1c025e3d-2e1f-4219-96a1-c11edb344999" name="Decision2" isLeaf="false">
+            <elementDefinition Id="36dc857e-86ad-4de3-86dc-d572946a5efa" />
+            <flowNodeTargets>
+              <controlFlow Id="db5ab598-6cfa-4670-a876-b0b99c76932c" guard="End of list" isLeaf="false">
+                <activityFinalNodeMoniker Id="4beaba0b-5b6e-497e-92be-3f09eaa6b517" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="29706536-f4a9-4fc0-9a88-246440d3da41" />
+              </controlFlow>
+              <controlFlow Id="cb59eb1d-d1d0-451d-ab1e-b2e925d02756" guard="Not end of list" isLeaf="false">
+                <opaqueActionMoniker Id="785cb30a-238e-48bb-bdfa-9786bf71a03d" LastKnownName="View List of Flagged Listings" />
+                <elementDefinition Id="414af7ea-95b1-47e9-a9ca-2f2daec2e015" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode Id="4beaba0b-5b6e-497e-92be-3f09eaa6b517" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="c26b6318-4ff8-4b53-ba99-5b466c6ecffc" />
+          </activityFinalNode>
+          <mergeNode Id="0f8f78d8-b521-4152-9fc3-82e5c1e53313" name="Merge1" isLeaf="false">
+            <elementDefinition Id="09029dd7-8d43-4d5c-bbfe-3a77c51927e2" />
+            <flowNodeTargets>
+              <controlFlow Id="46c61e6e-6c75-4e70-ac11-669f3a0e03c1" isLeaf="false">
+                <decisionNodeMoniker Id="1c025e3d-2e1f-4219-96a1-c11edb344999" LastKnownName="Decision2" />
+                <elementDefinition Id="4e4ce513-16b3-4aef-9f33-3bbae325c908" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="bbe62587-0837-455a-92e3-4d4b9a635705" name="Text_Trade_Modeling">
+    <elementDefinition Id="57f6c3c0-8f8f-4d04-95b2-2b10a8d827d1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="9b31c66d-d3ba-4ef0-9839-dc1d2c800ca1">
+        <profileInstance Id="b4cc8c7d-d8bb-42b9-a0c7-80540ec79234" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="695e299b-b6c8-4755-bd93-4fb1c10fdc51">
+        <profileInstance Id="f311c287-9d0f-468f-a4ee-e26c45c50871" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

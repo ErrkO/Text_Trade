@@ -143,8 +143,8 @@
 					</li>
 					<br/>
 					<li> * - Name: distinct_GUI <br/>
-						Type: Users and Moderators shall have separate interfaces <br/>
-						Summary: 
+						Type: constraint <br/>
+						Summary: Users and Moderators shall have separate interfaces
 					</li>
 					<br/>
 					<li> * - Name: email_notification <br/>
@@ -203,7 +203,7 @@
 					<li> # - Name: create_Listing_User <br/>
 						Type: Functional <br/>
 						Summary: User who wants to sell a textbook may create a listing by filling the following fields and publish it. <br/>
-						<ul>
+						<ol>
 							<li>Book title (required field)</li>
 							<li>Author (required field)</li>
 							<li>Edition (required field)</li>
@@ -215,7 +215,7 @@
 							<li>Asking price or best offer (required)</li>
 							<li>Picture of the textbook (optional)</li>
 							<li>Additional note/description – text box (optional)</li>
-						</ul>
+						</ol>
 					</li>
 					<br/>
 					<li> # - Name: remove_Listing_User <br/>
@@ -251,7 +251,7 @@
 					<br/>
 					<li> * - Name: renew_listing_life <br/>
 						Type: Functional <br/>
-						Summary: the user can choose to renew an active listing for another 30 days
+						Summary: within the last 7 days of a listing's life, the user has the option to renew the listing life for another 30 days
 					</li>
 					<br/>
 					<li> * - Name: renew_constraint <br/>
@@ -261,7 +261,7 @@
 					<br/>
 					<li> * - Name: search_manually <br/>
 						Type: Functional <br/>
-						Summary: User/moderator can manually type strings into search box to search for an item/textbook
+						Summary: User/moderator can manually type strings into search box to search for an item/textbook. (input strings will be compared with Title, Author, Edition fields of each book listing)
 					</li>
 					<br/>
 					<li> * - Name: search_by_course <br/>
@@ -287,7 +287,7 @@
 						Summary: User may remove active listings from Watch list as desired
 					</li>
 					<br/>
-					<li> * - Name: inquiry_seller <br/>
+					<li> * - Name: inquire_seller <br/>
 						Type: Functional <br/>
 						Summary: As user views a listing, he has the option to contact the seller via message.
 					</li>
@@ -303,16 +303,7 @@
 						Summary: As user views another user’s profile page, he has the option to report that user to moderators.
 					</li>
 					<br/>
-					<li>* - Name:  register_email_constraint <br/>
-						Type: constraint <br/>
-						Summary: User shall register with APSU email address
-					</li>
-					<br/>
-					<li>* - Name: username_constraint <br/>
-						Type: constraint <br/>
-						Summary: User shall pick a unique username that contains at least 5 characters that are either alphabet letters or numerical
-					</li>
-					<br/>
+					
 					
 				</ol>
 				<li id="list_header"> Moderator </li>
@@ -341,7 +332,7 @@
 					<br/>
 					<li> * - Name: search_user_mod <br/>
 						Type: Functional <br/>
-						Summary: Moderator can search for a user in the system to view his/her information
+						Summary: Moderator can look up a user in the system by his username to view his/her information
 					</li>
 					<br/>
 					<li> * - Name: view_user_info_mod <br/>
@@ -377,21 +368,21 @@
 					<li> # - Name: sort_results <br/>
 						Type: Functional <br/>
 						Summary: Results can be sorted based on criteria such as:
-						<ul>
+						<ol>
 							<li>Time: Newest listing first</li>
 							<li>Time: Ending soonest first</li>
 							<li>Price: Cheapest first</li>
 							<li>Price: Highest first </li>
-						</ul>
+						</ol>
 					</li>
 					<br/>
 					<li> # - Name: filter_results <br/>
 						Type: Functional <br/>
 						Summary: Results can be filtered based on:
-						<ul>
+						<ol>
 							<li>Price threshold: less than X $ or greater than X $</li>
 							<li>Condition: New or Used (Like New, Great, Good, Acceptable) </li>
-						</ul>
+						</ol>
 					</li>
 					<br/>
 			
@@ -403,6 +394,11 @@
 					<li> * - Name: email_notification <br/>
 						   Type: Functional <br/>
 						   Summary: Users should be notified by email when transactions are approved, listings responded to, etc.
+					</li>
+					<br/>
+					<li> * - Name: expire_renew_notification <br/>
+						   Type: Functional <br/>
+						   Summary: The system reminds seller when his listing is due to expire in 7 days and asks the seller if he would like to renew the listing for another 30 days.
 					</li>
 					<br/>
 					<li> Name: login_Storage <br/>

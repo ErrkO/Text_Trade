@@ -22,12 +22,54 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="Post_Listing_ActivityDiagram.activitydiagram">
+    <Content Include="Moderate_Listings_ActivityDiagram.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Post_Listing_ActivityDiagram.activitydiagram.layout">
+    <Content Include="Moderate_Listings_ActivityDiagram.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Post_Listing_ActivityDiagram.activitydiagram</DependentUpon>
+      <DependentUpon>Moderate_Listings_ActivityDiagram.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Moderate_Listings_SequenceDiagram.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Moderate_Listings_SequenceDiagram.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Moderate_Listings_SequenceDiagram.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Search_Listings_ActivityDiagram.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Search_Listings_ActivityDiagram.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Search_Listings_ActivityDiagram.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Search_Listings_SequenceDiagram.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Search_Listings_SequenceDiagram.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Search_Listings_SequenceDiagram.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Sell_Book_ActivityDiagram.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Sell_Book_ActivityDiagram.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Sell_Book_ActivityDiagram.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Marketplace_UseCaseDiagram.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Marketplace_UseCaseDiagram.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Marketplace_UseCaseDiagram.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Sell_Book_SequenceDiagram.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Sell_Book_SequenceDiagram.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Sell_Book_SequenceDiagram.sequencediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\Text_Trade_Modeling.uml">
