@@ -114,6 +114,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="9593be6b-971e-413e-bc8b-d354acc111ec" />
           </association>
+          <association Id="85a520f7-bfa8-419b-89dd-0b1dbca34a3d" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="Search" isLeaf="false" isAbstract="false">
+            <classMoniker Id="a6c7fb44-3997-480b-8666-b0fa4d06f753" LastKnownName="Search" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ab768347-925c-432f-8800-9f6ab0fb35a7" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="89cbed0c-16f3-4e21-b364-8c5daf198eee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ebd47f90-835c-4f58-a0ac-c5def8e495cf" name="Search" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="fccd84ed-a6b8-4380-b7cb-69c631439c68" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a5d9640d-583c-437d-8534-e7a6706b1590" />
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property Id="3417a751-8cf9-43bf-89e5-f6b53500305e" name="classSchedule" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -157,6 +173,9 @@
           <operation Id="4fe2c019-c49f-4d7e-9a36-c0bc81c62c6a" name="RemoveFromWatchList" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="3cb4b609-7c82-4c7e-8559-f0252af69c1b" />
           </operation>
+          <operation Id="c7563f95-57ff-40ae-b555-18a3adf21aa4" name="Search" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2797c67a-488f-47ce-8c06-51c4993c4d85" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -196,6 +215,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="da968c96-579f-43ef-bdf0-fea559e78a2b" />
           </association>
+          <association Id="1318b0a9-dafe-40f4-b177-fce2d580ea78" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="Search" isLeaf="false" isAbstract="false">
+            <classMoniker Id="a6c7fb44-3997-480b-8666-b0fa4d06f753" LastKnownName="Search" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1838178c-da41-43c0-806c-3593446dd1a7" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d60236a0-bf4c-4ae1-ad26-4a99aab9a4c0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9b62cb1d-3d5c-42a8-9a00-bcea2f7b7116" name="Search" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f119e452-1f72-4946-84c4-5f42d98c5b65" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e274fbbf-a7c1-43f5-8bf3-b10da856a26d" />
+          </association>
         </targetEnds>
         <ownedOperationsInternal>
           <operation Id="8fab27fa-82c0-48b4-be17-ac7a2bd5fefc" name="RemoveListing" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -218,6 +253,12 @@
           </operation>
           <operation Id="e15b89ce-6f17-4380-8ba2-90d833757059" name="ViewSystemStats" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="eac4fd78-bed0-4425-afe6-93fb5a41f393" />
+          </operation>
+          <operation Id="5c90242b-0dc7-43b0-b127-f5cbc79f6a0d" name="Search" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="74015f77-936e-458c-bc56-9b6541e83bcd" />
+          </operation>
+          <operation Id="381c6fbb-58f6-4d71-805e-e7ceed1f60d3" name="FlagListing" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="db493240-edec-47f4-a232-4306acd7ebe0" />
           </operation>
         </ownedOperationsInternal>
       </class>
