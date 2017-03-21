@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="57f6c3c0-8f8f-4d04-95b2-2b10a8d827d1"
   name="Text_Trade_Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2352,6 +2352,151 @@
                 </coveredLifelines>
                 <fragments>
                   <combinedFragment
+                    Id="d7affc6c-8b36-4011-b7db-7894b55ae01f"
+                    name="CombinedFragment2"
+                    interactionOperator="Alt">
+                    <coveredLifelines>
+                      <lifelineMoniker
+                        Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
+                        LastKnownName="Trader"
+                        LastKnownLocation="Text_Trade_Modeling.uml" />
+                      <lifelineMoniker
+                        Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
+                        LastKnownName="TextTrade Trader Application"
+                        LastKnownLocation="Text_Trade_Modeling.uml" />
+                      <lifelineMoniker
+                        Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
+                        LastKnownName="Listings Table"
+                        LastKnownLocation="Text_Trade_Modeling.uml" />
+                      <lifelineMoniker
+                        Id="1b5402f0-f645-4113-aa91-39b8b8717170"
+                        LastKnownName="Watch List"
+                        LastKnownLocation="Text_Trade_Modeling.uml" />
+                    </coveredLifelines>
+                    <operands>
+                      <interactionOperand
+                        Id="cebb11d4-b958-4803-a871-079d415900fc"
+                        name="InteractionOperand1">
+                        <coveredLifelines>
+                          <lifelineMoniker
+                            Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
+                            LastKnownName="Trader"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <lifelineMoniker
+                            Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
+                            LastKnownName="TextTrade Trader Application"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <lifelineMoniker
+                            Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
+                            LastKnownName="Listings Table"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <lifelineMoniker
+                            Id="1b5402f0-f645-4113-aa91-39b8b8717170"
+                            LastKnownName="Watch List"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                        </coveredLifelines>
+                        <guard>
+                          <interactionConstraint
+                            Id="eee6f6fd-961e-4df3-9e8c-940e74a64ec2" />
+                        </guard>
+                        <operandOccurrenceSpecifications>
+                          <operandOccurrenceSpecificationMoniker
+                            Id="11d2db13-6dd6-4536-b3f1-1a33632b42fb"
+                            LastKnownName="OperandOccurrenceSpecification105"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="8058f3f3-e35a-4106-9f02-aa609a6c3035"
+                            LastKnownName="OperandOccurrenceSpecification106"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="11823bee-feac-488f-911d-2b69e06752b7"
+                            LastKnownName="OperandOccurrenceSpecification107"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="97988ffe-6a4c-4819-b7c3-b4dc0f2489db"
+                            LastKnownName="OperandOccurrenceSpecification108"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="cdc35997-fc73-48be-9c81-368d96fd6145"
+                            LastKnownName="OperandOccurrenceSpecification109"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="5d4f9ff4-efb5-4b30-a403-716da8527243"
+                            LastKnownName="OperandOccurrenceSpecification110"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="e2b2d3f9-b719-446e-b971-0014744bd6a9"
+                            LastKnownName="OperandOccurrenceSpecification117"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="b7977194-ee2e-4417-a869-4b8857ccddaf"
+                            LastKnownName="OperandOccurrenceSpecification118"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                        </operandOccurrenceSpecifications>
+                      </interactionOperand>
+                      <interactionOperand
+                        Id="6073ca3f-aa2c-4b19-ba5a-80db26ac7917"
+                        name="InteractionOperand2">
+                        <coveredLifelines>
+                          <lifelineMoniker
+                            Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
+                            LastKnownName="Trader"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <lifelineMoniker
+                            Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
+                            LastKnownName="TextTrade Trader Application"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <lifelineMoniker
+                            Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
+                            LastKnownName="Listings Table"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <lifelineMoniker
+                            Id="1b5402f0-f645-4113-aa91-39b8b8717170"
+                            LastKnownName="Watch List"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                        </coveredLifelines>
+                        <guard>
+                          <interactionConstraint
+                            Id="1c8e5eb9-1318-4595-8a95-bad7671f4aa0" />
+                        </guard>
+                        <operandOccurrenceSpecifications>
+                          <operandOccurrenceSpecificationMoniker
+                            Id="4fa6ab01-6847-4ca6-9ff2-8db0d2d72fc7"
+                            LastKnownName="OperandOccurrenceSpecification111"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="53f06a07-1d41-4c52-8abc-34f41a873760"
+                            LastKnownName="OperandOccurrenceSpecification112"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="0965d5c3-f14f-45a4-92ef-bf3be7893afc"
+                            LastKnownName="OperandOccurrenceSpecification113"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="68286a26-a9e9-4fe9-b613-fc167b5a20bc"
+                            LastKnownName="OperandOccurrenceSpecification114"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="47de60f4-08aa-45b2-9f26-246dda037f34"
+                            LastKnownName="OperandOccurrenceSpecification115"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="bb0ce8c8-8bf6-429d-a0fe-f003f683d4c3"
+                            LastKnownName="OperandOccurrenceSpecification116"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="f1ec00b1-89e7-4300-a61c-f7751adea53b"
+                            LastKnownName="OperandOccurrenceSpecification119"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="84aaff24-e3e7-40b0-9875-c2cfcd57d951"
+                            LastKnownName="OperandOccurrenceSpecification120"
+                            LastKnownLocation="Text_Trade_Modeling.uml" />
+                        </operandOccurrenceSpecifications>
+                      </interactionOperand>
+                    </operands>
+                  </combinedFragment>
+                  <combinedFragment
                     Id="60008861-f420-49ad-bd4d-3bca509aadc1"
                     name="CombinedFragment3"
                     interactionOperator="Opt">
@@ -2560,151 +2705,6 @@
                       </interactionOperand>
                     </operands>
                   </combinedFragment>
-                  <combinedFragment
-                    Id="d7affc6c-8b36-4011-b7db-7894b55ae01f"
-                    name="CombinedFragment2"
-                    interactionOperator="Alt">
-                    <coveredLifelines>
-                      <lifelineMoniker
-                        Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
-                        LastKnownName="Trader"
-                        LastKnownLocation="Text_Trade_Modeling.uml" />
-                      <lifelineMoniker
-                        Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
-                        LastKnownName="TextTrade Trader Application"
-                        LastKnownLocation="Text_Trade_Modeling.uml" />
-                      <lifelineMoniker
-                        Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
-                        LastKnownName="Listings Table"
-                        LastKnownLocation="Text_Trade_Modeling.uml" />
-                      <lifelineMoniker
-                        Id="1b5402f0-f645-4113-aa91-39b8b8717170"
-                        LastKnownName="Watch List"
-                        LastKnownLocation="Text_Trade_Modeling.uml" />
-                    </coveredLifelines>
-                    <operands>
-                      <interactionOperand
-                        Id="cebb11d4-b958-4803-a871-079d415900fc"
-                        name="InteractionOperand1">
-                        <coveredLifelines>
-                          <lifelineMoniker
-                            Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
-                            LastKnownName="Trader"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <lifelineMoniker
-                            Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
-                            LastKnownName="TextTrade Trader Application"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <lifelineMoniker
-                            Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
-                            LastKnownName="Listings Table"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <lifelineMoniker
-                            Id="1b5402f0-f645-4113-aa91-39b8b8717170"
-                            LastKnownName="Watch List"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                        </coveredLifelines>
-                        <guard>
-                          <interactionConstraint
-                            Id="eee6f6fd-961e-4df3-9e8c-940e74a64ec2" />
-                        </guard>
-                        <operandOccurrenceSpecifications>
-                          <operandOccurrenceSpecificationMoniker
-                            Id="11d2db13-6dd6-4536-b3f1-1a33632b42fb"
-                            LastKnownName="OperandOccurrenceSpecification105"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="8058f3f3-e35a-4106-9f02-aa609a6c3035"
-                            LastKnownName="OperandOccurrenceSpecification106"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="11823bee-feac-488f-911d-2b69e06752b7"
-                            LastKnownName="OperandOccurrenceSpecification107"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="97988ffe-6a4c-4819-b7c3-b4dc0f2489db"
-                            LastKnownName="OperandOccurrenceSpecification108"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="cdc35997-fc73-48be-9c81-368d96fd6145"
-                            LastKnownName="OperandOccurrenceSpecification109"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="5d4f9ff4-efb5-4b30-a403-716da8527243"
-                            LastKnownName="OperandOccurrenceSpecification110"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="e2b2d3f9-b719-446e-b971-0014744bd6a9"
-                            LastKnownName="OperandOccurrenceSpecification117"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="b7977194-ee2e-4417-a869-4b8857ccddaf"
-                            LastKnownName="OperandOccurrenceSpecification118"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                        </operandOccurrenceSpecifications>
-                      </interactionOperand>
-                      <interactionOperand
-                        Id="6073ca3f-aa2c-4b19-ba5a-80db26ac7917"
-                        name="InteractionOperand2">
-                        <coveredLifelines>
-                          <lifelineMoniker
-                            Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
-                            LastKnownName="Trader"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <lifelineMoniker
-                            Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
-                            LastKnownName="TextTrade Trader Application"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <lifelineMoniker
-                            Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
-                            LastKnownName="Listings Table"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <lifelineMoniker
-                            Id="1b5402f0-f645-4113-aa91-39b8b8717170"
-                            LastKnownName="Watch List"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                        </coveredLifelines>
-                        <guard>
-                          <interactionConstraint
-                            Id="1c8e5eb9-1318-4595-8a95-bad7671f4aa0" />
-                        </guard>
-                        <operandOccurrenceSpecifications>
-                          <operandOccurrenceSpecificationMoniker
-                            Id="4fa6ab01-6847-4ca6-9ff2-8db0d2d72fc7"
-                            LastKnownName="OperandOccurrenceSpecification111"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="53f06a07-1d41-4c52-8abc-34f41a873760"
-                            LastKnownName="OperandOccurrenceSpecification112"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="0965d5c3-f14f-45a4-92ef-bf3be7893afc"
-                            LastKnownName="OperandOccurrenceSpecification113"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="68286a26-a9e9-4fe9-b613-fc167b5a20bc"
-                            LastKnownName="OperandOccurrenceSpecification114"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="47de60f4-08aa-45b2-9f26-246dda037f34"
-                            LastKnownName="OperandOccurrenceSpecification115"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="bb0ce8c8-8bf6-429d-a0fe-f003f683d4c3"
-                            LastKnownName="OperandOccurrenceSpecification116"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="f1ec00b1-89e7-4300-a61c-f7751adea53b"
-                            LastKnownName="OperandOccurrenceSpecification119"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                          <operandOccurrenceSpecificationMoniker
-                            Id="84aaff24-e3e7-40b0-9875-c2cfcd57d951"
-                            LastKnownName="OperandOccurrenceSpecification120"
-                            LastKnownLocation="Text_Trade_Modeling.uml" />
-                        </operandOccurrenceSpecifications>
-                      </interactionOperand>
-                    </operands>
-                  </combinedFragment>
                 </fragments>
                 <guard>
                   <interactionConstraint
@@ -2767,6 +2767,36 @@
             </operands>
           </combinedFragment>
           <operandOccurrenceSpecification
+            Id="f9f8e9ac-536d-4b9e-8fc6-cf866739a3dd"
+            name="OperandOccurrenceSpecification51">
+            <covered>
+              <lifelineMoniker
+                Id="1b5402f0-f645-4113-aa91-39b8b8717170"
+                LastKnownName="Watch List"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="7d5c3251-4ec8-438a-a3a1-f00bcd719041"
+            name="OperandOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
+                LastKnownName="TextTrade Trader Application"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="4edb81cc-e25c-4ec9-b05a-50fae450a49d"
+            name="OperandOccurrenceSpecification103">
+            <covered>
+              <lifelineMoniker
+                Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
+                LastKnownName="Listings Table"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="88ca78d0-78d4-45af-ab64-6d9ad4a02b9a"
             name="OperandOccurrenceSpecification45">
             <covered>
@@ -2783,36 +2813,6 @@
               <lifelineMoniker
                 Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
                 LastKnownName="Trader"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="7d5c3251-4ec8-438a-a3a1-f00bcd719041"
-            name="OperandOccurrenceSpecification21">
-            <covered>
-              <lifelineMoniker
-                Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
-                LastKnownName="TextTrade Trader Application"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="f9f8e9ac-536d-4b9e-8fc6-cf866739a3dd"
-            name="OperandOccurrenceSpecification51">
-            <covered>
-              <lifelineMoniker
-                Id="1b5402f0-f645-4113-aa91-39b8b8717170"
-                LastKnownName="Watch List"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="4edb81cc-e25c-4ec9-b05a-50fae450a49d"
-            name="OperandOccurrenceSpecification103">
-            <covered>
-              <lifelineMoniker
-                Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
-                LastKnownName="Listings Table"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3005,22 +3005,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="712dcf5d-2c68-4c6b-b2b6-371b481f3cfd"
-            name="MessageOccurrenceSpecification27">
-            <covered>
-              <lifelineMoniker
-                Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
-                LastKnownName="Listings Table"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="ba595576-a401-4b3e-9b85-c77068097526"
             name="MessageOccurrenceSpecification28">
             <covered>
               <lifelineMoniker
                 Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
                 LastKnownName="TextTrade Trader Application"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="712dcf5d-2c68-4c6b-b2b6-371b481f3cfd"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
+                LastKnownName="Listings Table"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3121,6 +3121,16 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="4fa6ab01-6847-4ca6-9ff2-8db0d2d72fc7"
+            name="OperandOccurrenceSpecification111">
+            <covered>
+              <lifelineMoniker
+                Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
+                LastKnownName="TextTrade Trader Application"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="47de60f4-08aa-45b2-9f26-246dda037f34"
             name="OperandOccurrenceSpecification115">
             <covered>
@@ -3147,16 +3157,6 @@
               <lifelineMoniker
                 Id="1b5402f0-f645-4113-aa91-39b8b8717170"
                 LastKnownName="Watch List"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="4fa6ab01-6847-4ca6-9ff2-8db0d2d72fc7"
-            name="OperandOccurrenceSpecification111">
-            <covered>
-              <lifelineMoniker
-                Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
-                LastKnownName="TextTrade Trader Application"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3385,22 +3385,12 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="84aaff24-e3e7-40b0-9875-c2cfcd57d951"
-            name="OperandOccurrenceSpecification120">
+            Id="68286a26-a9e9-4fe9-b613-fc167b5a20bc"
+            name="OperandOccurrenceSpecification114">
             <covered>
               <lifelineMoniker
-                Id="1b5402f0-f645-4113-aa91-39b8b8717170"
-                LastKnownName="Watch List"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="bb0ce8c8-8bf6-429d-a0fe-f003f683d4c3"
-            name="OperandOccurrenceSpecification116">
-            <covered>
-              <lifelineMoniker
-                Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
-                LastKnownName="Listings Table"
+                Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
+                LastKnownName="Trader"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3415,12 +3405,22 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="68286a26-a9e9-4fe9-b613-fc167b5a20bc"
-            name="OperandOccurrenceSpecification114">
+            Id="bb0ce8c8-8bf6-429d-a0fe-f003f683d4c3"
+            name="OperandOccurrenceSpecification116">
             <covered>
               <lifelineMoniker
-                Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
-                LastKnownName="Trader"
+                Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
+                LastKnownName="Listings Table"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="84aaff24-e3e7-40b0-9875-c2cfcd57d951"
+            name="OperandOccurrenceSpecification120">
+            <covered>
+              <lifelineMoniker
+                Id="1b5402f0-f645-4113-aa91-39b8b8717170"
+                LastKnownName="Watch List"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3603,22 +3603,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="749324f0-aa23-49ae-b75f-d48505a9feaa"
-            name="MessageOccurrenceSpecification31">
-            <covered>
-              <lifelineMoniker
-                Id="bc347369-e1aa-4061-a7ec-fcb4588a88ec"
-                LastKnownName="Filtered Search"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="f937272a-d008-4c99-9585-669996e593e1"
             name="MessageOccurrenceSpecification32">
             <covered>
               <lifelineMoniker
                 Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
                 LastKnownName="TextTrade Trader Application"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="749324f0-aa23-49ae-b75f-d48505a9feaa"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="bc347369-e1aa-4061-a7ec-fcb4588a88ec"
+                LastKnownName="Filtered Search"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3789,22 +3789,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="fb09c454-8c75-485e-b8b8-11dffaad2c95"
-            name="MessageOccurrenceSpecification22">
-            <covered>
-              <lifelineMoniker
-                Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
-                LastKnownName="TextTrade Trader Application"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="84aade37-4c20-43a5-a484-566638ba45db"
             name="MessageOccurrenceSpecification21">
             <covered>
               <lifelineMoniker
                 Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
                 LastKnownName="Trader"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fb09c454-8c75-485e-b8b8-11dffaad2c95"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="7ccbab7f-54c6-4979-a0b5-5a6d175d4f5a"
+                LastKnownName="TextTrade Trader Application"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4109,26 +4109,6 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="3780fa79-4c56-4cae-bd12-892929166ee0"
-            name="OperandOccurrenceSpecification52">
-            <covered>
-              <lifelineMoniker
-                Id="1b5402f0-f645-4113-aa91-39b8b8717170"
-                LastKnownName="Watch List"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="1cea1e06-3389-4201-9137-e731ea61e83c"
-            name="OperandOccurrenceSpecification24">
-            <covered>
-              <lifelineMoniker
-                Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
-                LastKnownName="Trader"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="8da74273-1bf1-45d0-bcd0-de3a72eb428d"
             name="OperandOccurrenceSpecification22">
             <covered>
@@ -4145,6 +4125,26 @@
               <lifelineMoniker
                 Id="bb941b6e-bd45-4c1a-b640-fce56356d101"
                 LastKnownName="Listings Table"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="3780fa79-4c56-4cae-bd12-892929166ee0"
+            name="OperandOccurrenceSpecification52">
+            <covered>
+              <lifelineMoniker
+                Id="1b5402f0-f645-4113-aa91-39b8b8717170"
+                LastKnownName="Watch List"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="1cea1e06-3389-4201-9137-e731ea61e83c"
+            name="OperandOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="25524412-b9a7-4012-ab47-8c6c9ef6c55e"
+                LastKnownName="Trader"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -6923,22 +6923,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="cedf8dea-81ca-4fdc-ab28-d558c372836b"
-            name="MessageOccurrenceSpecification22">
-            <covered>
-              <lifelineMoniker
-                Id="b8a029a2-cd68-45c1-8e1a-fc9d02f0210c"
-                LastKnownName="Listing Table"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="4ea8439d-a3d0-451b-a60a-6cfe7333ef8f"
             name="MessageOccurrenceSpecification21">
             <covered>
               <lifelineMoniker
                 Id="6299ebb2-104b-4758-9d55-4151a80de421"
                 LastKnownName="TextTrade Trader Application"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="cedf8dea-81ca-4fdc-ab28-d558c372836b"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="b8a029a2-cd68-45c1-8e1a-fc9d02f0210c"
+                LastKnownName="Listing Table"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -7545,16 +7545,6 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="12574ace-e438-43a9-8618-9462722acc54"
-            name="OperandOccurrenceSpecification93">
-            <covered>
-              <lifelineMoniker
-                Id="4c72cef2-7d59-4d99-bad8-1b9843fb1389"
-                LastKnownName="Messaging System"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="8825f879-d2f8-4492-a64f-803fc1f04969"
             name="OperandOccurrenceSpecification89">
             <covered>
@@ -7571,6 +7561,16 @@
               <lifelineMoniker
                 Id="1d3644e7-d0a6-4dec-be40-9a5a7e8bb5b6"
                 LastKnownName="Trader"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="12574ace-e438-43a9-8618-9462722acc54"
+            name="OperandOccurrenceSpecification93">
+            <covered>
+              <lifelineMoniker
+                Id="4c72cef2-7d59-4d99-bad8-1b9843fb1389"
+                LastKnownName="Messaging System"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7761,22 +7761,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="9f1f821d-24af-4d76-ab00-9b1359f17914"
-            name="MessageOccurrenceSpecification17">
-            <covered>
-              <lifelineMoniker
-                Id="6299ebb2-104b-4758-9d55-4151a80de421"
-                LastKnownName="TextTrade Trader Application"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="0da5edfb-bd6f-4003-b26c-31b98802b088"
             name="MessageOccurrenceSpecification18">
             <covered>
               <lifelineMoniker
                 Id="1d3644e7-d0a6-4dec-be40-9a5a7e8bb5b6"
                 LastKnownName="Trader"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9f1f821d-24af-4d76-ab00-9b1359f17914"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="6299ebb2-104b-4758-9d55-4151a80de421"
+                LastKnownName="TextTrade Trader Application"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8207,24 +8207,6 @@
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="ae99328e-5b53-4640-b008-725bde9d18ba"
-            name="ExecutionOccurrenceSpecification49">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="370bfb52-2376-431f-85a9-5ed75b3d63d6"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Text_Trade_Modeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="b8a029a2-cd68-45c1-8e1a-fc9d02f0210c"
-                LastKnownName="Listing Table"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
             Id="bf80904f-be5f-4009-920e-9aa2a189577d"
             name="ExecutionOccurrenceSpecification22">
             <event>
@@ -8239,6 +8221,24 @@
               <lifelineMoniker
                 Id="6299ebb2-104b-4758-9d55-4151a80de421"
                 LastKnownName="TextTrade Trader Application"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ae99328e-5b53-4640-b008-725bde9d18ba"
+            name="ExecutionOccurrenceSpecification49">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="370bfb52-2376-431f-85a9-5ed75b3d63d6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Text_Trade_Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b8a029a2-cd68-45c1-8e1a-fc9d02f0210c"
+                LastKnownName="Listing Table"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -8431,22 +8431,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="960b6f61-0b93-4849-93b8-190d9b617c26"
-            name="MessageOccurrenceSpecification70">
-            <covered>
-              <lifelineMoniker
-                Id="b8a029a2-cd68-45c1-8e1a-fc9d02f0210c"
-                LastKnownName="Listing Table"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="c509a770-8693-4b28-84e5-619d6ca8c93f"
             name="MessageOccurrenceSpecification69">
             <covered>
               <lifelineMoniker
                 Id="5b4f12a3-8166-4f52-9cb7-e6a4a68d1a03"
                 LastKnownName="Renew Functionality"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="960b6f61-0b93-4849-93b8-190d9b617c26"
+            name="MessageOccurrenceSpecification70">
+            <covered>
+              <lifelineMoniker
+                Id="b8a029a2-cd68-45c1-8e1a-fc9d02f0210c"
+                LastKnownName="Listing Table"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8613,22 +8613,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="ee0f462c-294b-4585-b515-f3aa211717d7"
-            name="MessageOccurrenceSpecification45">
-            <covered>
-              <lifelineMoniker
-                Id="6299ebb2-104b-4758-9d55-4151a80de421"
-                LastKnownName="TextTrade Trader Application"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="b0beb364-b169-43b8-b433-2e4710304e8e"
             name="MessageOccurrenceSpecification46">
             <covered>
               <lifelineMoniker
                 Id="b8a029a2-cd68-45c1-8e1a-fc9d02f0210c"
                 LastKnownName="Listing Table"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ee0f462c-294b-4585-b515-f3aa211717d7"
+            name="MessageOccurrenceSpecification45">
+            <covered>
+              <lifelineMoniker
+                Id="6299ebb2-104b-4758-9d55-4151a80de421"
+                LastKnownName="TextTrade Trader Application"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8691,6 +8691,16 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="f64bd753-9455-4713-a55f-4495d34cf2dc"
+            name="OperandOccurrenceSpecification46">
+            <covered>
+              <lifelineMoniker
+                Id="b8a029a2-cd68-45c1-8e1a-fc9d02f0210c"
+                LastKnownName="Listing Table"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="d953479f-b511-45e9-958f-495af4bcfbba"
             name="OperandOccurrenceSpecification20">
             <covered>
@@ -8721,12 +8731,22 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="f64bd753-9455-4713-a55f-4495d34cf2dc"
-            name="OperandOccurrenceSpecification46">
+            Id="82049dee-b5bc-4c06-92e2-d95d72f18c98"
+            name="OperandOccurrenceSpecification48">
             <covered>
               <lifelineMoniker
                 Id="b8a029a2-cd68-45c1-8e1a-fc9d02f0210c"
                 LastKnownName="Listing Table"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="9e6ffeb1-9694-402c-b901-c866cf03daa4"
+            name="OperandOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="1d3644e7-d0a6-4dec-be40-9a5a7e8bb5b6"
+                LastKnownName="Trader"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -8747,26 +8767,6 @@
               <lifelineMoniker
                 Id="6299ebb2-104b-4758-9d55-4151a80de421"
                 LastKnownName="TextTrade Trader Application"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="82049dee-b5bc-4c06-92e2-d95d72f18c98"
-            name="OperandOccurrenceSpecification48">
-            <covered>
-              <lifelineMoniker
-                Id="b8a029a2-cd68-45c1-8e1a-fc9d02f0210c"
-                LastKnownName="Listing Table"
-                LastKnownLocation="Text_Trade_Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="9e6ffeb1-9694-402c-b901-c866cf03daa4"
-            name="OperandOccurrenceSpecification4">
-            <covered>
-              <lifelineMoniker
-                Id="1d3644e7-d0a6-4dec-be40-9a5a7e8bb5b6"
-                LastKnownName="Trader"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -9725,6 +9725,969 @@
       <executionEvent
         Id="cf5b80e1-65a0-4bf4-926c-446e45f57ff6"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="66d409e0-d767-4dc0-a9c1-f2a8ddb64f98"
+        name="Email"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="81c3d4e1-d222-435f-b471-4e5f693f7f35"
+            name="email"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                LastKnownName="string"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="16192833-bd6c-4e74-8c6c-caf2f33a89cd"
+            name="OpenMail"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0f64c8a9-df00-4fb8-a701-acc1060e3542"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="967f65f9-bc04-482e-951f-9f3967f908bd"
+            name="SendMail"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1427f225-5e16-4d89-952e-ae0c8a83e984"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+        name="string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+        name="void" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1a30117f-58f0-4a5a-896d-ed3a71f56a6b"
+        name="Account"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="2fb56e88-9e23-4609-9e0c-ee76227f8c91"
+            name="username"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                LastKnownName="string"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7bbfdce3-c9f6-4560-9ca7-871ec7a63cf7"
+            name="password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                LastKnownName="string"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="76dbf22e-2873-4df3-aeb1-bdeffdd29e99"
+            name="email"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                LastKnownName="string"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4537dde2-7c63-4ae1-a007-d7d7a1f6783b"
+            name="firstName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                LastKnownName="string"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3e14efa9-0e53-4c09-b2d0-cbe0d5e25b7a"
+            name="lastName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                LastKnownName="string"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5ccb2f82-608f-4962-ba35-ed1a360871e3"
+            name="CreateAccount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="164da943-32e4-4a32-a30c-1e7ab3c0553a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fcfc3eb2-6466-47a4-8a6e-c40fbee8f4d3"
+        name="Trader"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="659b514b-f342-4ca0-99ab-76adc2f94320"
+            name="classSchedule"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="eca98307-6bfd-4fcb-a293-a2e4a4decddf"
+                LastKnownName="struct"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5cf2a2aa-71ce-49d8-85fc-44c5a8a14500"
+            name="CreateListing"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d973a272-aa83-4374-ba32-f98709b72d94"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5fb6dd7f-d1c5-48bf-a793-162cb8bea85d"
+            name="AddToWatchList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d50455ac-7688-4356-b54c-4ed724542c61"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="eecdbf80-81fe-4720-83c2-994dffbe3942"
+            name="CreateAccount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="22c4e1db-4dc9-404c-85c8-ae4be0b42369"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7003bd9c-3a9a-4dbf-8872-77a84a1df5b6"
+            name="ChangePassword"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bc9ae08c-54b5-4ec3-ad84-6c6cc3d5dd7a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fc5fc588-e64b-45a0-b9b9-5c7d963dc982"
+            name="RemoveListing"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3c23db72-23ae-46ce-a0f6-2bd724d1e4b1"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="05b199a8-a21b-4c0f-b7fd-eb83fefb91c8"
+            name="AddToSellList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0e7877fc-3d39-4084-a0de-054ca6ba9701"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0acf2114-de34-4812-a58b-d950a8596a6a"
+            name="ReportUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7b1c188e-7d70-403f-848e-d12df033325a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5505dfba-7edd-491e-a92c-c485209ea88b"
+            name="CreateClassSchedule"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aa36b14d-f3fb-43bf-ae59-40d651dfe08a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ae2324cf-7f27-4ad6-aca2-9e516705a82c"
+            name="AddClass"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fe4ebf5f-6e77-4f0b-ae3a-265fc1c96247"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="35387db1-97a3-412b-be08-200ac7f41521"
+            name="EditSchedule"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="858ca9a6-6eb9-47fb-85fb-629024bda1ba"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="852a1e55-a6ac-4796-b2ce-ae3f7ace2b9e"
+            name="RemoveFromWatchList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="47613d5f-0590-46b9-8477-711f424b45cf"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ccc120a6-0bab-4c6b-b7db-89876195fb51"
+            name="ReportListing"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f8d4b08-bf70-4d7e-b754-44bcf5e2ea6e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="eca98307-6bfd-4fcb-a293-a2e4a4decddf"
+        name="struct" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f0a5c00f-2576-4201-9d70-6f021d339caf"
+        name="&lt;&lt;Struct&gt;&gt; ClassSchedule"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="1f51443f-fb4c-40c7-adb1-6ec757a359e0"
+            name="schedule"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="79653df4-619c-489f-b7b0-62900c7fe195"
+                LastKnownName="List&lt;Class&gt;"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ba966ebc-00ad-470a-9598-526939dfa345"
+            name="ClassSchedule"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f372fd58-6a87-4706-9e38-83c74127cec0"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c369cbc6-25c0-4354-b2d4-4cc6da02846c"
+                      LastKnownName="constructor"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d4a8b9be-8118-496a-9ef8-69ef35d0dfac"
+        name="List" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="79653df4-619c-489f-b7b0-62900c7fe195"
+        name="List&lt;Class&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cfbf0431-0037-4d55-9354-fac6305cfbcc"
+        name="&lt;&lt;Struct&gt;&gt; Class"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="a961e0c9-2ed1-49f0-a180-6e794192acfc"
+            name="courseCode"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                LastKnownName="string"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9b209b18-4f24-47d9-815d-6697752f5803"
+            name="courseLevel"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                LastKnownName="string"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1d42fe3d-1505-40f4-9d6e-b63206f98abb"
+            name="Class"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="efec9685-2a3b-4a91-878e-3e8ad6113b9b"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c369cbc6-25c0-4354-b2d4-4cc6da02846c"
+                      LastKnownName="constructor"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c369cbc6-25c0-4354-b2d4-4cc6da02846c"
+        name="constructor" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e4618ee2-3b8d-46be-ac6d-58842380b5f2"
+        name="Moderator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="6e472812-fc42-4078-a086-3f6644293a87"
+            name="Attribute1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3eea7a15-eaab-4453-95cb-bf81a95a983f"
+            name="RemoveListing"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a8606a6d-3c81-418e-a15d-fe02391251a7"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4a52db6f-2fb8-436a-8788-77e6f513c9cc"
+            name="CreateAccount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="623b3f05-315e-4737-b68e-f981fcc5c6bb"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d718faa2-1b11-40b0-b60d-9312240a8e46"
+            name="WarnTrader"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="45ec1f22-9c4f-4d98-83dd-0901173c7912"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cc923c50-abe1-441f-875f-add2b314fecb"
+            name="BanTrader"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e07460b4-1cb3-4bdd-bb0b-c44545be6349"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="82d3d31b-0c90-4548-8679-65b0d944ce66"
+            name="SearchForUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1ae1436d-b0bf-48e4-bb17-ba24e7f543e1"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="8fed9f1c-2e3f-423d-9f23-31ce56db2916"
+                      LastKnownName="int"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="154d37b1-2ea9-44cd-bd6d-8518fecc6f08"
+            name="ViewUserInfo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9eb60796-1c7c-4a63-bda7-e8338c3d03e9"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="035487f9-d65e-4762-a1d0-97572c5ec010"
+            name="ViewSystemStats"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="65ef5701-2af6-4d4b-a0f9-decec29cd182"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8fed9f1c-2e3f-423d-9f23-31ce56db2916"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fdd434a4-36c3-4e16-a666-a9b9fb5e2e67"
+        name="ModeratorView"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="36f2d299-acd2-43ae-a37c-03b819ff88b8"
+            name="moderator"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="e38a0a23-452c-4173-8add-aa753f7b49b3"
+                LastKnownName="obj"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="71114db6-e915-45ef-b57c-1b03ecc86254"
+            name="DisplayProfile"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="459f0058-5fda-407e-b3e0-ac4c9d4fa6ca"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="880519b1-6c1b-400e-a290-934460ce26a3"
+            name="DisplayUserInfo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8026b42e-fbcb-40f1-85c9-145ece7d8c7c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e38a0a23-452c-4173-8add-aa753f7b49b3"
+        name="obj" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
