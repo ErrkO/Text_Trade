@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="57f6c3c0-8f8f-4d04-95b2-2b10a8d827d1"
   name="Text_Trade_Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -9800,6 +9800,20 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e5b374ad-9dd9-42c1-9581-c15a0a7de970"
+                  name="email"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="66d409e0-d767-4dc0-a9c1-f2a8ddb64f98"
+                      LastKnownName="Email"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
         </ownedOperationsInternal>
@@ -9930,9 +9944,9 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
-                LastKnownName="string"
+              <classMoniker
+                Id="66d409e0-d767-4dc0-a9c1-f2a8ddb64f98"
+                LastKnownName="Email"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </type_NamedElement>
           </property>
@@ -10689,17 +10703,91 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1fe4834d-bb2a-427f-9446-7d199ce6c10a"
+            name="AddClass"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="f372fd58-6a87-4706-9e38-83c74127cec0"
+                  Id="97728140-220b-4357-b9a8-98d362863022"
+                  name="cC"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                      LastKnownName="string"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1299c065-4c3f-451d-b83f-c699e7aebb7f"
+                  name="cL"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                      LastKnownName="string"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3467c986-4fc8-4e0f-a44c-6757b5827028"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="c369cbc6-25c0-4354-b2d4-4cc6da02846c"
-                      LastKnownName="constructor"
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c87f4172-4f52-4dbf-b05f-23952d0e0527"
+            name="RemoveClass"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bd6526cd-52d8-4612-b7af-5eb186778a32"
+                  name="class"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="35e55c24-203b-4c99-909b-16af1bbd8a24"
+                      LastKnownName="Class"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9ee00952-9d09-469a-ac5e-61e9cb1eb9e0"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
                       LastKnownLocation="Text_Trade_Modeling.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -10772,17 +10860,40 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3da598dc-3d50-4336-ac9d-f940cc190af6"
+            name="Class"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="efec9685-2a3b-4a91-878e-3e8ad6113b9b"
-                  direction="Return"
+                  Id="95bec11d-6fb1-4f12-9fea-dff8972a5172"
+                  name="cC"
+                  direction="In"
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="c369cbc6-25c0-4354-b2d4-4cc6da02846c"
-                      LastKnownName="constructor"
+                      Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                      LastKnownName="string"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="53c664ec-955b-4796-a002-c9ff3b17403d"
+                  name="cL"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                      LastKnownName="string"
                       LastKnownLocation="Text_Trade_Modeling.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -11837,18 +11948,6 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
-        <ownedAttributesInternal>
-          <property
-            Id="8396a5e7-45b6-472b-9a7b-27c821e28d94"
-            name="Attribute1"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="5b7318b6-a633-4356-a181-31323c14e7b3"
@@ -12042,9 +12141,9 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="e38a0a23-452c-4173-8add-aa753f7b49b3"
-                LastKnownName="obj"
+              <actorMoniker
+                Id="84bf33c5-6554-4c32-8993-6cab4366bc95"
+                LastKnownName="Trader"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </type_NamedElement>
           </property>
@@ -12581,6 +12680,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="58d815e0-11a1-4173-bf8a-030fed539fa9"
+            isDerived="false"
+            sourceEndRoleName="ListingList"
+            targetEndRoleName="Search"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="34e87948-1fa8-414b-84d5-23ede6cc89c4"
+              LastKnownName="Search"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1836b097-4597-464f-a173-bc089ce462a7"
+                  name="ListingList"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d4d61323-acd6-4aaa-b89f-7513a6a9e05f"
+                  name="Search"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -12621,6 +12759,20 @@
                     <undefinedTypeMoniker
                       Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
                       LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ba66d3c8-176e-4532-8596-06f183aa2e45"
+                  name="listing"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4a83e787-7846-4476-a253-e48d6c4f3379"
+                      LastKnownName="Listing"
                       LastKnownLocation="Text_Trade_Modeling.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -12695,6 +12847,20 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fb7b565f-8e3c-445d-88f1-197d477ffc9b"
+                  name="trader"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <actorMoniker
+                      Id="84bf33c5-6554-4c32-8993-6cab4366bc95"
+                      LastKnownName="Trader"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
         </ownedOperationsInternal>
@@ -12704,6 +12870,38 @@
       <undefinedType
         Id="06bb6509-7579-4a0f-9bd5-e4ce91691d91"
         name="list&lt;trader&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="41ff05f2-6453-4ba7-8406-6b7b5d782ddb"
+        name="DataBase"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="da785269-ab81-474f-9fe4-f511d3778ece"
+            name="Insert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8cdb5fef-06ba-41c9-9a2c-1f4132267e27"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="35e55c24-203b-4c99-909b-16af1bbd8a24"
+        name="Class" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
