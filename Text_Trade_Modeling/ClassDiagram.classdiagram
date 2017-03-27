@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="1a280145-0b9e-4d6e-b0e3-93e6400327a8" name="ClassDiagram" linkedPackageId="65c7aa93-edd7-4377-a32e-af994b4fb0e7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="1a280145-0b9e-4d6e-b0e3-93e6400327a8" name="ClassDiagram" linkedPackageId="65c7aa93-edd7-4377-a32e-af994b4fb0e7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="b614ac39-5f27-4899-b3c9-3e7c26c160eb" name="Email" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -63,16 +63,6 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="8810a82d-989b-4133-a0cf-ebe145dd6f9a" name="Account" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="1a30117f-58f0-4a5a-896d-ed3a71f56a6b" />
-        <generalsInternal>
-          <generalization Id="a307c02c-7a0b-481f-bc05-1f376e058744" isSubstitutable="false">
-            <classMoniker Id="c4b7fa89-7dc4-433f-9a48-f7623cd76294" LastKnownName="Trader" />
-            <elementDefinition Id="24ee8434-9349-4f89-b044-90b32fd08513" />
-          </generalization>
-          <generalization Id="d7c10b54-4a68-43c3-b5e4-088c1942e98e" isSubstitutable="false">
-            <classMoniker Id="33881c53-91f2-410c-822a-ec23e2e10bb7" LastKnownName="Moderator" />
-            <elementDefinition Id="b94c3a36-d421-4d12-8c20-142a25d17568" />
-          </generalization>
-        </generalsInternal>
         <targetEnds>
           <association Id="870cb40d-4ac1-4482-93fd-5a06fe2e0805" isDerived="false" sourceEndRoleName="Account" targetEndRoleName="Email" isLeaf="false" isAbstract="false">
             <classMoniker Id="b614ac39-5f27-4899-b3c9-3e7c26c160eb" LastKnownName="Email" />
@@ -199,6 +189,12 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="c4b7fa89-7dc4-433f-9a48-f7623cd76294" name="Trader" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="fcfc3eb2-6466-47a4-8a6e-c40fbee8f4d3" />
+        <generalsInternal>
+          <generalization Id="731687ff-1598-4610-9fca-397b3306e709" isSubstitutable="false">
+            <classMoniker Id="8810a82d-989b-4133-a0cf-ebe145dd6f9a" LastKnownName="Account" />
+            <elementDefinition Id="b801321e-61df-4925-a390-649bf7a02908" />
+          </generalization>
+        </generalsInternal>
         <targetEnds>
           <association Id="6357225e-b2a5-4bd9-80c8-af51fbf7796a" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="&lt;&lt;Struct&gt;&gt; ClassSchedule" isLeaf="false" isAbstract="false">
             <classMoniker Id="f127c55a-1634-41ca-ac10-b868c6c03b6e" LastKnownName="&lt;&lt;Struct&gt;&gt; ClassSchedule" />
@@ -215,32 +211,6 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="4a4a6723-a8e2-49bb-9301-d3cc9ee098de" />
-          </association>
-          <association Id="dae19c66-dfa8-40e4-ad7c-fad6b2075fd1" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="TraderView" isLeaf="false" isAbstract="false">
-            <classMoniker Id="95fabfd1-78b9-441f-bc1c-c8c8ca7ee0ef" LastKnownName="TraderView" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="a2fdbb4b-4159-471f-9722-19f59984372d" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString Id="3daeb59b-642c-4a67-9de4-a12e5e0d5386" name="Lower" value="*">
-                      <elementDefinition Id="cb1562bb-15a6-48e1-9ea0-c9e9dfbe083c" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="4545e79b-0e61-4898-8770-dc8a70623f24" name="Upper" value="*">
-                      <elementDefinition Id="dea08d37-048e-4d02-b2da-72b20611757a" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="d2565ee3-9c2a-4027-8e18-2e93a2ee0691" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="71ef9a53-8bbb-4932-95fe-17b5eb9c0c3c" name="TraderView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="99c3725f-1c1b-4f26-8b49-da050d33e2ad" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="f7daa280-1b15-4396-8938-2347f0a638b4" />
           </association>
           <association Id="bf6ddd80-aba5-452d-b8c2-382ac13e6699" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="UserList" isLeaf="false" isAbstract="false">
             <classMoniker Id="594b8686-8be3-4233-bc50-b1c5d911fa0f" LastKnownName="UserList" />
@@ -815,6 +785,12 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="33881c53-91f2-410c-822a-ec23e2e10bb7" name="Moderator" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="e4618ee2-3b8d-46be-ac6d-58842380b5f2" />
+        <generalsInternal>
+          <generalization Id="4a4c55de-e27e-4dc2-83e9-ece3c19b198f" isSubstitutable="false">
+            <classMoniker Id="8810a82d-989b-4133-a0cf-ebe145dd6f9a" LastKnownName="Account" />
+            <elementDefinition Id="646d35b5-ae40-49d1-bdec-cc7821e88573" />
+          </generalization>
+        </generalsInternal>
         <targetEnds>
           <association Id="1ee08d2e-90b1-4bff-a1d1-9833fbea6099" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="Listing" isLeaf="false" isAbstract="false">
             <classMoniker Id="226b7ed1-8ace-42a3-b418-8241ca6dcad1" LastKnownName="Listing" />
@@ -841,22 +817,6 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="fc4b39b9-c88a-47f9-a203-ade6acb2e4b9" />
-          </association>
-          <association Id="a6c3290e-abfc-40f5-be03-b2c029e202fb" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="ModeratorView" isLeaf="false" isAbstract="false">
-            <classMoniker Id="e6663f86-67dc-4eaf-bed5-cc4c194e38c6" LastKnownName="ModeratorView" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="2a5fc633-af13-4ce1-b6ff-0f3727ef4c04" name="Moderator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="6ed0cbf6-8b8d-4ec5-a51a-b86c8406503c" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="43b8ba57-7e45-4569-8856-2ebf31921001" name="ModeratorView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="fe508313-f8f3-4a0a-8260-51934062c627" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="03894ae1-5ecc-4147-84ed-12eae1a6c530" />
           </association>
           <association Id="633db696-2863-4dfb-ae16-cfc44bf5907d" isDerived="false" sourceEndRoleName="Moderator" targetEndRoleName="Marketplace" isLeaf="false" isAbstract="false">
             <classMoniker Id="f668cb3d-6852-4de1-bff3-837d5d632dbf" LastKnownName="Marketplace" />
@@ -891,6 +851,14 @@
             <elementDefinition Id="9fd694cb-28f8-4d39-8958-07bd0e8fe4ff" />
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="ce1672d5-0b89-4484-ac96-4838ecf214c3" name="account" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c5b416e9-f46b-4ec8-8009-d30cf0af8931" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c55e7ed4-1f2c-405e-9e9a-0698307d2614" LastKnownName="Account" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="800a8738-4416-4c23-aaf6-a25e791c89be" name="RemoveListing" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="3eea7a15-eaab-4453-95cb-bf81a95a983f" />
@@ -1018,47 +986,6 @@
         <elementDefinition Id="8fed9f1c-2e3f-423d-9f23-31ce56db2916" />
       </referencedType>
     </packageHasNamedElement>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="e6663f86-67dc-4eaf-bed5-cc4c194e38c6" name="ModeratorView" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="fdd434a4-36c3-4e16-a666-a9b9fb5e2e67" />
-        <ownedAttributesInternal>
-          <property Id="26efd711-8fcf-4fd1-8ec5-ca4681842486" name="moderator" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="36f2d299-acd2-43ae-a37c-03b819ff88b8" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="1e616cef-7357-49c7-83c9-019a23192d02" LastKnownName="Moderator" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="52588e40-7939-46eb-bff2-d9fdfa5185b9" name="DisplayProfile" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="71114db6-e915-45ef-b57c-1b03ecc86254" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="bdaed586-722b-4036-9651-723593378832" direction="Return" isUnique="false">
-                  <elementDefinition Id="459f0058-5fda-407e-b3e0-ac4c9d4fa6ca" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="e432930b-4c94-402c-bb4c-1c003abb066a" LastKnownName="void" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation Id="1574b034-87d0-4a9d-9dc5-69e495c835ef" name="DisplayUserInfo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="880519b1-6c1b-400e-a290-934460ce26a3" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="0dadcbe6-eb81-454e-b2ea-0d7d0d75a046" direction="Return" isUnique="false">
-                  <elementDefinition Id="8026b42e-fbcb-40f1-85c9-145ece7d8c7c" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="e432930b-4c94-402c-bb4c-1c003abb066a" LastKnownName="void" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="226b7ed1-8ace-42a3-b418-8241ca6dcad1" name="Listing" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="4a83e787-7846-4476-a253-e48d6c4f3379" />
@@ -1698,34 +1625,6 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="95fabfd1-78b9-441f-bc1c-c8c8ca7ee0ef" name="TraderView" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="404b5aa6-08d8-42df-9550-aa1213740804" />
-        <ownedAttributesInternal>
-          <property Id="0240342d-dd86-415c-a41c-1f4b0451e66b" name="trader" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="382e64c5-6cf7-4701-ab51-ebce5baed948" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="4d6a1a26-43bb-4903-96f7-70e8fb63565d" LastKnownName="Trader" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="fdfbf04d-c25a-47ff-a514-6858d3100f84" name="DisplayProfile" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="e0a4efe2-a9c8-4a2c-bd6b-20f1f2ec3cdb" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="fcbeafe3-6fa7-4ebc-8b4c-cff31a1d62e2" direction="Return" isUnique="false">
-                  <elementDefinition Id="98118041-a259-4663-95d1-936c51a79195" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="e432930b-4c94-402c-bb4c-1c003abb066a" LastKnownName="void" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
       <class Id="f668cb3d-6852-4de1-bff3-837d5d632dbf" name="Marketplace" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="78752aee-4879-4c4f-bd78-3269c7005039" />
         <targetEnds>
@@ -2269,11 +2168,6 @@
     <packageHasNamedElement>
       <referencedType Id="f31a740b-85e2-4769-881e-6e5de31938d0" name="Listing" isAbstract="false" isLeaf="false" cachedFullName="Text_Trade_Modeling::Listing">
         <elementDefinition Id="4a83e787-7846-4476-a253-e48d6c4f3379" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="1e616cef-7357-49c7-83c9-019a23192d02" name="Moderator" isAbstract="false" isLeaf="false" cachedFullName="Text_Trade_Modeling::Moderator">
-        <elementDefinition Id="ce93740e-18f7-4c79-9a8b-824e3ef5501e" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>

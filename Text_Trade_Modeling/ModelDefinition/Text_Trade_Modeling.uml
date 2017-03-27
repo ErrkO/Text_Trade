@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="57f6c3c0-8f8f-4d04-95b2-2b10a8d827d1"
   name="Text_Trade_Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -9836,24 +9836,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <generalsInternal>
-          <generalization
-            Id="24ee8434-9349-4f89-b044-90b32fd08513"
-            isSubstitutable="false">
-            <classMoniker
-              Id="fcfc3eb2-6466-47a4-8a6e-c40fbee8f4d3"
-              LastKnownName="Trader"
-              LastKnownLocation="Text_Trade_Modeling.uml" />
-          </generalization>
-          <generalization
-            Id="b94c3a36-d421-4d12-8c20-142a25d17568"
-            isSubstitutable="false">
-            <classMoniker
-              Id="e4618ee2-3b8d-46be-ac6d-58842380b5f2"
-              LastKnownName="Moderator"
-              LastKnownLocation="Text_Trade_Modeling.uml" />
-          </generalization>
-        </generalsInternal>
         <targetEnds>
           <association
             Id="2975f3eb-1af3-4e96-8659-e44803268438"
@@ -10125,6 +10107,16 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="b801321e-61df-4925-a390-649bf7a02908"
+            isSubstitutable="false">
+            <classMoniker
+              Id="1a30117f-58f0-4a5a-896d-ed3a71f56a6b"
+              LastKnownName="Account"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+          </generalization>
+        </generalsInternal>
         <targetEnds>
           <association
             Id="4a4a6723-a8e2-49bb-9301-d3cc9ee098de"
@@ -11326,6 +11318,16 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="646d35b5-ae40-49d1-bdec-cc7821e88573"
+            isSubstitutable="false">
+            <classMoniker
+              Id="1a30117f-58f0-4a5a-896d-ed3a71f56a6b"
+              LastKnownName="Account"
+              LastKnownLocation="Text_Trade_Modeling.uml" />
+          </generalization>
+        </generalsInternal>
         <targetEnds>
           <association
             Id="fc4b39b9-c88a-47f9-a203-ade6acb2e4b9"
@@ -11497,6 +11499,26 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="c5b416e9-f46b-4ec8-8009-d30cf0af8931"
+            name="account"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="1a30117f-58f0-4a5a-896d-ed3a71f56a6b"
+                LastKnownName="Account"
+                LastKnownLocation="Text_Trade_Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="3eea7a15-eaab-4453-95cb-bf81a95a983f"
