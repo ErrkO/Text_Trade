@@ -10971,7 +10971,7 @@
             isAbstract="false">
             <classMoniker
               Id="cfbf0431-0037-4d55-9354-fac6305cfbcc"
-              LastKnownName="&lt;&lt;Struct&gt;&gt; Class"
+              LastKnownName="&lt;&lt;Struct&gt;&gt; Course"
               LastKnownLocation="Text_Trade_Modeling.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -11016,8 +11016,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="79653df4-619c-489f-b7b0-62900c7fe195"
-                LastKnownName="List&lt;Class&gt;"
+                Id="3a5e11bd-36fa-400b-87c0-8d16fe538f8e"
+                LastKnownName="List&lt;Course&gt;"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </type_NamedElement>
           </property>
@@ -11095,13 +11095,13 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="bd6526cd-52d8-4612-b7af-5eb186778a32"
-                  name="class"
+                  name="course"
                   direction="In"
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="35e55c24-203b-4c99-909b-16af1bbd8a24"
-                      LastKnownName="Class"
+                      Id="35712838-52a2-4ef0-82a2-dae1ac7c391a"
+                      LastKnownName="Course"
                       LastKnownLocation="Text_Trade_Modeling.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -11137,7 +11137,7 @@
     <packageHasNamedElement>
       <class
         Id="cfbf0431-0037-4d55-9354-fac6305cfbcc"
-        name="&lt;&lt;Struct&gt;&gt; Class"
+        name="&lt;&lt;Struct&gt;&gt; Course"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -13269,13 +13269,13 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="fa6aeb0f-d092-43d8-a026-730d90aa38c5"
-                  name="listing"
+                  name="listingList"
                   direction="In"
                   isUnique="false">
                   <type_NamedElement>
                     <classMoniker
-                      Id="4a83e787-7846-4476-a253-e48d6c4f3379"
-                      LastKnownName="Listing"
+                      Id="fc423f94-8369-41f4-852b-92e2f3dbe8f1"
+                      LastKnownName="ListingList"
                       LastKnownLocation="Text_Trade_Modeling.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -13314,6 +13314,220 @@
                     <classMoniker
                       Id="4a83e787-7846-4476-a253-e48d6c4f3379"
                       LastKnownName="Listing"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="25408a5f-1030-4365-a06f-731907068732"
+            name="FilterResults"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b807f73f-ce82-434d-bcb7-c2ed1d2560da"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c3f666c9-ab6d-4d73-8f9c-891b83cb262e"
+                      LastKnownName="void"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f41ff227-a6c9-4e80-99db-ec08710a9fb4"
+            name="SearchAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ada17e3d-5104-4d74-acbb-b9322c9cfe28"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fc423f94-8369-41f4-852b-92e2f3dbe8f1"
+                      LastKnownName="ListingList"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2418ded8-ff1a-47b3-abce-ae11084feb9e"
+            name="SearchByAuthor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bc583629-d542-4ef7-8aa2-6088565df0b4"
+                  name="author"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                      LastKnownName="string"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2ba76850-9ebb-45d1-9fc2-74cda4302af7"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fc423f94-8369-41f4-852b-92e2f3dbe8f1"
+                      LastKnownName="ListingList"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ac12f9ce-e292-441e-a428-272b597feca8"
+            name="SearchByCourse"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d5ba8e03-1aa0-4bc0-b8f2-487def82ce2f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fc423f94-8369-41f4-852b-92e2f3dbe8f1"
+                      LastKnownName="ListingList"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="73f1954e-fe92-4218-a71c-9182113e4106"
+                  name="cC"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                      LastKnownName="string"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1595ffee-e672-4426-bfad-e845ef092f75"
+                  name="cL"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                      LastKnownName="string"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="836d3cad-6703-4ac5-bfbf-d499e7bb6392"
+            name="SearchByISBN"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3ca1b9aa-fcc1-4e73-98d7-1155f4cdb36e"
+                  name="isbn"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
+                      LastKnownName="string"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ffdfb5c2-0593-4666-a3ac-7c2af8553dc1"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fc423f94-8369-41f4-852b-92e2f3dbe8f1"
+                      LastKnownName="ListingList"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8a83c87f-8e75-4b93-8f78-0cfc07f93785"
+            name="SearchFromSchedule"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="863ffbd8-388c-4fcf-9135-08b10391bf8c"
+                  name="classSchedule"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a508ac78-4c62-4147-b651-41a9fcaa7ca0"
+                      LastKnownName="ClassShedule"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a2aa83d7-6ec9-46da-bc5f-f9e747fa7565"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fc423f94-8369-41f4-852b-92e2f3dbe8f1"
+                      LastKnownName="ListingList"
                       LastKnownLocation="Text_Trade_Modeling.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -13854,6 +14068,30 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="0801edb8-11f4-430a-8202-b0ec73f4f134"
+            name="SearchForUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6b25878a-c3d7-400f-b901-d27235540316"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e390ba67-f49d-4ba2-8aee-287f016fa0b6"
+                      LastKnownName="userList"
+                      LastKnownLocation="Text_Trade_Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -14152,6 +14390,21 @@
       <undefinedType
         Id="6318ad0c-86e1-4259-9713-33d27b85eafa"
         name="double" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a508ac78-4c62-4147-b651-41a9fcaa7ca0"
+        name="ClassShedule" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="3a5e11bd-36fa-400b-87c0-8d16fe538f8e"
+        name="List&lt;Course&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="35712838-52a2-4ef0-82a2-dae1ac7c391a"
+        name="Course" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
