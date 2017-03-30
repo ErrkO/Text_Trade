@@ -10127,7 +10127,7 @@
             isAbstract="false">
             <classMoniker
               Id="f0a5c00f-2576-4201-9d70-6f021d339caf"
-              LastKnownName="&lt;&lt;Struct&gt;&gt; ClassSchedule"
+              LastKnownName="ClassSchedule"
               LastKnownLocation="Text_Trade_Modeling.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -10957,7 +10957,7 @@
     <packageHasNamedElement>
       <class
         Id="f0a5c00f-2576-4201-9d70-6f021d339caf"
-        name="&lt;&lt;Struct&gt;&gt; ClassSchedule"
+        name="ClassSchedule"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -10971,7 +10971,7 @@
             isAbstract="false">
             <classMoniker
               Id="cfbf0431-0037-4d55-9354-fac6305cfbcc"
-              LastKnownName="&lt;&lt;Struct&gt;&gt; Course"
+              LastKnownName="Course"
               LastKnownLocation="Text_Trade_Modeling.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -11137,7 +11137,7 @@
     <packageHasNamedElement>
       <class
         Id="cfbf0431-0037-4d55-9354-fac6305cfbcc"
-        name="&lt;&lt;Struct&gt;&gt; Course"
+        name="Course"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">

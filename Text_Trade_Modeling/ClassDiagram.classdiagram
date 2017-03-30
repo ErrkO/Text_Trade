@@ -197,7 +197,7 @@
         </generalsInternal>
         <targetEnds>
           <association Id="6357225e-b2a5-4bd9-80c8-af51fbf7796a" isDerived="false" sourceEndRoleName="Trader" targetEndRoleName="&lt;&lt;Struct&gt;&gt; ClassSchedule" isLeaf="false" isAbstract="false">
-            <classMoniker Id="f127c55a-1634-41ca-ac10-b868c6c03b6e" LastKnownName="&lt;&lt;Struct&gt;&gt; ClassSchedule" />
+            <classMoniker Id="f127c55a-1634-41ca-ac10-b868c6c03b6e" LastKnownName="ClassSchedule" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="0ae2793c-2a47-4a00-a0a0-44e6b43c35db" name="Trader" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
@@ -589,11 +589,11 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="f127c55a-1634-41ca-ac10-b868c6c03b6e" name="&lt;&lt;Struct&gt;&gt; ClassSchedule" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="f127c55a-1634-41ca-ac10-b868c6c03b6e" name="ClassSchedule" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="f0a5c00f-2576-4201-9d70-6f021d339caf" />
         <targetEnds>
           <association Id="a77eb22c-06ca-4ed7-b642-accbda5349b5" isDerived="false" sourceEndRoleName="&lt;&lt;Struct&gt;&gt; ClassSchedule" targetEndRoleName="&lt;&lt;Struct&gt;&gt; Class" isLeaf="false" isAbstract="false">
-            <classMoniker Id="468ddbf1-6f05-4a88-9afa-c9967649a1b8" LastKnownName="&lt;&lt;Struct&gt;&gt; Course" />
+            <classMoniker Id="468ddbf1-6f05-4a88-9afa-c9967649a1b8" LastKnownName="Course" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="ddb4e32e-4af9-4884-9713-e010b83777af" name="&lt;&lt;Struct&gt;&gt; ClassSchedule" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
@@ -675,7 +675,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="468ddbf1-6f05-4a88-9afa-c9967649a1b8" name="&lt;&lt;Struct&gt;&gt; Course" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="468ddbf1-6f05-4a88-9afa-c9967649a1b8" name="Course" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="cfbf0431-0037-4d55-9354-fac6305cfbcc" />
         <ownedAttributesInternal>
           <property Id="e299cf20-7fab-42e6-9a55-83902bdfa7a9" name="courseCode" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
