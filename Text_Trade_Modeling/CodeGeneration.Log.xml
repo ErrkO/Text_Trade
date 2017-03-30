@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///E:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 14.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2017-03-29T20:59:27" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Diagnostic" Text="ProjectPath = ..\Text_Trade_ModelingLib\Text_Trade_ModelingLib.csproj" />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Diagnostic" Text="TemplateFilePath = E:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Medium" Text="Text_Trade_Modeling's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'Text_Trade_Modeling::Email' -  (Class), 'Text_Trade_Modeling::Account' -  (Class), 'Text_Trade_Modeling::Trader' -  (Class), 'Text_Trade_Modeling::ClassSchedule' -  (Class), 'Text_Trade_Modeling::Course' -  (Class), 'Text_Trade_Modeling::Moderator' -  (Class), 'Text_Trade_Modeling::Listing' -  (Class), 'Text_Trade_Modeling::WatchList' -  (Class), 'Text_Trade_Modeling::SellList' -  (Class), 'Text_Trade_Modeling::Marketplace' -  (Class), 'Text_Trade_Modeling::ListingList' -  (Class), 'Text_Trade_Modeling::UserList' -  (Class), 'Text_Trade_Modeling::DataBase' -  (Class) " />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Medium" Text="'Text_Trade_Modeling::Email' -  (Class) : success (file replaced) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\Email.cs" />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Medium" Text="'Text_Trade_Modeling::Account' -  (Class) : success (file replaced) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\Account.cs" />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Medium" Text="'Text_Trade_Modeling::Trader' -  (Class) : success (file created) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\Trader.cs" />
+  <Message Timestamp="2017-03-29T20:59:28" Importance="Medium" Text="'Text_Trade_Modeling::ClassSchedule' -  (Class) : success (file replaced) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\ClassSchedule.cs" />
+  <Message Timestamp="2017-03-29T20:59:29" Importance="Medium" Text="'Text_Trade_Modeling::Course' -  (Class) : success (file replaced) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\Course.cs" />
+  <Message Timestamp="2017-03-29T20:59:29" Importance="Medium" Text="'Text_Trade_Modeling::Moderator' -  (Class) : success (file created) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\Moderator.cs" />
+  <Message Timestamp="2017-03-29T20:59:29" Importance="Medium" Text="'Text_Trade_Modeling::Listing' -  (Class) : success (file created) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\Listing.cs" />
+  <Message Timestamp="2017-03-29T20:59:29" Importance="Medium" Text="'Text_Trade_Modeling::WatchList' -  (Class) : success (file created) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\WatchList.cs" />
+  <Message Timestamp="2017-03-29T20:59:29" Importance="Medium" Text="'Text_Trade_Modeling::SellList' -  (Class) : success (file created) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\SellList.cs" />
+  <Message Timestamp="2017-03-29T20:59:29" Importance="Medium" Text="'Text_Trade_Modeling::Marketplace' -  (Class) : success (file created) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\Marketplace.cs" />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Medium" Text="'Text_Trade_Modeling::ListingList' -  (Class) : success (file created) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\ListingList.cs" />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Medium" Text="'Text_Trade_Modeling::UserList' -  (Class) : success (file created) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\UserList.cs" />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Medium" Text="'Text_Trade_Modeling::DataBase' -  (Class) : success (file created) - C:\Users\Eric\Source\Repos\Text_Trade\Text_Trade_ModelingLib\GeneratedCode\DataBase.cs" />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="ProjectPath = ..\Text_Trade_ModelingLib\Text_Trade_ModelingLib.csproj" />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="TemplateFilePath = E:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Medium" Text="Text_Trade_Modeling's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'Text_Trade_Modeling::Email' -  (Class), 'Text_Trade_Modeling::Account' -  (Class), 'Text_Trade_Modeling::Trader' -  (Class), 'Text_Trade_Modeling::ClassSchedule' -  (Class), 'Text_Trade_Modeling::Course' -  (Class), 'Text_Trade_Modeling::Moderator' -  (Class), 'Text_Trade_Modeling::Listing' -  (Class), 'Text_Trade_Modeling::WatchList' -  (Class), 'Text_Trade_Modeling::SellList' -  (Class), 'Text_Trade_Modeling::Marketplace' -  (Class), 'Text_Trade_Modeling::ListingList' -  (Class), 'Text_Trade_Modeling::UserList' -  (Class), 'Text_Trade_Modeling::DataBase' -  (Class) " />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::Email' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::Account' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::Trader' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::ClassSchedule' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::Course' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::Moderator' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::Listing' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::WatchList' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::SellList' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::Marketplace' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::ListingList' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::UserList' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:30" Importance="Diagnostic" Text="'Text_Trade_Modeling::DataBase' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="The selection included 19 elements which were not bound to a template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'b801321e-61df-4925-a390-649bf7a02908' -  (Generalization): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'646d35b5-ae40-49d1-bdec-cc7821e88573' -  (Generalization): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="Diagnostic" Text="'Text_Trade_Modeling::' -  (Association): no bound template." />
+  <Message Timestamp="2017-03-29T20:59:31" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>
