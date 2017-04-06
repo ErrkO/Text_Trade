@@ -64,19 +64,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Classes\Account.cs" />
-    <Compile Include="Classes\ClassSchedule.cs" />
-    <Compile Include="Classes\Course.cs" />
-    <Compile Include="Classes\DataBase.cs" />
-    <Compile Include="Classes\Email.cs" />
-    <Compile Include="Classes\Listing.cs" />
-    <Compile Include="Classes\ListingList.cs" />
-    <Compile Include="Classes\Marketplace.cs" />
-    <Compile Include="Classes\Moderator.cs" />
-    <Compile Include="Classes\SellList.cs" />
-    <Compile Include="Classes\Trader.cs" />
-    <Compile Include="Classes\UserList.cs" />
-    <Compile Include="Classes\WatchList.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="ClassSchedule.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="DataBase.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="Listing.cs" />
+    <Compile Include="ListingList.cs" />
+    <Compile Include="Marketplace.cs" />
+    <Compile Include="Moderator.cs" />
+    <Compile Include="SellList.cs" />
+    <Compile Include="Trader.cs" />
+    <Compile Include="UserList.cs" />
+    <Compile Include="WatchList.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
