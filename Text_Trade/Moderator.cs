@@ -17,13 +17,25 @@ public class Moderator : Account
 		set;
 	}
 
-	public virtual Listing listing
+	public virtual IEnumerable<Listing> Listing
+	{
+		get;
+		set;
+	}
+
+	public virtual ModeratorView ModeratorView
 	{
 		get;
 		set;
 	}
 
 	public virtual Marketplace Marketplace
+	{
+		get;
+		set;
+	}
+
+	public virtual Search Search
 	{
 		get;
 		set;
