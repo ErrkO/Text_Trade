@@ -9,10 +9,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+// This class is modified by Linh.
+// First, account and classSchedule are data so should be made private
 public class Trader : Account
 {
-	public virtual ClassSchedule classSchedule
-	{
+	public virtual ClassSchedule classSchedule   
+    {
 		get;
 		set;
 	}
