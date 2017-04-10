@@ -10,8 +10,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+//modified by Linh
 public class ListingList
 {
+
 
 	public List<Listing> listingList
 	{
@@ -34,6 +36,7 @@ public class ListingList
     public virtual void Add(Listing listing)
 	{
         listingList.Add(listing);
+
 	}
 
 }

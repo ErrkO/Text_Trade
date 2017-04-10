@@ -9,33 +9,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+//modified by Linh
 public class ClassSchedule
 {
-	public virtual List<Course> schedule
-	{
-		get;
-		set;
-	}
+    #region data fields
+    private List<Course> schedule;
+    #endregion
 
-	public virtual Course <<Struct>> Class
-	{
-		get;
-		set;
-	}
+    #region Properties
+    public List<Course> Schedule
+    {
+        get
+        {
+            return schedule;
+        }
+    }
+    #endregion
 
-	public ClassSchedule()
+    #region methods
+    public ClassSchedule()  //constructor
 	{
+        List<Course> schedule = new List<Course>();
 	}
 
 	public virtual void AddClass(string cC, string cL)
 	{
-		throw new System.NotImplementedException();
+        schedule.Add(new Course(cC, cL));
 	}
 
 	public virtual void RemoveClass(Course course)
 	{
-		throw new System.NotImplementedException();
+		//Havent figured out how to remove a class object from List
 	}
-
+    #endregion
 }
 

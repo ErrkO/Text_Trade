@@ -9,110 +9,138 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+// This class is modified by Linh.
+
 public class Trader : Account
 {
-	public virtual ClassSchedule classSchedule
+    #region data fields
+   // each Trader is an Account, but has a class shedule, a watch list - list of listings of interest, and a sell list - list of listings posted for sale
+    private ClassSchedule class_schedule;
+    private ListingList watch_list; //WatchList and SellList classes look the same, basically a list of listings
+    private ListingList sell_list;  //so perhaps they could be the same class => ListingList
+    #endregion
+
+    #region Property fields
+    // are these properties necessary?
+    public ClassSchedule Class_Schedule   
+    {
+		get
+        {
+            return class_schedule;
+        }
+	}
+
+
+	/*public virtual TraderView TraderView
 	{
 		get;
 		set;
-	}
+	}*/     //What is this TradeView?
 
-	public virtual Account account
+	/*public virtual UserList UserList      //why is there a UserList inside Trader class?
 	{
 		get;
 		set;
+	}*/
+
+	public  ListingList Watch_List
+	{
+		get
+        {
+            return watch_list;
+        }
 	}
 
-	public virtual ClassSchedule <<Struct>> ClassSchedule
+    public ListingList Sell_List
+    {
+        get
+        {
+            return sell_list;
+        }
+    }
+    #endregion
+
+    /* public virtual IEnumerable<Listing> Listing
+     {
+         get;
+         set;
+     }*/
+
+    /*public virtual Search Search
 	{
 		get;
 		set;
-	}
+	}*/
 
-	public virtual TraderView TraderView
+    #region methods
+    
+    public Trader() : base()    //default constructor
+    {
+
+    }
+
+    //constructor
+    public Trader(string uName, string pWord, string fName, string lName, Email eMail) : base(uName, pWord, fName, lName, eMail)
+    {
+        ClassSchedule class_schedule = new ClassSchedule();
+        ListingList watch_list = new ListingList();
+        ListingList sell_list = new ListingList();
+    }
+
+    public void CreateListing(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price)
 	{
-		get;
-		set;
+        //whenever Trader creates a listing, it will be added to the sell_list
+        Listing a_listing = new Listing(title, author, edition, isbn, cC, cL, condition, price);
+        sell_list.Add(a_listing);
 	}
 
-	public virtual UserList UserList
+	public void AddToWatchList(Listing a_listing) //add a listing of interest into Watch List
 	{
-		get;
-		set;
+        watch_list.Add(a_listing); 
 	}
 
-	public virtual WatchList WatchList
-	{
-		get;
-		set;
-	}
-
-	public virtual IEnumerable<Listing> Listing
-	{
-		get;
-		set;
-	}
-
-	public virtual Search Search
-	{
-		get;
-		set;
-	}
-
-	public virtual void CreateListing(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price)
+    //the base class Account already has this method
+    /*public virtual void ChangePassword(string pass)
 	{
 		throw new System.NotImplementedException();
-	}
+	}*/
 
-	public virtual void AddToWatchList(Listing listing)
+    public virtual void AddClass(string cC, string cL) //keyword "virtual" since the method will be redefined in ClassSchedule class?
+    {
+        class_schedule.AddClass(cC, cL);    //which version of AddClass() will be called?
+    }
+
+    public void CreateClassSchedule()   //Not sure how to implement this yet. Is it even necessary?
 	{
-		throw new System.NotImplementedException();
+		
 	}
 
-	public virtual void ChangePassword(string pass)
+	public void EditSchedule()      //Not sure how to implement this yet
 	{
-		throw new System.NotImplementedException();
+		
 	}
 
-	public virtual void RemoveListing(Listing listing)
+    public virtual void RemoveListing(Listing a_listing)  //this method is virtual since the Moderator has its own version too
+    {
+        //Not sure how to remove an object from a List collection yet
+    }
+
+    public virtual void RemoveFromWatchList(Listing a_listing)
 	{
-		throw new System.NotImplementedException();
-	}
+        //Not sure how to remove an object from a List collection yet
+    }
 
-	public virtual void AddToSellList(Listing lsiting)
+    public void ReportListing(Listing a_listing)
 	{
-		throw new System.NotImplementedException();
+		//need to have an array-like structure to store the reported listings. perhaps should be passed by reference. 
+        //the Moderator shall have access to this structure
 	}
 
-	public virtual void ReportUser(Listing listing)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void CreateClassSchedule()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void AddClass(string cC, string cL)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void EditSchedule()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void RemoveFromWatchList(Listing listing)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void ReportListing(Listing listing)
-	{
-		throw new System.NotImplementedException();
-	}
-
+    public void ReportUser(Trader trader)
+    {
+        //need to have an array-like structure to store the trader.UserName entries sent by Traders
+        //the Moderator shall have access to this structure
+    }
+    #endregion
 }
 

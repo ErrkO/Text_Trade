@@ -9,56 +9,83 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+// modified by Linh 
 public class Account
 {
-	public virtual string username
+    //make all the data fields protected just in case, since Account class has children
+    #region data fields 
+    protected string username;
+    protected string password;
+    protected Email email;
+    protected string firstName;
+    protected string lastName;
+    #endregion
+
+    #region Property fields
+    public string UserName  //can't change username
+    {
+        get
+        {
+            return username;
+        }
+    }
+
+    public string Password
+    {
+        get
+        {
+            return password;
+        }
+        set //can change password
+        {
+            password = value;  
+        }
+    }
+
+    public Email _Email
+    {
+        get    //cant change registered email
+        {
+            return email;  
+        }
+    }
+
+    public string FirstName //cant change name
+    {
+        get
+        {
+            return firstName;
+        }
+    }
+
+    public string LastName  //cant change name
+    {
+        get
+        {
+            return lastName;
+        }
+    }
+
+    #endregion
+
+    #region methods
+    public Account()    //default constructor
 	{
-		get;
-		set;
 	}
 
-	public virtual string password
+	public Account(string uName, string pWord, string fName, string lName, Email eMail) //constructor
 	{
-		get;
-		set;
+        username = uName;
+        password = pWord;
+        firstName = fName;
+        lastName = lName;
+        email = eMail;
 	}
 
-	public virtual Email email
+	public void ChangePassword(string pass)  //why does this method return something? make it void
 	{
-		get;
-		set;
+        password = pass;
 	}
-
-	public virtual string firstName
-	{
-		get;
-		set;
-	}
-
-	public virtual string lastName
-	{
-		get;
-		set;
-	}
-
-	public virtual Email Email
-	{
-		get;
-		set;
-	}
-
-	public Account()
-	{
-	}
-
-	public Account(string uName, string pword, string fName, string lName, string email)
-	{
-	}
-
-	public virtual string ChangePassword(string pass)
-	{
-		throw new System.NotImplementedException();
-	}
-
+    #endregion
 }
 

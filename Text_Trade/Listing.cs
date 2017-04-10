@@ -81,7 +81,19 @@ public class Listing
 	{
 	}
 
-	public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price, string lastUsed, image picture, string description)
+    public Listing(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price)
+    {
+        this.title = title;
+        this.author = author;
+        this.edition = edition;
+        this.isbn = isbn;
+        this.courseCode = cC;
+        this.courseLevel = cL;
+        this.condition = condition;
+        this.price = price;
+    }
+
+    public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price, string lastUsed, image picture, string description)
 	{
 		throw new System.NotImplementedException();
 	}
@@ -139,10 +151,6 @@ public class Listing
 	public virtual void UpdateTitle(string title)
 	{
 		throw new System.NotImplementedException();
-	}
-
-	public Listing(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price)
-	{
 	}
 
 }
