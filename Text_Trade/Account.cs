@@ -90,7 +90,8 @@ public class Account
         email = eMail;
 	}
 
-	public void ChangePassword(string pass)
+	public void ChangePassword(string pass)  
+
 	{
         password = pass;
 	}
