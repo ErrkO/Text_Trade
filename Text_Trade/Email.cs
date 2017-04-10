@@ -5,31 +5,31 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-public class ListingList
+
+public class Email
 {
-	public virtual list<listing> listingList
+	public string email
 	{
-		get;
-		set;
+
+		get { return this.email; }
+		set { this.email = value; }
+
 	}
 
-	public virtual IEnumerable<Listing> Listing
+    public Email(string email)
+    {
+
+        this.email = email;
+
+    }
+
+	public virtual void OpenMessage()
 	{
-		get;
-		set;
+		throw new System.NotImplementedException();
 	}
 
-	public virtual Search Search
-	{
-		get;
-		set;
-	}
-
-	public virtual void Add(Listing listing)
+	public virtual void SendMail(Email email)
 	{
 		throw new System.NotImplementedException();
 	}

@@ -4,41 +4,64 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+// Eric ToDo
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Course
-{
-	public virtual string courseCode
+public class DataBase
+{ 
+
+	public string connString
+	{
+		get;
+		private set;
+	}
+
+	public virtual Marketplace Marketplace
 	{
 		get;
 		set;
 	}
 
-	public virtual string courseLevel
+	public virtual WatchList WatchList
 	{
 		get;
 		set;
 	}
 
-	public virtual void Class()
+	public virtual SellList SellList
+	{
+		get;
+		set;
+	}
+
+	public virtual UserList UserList
+	{
+		get;
+		set;
+	}
+
+	public virtual ListingList ListingList
+	{
+		get;
+		set;
+	}
+
+    public DataBase()
+    {
+
+        this.connString = "";
+
+    }
+
+	public virtual void Insert()
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void Class(string cC, string cL)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void UpdateCourseCode(string cC)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void UpdateCourseLevel(string cL)
+	public virtual void Remove()
 	{
 		throw new System.NotImplementedException();
 	}
