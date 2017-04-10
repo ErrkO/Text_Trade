@@ -9,5 +9,6 @@
     [courseLevel] VARCHAR(4) NOT NULL, 
     [lastUsed] VARCHAR(50) NULL, 
     [condition] VARCHAR(50) NOT NULL, 
-    [description] VARCHAR(1000) NULL
+    [description] VARCHAR(1000) NULL, 
+    [deleted] BINARY(1) NOT NULL
 )
