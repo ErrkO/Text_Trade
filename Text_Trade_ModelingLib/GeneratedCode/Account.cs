@@ -13,14 +13,26 @@ public class Account
 {
 	public virtual string username
 	{
-		get;
-		set;
+		get
+        {
+            return username;
+        }
+		set
+        {
+            username = value;
+        }
 	}
 
 	public virtual string password
 	{
-		get;
-		set;
+		get
+        {
+            return password;
+        }
+		set
+        {
+            password = value;
+        }
 	}
 
 	public virtual Email email
@@ -31,14 +43,26 @@ public class Account
 
 	public virtual string firstName
 	{
-		get;
-		set;
+		get
+        {
+            return firstName;
+        }
+		set
+        {
+            firstName = value;
+        }
 	}
 
 	public virtual string lastName
 	{
-		get;
-		set;
+		get
+        {
+            return lastName;
+        }
+		set
+        {
+            lastName = value;
+        }
 	}
 
 	public virtual Email Email
@@ -53,11 +77,15 @@ public class Account
 
 	public Account(string uName, string pword, string fName, string lName, string email)
 	{
+        username = uName;
+        password = pword;
+        firstName = fName;
+        lastName = lName;
+        this.Email.email = email;
 	}
 
 	public virtual string ChangePassword(string pass)
 	{
-		throw new System.NotImplementedException();
 	}
 
 }
