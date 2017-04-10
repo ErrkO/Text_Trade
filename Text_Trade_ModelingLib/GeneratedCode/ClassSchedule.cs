@@ -13,28 +13,37 @@ public class ClassSchedule
 {
 	public virtual List<Course> schedule
 	{
-		get;
-		set;
+        get
+        {
+            return schedule;
+        }
 	}
 
-	public virtual Course <<Struct>> Class
+	/*public virtual Course <<Struct>> Class
 	{
 		get;
 		set;
-	}
+	}*/
 
 	public ClassSchedule()
-	{
-	}
+    {
+        schedule.Add(new Course());
+    }
 
 	public virtual void AddClass(string cC, string cL)
 	{
-		throw new System.NotImplementedException();
+        if(schedule[0].courseCode  == "" && schedule[0].courseLevel == "")
+        {
+            schedule[0].UpdateCourseCode(cC);
+            schedule[0].UpdateCourseLevel(cL);
+        }
+        else
+            schedule.Add(new Course(cC, cL));
 	}
 
 	public virtual void RemoveClass(Course course)
 	{
-		throw new System.NotImplementedException();
+        schedule.Remove(course);
 	}
 
 }

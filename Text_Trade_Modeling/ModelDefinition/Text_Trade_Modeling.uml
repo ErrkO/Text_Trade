@@ -13070,7 +13070,7 @@
         <ownedOperationsInternal>
           <operation
             Id="1d42fe3d-1505-40f4-9d6e-b63206f98abb"
-            name="Class"
+            name="Course"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -13129,7 +13129,7 @@
           </operation>
           <operation
             Id="3da598dc-3d50-4336-ac9d-f940cc190af6"
-            name="Class"
+            name="Course"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -13188,7 +13188,7 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="95bec11d-6fb1-4f12-9fea-dff8972a5172"
+                  Id="807430ec-e7fe-468a-ab07-d3a19e52c812"
                   name="cC"
                   direction="In"
                   isUnique="false">
@@ -13202,7 +13202,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="53c664ec-955b-4796-a002-c9ff3b17403d"
+                  Id="f570fa2b-9d2a-45ef-b960-34f148a446f0"
                   name="cL"
                   direction="In"
                   isUnique="false">

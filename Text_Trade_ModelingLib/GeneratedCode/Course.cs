@@ -13,34 +13,48 @@ public class Course
 {
 	public virtual string courseCode
 	{
-		get;
-		set;
+		get
+        {
+            return courseCode;
+        }
+        set
+        {
+            courseCode = value;
+        }
 	}
 
 	public virtual string courseLevel
 	{
-		get;
-		set;
+		get
+        {
+            return courseLevel;
+        }
+		set
+        {
+            courseLevel = value;
+        }
 	}
 
-	public virtual void Class()
+	public Course()
 	{
-		throw new System.NotImplementedException();
+        this.courseCode = "";
+        this.courseLevel = "";
 	}
 
-	public virtual void Class(string cC, string cL)
+	public Course(string cC, string cL)
 	{
-		throw new System.NotImplementedException();
+        this.courseCode = cC;
+        this.courseLevel = cL;
 	}
 
 	public virtual void UpdateCourseCode(string cC)
 	{
-		throw new System.NotImplementedException();
+        this.courseCode = cC;
 	}
 
 	public virtual void UpdateCourseLevel(string cL)
 	{
-		throw new System.NotImplementedException();
+        this.courseLevel = cL;
 	}
 
 }
