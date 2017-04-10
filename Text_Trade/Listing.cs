@@ -11,73 +11,150 @@ using System.Text;
 
 public class Listing
 {
-	public virtual string title
+    #region data fields 
+    string title;
+    string author;
+    string edition;
+    string isbn;
+    string courseCode;
+    string courseLevel;
+    string condition;
+    string lastUsed;
+    double price;
+    image picture;  //? image type?
+    string description;
+    #endregion
+
+    #region Properties
+    public string Title
+	{
+		get
+        {
+            return title;
+        }
+		set
+        {
+            title = value;
+        }
+	}
+
+	public string Author
+	{
+        get
+        {
+            return author;
+        }
+        set
+        {
+            author = value;
+        }
+    }
+
+	public string Edition
+	{
+        get
+        {
+            return edition;
+        }
+        set
+        {
+            edition = value;
+        }
+    }
+
+	public string Isbn
+	{
+        get
+        {
+            return isbn;
+        }
+        set
+        {
+            isbn = value;
+        }
+    }
+
+	public string CourseCode
+	{
+        get
+        {
+            return courseCode;
+        }
+        set
+        {
+            courseCode = value;
+        }
+	}
+
+	public string CourseLevel
+	{
+        get
+        {
+            return courseLevel;
+        }
+        set
+        {
+            courseLevel = value;
+        }
+    }
+
+	public string LastUsed
+	{
+        get
+        {
+            return lastUsed;
+        }
+        set
+        {
+            lastUsed = value;
+        }
+    }
+
+	public string Condition
+	{
+        get
+        {
+            return condition;
+        }
+        set
+        {
+            condition = value;
+        }
+	}
+
+	public double Price
+	{
+        get
+        {
+            return price;
+        }
+        set
+        {
+            price = value;
+        }
+    }
+
+	public image Picture //Not sure how to implement this
 	{
 		get;
 		set;
 	}
 
-	public virtual string author
+	public string Description
 	{
-		get;
-		set;
-	}
+        get
+        {
+            return description;
+        }
+        set
+        {
+            description = value;
+        }
+    }
+    #endregion
 
-	public virtual string edition
-	{
-		get;
-		set;
-	}
-
-	public virtual string isbn
-	{
-		get;
-		set;
-	}
-
-	public virtual string courseCode
-	{
-		get;
-		set;
-	}
-
-	public virtual string courseLevel
-	{
-		get;
-		set;
-	}
-
-	public virtual string lastUsed
-	{
-		get;
-		set;
-	}
-
-	public virtual string condition
-	{
-		get;
-		set;
-	}
-
-	public virtual double price
-	{
-		get;
-		set;
-	}
-
-	public virtual image picture
-	{
-		get;
-		set;
-	}
-
-	public virtual string description
-	{
-		get;
-		set;
-	}
-
-	public Listing()
+    #region methods
+    public Listing()
 	{
 	}
 
@@ -95,63 +172,73 @@ public class Listing
 
     public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price, string lastUsed, image picture, string description)
 	{
-		throw new System.NotImplementedException();
-	}
+        this.title = title;
+        this.author = author;
+        this.edition = edition;
+        this.isbn = isbn;
+        this.courseCode = cC;
+        this.courseLevel = cL;
+        this.condition = condition;
+        this.price = price;
+        this.lastUsed = lastUsed;
+        this.picture = picture;
+        this.description = description;
+    }
 
 	public virtual void UpdateAuthor(string author)
 	{
-		throw new System.NotImplementedException();
+        this.author = author;
 	}
 
 	public virtual void UpdateCondition(string condition)
 	{
-		throw new System.NotImplementedException();
+        this.condition = condition;
 	}
 
 	public virtual void UpdateCourseCode(string cC)
 	{
-		throw new System.NotImplementedException();
+        this.courseCode = cC;
 	}
 
 	public virtual void UpdateCourseLevel(string cL)
 	{
-		throw new System.NotImplementedException();
+        this.courseLevel = cL;
 	}
 
-	public virtual void UpdateDescription(string desciption)
+	public virtual void UpdateDescription(string description)
 	{
-		throw new System.NotImplementedException();
+        this.description = description;
 	}
 
 	public virtual void UpdateEdition(string edition)
 	{
-		throw new System.NotImplementedException();
+        this.edition = edition;
 	}
 
 	public virtual void UpdateISBN(string isbn)
 	{
-		throw new System.NotImplementedException();
+        this.isbn = isbn;
 	}
 
 	public virtual void UpdateLastUsed(string lastUsed)
 	{
-		throw new System.NotImplementedException();
+        this.lastUsed = lastUsed;
 	}
 
 	public virtual void UpdatePicture(image picture)
 	{
-		throw new System.NotImplementedException();
+        this.picture = picture;
 	}
 
 	public virtual void UpdatePrice(double price)
 	{
-		throw new System.NotImplementedException();
+        this.price = price;
 	}
 
 	public virtual void UpdateTitle(string title)
 	{
-		throw new System.NotImplementedException();
+        this.title = title;
 	}
-
+    #endregion
 }
 
