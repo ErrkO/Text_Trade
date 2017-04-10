@@ -22,6 +22,11 @@ public class Account
     #endregion
 
     #region Property fields
+    
+    // can you add 'this.' before the variables in the get methods
+    // ie return this.username
+    // it helps to keep variables set in the proper manner
+
     public string UserName  //can't change username
     {
         get
@@ -46,7 +51,8 @@ public class Account
     {
         get    //cant change registered email
         {
-            return email;  
+            return email;  // as of now this wont return anything you need 
+                        //to call _Email.email to return the string containing the email
         }
     }
 
@@ -72,6 +78,8 @@ public class Account
     public Account()    //default constructor
 	{
 	}
+
+    // can you add this. before all the variables again here
 
 	public Account(string uName, string pWord, string fName, string lName, Email eMail) //constructor
 	{

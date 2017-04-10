@@ -22,6 +22,10 @@ public class Trader : Account
 
     #region Property fields
     // are these properties necessary?
+
+    // the properties are just getters and setters, they are basically just 
+    // incase we need them
+
     public ClassSchedule Class_Schedule   
     {
 		get
@@ -119,6 +123,8 @@ public class Trader : Account
 	{
 		
 	}
+
+    // see the class schedule comment about predicates
 
     public virtual void RemoveListing(Listing a_listing)  //this method is virtual since the Moderator has its own version too
     {
