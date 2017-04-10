@@ -28,7 +28,6 @@ public class ClassSchedule
     #region methods
     public ClassSchedule()  //constructor
 	{
-       // List<Course> schedule = new List<Course>();
 	}
 
 	public virtual void AddClass(string cC, string cL)

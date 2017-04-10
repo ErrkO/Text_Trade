@@ -83,6 +83,7 @@ public class Account
 	}
 
 	public void ChangePassword(string pass)  
+
 	{
         password = pass;
 	}
