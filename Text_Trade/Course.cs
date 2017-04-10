@@ -17,6 +17,9 @@ public class Course
     #endregion
 
     #region Properties
+
+    // same thing as the others, just add this.
+
     public string CourseCode
     {
         get
@@ -43,6 +46,10 @@ public class Course
     #endregion
 
     #region methods
+
+    // basically anywhere that you call a variable that is held by the class object
+    // just add this. before it. I wont comment this one anymore, as to be less redundent
+
     public Course() //default constructor
 	{
         courseCode = "";
