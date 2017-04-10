@@ -10,5 +10,6 @@
     [lastUsed] VARCHAR(50) NULL, 
     [condition] VARCHAR(50) NOT NULL, 
     [description] VARCHAR(1000) NULL, 
-    [deleted] BINARY(1) NOT NULL
+    [deleted] BINARY(1) NOT NULL, 
+    [price] SMALLINT NOT NULL
 )

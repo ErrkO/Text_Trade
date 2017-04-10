@@ -11,27 +11,23 @@ using System.Text;
 
 public class ListingList
 {
-	public virtual list<listing> listingList
+
+	public List<Listing> listingList
 	{
 		get;
 		set;
 	}
 
-	public virtual IEnumerable<Listing> Listing
-	{
-		get;
-		set;
-	}
+    public ListingList()
+    {
 
-	public virtual Search Search
-	{
-		get;
-		set;
-	}
+        this.listingList = new List<Listing>();
 
-	public virtual void Add(Listing listing)
+    }
+
+    public virtual void Add(Listing listing)
 	{
-		throw new System.NotImplementedException();
+        listingList.Add(listing);
 	}
 
 }
