@@ -72,20 +72,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="0095f047-ccc5-4b59-a9ae-d5951354d937">
-      <profileInstance Id="3732b015-7356-4152-a324-56824708c838" name="CSharpProfile">
-        <elementDefinition Id="5a25ef69-b601-492c-8149-3e2dafe4470a" />
-      </profileInstance>
-      <elementDefinition Id="0dd07e42-5650-49bf-a146-3b54c72d5970" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="b2423a6f-d7f3-4de3-89d3-99b7644619da">
-      <profileInstance Id="2235af30-a988-40a9-b4e5-88af7eb87ebd" name="TextTemplateBindings">
-        <elementDefinition Id="9e5c3089-28d9-4be5-9a9e-f459ff2fefee" />
-      </profileInstance>
-      <elementDefinition Id="78680fb8-e4b0-4b4f-be37-f47098b2e2fb" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="b614ac39-5f27-4899-b3c9-3e7c26c160eb" name="Email" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -2319,7 +2305,7 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation Id="f9d1553f-9c91-4fed-b5cf-4160719a1df7" name="Class" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="f9d1553f-9c91-4fed-b5cf-4160719a1df7" name="Course" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="b30e3467-811d-468d-a08f-ee6a125db8f5" name="method" profile="CSharpProfile">
                 <elementDefinition Id="443be0ee-296f-4390-801d-29cf83d56fec" />
@@ -2365,7 +2351,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="1d42fe3d-1505-40f4-9d6e-b63206f98abb" />
           </operation>
-          <operation Id="41d38d0d-6fd1-4845-abfa-df767bb4526f" name="Class" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="41d38d0d-6fd1-4845-abfa-df767bb4526f" name="Course" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="af94a936-7c38-4c42-b26f-71140e1998a5" name="method" profile="CSharpProfile">
                 <elementDefinition Id="11b713e4-6149-4da2-8ac3-ae8bc5856397" />
@@ -2412,16 +2398,16 @@
             <elementDefinition Id="3da598dc-3d50-4336-ac9d-f940cc190af6" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="95ef417d-446c-4fd7-afb5-23c2957fa0b9" name="cC" direction="In" isUnique="false">
-                  <elementDefinition Id="95bec11d-6fb1-4f12-9fea-dff8972a5172" />
+                <parameter Id="4df8b408-342f-4d54-a18f-db36ea5fc16e" name="cC" direction="In" isUnique="false">
+                  <elementDefinition Id="807430ec-e7fe-468a-ab07-d3a19e52c812" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="61591864-9c9f-4e10-890a-661d2848e849" LastKnownName="string" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="2e363d51-a5e4-4e77-9646-24ea1871ba4a" name="cL" direction="In" isUnique="false">
-                  <elementDefinition Id="53c664ec-955b-4796-a002-c9ff3b17403d" />
+                <parameter Id="ce61af58-2436-48c5-98e4-c25497dbb975" name="cL" direction="In" isUnique="false">
+                  <elementDefinition Id="f570fa2b-9d2a-45ef-b960-34f148a446f0" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="61591864-9c9f-4e10-890a-661d2848e849" LastKnownName="string" />
                   </type_NamedElement>
@@ -6668,6 +6654,18 @@
           <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
         </profileInstance>
         <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="0095f047-ccc5-4b59-a9ae-d5951354d937">
+        <profileInstance Id="3732b015-7356-4152-a324-56824708c838" name="CSharpProfile">
+          <elementDefinition Id="5a25ef69-b601-492c-8149-3e2dafe4470a" />
+        </profileInstance>
+        <elementDefinition Id="0dd07e42-5650-49bf-a146-3b54c72d5970" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="b2423a6f-d7f3-4de3-89d3-99b7644619da">
+        <profileInstance Id="2235af30-a988-40a9-b4e5-88af7eb87ebd" name="TextTemplateBindings">
+          <elementDefinition Id="9e5c3089-28d9-4be5-9a9e-f459ff2fefee" />
+        </profileInstance>
+        <elementDefinition Id="78680fb8-e4b0-4b4f-be37-f47098b2e2fb" />
       </packageHasProfileInstances>
     </profileInstances>
   </package>
