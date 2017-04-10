@@ -4,17 +4,19 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+// Eric ToDo
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 public class DataBase
-{
-	public virtual string connString
+{ 
+
+	public string connString
 	{
 		get;
-		set;
+		private set;
 	}
 
 	public virtual Marketplace Marketplace
@@ -46,6 +48,13 @@ public class DataBase
 		get;
 		set;
 	}
+
+    public DataBase()
+    {
+
+        this.connString = "";
+
+    }
 
 	public virtual void Insert()
 	{

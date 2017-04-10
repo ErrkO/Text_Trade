@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+// Eric ToDo
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,14 +15,19 @@ public class ListingList
 
 	public List<Listing> listingList
 	{
-		get;
-		set;
+
+		get { return this.listingList; }
+        set { this.listingList = new List<Listing>(); }
+
 	}
 
-    public ListingList()
+    public DataBase db;
+
+    public string connString
     {
 
-        this.listingList = new List<Listing>();
+        get { return this.connString; }
+        set { this.connString = db.connString; }
 
     }
 
