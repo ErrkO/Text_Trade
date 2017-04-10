@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+// modified by Linh 
 public class Account
 {
     //make all the data fields protected just in case, since Account class has children

@@ -9,39 +9,63 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+//modified by Linh
 public class Course
 {
-	public virtual string courseCode
+    #region data fields
+    private string courseCode;
+    private string courseLevel;
+    #endregion
+
+    #region Properties
+    public string CourseCode
+    {
+        get
+        {
+            return courseCode;
+        }
+        set
+        {
+            courseCode = value;
+        }
+    }
+
+    public string CourseLevel
+    {
+        get
+        {
+            return courseLevel;
+        }
+        set
+        {
+            courseLevel = value;
+        }
+    }
+    #endregion
+
+    #region methods
+    public Course() //default constructor
 	{
-		get;
-		set;
+        courseCode = "N/A";
+        courseLevel = "0000";
 	}
 
-	public virtual string courseLevel
+	public Course(string cC, string cL) //constructor with 2 args
 	{
-		get;
-		set;
+        courseCode = cC;
+        courseLevel = cL;
 	}
 
-	public virtual void Class()
+	public void UpdateCourseCode(string cC)
 	{
-		throw new System.NotImplementedException();
+        courseCode = cC;
 	}
 
-	public virtual void Class(string cC, string cL)
+	public void UpdateCourseLevel(string cL)
 	{
-		throw new System.NotImplementedException();
+        courseLevel = cL;
 	}
-
-	public virtual void UpdateCourseCode(string cC)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void UpdateCourseLevel(string cL)
-	{
-		throw new System.NotImplementedException();
-	}
+    #endregion
 
 }
 

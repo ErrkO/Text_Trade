@@ -9,29 +9,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+//modified by Linh
 public class ListingList
 {
-	public virtual list<listing> listingList
+    //data - a listing_list is a List structure of Listing types
+    private List<Listing> listing_list;
+
+    //Property
+	public List<Listing> Listing_List  
+	{
+		get
+        {
+            return listing_list;
+        }
+	}
+
+	/*public virtual Search Search
 	{
 		get;
 		set;
-	}
+	}*/
 
-	public virtual IEnumerable<Listing> Listing
-	{
-		get;
-		set;
-	}
+    //method - Add a new listing to the listing_list
+    public ListingList()    //constructor
+    {
+        List<Listing> listing_list = new List<Listing>();
+    }
 
-	public virtual Search Search
+	public void Add(Listing a_listing)
 	{
-		get;
-		set;
-	}
-
-	public virtual void Add(Listing listing)
-	{
-		throw new System.NotImplementedException();
+        listing_list.Add(a_listing);
 	}
 
 }
