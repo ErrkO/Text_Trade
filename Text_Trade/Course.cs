@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-//modified by Linh
 public class Course
 {
     #region data fields
@@ -53,8 +52,8 @@ public class Course
 
     public Course() //default constructor
 	{
-        courseCode = "N/A";
-        courseLevel = "0000";
+        courseCode = "";
+        courseLevel = "";
 	}
 
 	public Course(string cC, string cL) //constructor with 2 args

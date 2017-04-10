@@ -19,32 +19,20 @@ public class ClassSchedule
         }
 	}
 
-	/*public virtual Course <<Struct>> Class
-	{
-		get;
-		set;
-	}*/
-
 	public ClassSchedule()
     {
-        schedule.Add(new Course());
     }
 
 	public virtual void AddClass(string cC, string cL)
 	{
-        if(schedule[0].courseCode  == "" && schedule[0].courseLevel == "")
-        {
-            schedule[0].UpdateCourseCode(cC);
-            schedule[0].UpdateCourseLevel(cL);
-        }
-        else
+        if (!schedule.Contains(new Course(cC, cL)))
             schedule.Add(new Course(cC, cL));
 	}
 
 	public virtual void RemoveClass(Course course)
 	{
-        schedule.Remove(course);
+        if(schedule.Count != 0)
+            schedule.Remove(course);
 	}
 
 }
-

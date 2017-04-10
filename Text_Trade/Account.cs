@@ -90,7 +90,7 @@ public class Account
         email = eMail;
 	}
 
-	public void ChangePassword(string pass)  //why does this method return something? make it void
+	public void ChangePassword(string pass)
 	{
         password = pass;
 	}
