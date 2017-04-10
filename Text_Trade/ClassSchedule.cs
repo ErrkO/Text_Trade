@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-//modified by Linh
 public class ClassSchedule
 {
     #region data fields
@@ -29,7 +28,6 @@ public class ClassSchedule
     #region methods
     public ClassSchedule()  //constructor
 	{
-       // List<Course> schedule = new List<Course>();
 	}
 
 	public virtual void AddClass(string cC, string cL)
@@ -39,7 +37,8 @@ public class ClassSchedule
 
 	public virtual void RemoveClass(Course course)
 	{
-		//Havent figured out how to remove a class object from List
+        if (schedule.Count != 0)
+            schedule.Remove(course);
 	}
     #endregion
 }

@@ -11,7 +11,7 @@ using System.Text;
 
 public class Course
 {
-	public virtual string courseCode
+	private string courseCode
 	{
 		get
         {
@@ -23,7 +23,7 @@ public class Course
         }
 	}
 
-	public virtual string courseLevel
+	private string courseLevel
 	{
 		get
         {
