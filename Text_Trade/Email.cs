@@ -5,19 +5,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 
 public class Email
 {
-	public virtual string email
+	public string email
 	{
-		get;
-		set;
+
+		get { return this.email; }
+		set { this.email = value; }
+
 	}
 
-	public virtual void OpenMail()
+    public Email(string email)
+    {
+
+        this.email = email;
+
+    }
+
+	public virtual void OpenMessage()
 	{
 		throw new System.NotImplementedException();
 	}

@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+// Eric ToDo
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,33 +13,30 @@ using System.Text;
 //modified by Linh
 public class ListingList
 {
-    //data - a listing_list is a List structure of Listing types
-    private List<Listing> listing_list;
 
-    //Property
-	public List<Listing> Listing_List  
+
+	public List<Listing> listingList
 	{
-		get
-        {
-            return listing_list;
-        }
+
+		get { return this.listingList; }
+        set { this.listingList = new List<Listing>(); }
+
 	}
 
-	/*public virtual Search Search
-	{
-		get;
-		set;
-	}*/
+    public DataBase db;
 
-    //method - Add a new listing to the listing_list
-    public ListingList()    //constructor
+    public string connString
     {
-        List<Listing> listing_list = new List<Listing>();
+
+        get { return this.connString; }
+        set { this.connString = db.connString; }
+
     }
 
-	public void Add(Listing a_listing)
+    public virtual void Add(Listing listing)
 	{
-        listing_list.Add(a_listing);
+        listingList.Add(listing);
+
 	}
 
 }
