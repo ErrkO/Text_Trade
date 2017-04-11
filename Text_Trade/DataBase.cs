@@ -52,7 +52,7 @@ public class DataBase
     public DataBase()
     {
 
-        this.connString = "";
+        this.connString = "C:\Database";
 
     }
 
