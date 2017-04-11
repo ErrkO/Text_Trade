@@ -8,26 +8,108 @@
 // Eric TODO
 
 using System;
+using System.Net;
+using System.Net.Mail;
 
 
 public class Email
 {
-	public string email
+
+    public MailAddress e_Mail;
+
+    private string client = "smtp-mail.outlook.com";
+    private string username;
+    private string password;
+    private int port = 587;
+    private bool TSL_SSL = true;
+    private bool defaultsettings = false;
+
+    public MailAddress E_Mail
+    {
+        
+        get { return this.E_Mail; }
+
+        set { this.e_Mail = value; }
+        
+    }
+
+    public string email
 	{
 
 		get { return this.email; }
+
 		set { this.email = value; }
 
 	}
 
+    public string UserName
+    {
+
+        get { return this.username; }
+
+        set { this.username = value; }
+
+    }
+
+    public string Password
+    {
+
+        private get { return this.password; }
+
+        set { this.password = value; }
+
+    }
+
+    // Constructor
     public Email(string email)
     {
 
         this.email = email;
 
+        this.e_Mail = new MailAddress(email);
+
     }
 
-	public virtual void OpenMessage()
+    public void SendMessage(string to, string subject, string body, string bcc = null, string cc = null)
+    {
+
+        MailMessage message = new MailMessage();
+
+        message.To.Add(to);
+        message.Subject = subject;
+        message.Body = body;
+        message.From = E_Mail;
+
+        if (bcc != null)
+        {
+
+            message.Bcc.Add(bcc);
+
+        }
+
+        if (cc != null)
+        {
+
+            message.CC.Add(cc);
+
+        }
+
+        SmtpClient smpt = new SmtpClient();
+
+        smpt.Port = this.port;
+        smpt.EnableSsl = this.TSL_SSL;
+        smpt.DeliveryMethod = SmtpDeliveryMethod.Network;
+        smpt.UseDefaultCredentials = defaultsettings;
+        smpt.Credentials = new NetworkCredential(Convert.ToString(message.From), Password);
+        smpt.Host = client;
+
+        message.IsBodyHtml = true;
+
+        smpt.Send(message);
+
+    }
+
+	public void OpenMessage()
 	{
 		throw new System.NotImplementedException();
 	}
