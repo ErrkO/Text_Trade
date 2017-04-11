@@ -15,8 +15,7 @@ public class DataBase
 
 	public string connString
 	{
-		get;
-		private set;
+		get { return "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Database\\TTDatabase.mdf;Integrated Security=True;Connect Timeout=30"; }
 	}
 
 	public virtual Marketplace Marketplace
@@ -52,7 +51,7 @@ public class DataBase
     public DataBase()
     {
 
-        this.connString = "C:\Database";
+        
 
     }
 
