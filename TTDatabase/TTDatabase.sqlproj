@@ -73,4 +73,8 @@
   <ItemGroup>
     <RefactorLog Include="TTDatabase.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="CmpDBToRepo.scmp" />
+    <None Include="CmpRepoToDB.scmp" />
+  </ItemGroup>
 </Project>

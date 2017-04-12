@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 
 public class Listing
 {
@@ -21,7 +22,7 @@ public class Listing
     string condition;
     string lastUsed;
     double price;
-    image picture;  //? image type?
+    Image picture;  //? image type?
     string description;
     #endregion
 
@@ -134,7 +135,7 @@ public class Listing
         }
     }
 
-	public image Picture //Not sure how to implement this
+	public Image Picture //Not sure how to implement this
 	{
 		get;
 		set;
@@ -170,7 +171,7 @@ public class Listing
         this.price = price;
     }
 
-    public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price, string lastUsed, image picture, string description)
+    public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price, string lastUsed, Image picture, string description)
 	{
         this.title = title;
         this.author = author;
@@ -225,7 +226,7 @@ public class Listing
         this.lastUsed = lastUsed;
 	}
 
-	public virtual void UpdatePicture(image picture)
+	public virtual void UpdatePicture(Image picture)
 	{
         this.picture = picture;
 	}
