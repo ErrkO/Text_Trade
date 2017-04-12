@@ -15,14 +15,12 @@ public class ClassSchedule
     private List<Course> schedule;
     #endregion
 
-    // this. again please
-
     #region Properties
     public List<Course> Schedule
     {
         get
         {
-            return schedule;
+            return this.schedule;
         }
     }
     #endregion
@@ -34,7 +32,7 @@ public class ClassSchedule
 
 	public virtual void AddClass(string cC, string cL)
 	{
-        schedule.Add(new Course(cC, cL));
+        this.schedule.Add(new Course(cC, cL));
 	}
 
     // you would probably need to create a predicate and search the list for the course
@@ -45,8 +43,8 @@ public class ClassSchedule
 
 	public virtual void RemoveClass(Course course)
 	{
-        if (schedule.Count != 0)
-            schedule.Remove(course);
+        if (this.schedule.Count != 0)
+            this.schedule.Remove(course);
 	}
     #endregion
 }

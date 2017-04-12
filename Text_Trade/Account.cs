@@ -31,7 +31,7 @@ public class Account
     {
         get
         {
-            return username;
+            return this.username;
         }
     }
 
@@ -39,7 +39,7 @@ public class Account
     {
         get
         {
-            return password;
+            return this.password;
         }
         set //can change password
         {
@@ -60,7 +60,7 @@ public class Account
     {
         get
         {
-            return firstName;
+            return this.firstName;
         }
     }
 
@@ -68,7 +68,7 @@ public class Account
     {
         get
         {
-            return lastName;
+            return this.lastName;
         }
     }
 
