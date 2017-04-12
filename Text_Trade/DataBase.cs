@@ -21,43 +21,6 @@ public class DataBase
 		get { return CONNSTRING; }
 	}
 
-	public virtual Marketplace Marketplace
-	{
-		get;
-		set;
-	}
-
-	public virtual WatchList WatchList
-	{
-		get;
-		set;
-	}
-
-	public virtual SellList SellList
-	{
-		get;
-		set;
-	}
-
-	public virtual UserList UserList
-	{
-		get;
-		set;
-	}
-
-	public virtual ListingList ListingList
-	{
-		get;
-		set;
-	}
-
-    public DataBase()
-    {
-
-        
-
-    }
-
 	public virtual void Insert()
 	{
 		throw new System.NotImplementedException();

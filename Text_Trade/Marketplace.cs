@@ -31,7 +31,7 @@ public class Marketplace
 	public List<Listing> Listing
 	{
 
-		get { return this.Listing; }
+		get { return this.listing; }
 
     }
 
