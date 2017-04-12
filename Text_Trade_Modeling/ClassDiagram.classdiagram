@@ -363,7 +363,7 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="96549187-4702-490f-ae03-296e62dc2076" name="username" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="96549187-4702-490f-ae03-296e62dc2076" name="username" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="fac24399-c3e3-4743-bfe9-6a2f564e866a" name="property" profile="CSharpProfile">
                 <elementDefinition Id="fa3b3963-121b-4ebf-beb7-d5637cc494cf" />
@@ -418,7 +418,7 @@
               <referencedTypeMoniker Id="61591864-9c9f-4e10-890a-661d2848e849" LastKnownName="string" />
             </type_NamedElement>
           </property>
-          <property Id="b4d6d056-efe7-4961-a85e-ca34697e97e6" name="password" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="b4d6d056-efe7-4961-a85e-ca34697e97e6" name="password" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="60da4256-c367-46bd-ba54-80a8e383b88f" name="property" profile="CSharpProfile">
                 <elementDefinition Id="5ce62912-e995-454c-b22f-c73bb450af5c" />
@@ -473,7 +473,7 @@
               <referencedTypeMoniker Id="61591864-9c9f-4e10-890a-661d2848e849" LastKnownName="string" />
             </type_NamedElement>
           </property>
-          <property Id="f5483089-6a48-4d77-bc6b-e243659c805a" name="email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="f5483089-6a48-4d77-bc6b-e243659c805a" name="email" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="8264d818-5f45-4359-b673-05eb40c864be" name="property" profile="CSharpProfile">
                 <elementDefinition Id="cc853dc9-4007-49dc-8ff8-3c2308211fc1" />
@@ -528,7 +528,7 @@
               <referencedTypeMoniker Id="3a235929-ce4e-450f-9d72-19364d24c418" LastKnownName="Email" />
             </type_NamedElement>
           </property>
-          <property Id="a1f1730c-bd7f-4d38-a280-32489837fab6" name="firstName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="a1f1730c-bd7f-4d38-a280-32489837fab6" name="firstName" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="eb661382-d625-473f-987d-afcbc62cbef2" name="property" profile="CSharpProfile">
                 <elementDefinition Id="35a89ab9-7f32-454a-ba4c-5b7ba2708d8b" />
@@ -583,7 +583,7 @@
               <referencedTypeMoniker Id="61591864-9c9f-4e10-890a-661d2848e849" LastKnownName="string" />
             </type_NamedElement>
           </property>
-          <property Id="f7e4edae-4161-44d0-ace8-5a8b8b91b90e" name="lastName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="f7e4edae-4161-44d0-ace8-5a8b8b91b90e" name="lastName" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="8592aa57-899f-42f2-85da-d7c302bbebf4" name="property" profile="CSharpProfile">
                 <elementDefinition Id="8da7dba5-b5a7-4ea6-8e0a-88f09297fbf1" />
@@ -1910,7 +1910,7 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="343e74ca-7e23-44d8-91f9-a3a0e78c72b6" name="schedule" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="343e74ca-7e23-44d8-91f9-a3a0e78c72b6" name="schedule" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="c162bd1b-8d18-4b08-ace3-f3d7a738e27a" name="property" profile="CSharpProfile">
                 <elementDefinition Id="636fd289-cc33-4ca6-a071-329445e34421" />
@@ -2193,7 +2193,7 @@
         </appliedStereotypesInternal>
         <elementDefinition Id="cfbf0431-0037-4d55-9354-fac6305cfbcc" />
         <ownedAttributesInternal>
-          <property Id="e299cf20-7fab-42e6-9a55-83902bdfa7a9" name="courseCode" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="e299cf20-7fab-42e6-9a55-83902bdfa7a9" name="courseCode" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="d327e849-fa9e-4482-927b-ced2260f5720" name="property" profile="CSharpProfile">
                 <elementDefinition Id="fcbcd812-d028-481f-86a6-301f1a428431" />
@@ -2248,7 +2248,7 @@
               <referencedTypeMoniker Id="61591864-9c9f-4e10-890a-661d2848e849" LastKnownName="string" />
             </type_NamedElement>
           </property>
-          <property Id="4af30557-24e0-4c81-b4d2-fcfda3fb59ec" name="courseLevel" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="4af30557-24e0-4c81-b4d2-fcfda3fb59ec" name="courseLevel" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="b65460fc-8d2b-424f-aa6b-a404a988b4d2" name="property" profile="CSharpProfile">
                 <elementDefinition Id="6e63f931-42ea-407e-b89e-e0e36a86cc74" />
@@ -3504,7 +3504,7 @@
               <referencedTypeMoniker Id="61591864-9c9f-4e10-890a-661d2848e849" LastKnownName="string" />
             </type_NamedElement>
           </property>
-          <property Id="f7247fbc-c1eb-457e-8334-4db059ba0bbe" name="condition" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="f7247fbc-c1eb-457e-8334-4db059ba0bbe" name="bookCondition" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="40b3a81a-6ba2-452a-a92d-8b580029650a" name="property" profile="CSharpProfile">
                 <elementDefinition Id="3e749956-3a03-4115-a980-47478efd0237" />
@@ -3556,7 +3556,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="f0d6d8b3-f5f3-451a-9185-fa537d61c76f" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="61591864-9c9f-4e10-890a-661d2848e849" LastKnownName="string" />
+              <referencedTypeMoniker Id="fad6c416-860c-4819-8a86-d84ab2283a2d" LastKnownName="enum" />
             </type_NamedElement>
           </property>
           <property Id="9441badc-9daa-4ea4-a9f6-806aed5646be" name="price" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -6637,6 +6637,11 @@
     <packageHasNamedElement>
       <referencedType Id="d1c757fe-dafe-485d-b565-e5c3f905dc68" name="Course" isAbstract="false" isLeaf="false" cachedFullName="Course">
         <elementDefinition Id="35712838-52a2-4ef0-82a2-dae1ac7c391a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fad6c416-860c-4819-8a86-d84ab2283a2d" name="enum" isAbstract="false" isLeaf="false" cachedFullName="enum">
+        <elementDefinition Id="68e91dee-effb-4ebe-9a4e-af8ca88e00c6" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
