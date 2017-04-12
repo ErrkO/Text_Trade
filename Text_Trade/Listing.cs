@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Drawing;
 
 
 public enum condition { New, LikeNew, Great, Good, Acceptable }
@@ -23,7 +22,7 @@ public class Listing
     condition bookCondition;
     string lastUsed;
     double price;
-    Image picture;  //? image type?
+    image picture;  //? image type?
     string description;
     #endregion
 
@@ -136,7 +135,7 @@ public class Listing
         }
     }
 
-	public Image Picture //Not sure how to implement this
+	public image Picture //Not sure how to implement this
 	{
 		get;
 		set;
@@ -172,7 +171,7 @@ public class Listing
         this.price = price;
     }
 
-    public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price, string lastUsed, Image picture, string description)
+    public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price, string lastUsed, image picture, string description)
 	{
         this.title = title;
         this.author = author;
@@ -227,7 +226,7 @@ public class Listing
         this.lastUsed = lastUsed;
 	}
 
-	public virtual void UpdatePicture(Image picture)
+	public virtual void UpdatePicture(image picture)
 	{
         this.picture = picture;
 	}
