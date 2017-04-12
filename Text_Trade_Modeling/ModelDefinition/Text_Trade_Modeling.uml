@@ -10218,6 +10218,7 @@
           <property
             Id="2fb56e88-9e23-4609-9e0c-ee76227f8c91"
             name="username"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -10293,6 +10294,7 @@
           <property
             Id="7bbfdce3-c9f6-4560-9ca7-871ec7a63cf7"
             name="password"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -10368,6 +10370,7 @@
           <property
             Id="76dbf22e-2873-4df3-aeb1-bdeffdd29e99"
             name="email"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -10443,6 +10446,7 @@
           <property
             Id="4537dde2-7c63-4ae1-a007-d7d7a1f6783b"
             name="firstName"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -10518,6 +10522,7 @@
           <property
             Id="3e14efa9-0e53-4c09-b2d0-cbe0d5e25b7a"
             name="lastName"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -14893,7 +14898,7 @@
           </property>
           <property
             Id="f0d6d8b3-f5f3-451a-9185-fa537d61c76f"
-            name="condition"
+            name="bookCondition"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -14961,8 +14966,8 @@
             </appliedStereotypesInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="73e21dd4-a94b-4334-b35d-446cc398f5ca"
-                LastKnownName="string"
+                Id="68e91dee-effb-4ebe-9a4e-af8ca88e00c6"
+                LastKnownName="enum"
                 LastKnownLocation="Text_Trade_Modeling.uml" />
             </type_NamedElement>
           </property>
@@ -19651,6 +19656,11 @@
       <undefinedType
         Id="35712838-52a2-4ef0-82a2-dae1ac7c391a"
         name="Course" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="68e91dee-effb-4ebe-9a4e-af8ca88e00c6"
+        name="enum" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
