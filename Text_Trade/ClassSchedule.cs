@@ -15,6 +15,8 @@ public class ClassSchedule
     private List<Course> schedule;
     #endregion
 
+    // this. again please
+
     #region Properties
     public List<Course> Schedule
     {
@@ -34,6 +36,12 @@ public class ClassSchedule
 	{
         schedule.Add(new Course(cC, cL));
 	}
+
+    // you would probably need to create a predicate and search the list for the course
+    // then you would call the remove function (it might be called something different)
+    // and you could either remove it based on the predicate call (imagine a function in
+    // in a function) or you could set an iterator based on what the predicate returns
+    // and remove the position in the list
 
 	public virtual void RemoveClass(Course course)
 	{

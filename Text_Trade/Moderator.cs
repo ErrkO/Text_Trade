@@ -4,6 +4,9 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+// Eric TODO
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,34 +14,24 @@ using System.Text;
 
 public class Moderator : Account
 {
-	public virtual Account account
+
+    // creates an account object
+	public Account account
 	{
-		get;
-		set;
+		get { return this.account; }
+		set { this.account = new Account(); }
 	}
 
-	public virtual IEnumerable<Listing> Listing
+	public virtual List<Listing> listing
 	{
-		get;
-		set;
+		get { return this.listing; }
+		set { this.listing = new List<Listing>(); }
 	}
 
-	public virtual ModeratorView ModeratorView
+	public virtual Marketplace marketplace
 	{
-		get;
-		set;
-	}
-
-	public virtual Marketplace Marketplace
-	{
-		get;
-		set;
-	}
-
-	public virtual Search Search
-	{
-		get;
-		set;
+		get { return this.marketplace; }
+		set {; }
 	}
 
 	public virtual void RemoveListing(Listing listing)
