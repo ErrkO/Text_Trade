@@ -9,7 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-//modified by Linh
+
+public enum condition { New, LikeNew, Great, Good, Acceptable }
+
 public class Listing
 {
     #region data fields 
@@ -19,7 +21,7 @@ public class Listing
     string isbn;
     string courseCode;
     string courseLevel;
-    string condition;
+    condition bookCondition;
     string lastUsed;
     double price;
     image picture;  //? image type?
@@ -31,11 +33,11 @@ public class Listing
 	{
 		get
         {
-            return title;
+            return this.title;
         }
 		set
         {
-            title = value;
+            this.title = value;
         }
 	}
 
@@ -43,11 +45,11 @@ public class Listing
 	{
         get
         {
-            return author;
+            return this.author;
         }
         set
         {
-            author = value;
+            this.author = value;
         }
     }
 
@@ -55,11 +57,11 @@ public class Listing
 	{
         get
         {
-            return edition;
+            return this.edition;
         }
         set
         {
-            edition = value;
+            this.edition = value;
         }
     }
 
@@ -67,11 +69,11 @@ public class Listing
 	{
         get
         {
-            return isbn;
+            return this.isbn;
         }
         set
         {
-            isbn = value;
+            this.isbn = value;
         }
     }
 
@@ -79,11 +81,11 @@ public class Listing
 	{
         get
         {
-            return courseCode;
+            return this.courseCode;
         }
         set
         {
-            courseCode = value;
+            this.courseCode = value;
         }
 	}
 
@@ -91,11 +93,11 @@ public class Listing
 	{
         get
         {
-            return courseLevel;
+            return this.courseLevel;
         }
         set
         {
-            courseLevel = value;
+            this.courseLevel = value;
         }
     }
 
@@ -103,23 +105,23 @@ public class Listing
 	{
         get
         {
-            return lastUsed;
+            return this.lastUsed;
         }
         set
         {
-            lastUsed = value;
+            this.lastUsed = value;
         }
     }
 
-	public string Condition
+	private condition BookCondition
 	{
         get
         {
-            return condition;
+            return this.bookCondition;
         }
         set
         {
-            condition = value;
+            this.bookCondition = value;
         }
 	}
 
@@ -127,11 +129,11 @@ public class Listing
 	{
         get
         {
-            return price;
+            return this.price;
         }
         set
         {
-            price = value;
+            this.price = value;
         }
     }
 
@@ -145,11 +147,11 @@ public class Listing
 	{
         get
         {
-            return description;
+            return this.description;
         }
         set
         {
-            description = value;
+            this.description = value;
         }
     }
     #endregion
@@ -159,7 +161,7 @@ public class Listing
 	{
 	}
 
-    public Listing(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price)
+    public Listing(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price)
     {
         this.title = title;
         this.author = author;
@@ -167,11 +169,11 @@ public class Listing
         this.isbn = isbn;
         this.courseCode = cC;
         this.courseLevel = cL;
-        this.condition = condition;
+        this.bookCondition = bookCondition;
         this.price = price;
     }
 
-    public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price, string lastUsed, image picture, string description)
+    public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price, string lastUsed, image picture, string description)
 	{
         this.title = title;
         this.author = author;
@@ -179,7 +181,7 @@ public class Listing
         this.isbn = isbn;
         this.courseCode = cC;
         this.courseLevel = cL;
-        this.condition = condition;
+        this.bookCondition = bookCondition;
         this.price = price;
         this.lastUsed = lastUsed;
         this.picture = picture;
@@ -191,9 +193,9 @@ public class Listing
         this.author = author;
 	}
 
-	public virtual void UpdateCondition(string condition)
+	public virtual void UpdateCondition(condition bookCondition)
 	{
-        this.condition = condition;
+        this.bookCondition = bookCondition;
 	}
 
 	public virtual void UpdateCourseCode(string cC)

@@ -18,60 +18,54 @@ public class Course
 
     #region Properties
 
-    // same thing as the others, just add this.
-
-    public string CourseCode
+    private string CourseCode
     {
         get
         {
-            return courseCode;
+            return this.courseCode;
         }
         set
         {
-            courseCode = value;
+            this.courseCode = value;
         }
     }
 
-    public string CourseLevel
+    private string CourseLevel
     {
         get
         {
-            return courseLevel;
+            return this.courseLevel;
         }
         set
         {
-            courseLevel = value;
+            this.courseLevel = value;
         }
     }
     #endregion
 
     #region methods
 
-    // basically anywhere that you call a variable that is held by the class object
-    // just add this. before it. I wont comment this one anymore, as to be less redundent
-
     public Course() //default constructor
 	{
-        courseCode = "";
-        courseLevel = "";
+        this.courseCode = "";
+        this.courseLevel = "";
 	}
 
 	public Course(string cC, string cL) //constructor with 2 args
 	{
-        courseCode = cC;
-        courseLevel = cL;
+        this.courseCode = cC;
+        this.courseLevel = cL;
 	}
 
 	public void UpdateCourseCode(string cC)
 	{
-        courseCode = cC;
+        this.courseCode = cC;
 	}
 
 	public void UpdateCourseLevel(string cL)
 	{
-        courseLevel = cL;
+        this.courseLevel = cL;
 	}
     #endregion
 
 }
-
