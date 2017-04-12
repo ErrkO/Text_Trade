@@ -12534,7 +12534,6 @@
           <property
             Id="1f51443f-fb4c-40c7-adb1-6ec757a359e0"
             name="schedule"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -12925,7 +12924,6 @@
           <property
             Id="a961e0c9-2ed1-49f0-a180-6e794192acfc"
             name="courseCode"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -13001,7 +12999,6 @@
           <property
             Id="9b209b18-4f24-47d9-815d-6697752f5803"
             name="courseLevel"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -14902,7 +14899,6 @@
           <property
             Id="f0d6d8b3-f5f3-451a-9185-fa537d61c76f"
             name="bookCondition"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
