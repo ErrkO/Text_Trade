@@ -19,7 +19,7 @@ public class UserList
 		throw new System.NotImplementedException();
 	}
 
-	public virtual userList SearchForUser()
+	public virtual UserList SearchForUser()
 	{
 		throw new System.NotImplementedException();
 	}

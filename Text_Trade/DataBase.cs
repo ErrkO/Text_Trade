@@ -11,49 +11,15 @@ using System.Linq;
 using System.Text;
 
 public class DataBase
-{ 
+{
 
-	public string connString
+    private const string CONNSTRING = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Database\\TTDatabase.mdf;Integrated Security=True;Connect Timeout=30";
+
+
+    public string ConnString
 	{
-		get { return "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Database\\TTDatabase.mdf;Integrated Security=True;Connect Timeout=30"; }
+		get { return CONNSTRING; }
 	}
-
-	public virtual Marketplace Marketplace
-	{
-		get;
-		set;
-	}
-
-	public virtual WatchList WatchList
-	{
-		get;
-		set;
-	}
-
-	public virtual SellList SellList
-	{
-		get;
-		set;
-	}
-
-	public virtual UserList UserList
-	{
-		get;
-		set;
-	}
-
-	public virtual ListingList ListingList
-	{
-		get;
-		set;
-	}
-
-    public DataBase()
-    {
-
-        
-
-    }
 
 	public virtual void Insert()
 	{
