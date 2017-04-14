@@ -60,7 +60,7 @@ public class DataBase
             conn.ConnectionString = DataBase.CONNSTRING;
             conn.Open();
 
-            String sql;
+            string sql;
             sql = "INSERT FROM [" + tableName + "] WHERE [" + fieldName + "] = @id";
 
             SqlCommand command = new SqlCommand(sql, conn);
