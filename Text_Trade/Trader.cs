@@ -91,7 +91,7 @@ public class Trader : Account
         ListingList sell_list = new ListingList();
     }
 
-    public void CreateListing(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price)
+    public void CreateListing(string title, string author, string edition, string isbn, string cC, string cL, condition condition, double price)
 	{
         //whenever Trader creates a listing, it will be added to the sell_list
         Listing a_listing = new Listing(title, author, edition, isbn, cC, cL, condition, price);
@@ -127,8 +127,8 @@ public class Trader : Account
     // see the class schedule comment about predicates
 
     public virtual void RemoveListing(Listing a_listing)  //this method is virtual since the Moderator has its own version too
-    {
-        if (sell_list.Listing_List.Count != 0)
+    {                                                     // it shouldnt be virutal only the base class function needs to be virtual for inheritance and both trader and mod
+        if (sell_list.Listing_List.Count != 0)            // inherit from account
         {
             sell_list.Listing_List.Remove(a_listing);
         }
