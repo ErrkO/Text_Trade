@@ -9,17 +9,36 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
-public class UserList
+public class UserList : DataBase
 {
+
+    private DataBase db = new DataBase();
+
 	public virtual void Add(Trader trader)
 	{
-		throw new System.NotImplementedException();
+
+        using (SqlConnection conn = new SqlConnection())
+        {
+
+            conn.ConnectionString = db.ConnString;
+            conn.Open();
+
+            string sql;
+            sql = "INSERT into [UserList] (username, password, deleted, classschedule) " 
+                + "VALUES ( @uname , @pword, 0, @CSched";
+
+
+            +trader.UserName + ", " + trader.Password + ", 0, " + trader.Class_Schedule
+
+        }
+
 	}
 
-	public virtual userList SearchForUser()
+	public virtual UserList SearchForUser()
 	{
 		throw new System.NotImplementedException();
 	}

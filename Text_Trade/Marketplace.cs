@@ -14,23 +14,26 @@ using System.Text;
 
 public class Marketplace
 {
-	public virtual const int LISTINGLIFE
-	{
-		get;
-		set;
-	}
 
-	public virtual int listingLifeTime
-	{
-		get;
-		set;
-	}
+    public const int LISTINGLIFE = 30;
 
-	public virtual IEnumerable<Listing> Listing
+    private int listingLifetime;
+    private List<Listing> listing;
+
+	public int ListingLifeTime
 	{
-		get;
-		set;
-	}
+
+		get { return this.listingLifetime; }
+		set { this.listingLifetime = value; }
+
+    }
+
+	public List<Listing> Listing
+	{
+
+		get { return this.listing; }
+
+    }
 
 	public virtual void RenewListing(Listing listing)
 	{
@@ -72,7 +75,7 @@ public class Marketplace
 		throw new System.NotImplementedException();
 	}
 
-	public virtual ListingList SearchFromSchedule(ClassShedule classSchedule)
+	public virtual ListingList SearchFromSchedule(ClassSchedule classSchedule)
 	{
 		throw new System.NotImplementedException();
 	}

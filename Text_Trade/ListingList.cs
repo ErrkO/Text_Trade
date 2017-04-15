@@ -28,7 +28,7 @@ public class ListingList
     {
 
         get { return this.connString; }
-        set { this.connString = db.connString; }
+        set { this.connString = db.ConnString; }
 
     }
 

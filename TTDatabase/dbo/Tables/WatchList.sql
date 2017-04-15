@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[WatchList]
+(
+	[Id] INT NOT NULL PRIMARY KEY
+)
