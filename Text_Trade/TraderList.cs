@@ -18,7 +18,7 @@ public class TraderList : DataBase
 
     private DataBase db = new DataBase();
 
-	public virtual void Add(Trader trader)
+	public virtual void Add(Trader trader) // this function probably needs to be moved to the trader class
 	{
 
         using (SqlConnection conn = new SqlConnection())
@@ -43,7 +43,7 @@ public class TraderList : DataBase
 
                 sql = "INSERT into [UserList] (username, password, deleted, classschedule) "
                         + "VALUES ( @uname , @pword, 0, @CSched"
-                        + "WHERE trader_id = @";
+                        + "WHERE trader_id = @trader_id";
 
             }
 
@@ -52,8 +52,22 @@ public class TraderList : DataBase
             command.Parameters.AddWithValue("uname", trader.UserName);
             command.Parameters.AddWithValue("pword", trader.Password);
             command.Parameters.AddWithValue("CSched", trader.Class_Schedule);
-            
 
+            if (trader.Trader_id == -1)
+            {
+
+                trader.Trader_id = (int)command.ExecuteScalar();
+
+            }
+
+            else
+            {
+
+                command.Parameters.AddWithValue("trader_id", trader.Trader_id);
+
+                command.ExecuteNonQuery();
+
+            }
 
         }
 

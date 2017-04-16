@@ -11,5 +11,6 @@
     [condition] VARCHAR(50) NOT NULL, 
     [description] VARCHAR(1000) NULL, 
     [deleted] BINARY(1) NOT NULL, 
-    [price] SMALLINT NOT NULL
+    [price] SMALLINT NOT NULL, 
+    [listinglife] DATETIME NOT NULL
 )

@@ -42,6 +42,8 @@ public class ClassSchedule
     //testing in a separate project shows that the Remove() function will remove the first
     //occurence of the value that it is passed without the need for a predicate or iterator
 
+    // that is good to hear, I vaguely remember needing one for a similar project i was doing, but if we dont need one then great - Eric
+
 	public virtual void RemoveClass(Course course)
 	{
             this.schedule.Remove(course);
