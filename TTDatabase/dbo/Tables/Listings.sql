@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[ListingList]
+﻿CREATE TABLE [dbo].[Listings]
 (
 	[Id] INT NOT NULL PRIMARY KEY, 
     [title] VARCHAR(100) NOT NULL, 
