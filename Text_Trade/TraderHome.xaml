@@ -11,7 +11,7 @@
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="140" Margin="10,74,0,0" Stroke="Black" VerticalAlignment="Top" Width="270"/>
         <Label x:Name="label" Content="Options" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="60"/>
         <Button x:Name="viewListingsButton" Content="View Listings" HorizontalAlignment="Left" Margin="30,94,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.264,0.494" Height="20" Click="viewListingsButton_Click"/>
-        <Button x:Name="postListingButton" Content="Post Listing" HorizontalAlignment="Left" Margin="30,134,0,0" VerticalAlignment="Top" Width="100" Height="20"/>
+        <Button x:Name="postListingButton" Content="Create Listing" HorizontalAlignment="Left" Margin="30,134,0,0" VerticalAlignment="Top" Width="100" Height="20"/>
         <Button x:Name="manageListingsButton" Content="Manage Listings" HorizontalAlignment="Left" Margin="30,174,0,0" VerticalAlignment="Top" Width="100" Height="20"/>
         <Button x:Name="manageScheduleButton" Content="Manage Schedule" HorizontalAlignment="Left" Margin="160,94,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.264,0.494" Height="20"/>
         <Button x:Name="watchListButton" Content="Watch List" HorizontalAlignment="Left" Margin="160,134,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.264,0.494" Height="20"/>
