@@ -10,6 +10,9 @@
         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
     </Window.Background>
     <Grid x:Name="Create_Listing">
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
+        </Grid.Background>
         <Label x:Name="label" Content="Book Title:" HorizontalAlignment="Left" Margin="31,51,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.165,0.31"/>
         <Label x:Name="label1" Content="Author(s):" HorizontalAlignment="Left" Margin="31,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.179,-0.796"/>
         <Label x:Name="label2" Content="Edition:" HorizontalAlignment="Left" Margin="31,113,0,0" VerticalAlignment="Top"/>
