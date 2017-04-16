@@ -842,7 +842,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="c4b7fa89-7dc4-433f-9a48-f7623cd76294" name="Trader" isAbstract="true" isLeaf="false" isActiveClass="false">
+      <class Id="c4b7fa89-7dc4-433f-9a48-f7623cd76294" name="Trader" isAbstract="false" isLeaf="false" isActiveClass="false">
         <appliedStereotypesInternal>
           <stereotypeInstance Id="1193216f-3e69-4e12-839c-50407c89427c" name="class" profile="CSharpProfile">
             <elementDefinition Id="5f14a2d8-518c-4c32-9daa-2c2aaeec0042" />

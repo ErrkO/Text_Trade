@@ -10882,7 +10882,7 @@
       <class
         Id="fcfc3eb2-6466-47a4-8a6e-c40fbee8f4d3"
         name="Trader"
-        isAbstract="true"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <appliedStereotypesInternal>
