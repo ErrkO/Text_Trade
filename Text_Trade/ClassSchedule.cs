@@ -39,9 +39,11 @@ public class ClassSchedule
     // in a function) or you could set an iterator based on what the predicate returns
     // and remove the position in the list
 
+    //testing in a separate project shows that the Remove() function will remove the first
+    //occurence of the value that it is passed without the need for a predicate or iterator
+
 	public virtual void RemoveClass(Course course)
 	{
-        if (this.schedule.Count != 0)
             this.schedule.Remove(course);
 	}
     #endregion
