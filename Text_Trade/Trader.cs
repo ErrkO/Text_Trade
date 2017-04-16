@@ -128,9 +128,9 @@ public class Trader : Account
 
     public virtual void RemoveListing(Listing a_listing)  //this method is virtual since the Moderator has its own version too
     {
-        if (sell_list.Listing_List.Count != 0)
+        if (sell_list.listingList.Count != 0)
         {
-            sell_list.Listing_List.Remove(a_listing);
+            sell_list.listingList.Remove(a_listing);
         }
         //but how can we pass an object to Remove function if the list is empty in the first place?
     }
@@ -138,9 +138,9 @@ public class Trader : Account
     public virtual void RemoveFromWatchList(Listing a_listing)
 	{
         //Not sure how to remove an object from a List collection yet
-        if (watch_list.Listing_List.Count != 0)
+        if (watch_list.listingList.Count != 0)
         {
-            watch_list.Listing_List.Remove(a_listing);
+            watch_list.listingList.Remove(a_listing);
         }
     }
 
