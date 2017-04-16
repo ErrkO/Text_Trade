@@ -84,7 +84,7 @@ public class Email
 
             this.IsOutlook = true;
 
-            client = "smtp-mail.outlook.com";
+            client = "smtp.office365.com";
             port = 587;
             TSL_SSL = true;
             defaultsettings = false;
@@ -117,7 +117,7 @@ public class Email
         smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
         smtp.UseDefaultCredentials = false;
         smtp.Credentials = new NetworkCredential(mail.From.Address, Password);
-        smtp.Host = "smtp.gmail.com";
+        smtp.Host = client;
 
         mail.To.Add(new MailAddress(to));
 
