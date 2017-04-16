@@ -28,11 +28,11 @@ public class UserList : DataBase
             conn.Open();
 
             string sql;
-            sql = "INSERT into [UserList] (username, password, deleted, classschedule) " 
-                + "VALUES ( @uname , @pword, 0, @CSched";
+            sql = "INSERT into [UserList] (username, password, deleted, classschedule) "
+                + "VALUES ( @uname , @pword, 0, @CSched"
 
 
-            +trader.UserName + ", " + trader.Password + ", 0, " + trader.Class_Schedule
+            + trader.UserName + ", " + trader.Password + ", 0, " + trader.Class_Schedule;
 
         }
 
