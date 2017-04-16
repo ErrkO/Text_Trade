@@ -86,7 +86,7 @@
     <Compile Include="TraderHome.xaml.cs">
       <DependentUpon>TraderHome.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserList.cs" />
+    <Compile Include="TraderList.cs" />
     <Compile Include="ViewListingsList.xaml.cs">
       <DependentUpon>ViewListingsList.xaml</DependentUpon>
     </Compile>

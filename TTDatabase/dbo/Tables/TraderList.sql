@@ -1,6 +1,6 @@
-﻿CREATE TABLE [dbo].[UserList]
+﻿CREATE TABLE [dbo].[TraderList]
 (
-	[user_Id] INT NOT NULL PRIMARY KEY, 
+	[trader_id] INT NOT NULL PRIMARY KEY, 
     [username] NVARCHAR(100) NOT NULL, 
     [password] VARCHAR(50) NOT NULL, 
     [deleted] BINARY(1) NOT NULL, 
