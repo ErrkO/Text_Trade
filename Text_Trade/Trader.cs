@@ -21,16 +21,12 @@ public class Trader : Account
     #endregion
 
     #region Property fields
-    // are these properties necessary?
-
-    // the properties are just getters and setters, they are basically just 
-    // incase we need them
 
     public ClassSchedule Class_Schedule   
     {
 		get
         {
-            return class_schedule;
+            return this.class_schedule;
         }
 	}
 
@@ -51,7 +47,7 @@ public class Trader : Account
 	{
 		get
         {
-            return watch_list;
+            return this.watch_list;
         }
 	}
 
@@ -59,7 +55,7 @@ public class Trader : Account
     {
         get
         {
-            return sell_list;
+            return this.sell_list;
         }
     }
     #endregion
@@ -91,16 +87,19 @@ public class Trader : Account
         ListingList sell_list = new ListingList();
     }
 
-    public void CreateListing(string title, string author, string edition, string isbn, string cC, string cL, string condition, double price)
+    public void CreateListing(string title, string author, string edition, string isbn, string cC, string cL, condition condition, double price)
 	{
-        //whenever Trader creates a listing, it will be added to the sell_list
+        //whenever Trader creates a listing, it will be added to the sell_list as long as sell_list does not already contain this listing
         Listing a_listing = new Listing(title, author, edition, isbn, cC, cL, condition, price);
-        sell_list.Add(a_listing);
+        if(!this.sell_list.listingList.Contains(a_listing))
+            this.sell_list.Add(a_listing);
 	}
 
 	public void AddToWatchList(Listing a_listing) //add a listing of interest into Watch List
 	{
-        watch_list.Add(a_listing); 
+        //Will only add listing to watch list if watch list does not already contain listing
+        if(!this.watch_list.listingList.Contains(a_listing))
+            this.watch_list.Add(a_listing); 
 	}
 
     //the base class Account already has this method
@@ -111,37 +110,29 @@ public class Trader : Account
 
     public virtual void AddClass(string cC, string cL) //keyword "virtual" since the method will be redefined in ClassSchedule class?
     {
-        class_schedule.AddClass(cC, cL);    //which version of AddClass() will be called?
+        Course a_course = new Course(cC, cL);
+        if (!this.class_schedule.schedule.Contains(a_course))
+            this.class_schedule.AddClass(cC, cL);    //This will call the ClassSchedule AddClass method
     }
 
     public void CreateClassSchedule()   //Not sure how to implement this yet. Is it even necessary?
-	{
+	{                                   //Class schedule would already exist, but just be null, right?
 		
 	}
 
-	public void EditSchedule()      //Not sure how to implement this yet
+	public virtual void RemoveClass(Course a_course)      //Changed from EditSchedule()
 	{
-		
+        this.class_schedule.RemoveClass(a_course);
 	}
 
-    // see the class schedule comment about predicates
-
-    public virtual void RemoveListing(Listing a_listing)  //this method is virtual since the Moderator has its own version too
-    {
-        if (sell_list.listingList.Count != 0)
-        {
-            sell_list.listingList.Remove(a_listing);
-        }
-        //but how can we pass an object to Remove function if the list is empty in the first place?
+    public void RemoveListing(Listing a_listing)
+    {                                                     // it shouldnt be virutal only the base class function needs to be virtual for inheritance and both trader and mod
+        this.sell_list.listingList.Remove(a_listing);     // inherit from account
     }
 
     public virtual void RemoveFromWatchList(Listing a_listing)
 	{
-        //Not sure how to remove an object from a List collection yet
-        if (watch_list.listingList.Count != 0)
-        {
-            watch_list.listingList.Remove(a_listing);
-        }
+       this.watch_list.listingList.Remove(a_listing);
     }
 
     public void ReportListing(Listing a_listing)
