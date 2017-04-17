@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Create Account" Height="300" Width="400">
     <Window.Background>
-        <ImageBrush ImageSource="C:/Users/ly/Pictures/Text Trade designs/Create_Account.jpg" />
+        <ImageBrush ImageSource="../Text_Trade/Pictures/Create_Account.jpg" />
     </Window.Background>
     <Grid>
         <Label x:Name="label" Content="Enter all the required fields below to create a Trader account" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Foreground="#FFF5EEEE"/>
