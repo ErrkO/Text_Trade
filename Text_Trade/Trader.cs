@@ -30,6 +30,13 @@ public class Trader : Account
         }
 	}
 
+    public int Trader_id
+    {
+
+        get;
+        set;
+
+    }
 
 	/*public virtual TraderView TraderView
 	{

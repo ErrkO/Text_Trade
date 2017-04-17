@@ -48,6 +48,8 @@ public class Account
             return email;  // as of now this wont return anything you need 
                         //to call _Email.email to return the string containing the email 
                         //The above comment results in: cannot convert type string to Email -Seth
+                        /* it gives you the error becuase the .email is of type string, if you want you can change this property to a string type or i can create a tostring
+                         method for the email class  - Eric*/ 
         }
     }
 
@@ -74,7 +76,7 @@ public class Account
 	{
 	}
 
-    // can you add this. before all the variables again here
+    // can you add this. before all the variables again here - Eric
 
 	public Account(string uName, string pWord, string fName, string lName, Email eMail) //constructor
 	{
