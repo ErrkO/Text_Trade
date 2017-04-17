@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Create Listing" Height="450" Width="450">
     <Window.Background>
-        <ImageBrush ImageSource="C:/Users/ly/Pictures/Text Trade designs/book6.jpg" />
+        <ImageBrush ImageSource="C:/Users/ly/Pictures/Text Trade designs/Create_Listing.jpg" />
     </Window.Background>
     <Grid x:Name="Create_Listing">
         <Grid.ColumnDefinitions>
