@@ -105,8 +105,8 @@
       <DependentUpon>TraderHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="TraderList.cs" />
-    <Compile Include="ManageListings.xaml.cs">
-      <DependentUpon>ManageListings.xaml</DependentUpon>
+    <Compile Include="Selling.xaml.cs">
+      <DependentUpon>Selling.xaml</DependentUpon>
     </Compile>
     <Compile Include="WatchList.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -121,7 +121,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ManageListings.xaml">
+    <Page Include="Selling.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
