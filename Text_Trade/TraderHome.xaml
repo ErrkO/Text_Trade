@@ -10,7 +10,7 @@
         <Label x:Name="userLabel" Content="User: **username**" Margin="10,10,12,0" VerticalAlignment="Top" Width="270" Height="26" HorizontalAlignment="Center"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="140" Margin="10,73,0,0" Stroke="Black" VerticalAlignment="Top" Width="322"/>
         <Label x:Name="label" Content="Options" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button x:Name="viewListingsButton" Content="Search Marketplace" HorizontalAlignment="Left" Margin="30,94,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="20" Click="viewListingsButton_Click"/>
+        <Button x:Name="viewMarketplaceButton" Content="Search Marketplace" HorizontalAlignment="Left" Margin="30,94,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="20" Click="viewMarketplaceButtonOnClick"/>
         <Button x:Name="postListingButton" Content="Create Listing" HorizontalAlignment="Left" Margin="30,134,0,0" VerticalAlignment="Top" Width="128" Height="20"/>
         <Button x:Name="manageListingsButton" Content="Manage Listings" HorizontalAlignment="Left" Margin="30,174,0,0" VerticalAlignment="Top" Width="128" Height="20"/>
         <Button x:Name="manageScheduleButton" Content="Manage Schedule" HorizontalAlignment="Left" Margin="186,94,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="20"/>

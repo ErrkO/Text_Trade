@@ -24,9 +24,9 @@ namespace Text_Trade
             InitializeComponent();
         }
 
-        private void viewListingsButton_Click(object sender, RoutedEventArgs e)
+        private void viewMarketplaceButtonOnClick(object sender, RoutedEventArgs e)
         {
-            ViewListingsList frm = new ViewListingsList();
+            MarketplaceView1 frm = new MarketplaceView1();
             frm.Show();
         }
     }
