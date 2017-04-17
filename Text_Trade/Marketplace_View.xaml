@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Text Trade Marketplace" Height="500" Width="600">
     <Window.Background>
-        <ImageBrush ImageSource="C:/Users/ly/Pictures/Text Trade designs/book1.jpg" />
+        <ImageBrush ImageSource="C:/Users/ly/Pictures/Text Trade designs/Marketplace_View.jpg" />
     </Window.Background>
     <Grid>
         <TextBox x:Name="textBox_search" HorizontalAlignment="Left" Height="23" Margin="35,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298"/>
