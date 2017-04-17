@@ -30,7 +30,7 @@
         <TextBox x:Name="textBox_edition" HorizontalAlignment="Left" Height="23" Margin="118,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82"/>
         <TextBox x:Name="textBox_isbn" HorizontalAlignment="Left" Height="23" Margin="290,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104"/>
         <ComboBox x:Name="comboBox_cC" HorizontalAlignment="Left" Margin="118,148,0,0" VerticalAlignment="Top" Width="82">
-            <ComboBoxItem Content=""></ComboBoxItem>
+    
             <ComboBoxItem Content="AAST"></ComboBoxItem>
             <ComboBoxItem Content="ACCT"></ComboBoxItem>
             <ComboBoxItem Content="AGRI"></ComboBoxItem>
