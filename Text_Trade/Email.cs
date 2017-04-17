@@ -84,7 +84,7 @@ public class Email
 
             this.IsOutlook = true;
 
-            client = "smtp-mail.outlook.com";
+            client = "smtp.office365.com";
             port = 587;
             TSL_SSL = true;
             defaultsettings = false;
@@ -105,46 +105,31 @@ public class Email
 
     }
 
-    public void SendMessage(string to, string subject, string body, string bcc = null, string cc = null)
+    public void SendMessage(string to, string subject, string body)
     {
 
-        MailMessage message = new MailMessage();
-
-        message.To.Add(new MailAddress(to));
-        message.Subject = subject;
-        message.Body = body;
-        message.From = E_Mail;
-
-        if (bcc != null)
-        {
-
-            message.Bcc.Add(bcc);
-
-        }
-
-        if (cc != null)
-        {
-
-            message.CC.Add(cc);
-
-        }
+        MailMessage mail = new MailMessage();
+        mail.From = E_Mail;
 
         SmtpClient smtp = new SmtpClient();
-
-        smtp.Port = this.port;
-        smtp.EnableSsl = this.TSL_SSL;
+        smtp.Port = 587;
+        smtp.EnableSsl = true;
         smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-        smtp.UseDefaultCredentials = defaultsettings;
-        smtp.Credentials = new NetworkCredential(Convert.ToString(message.From), Password);
+        smtp.UseDefaultCredentials = false;
+        smtp.Credentials = new NetworkCredential(mail.From.Address, Password);
         smtp.Host = client;
 
-        message.IsBodyHtml = true;
+        mail.To.Add(new MailAddress(to));
 
-        smtp.Send(message);
+        mail.IsBodyHtml = true;
+        string st = "Test";
+
+        mail.Body = st;
+        smtp.Send(mail);
 
     }
 
-	public void OpenMessage()
+    public void OpenMessage()
 	{
 		throw new System.NotImplementedException();
 	}

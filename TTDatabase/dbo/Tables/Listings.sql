@@ -1,6 +1,6 @@
-﻿CREATE TABLE [dbo].[ListingList]
+﻿CREATE TABLE [dbo].[Listings]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[listing_id] INT NOT NULL PRIMARY KEY, 
     [title] VARCHAR(100) NOT NULL, 
     [author] VARCHAR(100) NOT NULL, 
     [edition] VARCHAR(100) NOT NULL, 
@@ -11,5 +11,8 @@
     [condition] VARCHAR(50) NOT NULL, 
     [description] VARCHAR(1000) NULL, 
     [deleted] BINARY(1) NOT NULL, 
-    [price] SMALLINT NOT NULL
+    [price] SMALLINT NOT NULL, 
+    [listinglife] DATETIME NOT NULL, 
+    [trader_id] INT NOT NULL, 
+    CONSTRAINT [FK_Listings_TraderList] FOREIGN KEY ([trader_id]) REFERENCES [dbo].[TraderList] (trader_id)
 )

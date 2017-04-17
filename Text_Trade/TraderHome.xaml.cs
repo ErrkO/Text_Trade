@@ -10,24 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Text_Trade
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for TraderHome.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TraderHome : Window
     {
-        public MainWindow()
+        public TraderHome()
         {
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void viewListingsButton_Click(object sender, RoutedEventArgs e)
         {
-            TraderHome frm = new TraderHome();
+            ViewListingsList frm = new ViewListingsList();
             frm.Show();
         }
     }

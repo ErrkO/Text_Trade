@@ -10,7 +10,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-//modified by Linh
 public class ListingList
 {
 
@@ -29,7 +28,7 @@ public class ListingList
     {
 
         get { return this.connString; }
-        set { this.connString = db.connString; }
+        set { this.connString = db.ConnString; }
 
     }
 

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class WatchList
+public class WatchList : DataBase
 {
 	public virtual IEnumerable<Listing> Listing
 	{

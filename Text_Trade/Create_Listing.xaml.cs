@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Text_Trade
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Create_LIsting.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Create_LIsting : Window
     {
-        public MainWindow()
+        public Create_LIsting()
         {
             InitializeComponent();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            TraderHome frm = new TraderHome();
-            frm.Show();
         }
     }
 }
