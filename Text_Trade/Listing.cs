@@ -23,7 +23,7 @@ public class Listing
     condition bookCondition;
     string lastUsed;
     double price;
-    image picture;  //? image type? proabably a bitmap idk google knows all
+    image picture;  //? image type?
     string description;
     #endregion
 
