@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Listings]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[listing_id] INT NOT NULL PRIMARY KEY, 
     [title] VARCHAR(100) NOT NULL, 
     [author] VARCHAR(100) NOT NULL, 
     [edition] VARCHAR(100) NOT NULL, 

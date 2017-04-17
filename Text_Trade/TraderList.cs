@@ -17,14 +17,15 @@ public class TraderList : DataBase
 {
 
     private DataBase db = new DataBase();
+    private List<string> traderList = new List<string>();
 
 	public virtual void Add(Trader trader) // this function probably needs to be moved to the trader class
 	{
 
-        using (SqlConnection conn = new SqlConnection())
+        using (SqlConnection conn = new SqlConnection(db.ConnString))
         {
 
-            conn.ConnectionString = db.ConnString;
+            //conn.ConnectionString = db.ConnString;
             conn.Open();
 
             string sql;
@@ -72,6 +73,37 @@ public class TraderList : DataBase
         }
 
 	}
+
+    public void CreateList()
+    {
+
+        using (SqlConnection conn = new SqlConnection(db.ConnString))
+        {
+
+            conn.Open();
+
+            string query = "SELECT * FROM TraderList";
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+
+                using (SqlDataReader dbreader = command.ExecuteReader())
+                {
+
+                    while (dbreader.Read())
+                    {
+
+                        traderList.Add(dbreader.GetString(0));
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
 
 	public virtual TraderList SearchForUser()
 	{

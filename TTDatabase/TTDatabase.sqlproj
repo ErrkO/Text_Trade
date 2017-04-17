@@ -76,5 +76,6 @@
   <ItemGroup>
     <None Include="CmpDBToRepo.scmp" />
     <None Include="CmpRepoToDB.scmp" />
+    <None Include="CmpRebotoGitDB.scmp" />
   </ItemGroup>
 </Project>

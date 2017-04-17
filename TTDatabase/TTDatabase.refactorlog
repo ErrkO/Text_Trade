@@ -35,4 +35,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[FK_Listings_TraderList]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="0eeca799-085e-49f4-8f86-9a4b83d08583" ChangeDateTime="04/17/2017 03:14:50">
+    <Property Name="ElementName" Value="[dbo].[Listings].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Listings]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="listing_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="65e5c3ee-69f9-4066-b371-53d577950cd5" ChangeDateTime="04/17/2017 03:15:03">
+    <Property Name="ElementName" Value="[dbo].[Marketplace].[listing]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Marketplace]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="listing_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="07b05fce-5b60-4adf-9cd1-2073d8ecc14a" ChangeDateTime="04/17/2017 03:15:45">
+    <Property Name="ElementName" Value="[dbo].[WatchList].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[WatchList]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="watchlist_id" />
+  </Operation>
 </Operations>
