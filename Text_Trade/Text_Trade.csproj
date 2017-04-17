@@ -58,6 +58,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Create_Account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Create_Listing.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -77,6 +81,9 @@
     <Compile Include="Account.cs" />
     <Compile Include="ClassSchedule.cs" />
     <Compile Include="Course.cs" />
+    <Compile Include="Create_Account.xaml.cs">
+      <DependentUpon>Create_Account.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Create_Listing.xaml.cs">
       <DependentUpon>Create_Listing.xaml</DependentUpon>
     </Compile>
@@ -88,8 +95,8 @@
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Marketplace.cs" />
-    <Compile Include="MarketplaceView1.xaml.cs">
-      <DependentUpon>MarketplaceView1.xaml</DependentUpon>
+    <Compile Include="Marketplace_View.xaml.cs">
+      <DependentUpon>Marketplace_View.xaml</DependentUpon>
     </Compile>
     <Compile Include="Moderator.cs" />
     <Compile Include="SellList.cs" />
@@ -98,15 +105,15 @@
       <DependentUpon>TraderHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="TraderList.cs" />
-    <Compile Include="ViewListingsList.xaml.cs">
-      <DependentUpon>ViewListingsList.xaml</DependentUpon>
+    <Compile Include="Selling.xaml.cs">
+      <DependentUpon>Selling.xaml</DependentUpon>
     </Compile>
     <Compile Include="WatchList.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MarketplaceView1.xaml">
+    <Page Include="Marketplace_View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,7 +121,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewListingsList.xaml">
+    <Page Include="Selling.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
