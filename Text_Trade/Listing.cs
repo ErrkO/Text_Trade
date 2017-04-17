@@ -18,13 +18,14 @@ public class Listing
     string author;
     string edition;
     string isbn;
-    string courseCode;      //Why don't we just use a Course object here?
+    string courseCode;      //Why don't we just use a Course object here? "I agree we should just use a course object here" -Eric
     string courseLevel;     //-------------------------------------------
     condition bookCondition;
     string lastUsed;
     double price;
     Image picture;  //? image type?
     string description;
+    // we need to add a varaible to store the listing life maybe an int or a datetime object - Eric
     #endregion
 
     #region Properties

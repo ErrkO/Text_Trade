@@ -34,7 +34,7 @@ public class DataBase
         set;
     }
 
-    public virtual UserList UserList
+    public virtual TraderList UserList
     {
         get;
         set;
