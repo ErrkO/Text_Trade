@@ -1,5 +1,6 @@
 ﻿CREATE TABLE [dbo].[Marketplace]
 (
 	[Id] INT NOT NULL PRIMARY KEY, 
-    [Listing] VARCHAR(50) NOT NULL
+    [listing_id] INT NOT NULL, 
+    CONSTRAINT [FK_Marketplace_Listings] FOREIGN KEY ([listing_id]) REFERENCES [dbo].[Listings] ([listing_id])
 )
