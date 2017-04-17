@@ -64,8 +64,8 @@
     <Folder Include="dbo\Tables\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\UserList.sql" />
-    <Build Include="dbo\Tables\ListingList.sql" />
+    <Build Include="dbo\Tables\TraderList.sql" />
+    <Build Include="dbo\Tables\Listings.sql" />
     <Build Include="dbo\Tables\Marketplace.sql" />
     <Build Include="dbo\Tables\WatchList.sql" />
     <Build Include="dbo\Tables\SellList.sql" />
@@ -76,5 +76,6 @@
   <ItemGroup>
     <None Include="CmpDBToRepo.scmp" />
     <None Include="CmpRepoToDB.scmp" />
+    <None Include="CmpRebotoGitDB.scmp" />
   </ItemGroup>
 </Project>
