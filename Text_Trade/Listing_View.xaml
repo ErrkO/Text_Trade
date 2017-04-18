@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Listing View" Height="280" Width="380">
     <Window.Background>
-        <ImageBrush ImageSource="../Text_Trade/Pictures/color_beige.jpg" />
+        <ImageBrush ImageSource="./Pictures/color_beige.jpg" />
     </Window.Background>
     <Grid Background="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}">
         <Rectangle HorizontalAlignment="Left" Height="100" Margin="28,29,0,0" Stroke="#FFD19C5D" VerticalAlignment="Top" Width="100"/>

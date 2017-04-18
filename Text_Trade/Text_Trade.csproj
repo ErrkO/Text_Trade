@@ -167,11 +167,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Pictures\color.jpg" />
+    <Resource Include="Pictures\color_beige.jpg" />
+    <Resource Include="Pictures\Listing_View.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\Create_Account.jpg" />
     <Resource Include="Pictures\Create_Listing.jpg" />
     <Resource Include="Pictures\Marketplace_View.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Trader_Home.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
