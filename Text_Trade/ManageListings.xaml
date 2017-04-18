@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="195" Margin="10,36,0,0" VerticalAlignment="Top" Width="272" Grid.ColumnSpan="2" />
         <Label x:Name="Listings_Label" Content="Active Listings" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="85"/>
-        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Height="25" Margin="30,307,0,0" VerticalAlignment="Top" Width="100" Click="cancelButton_Click"/>
+        <Button x:Name="deleteListingButton" Content="Delete Listing" HorizontalAlignment="Left" Height="25" Margin="30,307,0,0" VerticalAlignment="Top" Width="100" Click="deleteListingButton_Click"/>
         <Button x:Name="editListingButton" Content="Edit Listing" HorizontalAlignment="Left" Height="25" Margin="0,307,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1" Click="editListingButton_Click"/>
         <TextBox x:Name="textBox_search" HorizontalAlignment="Left" Height="23" Margin="10,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" Grid.ColumnSpan="2"/>
         <Label x:Name="label" Content="Search:" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top" Height="26" Width="48"/>

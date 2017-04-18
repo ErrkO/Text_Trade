@@ -29,6 +29,7 @@ namespace Text_Trade
         {
             TraderHome frm = new TraderHome();
             frm.Show();
+            this.Close();
         }
     }
 }

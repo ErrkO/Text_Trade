@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Text_Trade Trader Application" Height="260.836" Width="350">
     <Window.Background>
-        <ImageBrush ImageSource="../Text_Trade/Pictures/Trader_Home.jpg" />
+        <ImageBrush ImageSource="./Pictures/Trader_Home.jpg" />
     </Window.Background>
     <Grid>
         <Label x:Name="userLabel" Content="User: **username**" Margin="10,10,12,0" VerticalAlignment="Top" Width="270" Height="26" HorizontalAlignment="Center"/>
@@ -18,10 +18,10 @@
         </Rectangle>
         <Label x:Name="label" Content="Options" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="61" FontSize="14" Foreground="Black" FontFamily="Tempus Sans ITC"/>
         <Button x:Name="viewListingsButton" Content="Search Marketplace" HorizontalAlignment="Left" Margin="30,94,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="27" Click="viewListingsButton_Click" Background="#FFDAF091" BorderThickness="2" BorderBrush="#FFB9B1A4" FontFamily="Tempus Sans ITC" FontSize="14"/>
-        <Button x:Name="postListingButton" Content="Create Listing" HorizontalAlignment="Left" Margin="186,94,0,0" VerticalAlignment="Top" Width="128" Height="27" Background="#FFE4EE88" BorderBrush="#FFB9B1A4" BorderThickness="2" FontFamily="Tempus Sans ITC" FontSize="14"/>
-        <Button x:Name="sellingButton" Content="Selling" HorizontalAlignment="Left" Margin="186,134,0,0" VerticalAlignment="Top" Width="128" Height="27" Background="#FFCEF37D" BorderBrush="#FFB9B1A4" BorderThickness="2" FontFamily="Tempus Sans ITC" FontSize="14"/>
+        <Button x:Name="postListingButton" Content="Create Listing" HorizontalAlignment="Left" Margin="186,94,0,0" VerticalAlignment="Top" Width="128" Height="27" Background="#FFE4EE88" BorderBrush="#FFB9B1A4" BorderThickness="2" FontFamily="Tempus Sans ITC" FontSize="14" Click="postListingButton_Click"/>
+        <Button x:Name="manageListingsButton" Content="Selling" HorizontalAlignment="Left" Margin="186,134,0,0" VerticalAlignment="Top" Width="128" Height="27" Background="#FFCEF37D" BorderBrush="#FFB9B1A4" BorderThickness="2" FontFamily="Tempus Sans ITC" FontSize="14" Click="manageListingsButton_Click"/>
         <Button x:Name="manageScheduleButton" Content="Manage Schedule" HorizontalAlignment="Left" Margin="30,174,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="27" Background="#FFE8F184" BorderBrush="#FFB9B1A4" BorderThickness="2" FontFamily="Tempus Sans ITC" FontSize="14"/>
-        <Button x:Name="watchListButton" Content="Watch List" HorizontalAlignment="Left" Margin="30,134,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="27" Background="#FFCCF97D" BorderBrush="#FFB9B1A4" BorderThickness="2" FontFamily="Tempus Sans ITC" FontSize="14"/>
+        <Button x:Name="watchListButton" Content="Watch List" HorizontalAlignment="Left" Margin="30,134,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="27" Background="#FFCCF97D" BorderBrush="#FFB9B1A4" BorderThickness="2" FontFamily="Tempus Sans ITC" FontSize="14" Click="watchListButton_Click"/>
         <Button x:Name="manageProfileButton" Content="Manage Profile" HorizontalAlignment="Left" Margin="186,174,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="27" Background="#FFD8E273" BorderBrush="#FFB9B1A4" BorderThickness="2" FontFamily="Tempus Sans ITC" FontSize="14"/>
 
     </Grid>

@@ -29,7 +29,7 @@ namespace Text_Trade
 
         }
 
-        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        private void deleteListingButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
