@@ -15,13 +15,23 @@ using System.Windows.Shapes;
 namespace Text_Trade
 {
     /// <summary>
-    /// Interaction logic for ViewListings.xaml
+    /// Interaction logic for ManageListings.xaml
     /// </summary>
-    public partial class ViewListingsList : Window
+    public partial class ManageListings : Window
     {
-        public ViewListingsList()
+        public ManageListings()
         {
             InitializeComponent();
+        }
+
+        private void editListingButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

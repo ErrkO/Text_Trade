@@ -1,4 +1,4 @@
-﻿<Window x:Class="Text_Trade.MarketplaceView1"
+﻿<Window x:Class="Text_Trade.Marketplace_View"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Text Trade Marketplace" Height="500" Width="600">
     <Window.Background>
-        <ImageBrush ImageSource="../Text_Trade/Pictures/Marketplace_View.jpg" />
+        <ImageBrush ImageSource="./Pictures/Marketplace_View.jpg"/>
     </Window.Background>
     <Grid>
         <TextBox x:Name="textBox_search" HorizontalAlignment="Left" Height="23" Margin="35,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298"/>

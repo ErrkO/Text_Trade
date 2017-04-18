@@ -23,5 +23,10 @@ namespace Text_Trade
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
