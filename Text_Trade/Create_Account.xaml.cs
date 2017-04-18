@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Text_Trade
 {
     /// <summary>
-    /// Interaction logic for MarketplaceView1.xaml
+    /// Interaction logic for Create_Account.xaml
     /// </summary>
-    public partial class MarketplaceView1 : Window
+    public partial class Create_Account : Window
     {
-        public MarketplaceView1()
+        public Create_Account()
         {
             InitializeComponent();
         }

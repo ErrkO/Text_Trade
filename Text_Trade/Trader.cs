@@ -133,7 +133,7 @@ public class Trader : Account
 	}
 
     public void RemoveListing(Listing a_listing)
-    {                                                     // it shouldnt be virutal only the base class function needs to be virtual for inheritance and both trader and mod
+    {                                                     // it shouldnt be virtual only the base class function needs to be virtual for inheritance and both trader and mod
         this.sell_list.listingList.Remove(a_listing);     // inherit from account
     }
 

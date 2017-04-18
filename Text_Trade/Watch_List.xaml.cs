@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace Text_Trade
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for Watch_List.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class Watch_List : Window
     {
-        public Login()
+        public Watch_List()
         {
             InitializeComponent();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

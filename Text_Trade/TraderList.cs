@@ -82,7 +82,7 @@ public class TraderList : DataBase
 
             conn.Open();
 
-            string query = "SELECT * FROM TraderList";
+            string query = "SELECT trader_id FROM TraderList";
 
             using (SqlCommand command = new SqlCommand(query, conn))
             {
