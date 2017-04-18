@@ -1,0 +1,16 @@
+﻿<Window x:Class="Text_Trade.Watch_List"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Text_Trade"
+        mc:Ignorable="d"
+        Title="Watch List" Height="400" Width="300">
+    <Grid>
+        <Label x:Name="label" Content="Watch List" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBox_watchList" HorizontalAlignment="Left" Height="264" Margin="24,41,0,0" VerticalAlignment="Top" Width="247"/>
+        <Button x:Name="button_delete" Content="Delete Listing" HorizontalAlignment="Left" Margin="45,330,0,0" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.344,-0.562" Click="button_Click"/>
+        <Button x:Name="button_view" Content="View Listing" HorizontalAlignment="Left" Margin="169,330,0,0" VerticalAlignment="Top" Width="84"/>
+
+    </Grid>
+</Window>
