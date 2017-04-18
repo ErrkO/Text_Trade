@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Text_Trade"
         mc:Ignorable="d"
-        Title="Text_Trade Trader Application" Height="260.836" Width="350">
+        Title="Text_Trade Trader Application" Height="260" Width="360">
     <Grid>
         <Label x:Name="userLabel" Content="User: **username**" Margin="10,10,12,0" VerticalAlignment="Top" Width="270" Height="26" HorizontalAlignment="Center"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="140" Margin="10,73,0,0" Stroke="Black" VerticalAlignment="Top" Width="322"/>
         <Label x:Name="label" Content="Options" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button x:Name="viewListingsButton" Content="Search Marketplace" HorizontalAlignment="Left" Margin="30,94,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="20" Click="viewListingsButton_Click"/>
-        <Button x:Name="postListingButton" Content="Create Listing" HorizontalAlignment="Left" Margin="186,94,0,0" VerticalAlignment="Top" Width="128" Height="20"/>
-        <Button x:Name="sellingButton" Content="Selling" HorizontalAlignment="Left" Margin="186,134,0,0" VerticalAlignment="Top" Width="128" Height="20"/>
-        <Button x:Name="manageScheduleButton" Content="Manage Schedule" HorizontalAlignment="Left" Margin="30,174,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="20"/>
-        <Button x:Name="watchListButton" Content="Watch List" HorizontalAlignment="Left" Margin="30,134,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="20"/>
-        <Button x:Name="manageProfileButton" Content="Manage Profile" HorizontalAlignment="Left" Margin="186,174,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="20"/>
+        <Button x:Name="viewListingsButton" Content="Search Marketplace" HorizontalAlignment="Left" Margin="30,94,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="25" Click="viewListingsButton_Click"/>
+        <Button x:Name="postListingButton" Content="Create Listing" HorizontalAlignment="Left" Margin="186,94,0,0" VerticalAlignment="Top" Width="128" Height="25"/>
+        <Button x:Name="manageListingsButton" Content="Manage Listings" HorizontalAlignment="Left" Margin="186,134,0,0" VerticalAlignment="Top" Width="128" Height="25" Click="manageListingsButton_Click"/>
+        <Button x:Name="manageScheduleButton" Content="Manage Schedule" HorizontalAlignment="Left" Margin="30,174,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="25"/>
+        <Button x:Name="watchListButton" Content="Watch List" HorizontalAlignment="Left" Margin="30,134,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="25"/>
+        <Button x:Name="manageProfileButton" Content="Manage Profile" HorizontalAlignment="Left" Margin="186,174,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.264,0.494" Height="25"/>
 
     </Grid>
 </Window>
