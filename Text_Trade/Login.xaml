@@ -14,7 +14,7 @@
         <CheckBox x:Name="checkBox_remember" Content="Remember me" HorizontalAlignment="Left" Margin="83,194,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button_login" Content="Login" HorizontalAlignment="Left" Margin="199,194,0,0" VerticalAlignment="Top" Width="100" Height="36" RenderTransformOrigin="0.509,0.201" FontSize="16" FontFamily="Stencil"/>
         <Label x:Name="label2" Content="Text Trade &#xD;&#xA;User Login" HorizontalAlignment="Left" Margin="112,31,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Stencil"/>
-        <Button x:Name="button_signUp" Content="Sign up" HorizontalAlignment="Left" Margin="234,272,0,0" VerticalAlignment="Top" Width="55" Click="button_Click" Background="{x:Null}" BorderThickness="1,0"/>
+        <Button x:Name="signUpButton" Content="Sign up" HorizontalAlignment="Left" Margin="234,272,0,0" VerticalAlignment="Top" Width="55" Click="signUpButton_Click" Background="{x:Null}" BorderThickness="1,0"/>
         <Label x:Name="label3" Content="Don't have an account yet?" HorizontalAlignment="Left" Margin="67,268,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label4" Content="Forget your username or password?" HorizontalAlignment="Left" Margin="29,290,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button_help" Content="Help" HorizontalAlignment="Left" Margin="234,294,0,0" VerticalAlignment="Top" Width="55" Background="{x:Null}" BorderThickness="1,0"/>

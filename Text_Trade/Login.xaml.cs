@@ -24,9 +24,10 @@ namespace Text_Trade
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void signUpButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Create_Account frm = new Create_Account();
+            frm.Show();
         }
     }
 }
