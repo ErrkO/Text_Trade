@@ -26,7 +26,25 @@ namespace Text_Trade
 
         private void viewListingsButton_Click(object sender, RoutedEventArgs e)
         {
-            ViewListingsList frm = new ViewListingsList();
+            Marketplace_View frm = new Marketplace_View();
+            frm.Show();
+        }
+
+        private void manageListingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            ManageListings frm = new ManageListings();
+            frm.Show();
+        }
+
+        private void postListingButton_Click(object sender, RoutedEventArgs e)
+        {
+            Create_Listing frm = new Create_Listing();
+            frm.Show();
+        }
+
+        private void watchListButton_Click(object sender, RoutedEventArgs e)
+        {
+            Watch_List frm = new Watch_List();
             frm.Show();
         }
     }

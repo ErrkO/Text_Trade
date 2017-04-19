@@ -1,0 +1,22 @@
+﻿<Window x:Class="Text_Trade.ManageListings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Text_Trade"
+        mc:Ignorable="d"
+        Title="Sell List" Height="379.112" Width="310" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Background="White" Foreground="Black">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="195" Margin="10,36,0,0" VerticalAlignment="Top" Width="272" Grid.ColumnSpan="2" />
+        <Label x:Name="Listings_Label" Content="Active Listings" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="85"/>
+        <Button x:Name="deleteListingButton" Content="Delete Listing" HorizontalAlignment="Left" Height="25" Margin="30,307,0,0" VerticalAlignment="Top" Width="100" Click="deleteListingButton_Click"/>
+        <Button x:Name="editListingButton" Content="Edit Listing" HorizontalAlignment="Left" Height="25" Margin="0,307,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1" Click="editListingButton_Click"/>
+        <TextBox x:Name="textBox_search" HorizontalAlignment="Left" Height="23" Margin="10,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" Grid.ColumnSpan="2"/>
+        <Label x:Name="label" Content="Search:" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top" Height="26" Width="48"/>
+
+    </Grid>
+</Window>

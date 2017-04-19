@@ -17,9 +17,9 @@ namespace Text_Trade
     /// <summary>
     /// Interaction logic for Create_LIsting.xaml
     /// </summary>
-    public partial class Create_LIsting : Window
+    public partial class Create_Listing : Window
     {
-        public Create_LIsting()
+        public Create_Listing()
         {
             InitializeComponent();
         }

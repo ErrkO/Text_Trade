@@ -115,8 +115,8 @@
       <DependentUpon>TraderHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="TraderList.cs" />
-    <Compile Include="Selling.xaml.cs">
-      <DependentUpon>Selling.xaml</DependentUpon>
+    <Compile Include="ManageListings.xaml.cs">
+      <DependentUpon>ManageListings.xaml</DependentUpon>
     </Compile>
     <Compile Include="WatchList.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -131,7 +131,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Selling.xaml">
+    <Page Include="ManageListings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,7 +168,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pictures\" />
+    <Resource Include="Pictures\color.jpg" />
+    <Resource Include="Pictures\color_beige.jpg" />
+    <Resource Include="Pictures\Listing_View.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Create_Account.jpg" />
+    <Resource Include="Pictures\Create_Listing.jpg" />
+    <Resource Include="Pictures\Marketplace_View.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Trader_Home.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

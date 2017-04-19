@@ -9,8 +9,8 @@
     <Grid>
         <Label x:Name="label" Content="Watch List" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="listBox_watchList" HorizontalAlignment="Left" Height="264" Margin="24,41,0,0" VerticalAlignment="Top" Width="247"/>
-        <Button x:Name="button_delete" Content="Delete Listing" HorizontalAlignment="Left" Margin="45,330,0,0" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.344,-0.562" Click="button_Click"/>
-        <Button x:Name="button_view" Content="View Listing" HorizontalAlignment="Left" Margin="169,330,0,0" VerticalAlignment="Top" Width="84"/>
+        <Button x:Name="deleteButton" Content="Delete Listing" HorizontalAlignment="Left" Margin="45,330,0,0" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.344,-0.562" Click="deleteButton_Click"/>
+        <Button x:Name="viewButton" Content="View Listing" HorizontalAlignment="Left" Margin="169,330,0,0" VerticalAlignment="Top" Width="84" Click="viewButton_Click"/>
 
     </Grid>
 </Window>

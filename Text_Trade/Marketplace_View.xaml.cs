@@ -17,9 +17,9 @@ namespace Text_Trade
     /// <summary>
     /// Interaction logic for MarketplaceView1.xaml
     /// </summary>
-    public partial class MarketplaceView1 : Window
+    public partial class Marketplace_View : Window
     {
-        public MarketplaceView1()
+        public Marketplace_View()
         {
             InitializeComponent();
         }

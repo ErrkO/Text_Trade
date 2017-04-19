@@ -1,4 +1,4 @@
-﻿<Window x:Class="Text_Trade.Create_LIsting"
+﻿<Window x:Class="Text_Trade.Create_Listing"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Create Listing" Height="450" Width="450">
     <Window.Background>
-        <ImageBrush ImageSource="../Text_Trade/Pictures/Create_Listing.jpg" />
+        <ImageBrush ImageSource="./Pictures/Create_Listing.jpg" />
     </Window.Background>
-    <Grid x:Name="Create_Listing">
+    <Grid x:Name="CreateListing">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="11*"/>
             <ColumnDefinition Width="6*"/>
