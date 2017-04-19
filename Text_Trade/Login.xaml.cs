@@ -28,6 +28,7 @@ namespace Text_Trade
         {
             Create_Account frm = new Create_Account();
             frm.Show();
+            this.Close();
         }
     }
 }
