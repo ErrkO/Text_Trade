@@ -29,20 +29,20 @@ public class Email
     public MailAddress E_Mail
     {
         
-        get { return this.E_Mail; }
+        get { return this.e_Mail; }
 
         set { this.e_Mail = value; }
         
     }
 
-    public string email
-	{
+ //   public string email
+	//{
 
-		get { return this.email; }
+	//	get { return this.email; }
 
-		set { this.email = value; }
+	//	set { this.email = value; }
 
-	}
+	//}
 
     public string UserName
     {
@@ -66,7 +66,7 @@ public class Email
     public Email(string email)
     {
 
-        this.email = email;
+        //this.email = email;
 
         this.e_Mail = new MailAddress(email);
 
@@ -75,7 +75,7 @@ public class Email
     public Email(string email, bool outlook = false)
     {
 
-        this.email = email;
+        //this.email = email;
 
         this.e_Mail = new MailAddress(email);
 
@@ -122,9 +122,8 @@ public class Email
         mail.To.Add(new MailAddress(to));
 
         mail.IsBodyHtml = true;
-        string st = "Test";
 
-        mail.Body = st;
+        mail.Body = body;
         smtp.Send(mail);
 
     }

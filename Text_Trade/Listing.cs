@@ -14,6 +14,7 @@ public enum condition { New, LikeNew, Great, Good, Acceptable }
 public class Listing
 {
     #region data fields 
+    private int listing_id;
     string title;
     string author;
     string edition;
@@ -29,6 +30,15 @@ public class Listing
     #endregion
 
     #region Properties
+    public int Listing_id
+    {
+
+        get { return this.listing_id; }
+
+        private set { this.listing_id = value; }
+
+    }
+
     public string Title
 	{
 		get

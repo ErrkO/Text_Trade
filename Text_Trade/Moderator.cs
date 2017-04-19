@@ -9,34 +9,61 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
 public class Moderator : Account
 {
 
+    DataBase db = new DataBase();
+
     // creates an account object
 	public Account account
 	{
+
 		get { return this.account; }
-		set { this.account = new Account(); }
-	}
+		set { this.account = value; }
+
+    }
 
 	public virtual List<Listing> listing
 	{
+
 		get { return this.listing; }
-		set { this.listing = new List<Listing>(); }
-	}
+		set { this.listing = value; }
+
+    }
 
 	public virtual Marketplace marketplace
 	{
+
 		get { return this.marketplace; }
-		set {; }
+
 	}
 
 	public virtual void RemoveListing(Listing listing)
 	{
-		throw new System.NotImplementedException();
+
+        using (SqlConnection conn = new SqlConnection())
+        {
+
+            conn.ConnectionString = db.ConnString;
+            conn.Open();
+
+            string query = "UPDATE ListingList SET deleted = 1 WHERE listing_id = " + listing.Listing_id ;
+
+            SqlCommand command = new SqlCommand(query, conn);
+
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+
+
+
+            }
+
+        }
+
 	}
 
 	public virtual void WarnTrader(Trader trader)

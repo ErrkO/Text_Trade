@@ -7,22 +7,23 @@
 // Eric ToDo
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
 public class ListingList
 {
 
+    public DataBase db = new DataBase();
+    public List<int> listinglist = new List<int>();
 
-	public List<Listing> listingList
+    public List<Listing> listingList
 	{
 
 		get { return this.listingList; }
-        set { this.listingList = new List<Listing>(); }
+        set { this.listingList = value; }
 
 	}
-
-    public DataBase db;
 
     public string connString
     {
@@ -32,11 +33,72 @@ public class ListingList
 
     }
 
-    public virtual void Add(Listing listing)
-	{
-        listingList.Add(listing);
+    public int SearchForListing(Listing listing)
+    {
 
-	}
+        int listingId = listing.Listing_id;
+
+        using (SqlConnection conn = new SqlConnection())
+        {
+
+            conn.ConnectionString = db.ConnString;
+            conn.Open();
+
+            string query = "SELECT  listing_id FROM ListingList WHERE any like " + listing.Listing_id;
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+
+                    while (reader.Read())
+                    {
+
+                        
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        return listingId;
+
+    }
+
+    public void CreateList()
+    {
+
+        using (SqlConnection conn = new SqlConnection(db.ConnString))
+        {
+
+            conn.Open();
+
+            string query = "SELECT listing_id FROM ListingList";
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+
+                using (SqlDataReader dbreader = command.ExecuteReader())
+                {
+
+                    while (dbreader.Read())
+                    {
+
+                        listinglist.Add(Convert.ToInt32(dbreader.GetString(0)));
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
 
 }
 
