@@ -17,7 +17,7 @@ public class TraderList : DataBase
 {
 
     private DataBase db = new DataBase();
-    private List<string> traderList = new List<string>();
+    private List<int> traderList = new List<int>();
 
 	public virtual void Add(Trader trader) // this function probably needs to be moved to the trader class
 	{
@@ -93,7 +93,7 @@ public class TraderList : DataBase
                     while (dbreader.Read())
                     {
 
-                        traderList.Add(dbreader.GetString(0));
+                        traderList.Add(Convert.ToInt32(dbreader.GetString(0)));
 
                     }
 
