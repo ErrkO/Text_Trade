@@ -27,7 +27,7 @@ public class Moderator : Account
 
     }
 
-	public virtual List<Listing> listing
+	public List<Listing> listing
 	{
 
 		get { return this.listing; }
@@ -35,55 +35,57 @@ public class Moderator : Account
 
     }
 
-	public virtual Marketplace marketplace
+	public Marketplace marketplace
 	{
 
 		get { return this.marketplace; }
 
 	}
 
-	public virtual void RemoveListing(Listing listing)
+	public void RemoveListing(Listing listing)
+	{
+
+        db.Delete("Listings", "listing_id", listing.Listing_id);
+
+	}
+
+	public void WarnTrader(Trader trader)
 	{
 
         using (SqlConnection conn = new SqlConnection())
         {
 
             conn.ConnectionString = db.ConnString;
-            conn.Open();
 
-            string query = "UPDATE ListingList SET deleted = 1 WHERE listing_id = " + listing.Listing_id ;
+            string query = "UPDATE TraderList Set warnings = warnings + 1 WHERE trader_id = " + trader.Trader_id;
 
             SqlCommand command = new SqlCommand(query, conn);
 
-            using (SqlDataReader reader = command.ExecuteReader())
-            {
-
-
-
-            }
+            command.ExecuteNonQuery();
 
         }
+	
+    }
+
+	public void BanTrader(Trader trader)
+	{
+
+		db.Delete("TraderList","trader_id",trader.Trader_id);
+
+    }
+
+	public int SearchForUser(Trader trader)
+	{
+
+        throw new System.NotImplementedException();
 
 	}
 
-	public virtual void WarnTrader(Trader trader)
+	public Trader ViewUserInfo(Trader trader)
 	{
-		throw new System.NotImplementedException();
-	}
 
-	public virtual void BanTrader(Trader trader)
-	{
-		throw new System.NotImplementedException();
-	}
+        throw new System.NotImplementedException();
 
-	public virtual int SearchForUser(Trader trader)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void ViewUserInfo(Trader trader)
-	{
-		throw new System.NotImplementedException();
 	}
 
 	public virtual void ViewSystemStats()
