@@ -16,8 +16,8 @@ public class Trader : Account
     #region data fields
    // each Trader is an Account, but has a class shedule, a watch list - list of listings of interest, and a sell list - list of listings posted for sale
     private ClassSchedule class_schedule;
-    private ListingList watch_list; //WatchList and SellList classes look the same, basically a list of listings
-    private ListingList sell_list;  //so perhaps they could be the same class => ListingList
+    private WatchList watch_list;
+    private SellList sell_list;  
     #endregion
 
     #region Property fields
@@ -38,19 +38,7 @@ public class Trader : Account
 
     }
 
-	/*public virtual TraderView TraderView
-	{
-		get;
-		set;
-	}*/     //What is this TradeView?
-
-	/*public virtual UserList UserList      //why is there a UserList inside Trader class?
-	{
-		get;
-		set;
-	}*/
-
-	public  ListingList Watch_List
+	public  WatchList Watch_List
 	{
 		get
         {
@@ -58,7 +46,7 @@ public class Trader : Account
         }
 	}
 
-    public ListingList Sell_List
+    public SellList Sell_List
     {
         get
         {
@@ -66,18 +54,6 @@ public class Trader : Account
         }
     }
     #endregion
-
-    /* public virtual IEnumerable<Listing> Listing
-     {
-         get;
-         set;
-     }*/
-
-    /*public virtual Search Search
-	{
-		get;
-		set;
-	}*/
 
     #region methods
     
@@ -96,17 +72,13 @@ public class Trader : Account
 
     public void CreateListing(string title, string author, string edition, string isbn, string cC, string cL, condition condition, double price)
 	{
-        //whenever Trader creates a listing, it will be added to the sell_list as long as sell_list does not already contain this listing
         Listing a_listing = new Listing(title, author, edition, isbn, cC, cL, condition, price);
-        if(!this.sell_list.listingList.Contains(a_listing))
-            this.sell_list.Add(a_listing);
+        this.sell_list.AddToSellList(a_listing);
 	}
 
 	public void AddToWatchList(Listing a_listing) //add a listing of interest into Watch List
 	{
-        //Will only add listing to watch list if watch list does not already contain listing
-        if(!this.watch_list.listingList.Contains(a_listing))
-            this.watch_list.Add(a_listing); 
+            this.watch_list.AddToWatchList(a_listing); 
 	}
 
     //the base class Account already has this method
@@ -122,11 +94,6 @@ public class Trader : Account
             this.class_schedule.AddClass(cC, cL);    //This will call the ClassSchedule AddClass method
     }
 
-    public void CreateClassSchedule()   //Not sure how to implement this yet. Is it even necessary?
-	{                                   //Class schedule would already exist, but just be null, right?
-		
-	}
-
 	public virtual void RemoveClass(Course a_course)      //Changed from EditSchedule()
 	{
         this.class_schedule.RemoveClass(a_course);
@@ -134,12 +101,12 @@ public class Trader : Account
 
     public void RemoveListing(Listing a_listing)
     {                                                     // it shouldnt be virtual only the base class function needs to be virtual for inheritance and both trader and mod
-        this.sell_list.listingList.Remove(a_listing);     // inherit from account
+        this.sell_list.RemoveFromSellList(a_listing);     // inherit from account
     }
 
     public virtual void RemoveFromWatchList(Listing a_listing)
 	{
-       this.watch_list.listingList.Remove(a_listing);
+       this.watch_list.RemoveFromWatchList(a_listing);
     }
 
     public void ReportListing(Listing a_listing)

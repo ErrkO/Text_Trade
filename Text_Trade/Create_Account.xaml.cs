@@ -23,5 +23,12 @@ namespace Text_Trade
         {
             InitializeComponent();
         }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            Login frm = new Login();
+            frm.Show();
+            this.Close();
+        }
     }
 }
