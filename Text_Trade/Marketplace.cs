@@ -19,7 +19,7 @@ public class Marketplace
     public const int LISTINGLIFE = 30;
 
     private int listingLifetime;
-    private List<Listing> listing;
+    private List<Listing> listings;
     private DataBase db = new DataBase();
 
 	public int ListingLifeTime
@@ -33,7 +33,7 @@ public class Marketplace
 	public List<Listing> Listing
 	{
 
-		get { return this.listing; }
+		get { return this.listings; }
 
     }
 
@@ -75,9 +75,11 @@ public class Marketplace
 
 	}
 
-	public virtual void AddListing(Listing listing)
+	public virtual void AddListing(Listing listing,int trader_id)
 	{
-		throw new System.NotImplementedException();
+
+        listing.CreateListing(trader_id);
+
 	}
 
 	public virtual void RemoveListing(Listing listing)
