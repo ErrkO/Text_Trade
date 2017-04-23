@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-
+using System.Data.SqlClient;
 
 public enum condition { New, LikeNew, Great, Good, Acceptable }
 
@@ -26,7 +26,9 @@ public class Listing
     double price;
     Image picture;  //? image type?
     string description;
+    int listinglife;
     // we need to add a varaible to store the listing life maybe an int or a datetime object - Eric
+    private DataBase db = new DataBase();
     #endregion
 
     #region Properties
@@ -171,7 +173,7 @@ public class Listing
 	{
 	}
 
-    public Listing(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price)
+    public Listing(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price, string lastUsed = null, Image picture = null, string description = null)
     {
         this.title = title;
         this.author = author;
@@ -181,6 +183,9 @@ public class Listing
         this.courseLevel = cL;
         this.bookCondition = bookCondition;
         this.price = price;
+        this.lastUsed = lastUsed;
+        this.picture = picture;
+        this.description = description;
     }
 
     public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price, string lastUsed, Image picture, string description)
@@ -252,6 +257,19 @@ public class Listing
 	{
         this.title = title;
 	}
+
+    public void CreateListing()
+    {
+
+        using (SqlConnection conn = new SqlConnection(db.ConnString))
+        {
+
+
+
+        }
+
+    }
+
     #endregion
 }
 

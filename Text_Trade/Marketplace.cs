@@ -9,6 +9,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
@@ -19,6 +20,7 @@ public class Marketplace
 
     private int listingLifetime;
     private List<Listing> listing;
+    private DataBase db = new DataBase();
 
 	public int ListingLifeTime
 	{
@@ -37,10 +39,43 @@ public class Marketplace
 
 	public virtual void RenewListing(Listing listing)
 	{
-		throw new System.NotImplementedException();
+
+        using (SqlConnection conn = new SqlConnection(db.ConnString))
+        {
+
+            conn.Open();
+
+            string sql;
+
+            if (listing.Listing_id == -1)
+            {
+
+                sql = "UPDATE [UserList] "
+                        + "SET listinglife = 30"
+                        + "WHERE listing_id = @lid";
+
+            }
+
+            else
+            {
+
+                sql = "UPDATE [UserList] "
+                        + "SET listinglife = 30"
+                        + "WHERE listing_id = @lid";
+
+            }
+
+            SqlCommand command = new SqlCommand(sql, conn);
+
+            command.Parameters.AddWithValue("lid", listing.Listing_id);
+
+            command.ExecuteNonQuery();
+
+        }
+
 	}
 
-	public virtual void AddListing(ListingList listingList)
+	public virtual void AddListing(Listing listing)
 	{
 		throw new System.NotImplementedException();
 	}
