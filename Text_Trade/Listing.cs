@@ -258,15 +258,76 @@ public class Listing
         this.title = title;
 	}
 
-    public void CreateListing()
+    public void CreateListing(int trader_id)
     {
 
         using (SqlConnection conn = new SqlConnection(db.ConnString))
         {
 
+            conn.Open();
 
+            string sql;
+
+            if(this.listing_id == -1)
+            {
+
+                sql = "INSERT INTO Listings (title,author,edition,isbn,courseCode,courseLevel,lastUsed,condition,"
+                        + " description,deleted,price,listinglife,trader_id)"
+                        + " VALUES (@title,@author,@edition,@isbn,@courseCode,@courseLevel,@lastUsed,@condition,"
+                        + " @description,0,@price,@trader_id"
+                        + " SELECT cast(scope_identity() as int)";
+
+            }
+
+            else
+            {
+
+                sql = "UPDATE Listings "
+                        + " SET title = @title, author = @author, edition = @edition, isbn = @isbn, courseCode = =courseCode,"
+                        + " courseLevel = @courseLevel, lastUsed = @lastUsed, condition = @condition, description = @description,"
+                        + " deleted = 0, price = @price, listing_id = @trader_id"
+                        + " WHERE listinglife = @listinglife";
+
+            }
+
+            SqlCommand command = new SqlCommand(sql, conn);
+
+            command.Parameters.AddWithValue("title",this.title);
+            command.Parameters.AddWithValue("author",this.author);
+            command.Parameters.AddWithValue("edition",this.edition);
+            command.Parameters.AddWithValue("isbn",this.isbn);
+            command.Parameters.AddWithValue("courseCode",this.courseCode);
+            command.Parameters.AddWithValue("courseLevel",this.courseLevel);
+            command.Parameters.AddWithValue("lastUsed",this.lastUsed);
+            command.Parameters.AddWithValue("condition",Convert.ToString(this.bookCondition));
+            command.Parameters.AddWithValue("description",this.description);
+            command.Parameters.AddWithValue("price",this.price);
+            command.Parameters.AddWithValue("trader_id",trader_id);
+
+            if (listing_id == -1)
+            {
+
+                listing_id = (int)command.ExecuteScalar();
+
+            }
+
+            else
+            {
+
+                command.Parameters.AddWithValue("listing_id", this.listing_id);
+
+                command.ExecuteNonQuery();
+
+            }
 
         }
+
+    }
+
+    public void CreateListingObjFromDb()
+    {
+
+
 
     }
 
