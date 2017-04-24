@@ -23,5 +23,19 @@ namespace Text_Trade
         {
             InitializeComponent();
         }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            TraderHome frm = new TraderHome();
+            frm.Show();
+            this.Close();
+        }
+
+        private void logOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            Login frm = new Login();
+            frm.Show();
+            this.Close();
+        }
     }
 }

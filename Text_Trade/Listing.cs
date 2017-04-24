@@ -7,13 +7,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-
+using System.Data.SqlClient;
 
 public enum condition { New, LikeNew, Great, Good, Acceptable }
 
 public class Listing
 {
     #region data fields 
+    private int listing_id;
     string title;
     string author;
     string edition;
@@ -25,10 +26,21 @@ public class Listing
     double price;
     Image picture;  //? image type?
     string description;
+    int listinglife;
     // we need to add a varaible to store the listing life maybe an int or a datetime object - Eric
+    private DataBase db = new DataBase();
     #endregion
 
     #region Properties
+    public int Listing_id
+    {
+
+        get { return this.listing_id; }
+
+        private set { this.listing_id = value; }
+
+    }
+
     public string Title
 	{
 		get
@@ -161,7 +173,7 @@ public class Listing
 	{
 	}
 
-    public Listing(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price)
+    public Listing(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price, string lastUsed = null, Image picture = null, string description = null)
     {
         this.title = title;
         this.author = author;
@@ -171,6 +183,9 @@ public class Listing
         this.courseLevel = cL;
         this.bookCondition = bookCondition;
         this.price = price;
+        this.lastUsed = lastUsed;
+        this.picture = picture;
+        this.description = description;
     }
 
     public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price, string lastUsed, Image picture, string description)
@@ -242,6 +257,80 @@ public class Listing
 	{
         this.title = title;
 	}
+
+    public void CreateListing(int trader_id)
+    {
+
+        using (SqlConnection conn = new SqlConnection(db.ConnString))
+        {
+
+            conn.Open();
+
+            string sql;
+
+            if(this.listing_id == -1)
+            {
+
+                sql = "INSERT INTO Listings (title,author,edition,isbn,courseCode,courseLevel,lastUsed,condition,"
+                        + " description,deleted,price,listinglife,trader_id)"
+                        + " VALUES (@title,@author,@edition,@isbn,@courseCode,@courseLevel,@lastUsed,@condition,"
+                        + " @description,0,@price,@trader_id"
+                        + " SELECT cast(scope_identity() as int)";
+
+            }
+
+            else
+            {
+
+                sql = "UPDATE Listings "
+                        + " SET title = @title, author = @author, edition = @edition, isbn = @isbn, courseCode = =courseCode,"
+                        + " courseLevel = @courseLevel, lastUsed = @lastUsed, condition = @condition, description = @description,"
+                        + " deleted = 0, price = @price, listing_id = @trader_id"
+                        + " WHERE listinglife = @listinglife";
+
+            }
+
+            SqlCommand command = new SqlCommand(sql, conn);
+
+            command.Parameters.AddWithValue("title",this.title);
+            command.Parameters.AddWithValue("author",this.author);
+            command.Parameters.AddWithValue("edition",this.edition);
+            command.Parameters.AddWithValue("isbn",this.isbn);
+            command.Parameters.AddWithValue("courseCode",this.courseCode);
+            command.Parameters.AddWithValue("courseLevel",this.courseLevel);
+            command.Parameters.AddWithValue("lastUsed",this.lastUsed);
+            command.Parameters.AddWithValue("condition",Convert.ToString(this.bookCondition));
+            command.Parameters.AddWithValue("description",this.description);
+            command.Parameters.AddWithValue("price",this.price);
+            command.Parameters.AddWithValue("trader_id",trader_id);
+
+            if (listing_id == -1)
+            {
+
+                listing_id = (int)command.ExecuteScalar();
+
+            }
+
+            else
+            {
+
+                command.Parameters.AddWithValue("listing_id", this.listing_id);
+
+                command.ExecuteNonQuery();
+
+            }
+
+        }
+
+    }
+
+    public void CreateListingObjFromDb()
+    {
+
+
+
+    }
+
     #endregion
 }
 

@@ -23,26 +23,24 @@ public class Email
     private int port;
     private bool TSL_SSL;
     private bool defaultsettings;
-    private bool IsOutlook;
-    private bool IsGmail;
 
     public MailAddress E_Mail
     {
         
-        get { return this.E_Mail; }
+        get { return this.e_Mail; }
 
         set { this.e_Mail = value; }
         
     }
 
-    public string email
-	{
+ //   public string email
+	//{
 
-		get { return this.email; }
+	//	get { return this.email; }
 
-		set { this.email = value; }
+	//	set { this.email = value; }
 
-	}
+	//}
 
     public string UserName
     {
@@ -66,7 +64,7 @@ public class Email
     public Email(string email)
     {
 
-        this.email = email;
+        //this.email = email;
 
         this.e_Mail = new MailAddress(email);
 
@@ -75,14 +73,12 @@ public class Email
     public Email(string email, bool outlook = false)
     {
 
-        this.email = email;
+        //this.email = email;
 
         this.e_Mail = new MailAddress(email);
 
         if (outlook == true)
         {
-
-            this.IsOutlook = true;
 
             client = "smtp.office365.com";
             port = 587;
@@ -93,8 +89,6 @@ public class Email
 
         else
         {
-
-            this.IsGmail = true;
 
             client = "smtp.gmail.com";
             port = 587;
@@ -112,19 +106,18 @@ public class Email
         mail.From = E_Mail;
 
         SmtpClient smtp = new SmtpClient();
-        smtp.Port = 587;
-        smtp.EnableSsl = true;
+        smtp.Port = port;
+        smtp.EnableSsl = TSL_SSL;
         smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-        smtp.UseDefaultCredentials = false;
+        smtp.UseDefaultCredentials = defaultsettings;
         smtp.Credentials = new NetworkCredential(mail.From.Address, Password);
         smtp.Host = client;
 
         mail.To.Add(new MailAddress(to));
 
         mail.IsBodyHtml = true;
-        string st = "Test";
 
-        mail.Body = st;
+        mail.Body = body;
         smtp.Send(mail);
 
     }

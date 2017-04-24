@@ -72,7 +72,7 @@ public class DataBase
 
 	}
 
-	public virtual void Remove(string tableName, string fieldName, int pKey)
+	public virtual void Delete(string tableName, string fieldName, int pKey)
 	{
 
         using (SqlConnection conn = new SqlConnection())

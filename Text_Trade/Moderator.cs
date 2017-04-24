@@ -9,54 +9,83 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
 public class Moderator : Account
 {
 
+    DataBase db = new DataBase();
+
     // creates an account object
 	public Account account
 	{
+
 		get { return this.account; }
-		set { this.account = new Account(); }
-	}
+		set { this.account = value; }
 
-	public virtual List<Listing> listing
+    }
+
+	public List<Listing> listing
 	{
+
 		get { return this.listing; }
-		set { this.listing = new List<Listing>(); }
-	}
+		set { this.listing = value; }
 
-	public virtual Marketplace marketplace
+    }
+
+	public Marketplace marketplace
 	{
+
 		get { return this.marketplace; }
-		set {; }
+
 	}
 
-	public virtual void RemoveListing(Listing listing)
+	public void RemoveListing(Listing listing)
 	{
-		throw new System.NotImplementedException();
+
+        db.Delete("Listings", "listing_id", listing.Listing_id);
+
 	}
 
-	public virtual void WarnTrader(Trader trader)
+	public void WarnTrader(Trader trader)
 	{
-		throw new System.NotImplementedException();
+
+        using (SqlConnection conn = new SqlConnection())
+        {
+
+            conn.ConnectionString = db.ConnString;
+
+            string query = "UPDATE TraderList Set warnings = warnings + 1 WHERE trader_id = " + trader.Trader_id;
+
+            SqlCommand command = new SqlCommand(query, conn);
+
+            command.ExecuteNonQuery();
+
+        }
+	
+    }
+
+	public void BanTrader(Trader trader)
+	{
+
+		db.Delete("TraderList","trader_id",trader.Trader_id);
+
+    }
+
+	public int SearchForUser(Trader trader)
+	{
+
+        throw new System.NotImplementedException();
+
 	}
 
-	public virtual void BanTrader(Trader trader)
+	public Trader ViewUserInfo(Trader trader)
 	{
-		throw new System.NotImplementedException();
-	}
 
-	public virtual int SearchForUser(Trader trader)
-	{
-		throw new System.NotImplementedException();
-	}
+        throw new System.NotImplementedException();
 
-	public virtual void ViewUserInfo(Trader trader)
-	{
-		throw new System.NotImplementedException();
 	}
 
 	public virtual void ViewSystemStats()

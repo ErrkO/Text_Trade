@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Create Account" Height="300" Width="400">
     <Window.Background>
-        <ImageBrush ImageSource="../Text_Trade/Pictures/Create_Account.jpg" />
+        <ImageBrush ImageSource="./Pictures/Create_Account.jpg" />
     </Window.Background>
     <Grid>
         <Label x:Name="label" Content="Enter all the required fields below to create a Trader account" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Foreground="#FFF5EEEE"/>
@@ -21,7 +21,7 @@
         <TextBox x:Name="textBox_uName" HorizontalAlignment="Left" Height="23" Margin="109,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="237"/>
         <Label x:Name="label5" Content="Password:" HorizontalAlignment="Left" Margin="25,165,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFF7E4E4"/>
         <TextBox x:Name="textBox_pWord" HorizontalAlignment="Left" Height="23" Margin="109,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="237"/>
-        <Button x:Name="button_cancel" Content="Cancel" HorizontalAlignment="Left" Margin="65,224,0,0" VerticalAlignment="Top" Width="110" Background="#FFF0D099"/>
+        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="65,224,0,0" VerticalAlignment="Top" Width="110" Background="#FFF0D099" Click="cancelButton_Click"/>
         <Button x:Name="button_createAccount" Content="Create Account" HorizontalAlignment="Left" Margin="220,224,0,0" VerticalAlignment="Top" Width="110" Background="#FFF0D099"/>
 
     </Grid>

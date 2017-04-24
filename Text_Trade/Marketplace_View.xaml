@@ -12,10 +12,10 @@
     <Grid>
         <TextBox x:Name="textBox_search" HorizontalAlignment="Left" Height="23" Margin="35,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298"/>
         <Button x:Name="button_search" Content="Search" HorizontalAlignment="Left" Margin="347,128,0,0" VerticalAlignment="Top" Width="66" Background="#FFDECFB0"/>
-        <Label x:Name="label" Content="Welcome to Text Trade" HorizontalAlignment="Left" Margin="35,38,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Stencil"/>
-        <Button x:Name="button_home" Content="Home" HorizontalAlignment="Left" Margin="465,10,0,0" VerticalAlignment="Top" Width="58" Background="{x:Null}" BorderThickness="1,0" FontFamily="Sylfaen" FontSize="14" Foreground="#FFF1F1F1"/>
-        <Label x:Name="label1" Content="A marketplace for textbooks within students' budget" HorizontalAlignment="Left" Margin="35,72,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Sylfaen"/>
-        <Button x:Name="button_marketplace" Content="Marketplace" HorizontalAlignment="Left" Margin="370,10,0,0" VerticalAlignment="Top" Width="90" Background="{x:Null}" BorderThickness="1,0" FontFamily="Sylfaen" FontSize="14" Foreground="#FFF1F1F1"/>
+        <Label x:Name="label" Content="Welcome to Text Trade" HorizontalAlignment="Left" Margin="35,38,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="homeButton" Content="Home" HorizontalAlignment="Left" Margin="465,10,0,0" VerticalAlignment="Top" Width="58" Background="{x:Null}" BorderThickness="1,0" FontSize="14" Foreground="#FFF1F1F1" Click="homeButton_Click"/>
+        <Label x:Name="label1" Content="A marketplace for textbooks within students' budget" HorizontalAlignment="Left" Margin="35,72,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="button_marketplace" Content="Marketplace" HorizontalAlignment="Left" Margin="370,10,0,0" VerticalAlignment="Top" Width="90" Background="{x:Null}" BorderThickness="1,0" FontSize="14" Foreground="#FFF1F1F1"/>
         <Label x:Name="label2" Content="Search by:" HorizontalAlignment="Left" Margin="35,153,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="listBox_results" HorizontalAlignment="Left" Height="179" Margin="35,251,0,0" VerticalAlignment="Top" Width="515"/>
         <Label x:Name="label3" Content="Sort by:" HorizontalAlignment="Left" Margin="35,214,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.194,-0.12"/>
@@ -29,6 +29,6 @@
         <RadioButton x:Name="radioButton_byAuthor" Content="Author(s)" HorizontalAlignment="Left" Margin="104,159,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="radioButton_byCourse" Content="Course" HorizontalAlignment="Left" Margin="200,159,0,0" VerticalAlignment="Top" Foreground="#FFF5F1F1"/>
         <RadioButton x:Name="radioButton_byISBN" Content="ISBN" HorizontalAlignment="Left" Margin="289,159,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button_logOut" Content="Log out" HorizontalAlignment="Left" Margin="528,10,0,0" VerticalAlignment="Top" Width="54" Background="{x:Null}" Foreground="#FFF1F1F1" BorderThickness="1,0"/>
+        <Button x:Name="logOutButton" Content="Log out" HorizontalAlignment="Left" Margin="528,10,0,0" VerticalAlignment="Top" Width="54" Background="{x:Null}" Foreground="#FFF1F1F1" BorderThickness="1,0" Click="logOutButton_Click"/>
     </Grid>
 </Window>

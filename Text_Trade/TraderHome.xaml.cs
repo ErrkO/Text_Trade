@@ -28,6 +28,7 @@ namespace Text_Trade
         {
             Marketplace_View frm = new Marketplace_View();
             frm.Show();
+            this.Close();
         }
 
         private void manageListingsButton_Click(object sender, RoutedEventArgs e)
@@ -46,6 +47,13 @@ namespace Text_Trade
         {
             Watch_List frm = new Watch_List();
             frm.Show();
+        }
+
+        private void logOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            Login frm = new Login();
+            frm.Show();
+            this.Close();
         }
     }
 }
