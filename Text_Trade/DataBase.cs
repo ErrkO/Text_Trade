@@ -93,5 +93,24 @@ public class DataBase
 
     }
 
+
+    public List<Listing> SearchFor(string fieldname)
+    {
+
+        List<Listing> listings = new List<Listing>();
+
+        using (SqlConnection conn = new SqlConnection(CONNSTRING))
+        {
+
+            conn.Open();
+
+            string sql = "";
+
+        }
+
+        return listings;
+
+    } 
+
 }
 
