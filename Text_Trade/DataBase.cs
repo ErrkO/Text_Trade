@@ -94,7 +94,7 @@ public class DataBase
     }
 
 
-    public List<Listing> SearchFor(string fieldname, string field)
+    public List<Listing> SearchFor(string fieldname = null, string field = null,string fieldname2 = null, string field2 = null)
     {
 
         List<Listing> listings = new List<Listing>();
@@ -104,13 +104,49 @@ public class DataBase
 
             conn.Open();
 
-            string sql = "SELCT * FROM (Listings) WHERE @fieldname = @field";
+            string sql;
+
+            if (fieldname == null && field == null)
+            {
+
+                sql = "SELCT * FROM (Listings)";
+
+            }
+
+            else if (fieldname == null || field == null)
+            {
+
+                throw new ArgumentException("make sure fields are set");
+
+            }
+
+            else if (fieldname2 != null && field2 != null)
+            {
+
+                sql = "SELCT * FROM (Listings) WHERE @fieldname = @field and @fieldname2 = @field2";
+
+            }
+
+            else
+            {
+
+                sql = "SELCT * FROM (Listings) WHERE @fieldname = @field"; 
+
+            }
 
             using (SqlCommand command = new SqlCommand(sql, conn))
             {
 
                 command.Parameters.AddWithValue("fieldname", fieldname);
                 command.Parameters.AddWithValue("field", field);
+
+                if (fieldname2 != null && field2 != null)
+                {
+
+                    command.Parameters.AddWithValue("fieldname2", fieldname2);
+                    command.Parameters.AddWithValue("field2", field2);
+
+                }
 
                 SqlDataReader reader = command.ExecuteReader();
 
