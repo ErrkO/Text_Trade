@@ -94,7 +94,7 @@ public class DataBase
     }
 
 
-    public List<Listing> SearchFor(string fieldname)
+    public List<Listing> SearchFor(string fieldname, string field)
     {
 
         List<Listing> listings = new List<Listing>();
@@ -104,7 +104,44 @@ public class DataBase
 
             conn.Open();
 
-            string sql = "";
+            string sql = "SELCT * FROM (Listings) WHERE @fieldname = @field";
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+
+                command.Parameters.AddWithValue("fieldname", fieldname);
+                command.Parameters.AddWithValue("field", field);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    Listing templisting = new Listing();
+
+                    templisting.Listing_id = reader.GetInt32(0);
+                    templisting.Title = reader.GetString(1);
+                    templisting.Author = reader.GetString(2);
+                    templisting.Edition = reader.GetString(3);
+                    templisting.Isbn = reader.GetString(4);
+                    templisting.CourseCode = reader.GetString(5);
+                    templisting.CourseLevel = reader.GetString(6);
+                    templisting.LastUsed = reader.GetString(7);
+                    Condition conditionstring = (Condition)Enum.Parse(typeof(Condition), reader.GetString(8));
+                    templisting.Condition = conditionstring;
+                    templisting.Description = reader.GetString(9);
+                    templisting.Deleted = reader.GetInt32(10);
+                    templisting.Price = reader.GetInt32(11);
+                    templisting.Listinglife = reader.GetInt32(12);
+                    templisting.Trader_id = reader.GetInt32(13);
+
+                    listings.Add(templisting);
+
+                }
+
+            }
+
+            
 
         }
 

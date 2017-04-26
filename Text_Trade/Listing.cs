@@ -39,7 +39,7 @@ public class Listing
 
         get { return this.listing_id; }
 
-        private set { this.listing_id = value; }
+        set { this.listing_id = value; }
 
     }
 
@@ -133,7 +133,7 @@ public class Listing
         {
             return this.condition;
         }
-        private set
+        set
         {
             this.condition = value;
         }
@@ -174,7 +174,7 @@ public class Listing
 
         get { return this.deleted; }
 
-        private set { this.deleted = value; }
+        set { this.deleted = value; }
 
     }
 
@@ -183,7 +183,7 @@ public class Listing
 
         get { return this.trader_id; }
 
-        private set { this.trader_id = value; }
+        set { this.trader_id = value; }
 
     }
 
@@ -396,8 +396,6 @@ public class Listing
                     templisting.Price = reader.GetInt32(11);
                     templisting.Listinglife = reader.GetInt32(12);
                     templisting.Trader_id = reader.GetInt32(13);
-
-                    reader.Close();
 
                 }
 
