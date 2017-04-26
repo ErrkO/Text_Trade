@@ -9,7 +9,7 @@ using System.Text;
 using System.Drawing;
 using System.Data.SqlClient;
 
-public enum condition { New, LikeNew, Great, Good, Acceptable }
+public enum Condition { New, LikeNew, Great, Good, Acceptable }
 
 public class Listing
 {
@@ -21,12 +21,14 @@ public class Listing
     string isbn;
     string courseCode;      //Why don't we just use a Course object here? "I agree we should just use a course object here" -Eric
     string courseLevel;     //-------------------------------------------
-    condition bookCondition;
+    Condition condition;
     string lastUsed;
     double price;
     Image picture;  //? image type?
     string description;
     int listinglife;
+    int deleted;
+    int trader_id;
     // we need to add a varaible to store the listing life maybe an int or a datetime object - Eric
     private DataBase db = new DataBase();
     #endregion
@@ -125,15 +127,15 @@ public class Listing
         }
     }
 
-	public condition BookCondition
+	public Condition Condition
 	{
         get
         {
-            return this.bookCondition;
+            return this.condition;
         }
         private set
         {
-            this.bookCondition = value;
+            this.condition = value;
         }
 	}
 
@@ -166,6 +168,34 @@ public class Listing
             this.description = value;
         }
     }
+
+    public int Deleted
+    {
+
+        get { return this.deleted; }
+
+        private set { this.deleted = value; }
+
+    }
+
+    public int Trader_id
+    {
+
+        get { return this.trader_id; }
+
+        private set { this.trader_id = value; }
+
+    }
+
+    public int Listinglife
+    {
+
+        get { return this.listinglife; }
+
+        set { this.listinglife = value; }
+
+    }
+
     #endregion
 
     #region methods
@@ -173,7 +203,7 @@ public class Listing
 	{
 	}
 
-    public Listing(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price, string lastUsed = null, Image picture = null, string description = null)
+    public Listing(string title, string author, string edition, string isbn, string cC, string cL, Condition bookCondition, double price, string lastUsed = null, Image picture = null, string description = null)
     {
         this.title = title;
         this.author = author;
@@ -181,14 +211,14 @@ public class Listing
         this.isbn = isbn;
         this.courseCode = cC;
         this.courseLevel = cL;
-        this.bookCondition = bookCondition;
+        this.condition = bookCondition;
         this.price = price;
         this.lastUsed = lastUsed;
         this.picture = picture;
         this.description = description;
     }
 
-    public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, condition bookCondition, double price, string lastUsed, Image picture, string description)
+    public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, Condition bookCondition, double price, string lastUsed, Image picture, string description)
 	{
         this.title = title;
         this.author = author;
@@ -196,7 +226,7 @@ public class Listing
         this.isbn = isbn;
         this.courseCode = cC;
         this.courseLevel = cL;
-        this.bookCondition = bookCondition;
+        this.condition = bookCondition;
         this.price = price;
         this.lastUsed = lastUsed;
         this.picture = picture;
@@ -208,9 +238,9 @@ public class Listing
         this.author = author;
 	}
 
-	public virtual void UpdateCondition(condition bookCondition)
+	public virtual void UpdateCondition(Condition bookCondition)
 	{
-        this.bookCondition = bookCondition;
+        this.condition = bookCondition;
 	}
 
 	public virtual void UpdateCourseCode(string cC)
@@ -299,7 +329,7 @@ public class Listing
             command.Parameters.AddWithValue("courseCode",this.courseCode);
             command.Parameters.AddWithValue("courseLevel",this.courseLevel);
             command.Parameters.AddWithValue("lastUsed",this.lastUsed);
-            command.Parameters.AddWithValue("condition",Convert.ToString(this.bookCondition));
+            command.Parameters.AddWithValue("condition",Convert.ToString(this.condition));
             command.Parameters.AddWithValue("description",this.description);
             command.Parameters.AddWithValue("price",this.price);
             command.Parameters.AddWithValue("trader_id",trader_id);
@@ -324,10 +354,58 @@ public class Listing
 
     }
 
-    public void CreateListingObjFromDb()
+    public Listing CreateListingObjFromDb(int listing_id)
     {
 
+        Listing templisting = new Listing();
 
+        using (SqlConnection conn = new SqlConnection(db.ConnString))
+        {
+
+            conn.Open();
+
+            string sql = "SELECT * "
+                        + "FROM Listings "
+                        + "WHERE listing_id = @listing_id";
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+
+                if (listing_id == -1)
+                {
+
+                    throw new ArgumentException("The listing does not exist");
+
+                }
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+
+                    templisting.Listing_id = reader.GetInt32(0);
+                    templisting.Title = reader.GetString(1);
+                    templisting.Author = reader.GetString(2);
+                    templisting.Edition = reader.GetString(3);
+                    templisting.Isbn = reader.GetString(4);
+                    templisting.CourseCode = reader.GetString(5);
+                    templisting.CourseLevel = reader.GetString(6);
+                    templisting.LastUsed = reader.GetString(7);
+                    Condition conditionstring = (Condition)Enum.Parse(typeof(Condition), reader.GetString(8));
+                    templisting.Condition =conditionstring;
+                    templisting.Description = reader.GetString(9);
+                    templisting.Deleted = reader.GetInt32(10);
+                    templisting.Price = reader.GetInt32(11);
+                    templisting.Listinglife = reader.GetInt32(12);
+                    templisting.Trader_id = reader.GetInt32(13);
+
+                    reader.Close();
+
+                }
+
+            }
+
+        }
+
+        return templisting;
 
     }
 

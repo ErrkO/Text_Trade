@@ -70,7 +70,7 @@ public class Trader : Account
         ListingList sell_list = new ListingList();
     }
 
-    public void CreateListing(string title, string author, string edition, string isbn, string cC, string cL, condition condition, double price)
+    public void CreateListing(string title, string author, string edition, string isbn, string cC, string cL, Condition condition, double price)
 	{
         Listing a_listing = new Listing(title, author, edition, isbn, cC, cL, condition, price);
         this.sell_list.AddToSellList(a_listing);

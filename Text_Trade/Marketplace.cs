@@ -84,7 +84,7 @@ public class Marketplace
 
 	public virtual void RemoveListing(Listing listing)
 	{
-		throw new System.NotImplementedException();
+        db.Delete("listings", "listing_id", listing.Listing_id);
 	}
 
 	public virtual void FilterResults()
