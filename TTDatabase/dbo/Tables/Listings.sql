@@ -11,8 +11,8 @@
     [condition] VARCHAR(50) NOT NULL, 
     [description] VARCHAR(1000) NULL, 
     [deleted] BINARY(1) NOT NULL, 
-    [price] SMALLINT NOT NULL, 
-    [listinglife] DATETIME NOT NULL, 
+    [price] INT NOT NULL, 
+    [listinglife] INT NOT NULL, 
     [trader_id] INT NOT NULL, 
     CONSTRAINT [FK_Listings_TraderList] FOREIGN KEY ([trader_id]) REFERENCES [dbo].[TraderList] (trader_id)
 )
