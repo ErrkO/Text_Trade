@@ -23,6 +23,11 @@ public class Account
 
     public string UserName  //can't change username
     {
+        set
+        {
+            this.username = value;
+        }
+
         get
         {
             return this.username;
@@ -51,7 +56,7 @@ public class Account
                         /* it gives you the error becuase the .email is of type string, if you want you can change this property to a string type or i can create a tostring
                          method for the email class  - Eric*/ 
         }
-    }
+    }                   //To string would probably be easier, because the alternative wouldn't have an email object associated with the account anymore - Seth
 
     public string FirstName //cant change name
     {
@@ -76,21 +81,30 @@ public class Account
 	{
 	}
 
+    //Constructor - only used username and password to create account object for login process
+    public Account(string username, string password)
+    {
+        this.username = username;
+        this.password = password;
+
+    }
+
+
     // can you add this. before all the variables again here - Eric
 
-	public Account(string uName, string pWord, string fName, string lName, Email eMail) //constructor
+    public Account(string uName, string pWord, string fName, string lName, string eMail) //constructor
 	{
-        username = uName;
-        password = pWord;
-        firstName = fName;
-        lastName = lName;
-        email = eMail;
+        this.username = uName;
+        this.password = pWord;
+        this.firstName = fName;
+        this.lastName = lName;
+        this.email = new Email(eMail); //Changed the parameter in the constructor to string so that email can be added from Create_Account form
 	}
 
 	public void ChangePassword(string pass)  
 
 	{
-        password = pass;
+        this.password = pass;
 	}
     #endregion
 }

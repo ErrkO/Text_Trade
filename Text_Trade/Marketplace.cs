@@ -92,30 +92,60 @@ public class Marketplace
 		throw new System.NotImplementedException();
 	}
 
-	public virtual ListingList SearchAll()
+	public List<Listing> SearchAll()
 	{
-		throw new System.NotImplementedException();
+
+        List<Listing> listings;
+
+        listings = db.SearchFor();
+
+        return listings;
+
 	}
 
-	public virtual ListingList SearchByAuthor(string author)
+	public List<Listing> SearchByAuthor(string author)
 	{
-		throw new System.NotImplementedException();
-	}
 
-	public virtual ListingList SearchByCourse(string cC, string cL)
-	{
-		throw new System.NotImplementedException();
-	}
+        List<Listing> listings;
 
-	public virtual ListingList SearchByISBN(string isbn)
-	{
-		throw new System.NotImplementedException();
-	}
+        listings = db.SearchFor("author",author);
 
-	public virtual ListingList SearchFromSchedule(ClassSchedule classSchedule)
+        return listings;
+
+    }
+
+	public List<Listing> SearchByCourse(string cC, string cL)
 	{
-		throw new System.NotImplementedException();
-	}
+
+        List<Listing> listings;
+
+        listings = db.SearchFor("courseCode",cC,"courseLevel",cL);
+
+        return listings;
+
+    }
+
+	public List<Listing> SearchByISBN(string isbn)
+	{
+
+        List<Listing> listings;
+
+        listings = db.SearchFor("isbn",isbn);
+
+        return listings;
+
+    }
+
+	public List<Listing> SearchFromSchedule(ClassSchedule classSchedule)
+	{
+
+        List<Listing> listings;
+
+        listings = db.SearchFor();
+
+        return listings;
+
+    }
 
 }
 

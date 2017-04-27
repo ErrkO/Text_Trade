@@ -30,5 +30,16 @@ namespace Text_Trade
             frm.Show();
             this.Close();
         }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+            Trader login = new Trader(usernameTextBox.Text, passwordTextBox.Text);
+            login.UserName = usernameTextBox.Text;
+            login.Password = passwordTextBox.Text;
+            TraderList userlist = new TraderList();
+            userlist.CreateList();
+
+            userlist.SearchForUser(); //To be continued when SearchForUser() is implemented
+        }
     }
 }

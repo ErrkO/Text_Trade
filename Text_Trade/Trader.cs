@@ -62,8 +62,14 @@ public class Trader : Account
 
     }
 
+    public Trader(string username, string password)
+    {
+        this.username = username;
+        this.password = password;
+    }
+
     //constructor
-    public Trader(string uName, string pWord, string fName, string lName, Email eMail) : base(uName, pWord, fName, lName, eMail)
+    public Trader(string uName, string pWord, string fName, string lName, string eMail) : base(uName, pWord, fName, lName, eMail)
     {
         ClassSchedule class_schedule = new ClassSchedule();
         ListingList watch_list = new ListingList();
