@@ -23,8 +23,6 @@ public class Email
     private int port;
     private bool TSL_SSL;
     private bool defaultsettings;
-    private bool IsOutlook;
-    private bool IsGmail;
 
     public MailAddress E_Mail
     {
@@ -82,8 +80,6 @@ public class Email
         if (outlook == true)
         {
 
-            this.IsOutlook = true;
-
             client = "smtp.office365.com";
             port = 587;
             TSL_SSL = true;
@@ -93,8 +89,6 @@ public class Email
 
         else
         {
-
-            this.IsGmail = true;
 
             client = "smtp.gmail.com";
             port = 587;
@@ -112,10 +106,10 @@ public class Email
         mail.From = E_Mail;
 
         SmtpClient smtp = new SmtpClient();
-        smtp.Port = 587;
-        smtp.EnableSsl = true;
+        smtp.Port = port;
+        smtp.EnableSsl = TSL_SSL;
         smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-        smtp.UseDefaultCredentials = false;
+        smtp.UseDefaultCredentials = defaultsettings;
         smtp.Credentials = new NetworkCredential(mail.From.Address, Password);
         smtp.Host = client;
 
