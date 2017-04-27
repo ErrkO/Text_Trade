@@ -30,5 +30,12 @@ namespace Text_Trade
             frm.Show();
             this.Close();
         }
+
+        private void createAccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            Trader newTrader = new Trader(usernameBox.Text, passwordBox.Text, firstNameBox.Text, lastNameBox.Text, emailBox.Text);
+            TraderList newList = new TraderList();
+            newList.Add(newTrader);
+        }
     }
 }
