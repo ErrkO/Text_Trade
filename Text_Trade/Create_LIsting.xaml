@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Text_Trade"
         mc:Ignorable="d"
-        Title="Create Listing" Height="480" Width="450">
+        Title="Create Listing" Height="470" Width="450">
     <Window.Background>
         <ImageBrush ImageSource="./Pictures/Create_Listing.jpg" />
     </Window.Background>
@@ -112,7 +112,7 @@
         <TextBox x:Name="textBox_price" HorizontalAlignment="Left" Height="23" Margin="12,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
         <Label x:Name="label8" Content="Description:" HorizontalAlignment="Left" Margin="19,226,0,0" VerticalAlignment="Top" Foreground="#FFF1E7E7"/>
         <TextBox x:Name="textBox_description" HorizontalAlignment="Left" Height="73" Margin="118,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2"/>
-        <Button x:Name="button_createListing" Content="Create Listing" HorizontalAlignment="Left" Margin="173,360,0,0" VerticalAlignment="Top" Width="103" Height="46" BorderThickness="2" FontSize="14">
+        <Button x:Name="button_createListing" Content="Create Listing" HorizontalAlignment="Left" Margin="173,356,0,0" VerticalAlignment="Top" Width="103" Height="46" BorderThickness="2" FontSize="14">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -128,11 +128,11 @@
         <Label x:Name="label9" Content="Enter all fields below to create a listing" HorizontalAlignment="Left" Margin="118,25,0,0" VerticalAlignment="Top" Width="276" FontSize="14" Foreground="#FFF3DFDF" Grid.ColumnSpan="2"/>
         <Label x:Name="label10" Content="Upload Images:" HorizontalAlignment="Left" Margin="19,304,0,0" VerticalAlignment="Top" Foreground="#FFF5E1E1"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="118,304,0,0" VerticalAlignment="Top" Width="96"/>
-        <TextBox x:Name="textBox_bookTitle_Copy" HorizontalAlignment="Left" Height="23" Margin="118,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2">
+        <TextBox x:Name="textbox_listingTitle" HorizontalAlignment="Left" Height="23" Margin="118,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2">
             <TextBox.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
             </TextBox.Background>
         </TextBox>
-        <Label x:Name="label11" Content="Listing Title" HorizontalAlignment="Left" Margin="19,59,0,0" VerticalAlignment="Top" Foreground="#FFF7F4F4"/>
+        <Label x:Name="label11" Content="Listing Title:" HorizontalAlignment="Left" Margin="19,59,0,0" VerticalAlignment="Top" Foreground="#FFF7F4F4"/>
     </Grid>
 </Window>
