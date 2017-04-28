@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Text_Trade"
         mc:Ignorable="d"
-        Title="Create Listing" Height="450" Width="450">
+        Title="Create Listing" Height="470" Width="450">
     <Window.Background>
         <ImageBrush ImageSource="./Pictures/Create_Listing.jpg" />
     </Window.Background>
@@ -15,23 +15,23 @@
             <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="label" Content="Book Title:" HorizontalAlignment="Left" Margin="31,51,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.165,0.31" Foreground="#FFF9F8F8"/>
-        <Label x:Name="label1" Content="Author(s):" HorizontalAlignment="Left" Margin="31,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.179,-0.796" Foreground="#FFF7ECEC"/>
-        <Label x:Name="label2" Content="Edition:" HorizontalAlignment="Left" Margin="31,113,0,0" VerticalAlignment="Top" Foreground="#FFF1E0E0"/>
-        <Label x:Name="label3" Content="ISBN:" HorizontalAlignment="Left" Margin="228,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.01,0.585" Foreground="#FFF9EDED"/>
-        <Label x:Name="label4" Content="Course Code:&#xD;&#xA;" HorizontalAlignment="Left" Margin="31,144,0,0" VerticalAlignment="Top" Height="29" Foreground="#FFF5F3F3"/>
-        <Label x:Name="label5" Content="Course Level:" HorizontalAlignment="Left" Margin="31,178,0,0" VerticalAlignment="Top" Foreground="#FFFDF7F7"/>
-        <Label x:Name="label6" Content="Condition:" HorizontalAlignment="Left" Margin="228,144,0,0" VerticalAlignment="Top" Height="29" Foreground="#FFF1E7E7" Grid.ColumnSpan="2"/>
-        <Label x:Name="label7" Content="Price:" HorizontalAlignment="Left" Margin="228,178,0,0" VerticalAlignment="Top" Foreground="#FFF9F4F4"/>
-        <TextBox x:Name="textBox_bookTitle" HorizontalAlignment="Left" Height="23" Margin="118,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2">
+        <Label x:Name="label" Content="Book Title:" HorizontalAlignment="Left" Margin="19,87,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.165,0.31" Foreground="#FFF9F8F8"/>
+        <Label x:Name="label1" Content="Author(s):" HorizontalAlignment="Left" Margin="19,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.179,-0.796" Foreground="#FFF7ECEC"/>
+        <Label x:Name="label2" Content="Edition:" HorizontalAlignment="Left" Margin="19,143,0,0" VerticalAlignment="Top" Foreground="#FFF1E0E0"/>
+        <Label x:Name="label3" Content="ISBN:" HorizontalAlignment="Left" Margin="228,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.01,0.585" Foreground="#FFF9EDED"/>
+        <Label x:Name="label4" Content="Course Code:&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,169,0,0" VerticalAlignment="Top" Height="29" Foreground="#FFF5F3F3"/>
+        <Label x:Name="label5" Content="Course Level:" HorizontalAlignment="Left" Margin="19,195,0,0" VerticalAlignment="Top" Foreground="#FFFDF7F7"/>
+        <Label x:Name="label6" Content="Condition:" HorizontalAlignment="Left" Margin="228,169,0,0" VerticalAlignment="Top" Height="29" Foreground="#FFF1E7E7" Grid.ColumnSpan="2"/>
+        <Label x:Name="label7" Content="Price:" HorizontalAlignment="Left" Margin="228,198,0,0" VerticalAlignment="Top" Foreground="#FFF9F4F4"/>
+        <TextBox x:Name="textBox_bookTitle" HorizontalAlignment="Left" Height="23" Margin="118,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2">
             <TextBox.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="textBox_authors" HorizontalAlignment="Left" Height="23" Margin="118,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="textBox_edition" HorizontalAlignment="Left" Height="23" Margin="118,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
-        <TextBox x:Name="textBox_isbn" HorizontalAlignment="Left" Height="23" Margin="11.574,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
-        <ComboBox x:Name="comboBox_cC" HorizontalAlignment="Left" Margin="118,148,0,0" VerticalAlignment="Top" Width="96">
+        <TextBox x:Name="textBox_authors" HorizontalAlignment="Left" Height="23" Margin="118,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBox_edition" HorizontalAlignment="Left" Height="23" Margin="118,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+        <TextBox x:Name="textBox_isbn" HorizontalAlignment="Left" Height="23" Margin="12,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
+        <ComboBox x:Name="comboBox_cC" HorizontalAlignment="Left" Margin="118,171,0,0" VerticalAlignment="Top" Width="96">
 
             <ComboBoxItem Content="AAST"></ComboBoxItem>
             <ComboBoxItem Content="ACCT"></ComboBoxItem>
@@ -101,18 +101,18 @@
             <ComboBoxItem Content="WGS"></ComboBoxItem>
 
         </ComboBox>
-        <ComboBox x:Name="comboBox_condition" HorizontalAlignment="Left" Margin="11.574,148,0,0" VerticalAlignment="Top" Width="96" Grid.Column="1">
+        <ComboBox x:Name="comboBox_condition" HorizontalAlignment="Left" Margin="12,171,0,0" VerticalAlignment="Top" Width="96" Grid.Column="1">
             <ComboBoxItem Content="New"></ComboBoxItem>
             <ComboBoxItem Content="Like New"></ComboBoxItem>
             <ComboBoxItem Content="Great"></ComboBoxItem>
             <ComboBoxItem Content="Good"></ComboBoxItem>
             <ComboBoxItem Content="Acceptable"></ComboBoxItem>
         </ComboBox>
-        <TextBox x:Name="textBox_cL" HorizontalAlignment="Left" Height="23" Margin="118,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
-        <TextBox x:Name="textBox_price" HorizontalAlignment="Left" Height="23" Margin="11.574,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
-        <Label x:Name="label8" Content="Description:" HorizontalAlignment="Left" Margin="31,218,0,0" VerticalAlignment="Top" Foreground="#FFF1E7E7"/>
-        <TextBox x:Name="textBox_description" HorizontalAlignment="Left" Height="73" Margin="118,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2"/>
-        <Button x:Name="button_createListing" Content="Create Listing" HorizontalAlignment="Left" Margin="173,350,0,0" VerticalAlignment="Top" Width="103" Height="46" BorderThickness="2" FontSize="14">
+        <TextBox x:Name="textBox_cL" HorizontalAlignment="Left" Height="23" Margin="118,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+        <TextBox x:Name="textBox_price" HorizontalAlignment="Left" Height="23" Margin="12,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
+        <Label x:Name="label8" Content="Description:" HorizontalAlignment="Left" Margin="19,226,0,0" VerticalAlignment="Top" Foreground="#FFF1E7E7"/>
+        <TextBox x:Name="textBox_description" HorizontalAlignment="Left" Height="73" Margin="118,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2"/>
+        <Button x:Name="button_createListing" Content="Create Listing" HorizontalAlignment="Left" Margin="173,356,0,0" VerticalAlignment="Top" Width="103" Height="46" BorderThickness="2" FontSize="14">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -125,8 +125,14 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label x:Name="label9" Content="Enter all fields below to create a listing" HorizontalAlignment="Left" Margin="118,10,0,0" VerticalAlignment="Top" Width="276" FontSize="14" Foreground="#FFF3DFDF" Grid.ColumnSpan="2"/>
-        <Label x:Name="label10" Content="Upload Images:" HorizontalAlignment="Left" Margin="19,306,0,0" VerticalAlignment="Top" Foreground="#FFF5E1E1"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="118,310,0,0" VerticalAlignment="Top" Width="96"/>
+        <Label x:Name="label9" Content="Enter all fields below to create a listing" HorizontalAlignment="Left" Margin="118,25,0,0" VerticalAlignment="Top" Width="276" FontSize="14" Foreground="#FFF3DFDF" Grid.ColumnSpan="2"/>
+        <Label x:Name="label10" Content="Upload Images:" HorizontalAlignment="Left" Margin="19,304,0,0" VerticalAlignment="Top" Foreground="#FFF5E1E1"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="118,304,0,0" VerticalAlignment="Top" Width="96"/>
+        <TextBox x:Name="textbox_listingTitle" HorizontalAlignment="Left" Height="23" Margin="118,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2">
+            <TextBox.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="label11" Content="Listing Title:" HorizontalAlignment="Left" Margin="19,59,0,0" VerticalAlignment="Top" Foreground="#FFF7F4F4"/>
     </Grid>
 </Window>

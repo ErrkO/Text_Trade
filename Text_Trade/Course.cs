@@ -22,7 +22,7 @@ public class Course
         {
             return this.courseCode;
         }
-        private set
+        /*private*/ set     //why we need to make the set's private?
         {
             this.courseCode = value;
         }
@@ -34,7 +34,7 @@ public class Course
         {
             return this.courseLevel;
         }
-        private set
+        /*private*/ set
         {
             this.courseLevel = value;
         }
@@ -64,6 +64,8 @@ public class Course
 	{
         this.courseLevel = cL;
 	}
+
     #endregion
 
 }
+// Can't overload assignment operator in C#? 
