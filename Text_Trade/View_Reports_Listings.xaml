@@ -1,0 +1,20 @@
+﻿<Window x:Class="Text_Trade.View_Reports_Listings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Text_Trade"
+        mc:Ignorable="d"
+        Title="Reported Listings" Height="400" Width="300">
+    <Window.Background>
+        <ImageBrush ImageSource="./Pictures/Text_Trade_background_big2.jpg" />
+    </Window.Background>
+    <Grid>
+        <Label x:Name="label" Content="Reported Listings" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBox_reportList" HorizontalAlignment="Left" Height="264" Margin="24,41,0,0" VerticalAlignment="Top" Width="247" Background="#FFF7F6F6" BorderBrush="#FFEFAC54"/>
+        <Button x:Name="clearButton" Content="Clear Report" HorizontalAlignment="Left" Margin="45,330,0,0" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.344,-0.562" Click="deleteButton_Click"/>
+        <Button x:Name="viewButton" Content="View Report" HorizontalAlignment="Left" Margin="169,330,0,0" VerticalAlignment="Top" Width="84" Click="viewButton_Click"/>
+
+    </Grid>
+</Window>
+

@@ -64,6 +64,12 @@
     <Compile Include="Moderator_Home.xaml.cs">
       <DependentUpon>Moderator_Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View_Reports_Listings.xaml.cs">
+      <DependentUpon>View_Reports_Listings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View_Reports_Users.xaml.cs">
+      <DependentUpon>View_Reports_Users.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Watch_List.xaml.cs">
       <DependentUpon>Watch_List.xaml</DependentUpon>
     </Compile>
@@ -139,6 +145,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ManageListings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View_Reports_Listings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View_Reports_Users.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
