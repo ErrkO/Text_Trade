@@ -58,62 +58,62 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Listing_View.xaml.cs">
+    <Compile Include="Forms\Listing_View.xaml.cs">
       <DependentUpon>Listing_View.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Manage_Profile.xaml.cs">
+    <Compile Include="Forms\Manage_Profile.xaml.cs">
       <DependentUpon>Manage_Profile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Manage_Schedule.xaml.cs">
+    <Compile Include="Forms\Manage_Schedule.xaml.cs">
       <DependentUpon>Manage_Schedule.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Moderator_Home.xaml.cs">
+    <Compile Include="Forms\Moderator_Home.xaml.cs">
       <DependentUpon>Moderator_Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Report_Trader.xaml.cs">
+    <Compile Include="Forms\Report_Trader.xaml.cs">
       <DependentUpon>Report_Trader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Send_Email.xaml.cs">
+    <Compile Include="Forms\Send_Email.xaml.cs">
       <DependentUpon>Send_Email.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Trader_Profile_View_Mod.xaml.cs">
+    <Compile Include="Forms\Trader_Profile_View_Mod.xaml.cs">
       <DependentUpon>Trader_Profile_View_Mod.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Trader_Profile_View_Trader.xaml.cs">
+    <Compile Include="Forms\Trader_Profile_View_Trader.xaml.cs">
       <DependentUpon>Trader_Profile_View_Trader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View_BanList.xaml.cs">
+    <Compile Include="Forms\View_BanList.xaml.cs">
       <DependentUpon>View_BanList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View_Reports_Listings.xaml.cs">
+    <Compile Include="Forms\View_Reports_Listings.xaml.cs">
       <DependentUpon>View_Reports_Listings.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View_Reports_Users.xaml.cs">
+    <Compile Include="Forms\View_Reports_Users.xaml.cs">
       <DependentUpon>View_Reports_Users.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View_UserList.xaml.cs">
+    <Compile Include="Forms\View_UserList.xaml.cs">
       <DependentUpon>View_UserList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Watch_List.xaml.cs">
+    <Compile Include="Forms\Watch_List.xaml.cs">
       <DependentUpon>Watch_List.xaml</DependentUpon>
     </Compile>
-    <Page Include="Create_Account.xaml">
+    <Page Include="Forms\Create_Account.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Create_Listing.xaml">
+    <Page Include="Forms\Create_Listing.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Listing_View.xaml">
+    <Page Include="Forms\Listing_View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Login.xaml">
+    <Page Include="Forms\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Forms\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -124,95 +124,95 @@
     <Compile Include="Account.cs" />
     <Compile Include="ClassSchedule.cs" />
     <Compile Include="Course.cs" />
-    <Compile Include="Create_Account.xaml.cs">
+    <Compile Include="Forms\Create_Account.xaml.cs">
       <DependentUpon>Create_Account.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Create_Listing.xaml.cs">
+    <Compile Include="Forms\Create_Listing.xaml.cs">
       <DependentUpon>Create_Listing.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataBase.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="Listing.cs" />
     <Compile Include="ListingList.cs" />
-    <Compile Include="Login.xaml.cs">
+    <Compile Include="Forms\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Marketplace.cs" />
-    <Compile Include="Marketplace_View.xaml.cs">
+    <Compile Include="Forms\Marketplace_View.xaml.cs">
       <DependentUpon>Marketplace_View.xaml</DependentUpon>
     </Compile>
     <Compile Include="Moderator.cs" />
     <Compile Include="SellList.cs" />
     <Compile Include="Trader.cs" />
-    <Compile Include="TraderHome.xaml.cs">
+    <Compile Include="Forms\TraderHome.xaml.cs">
       <DependentUpon>TraderHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="TraderList.cs" />
-    <Compile Include="ManageListings.xaml.cs">
+    <Compile Include="Forms\ManageListings.xaml.cs">
       <DependentUpon>ManageListings.xaml</DependentUpon>
     </Compile>
     <Compile Include="WatchList.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Forms\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Manage_Profile.xaml">
+    <Page Include="Forms\Manage_Profile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Manage_Schedule.xaml">
+    <Page Include="Forms\Manage_Schedule.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Marketplace_View.xaml">
+    <Page Include="Forms\Marketplace_View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Moderator_Home.xaml">
+    <Page Include="Forms\Moderator_Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Report_Trader.xaml">
+    <Page Include="Forms\Report_Trader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Send_Email.xaml">
+    <Page Include="Forms\Send_Email.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TraderHome.xaml">
+    <Page Include="Forms\TraderHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ManageListings.xaml">
+    <Page Include="Forms\ManageListings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Trader_Profile_View_Mod.xaml">
+    <Page Include="Forms\Trader_Profile_View_Mod.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Trader_Profile_View_Trader.xaml">
+    <Page Include="Forms\Trader_Profile_View_Trader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View_BanList.xaml">
+    <Page Include="Forms\View_BanList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View_Reports_Listings.xaml">
+    <Page Include="Forms\View_Reports_Listings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View_Reports_Users.xaml">
+    <Page Include="Forms\View_Reports_Users.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View_UserList.xaml">
+    <Page Include="Forms\View_UserList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Watch_List.xaml">
+    <Page Include="Forms\Watch_List.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

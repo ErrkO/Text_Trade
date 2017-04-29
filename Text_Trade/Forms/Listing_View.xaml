@@ -29,7 +29,7 @@
         <Button x:Name="button_AddWatchList" Content="Add to &#xD;&#xA;Watch List" HorizontalAlignment="Left" Margin="251,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2"/>
         <Label x:Name="label6" Content="Seller:" HorizontalAlignment="Left" Margin="150,92,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_SellerName" HorizontalAlignment="Left" Margin="217,97,0,0" TextWrapping="Wrap" Text="&lt;Seller username&gt;" VerticalAlignment="Top"/>
-        <Button x:Name="button_ReportListing" Content="Report Listing" HorizontalAlignment="Left" Margin="188,321,0,0" VerticalAlignment="Top" Width="82" BorderThickness="2,0" Background="{x:Null}" BorderBrush="#FFEA961D"/>
+        <Button x:Name="button_ReportListing" Content="Report Listing" HorizontalAlignment="Left" Margin="200,321,0,0" VerticalAlignment="Top" Width="82" BorderThickness="2,0" Background="{x:Null}" BorderBrush="#FFEA961D"/>
         <Button x:Name="button_ReportUser" Content="Report User" HorizontalAlignment="Left" Margin="287,321,0,0" VerticalAlignment="Top" Width="75" BorderThickness="2,0" Background="{x:Null}" BorderBrush="#FFEA961D"/>
         <Button x:Name="button_ViewProfile" Content="View Seller&#xD;&#xA;Profile" HorizontalAlignment="Left" Margin="28,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2"/>
     </Grid>
