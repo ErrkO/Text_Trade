@@ -184,6 +184,69 @@ public class DataBase
 
         return listings;
 
+    }
+    
+    public List<Trader> SearchForTrader(int traderid = 0)
+    {
+
+        List<Trader> traders = new List<Trader>();
+
+        using (SqlConnection conn = new SqlConnection(ConnString))
+        {
+
+            string sql;
+
+            if (traderid == 0)
+            {
+
+                sql = "SELCT * FROM (TraderList)";
+
+            }
+
+            else
+            {
+
+                sql = "SELECT * FROM (TraderList) WHERE trader_id = @traderid";
+
+            }
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+
+                if (traderid != 0)
+                {
+
+                    command.Parameters.AddWithValue("traderid", traderid);
+
+                }
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    Trader temptrader = new Trader();
+
+                    if (reader.GetInt32(3) != 1)
+                    {
+
+                        temptrader.Trader_id = reader.GetInt32(0);
+                        temptrader.UserName = reader.GetString(1);
+                        temptrader.Class_Schedule = new ClassSchedule(reader.GetString(4));
+                        temptrader.Warnings = reader.GetInt32(5);
+
+                        traders.Add(temptrader);
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        return traders;
+
     } 
 
 }
