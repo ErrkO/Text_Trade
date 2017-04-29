@@ -20,9 +20,7 @@ public class Listing
     string author;
     string edition;
     string isbn;
-    Course class_course;    //replace string courseCode and string courseLevel with Course class_course
-         //Why don't we just use a Course object here? "I agree we should just use a course object here" -Eric
-         //-------------------------------------------
+    Course class_course;
     Condition condition;
     string lastUsed;
     double price;
