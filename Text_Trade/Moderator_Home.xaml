@@ -11,17 +11,17 @@
     </Window.Background>
     <Grid>
         <Label x:Name="userLabel" Content="Moderator: **username**" Margin="38,15,84,0" VerticalAlignment="Top" Width="270" Height="26" HorizontalAlignment="Center"/>
-        <Rectangle HorizontalAlignment="Left" Height="140" Margin="19,75,0,0" Stroke="#FFD19C5D" VerticalAlignment="Top" Width="352">
+        <Rectangle HorizontalAlignment="Center" Height="140" Margin="19,80,21,0" Stroke="#FFD19C5D" VerticalAlignment="Top" Width="352">
             <Rectangle.Effect>
                 <DropShadowEffect/>
             </Rectangle.Effect>
         </Rectangle>
         <Label x:Name="label" Content="Options" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="61" FontSize="14" Foreground="Black"/>
-        <Button x:Name="viewListingsButton" Content="Search Marketplace" HorizontalAlignment="Left" Margin="38,94,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.264,0.494" Height="27" Click="viewListingsButton_Click" Background="#FFDAF091" BorderThickness="2" BorderBrush="#FFB9B1A4" FontSize="14"/>
+        <Button x:Name="viewListingsButton" Content="Search Marketplace" HorizontalAlignment="Left" Margin="31,94,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.264,0.494" Height="27" Click="viewListingsButton_Click" Background="#FFDAF091" BorderThickness="2" BorderBrush="#FFB9B1A4" FontSize="14"/>
         <Button x:Name="viewUserListButton" Content="View User List" HorizontalAlignment="Left" Margin="214,94,0,0" VerticalAlignment="Top" Width="148" Height="27" Background="#FFE4EE88" BorderBrush="#FFB9B1A4" BorderThickness="2" FontSize="14" Click="postListingButton_Click"/>
         <Button x:Name="manageListingsButton" Content="View Reports - Listings" HorizontalAlignment="Left" Margin="214,134,0,0" VerticalAlignment="Top" Width="148" Height="27" Background="#FFCEF37D" BorderBrush="#FFB9B1A4" BorderThickness="2" FontSize="14" Click="manageListingsButton_Click"/>
-        <Button x:Name="manageScheduleButton" Content="View Ban List" HorizontalAlignment="Left" Margin="38,174,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.264,0.494" Height="27" Background="#FFE8F184" BorderBrush="#FFB9B1A4" BorderThickness="2" FontSize="14"/>
-        <Button x:Name="watchListButton" Content="View Reports - Users" HorizontalAlignment="Left" Margin="38,134,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.264,0.494" Height="27" Background="#FFCCF97D" BorderBrush="#FFB9B1A4" BorderThickness="2" FontSize="14" Click="watchListButton_Click"/>
+        <Button x:Name="manageScheduleButton" Content="View Ban List" HorizontalAlignment="Left" Margin="31,174,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.264,0.494" Height="27" Background="#FFE8F184" BorderBrush="#FFB9B1A4" BorderThickness="2" FontSize="14"/>
+        <Button x:Name="watchListButton" Content="View Reports - Users" HorizontalAlignment="Left" Margin="31,134,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.264,0.494" Height="27" Background="#FFCCF97D" BorderBrush="#FFB9B1A4" BorderThickness="2" FontSize="14" Click="watchListButton_Click"/>
         <Button x:Name="manageProfileButton" Content="View System Stats" HorizontalAlignment="Left" Margin="214,174,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.264,0.494" Height="27" Background="#FFD8E273" BorderBrush="#FFB9B1A4" BorderThickness="2" FontSize="14"/>
         <Button x:Name="logOutButton" Content="Log out" HorizontalAlignment="Left" Margin="317,47,0,0" VerticalAlignment="Top" Width="54" Background="{x:Null}" Foreground="#FFF1F1F1" BorderThickness="1,0" Click="logOutButton_Click"/>
 

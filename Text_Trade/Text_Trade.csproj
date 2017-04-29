@@ -67,6 +67,9 @@
     <Compile Include="Moderator_Home.xaml.cs">
       <DependentUpon>Moderator_Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Report_Trader.xaml.cs">
+      <DependentUpon>Report_Trader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Send_Email.xaml.cs">
       <DependentUpon>Send_Email.xaml</DependentUpon>
     </Compile>
@@ -159,6 +162,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Moderator_Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report_Trader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -14,10 +14,10 @@
         <Frame x:Name="frame" Content="" HorizontalAlignment="Left" Height="100" Margin="31,41,0,0" VerticalAlignment="Top" Width="100" BorderBrush="#FFF8AD56" BorderThickness="2"/>
         <Label x:Name="label" Content="Username:" HorizontalAlignment="Left" Margin="148,46,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Name:" HorizontalAlignment="Left" Margin="170,77,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1_Copy" Content="DOB:" HorizontalAlignment="Left" Margin="170,115,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1_Copy1" Content="Major:" HorizontalAlignment="Left" Margin="22,182,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy" Content="DOB:" HorizontalAlignment="Left" Margin="177,115,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy1" Content="Major:" HorizontalAlignment="Left" Margin="170,151,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1_Copy2" Content="Concentration:" HorizontalAlignment="Left" Margin="159,182,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content="Class of:" HorizontalAlignment="Left" Margin="161,151,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Class of:" HorizontalAlignment="Left" Margin="31,182,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button_ViewListings" Content="Listings by&#xD;&#xA;Trader" HorizontalAlignment="Left" Margin="31,226,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
         <Button x:Name="button_Contact" Content="Contact &#xD;&#xA;Trader" HorizontalAlignment="Left" Margin="111,226,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
         <Button x:Name="button_IssueWarning" Content="Issue&#xD;&#xA;Warning" HorizontalAlignment="Left" Margin="191,226,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="button_Report_Click"/>
@@ -26,8 +26,8 @@
         <Button x:Name="button_uploadPic" Content="Upload Picture" HorizontalAlignment="Left" Margin="31,151,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="textBox_name" HorizontalAlignment="Left" Height="23" Margin="228,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"/>
         <TextBox x:Name="textBox_dob" HorizontalAlignment="Left" Height="23" Margin="228,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"/>
-        <TextBox x:Name="textBox_classof" HorizontalAlignment="Left" Height="23" Margin="228,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"/>
-        <TextBox x:Name="textBox_major" HorizontalAlignment="Left" Height="23" Margin="71,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83"/>
+        <TextBox x:Name="textBox_major" HorizontalAlignment="Left" Height="23" Margin="228,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"/>
+        <TextBox x:Name="textBox_classof" HorizontalAlignment="Left" Height="23" Margin="95,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59"/>
         <TextBox x:Name="textBox_concentration" HorizontalAlignment="Left" Height="23" Margin="247,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99"/>
 
     </Grid>
