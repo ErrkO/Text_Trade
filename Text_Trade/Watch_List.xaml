@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:Text_Trade"
         mc:Ignorable="d"
         Title="Watch List" Height="400" Width="300">
+    <Window.Background>
+        <ImageBrush ImageSource="./Pictures/Text_Trade_background_big2.jpg" />
+    </Window.Background>
     <Grid>
         <Label x:Name="label" Content="Watch List" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="listBox_watchList" HorizontalAlignment="Left" Height="264" Margin="24,41,0,0" VerticalAlignment="Top" Width="247"/>
+        <ListBox x:Name="listBox_watchList" HorizontalAlignment="Left" Height="264" Margin="24,41,0,0" VerticalAlignment="Top" Width="247" Background="#FFF7F6F6" BorderBrush="#FFEFAC54"/>
         <Button x:Name="deleteButton" Content="Delete Listing" HorizontalAlignment="Left" Margin="45,330,0,0" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.344,-0.562" Click="deleteButton_Click"/>
         <Button x:Name="viewButton" Content="View Listing" HorizontalAlignment="Left" Margin="169,330,0,0" VerticalAlignment="Top" Width="84" Click="viewButton_Click"/>
 
