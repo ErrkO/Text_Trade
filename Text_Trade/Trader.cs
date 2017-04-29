@@ -17,7 +17,8 @@ public class Trader : Account
    // each Trader is an Account, but has a class shedule, a watch list - list of listings of interest, and a sell list - list of listings posted for sale
     private ClassSchedule class_schedule;
     private WatchList watch_list;
-    private SellList sell_list;  
+    private SellList sell_list;
+    private int warnings;
     #endregion
 
     #region Property fields
@@ -28,6 +29,8 @@ public class Trader : Account
         {
             return this.class_schedule;
         }
+
+        set { this.class_schedule = value; }
 	}
 
     public int Trader_id
@@ -38,7 +41,16 @@ public class Trader : Account
 
     }
 
-	public  WatchList Watch_List
+    public int Warnings
+    {
+
+        get { return this.warnings; }
+
+        set { this.warnings = value; }
+
+    }
+
+	public WatchList Watch_List
 	{
 		get
         {

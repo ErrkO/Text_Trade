@@ -74,12 +74,14 @@ public class Moderator : Account
 
     }
 
-	public Trader SearchForUser(int traderid)
+	public List<Trader> SearchForUser(int traderid)
 	{
 
-        Trader temptrader = new Trader();
+        List<Trader> traders = new List<Trader>();
 
-        db.SearchForListing("TraderList")
+        traders = db.SearchForTrader(traderid);
+
+        return traders;
 
 	}
 
