@@ -18,11 +18,9 @@
         <Label x:Name="label1_Copy1" Content="Major:" HorizontalAlignment="Left" Margin="170,151,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1_Copy2" Content="Concentration:" HorizontalAlignment="Left" Margin="159,182,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label3" Content="Class of:" HorizontalAlignment="Left" Margin="31,182,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button_ViewListings" Content="Listings by&#xD;&#xA;Trader" HorizontalAlignment="Left" Margin="31,226,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
-        <Button x:Name="button_Contact" Content="Contact &#xD;&#xA;Trader" HorizontalAlignment="Left" Margin="111,226,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
-        <Button x:Name="button_IssueWarning" Content="Issue&#xD;&#xA;Warning" HorizontalAlignment="Left" Margin="191,226,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="button_Report_Click"/>
+        <Button x:Name="button_cancel" Content="Cancel" HorizontalAlignment="Left" Margin="104,226,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
+        <Button x:Name="button_save" Content="Save&#xD;&#xA;Changes" HorizontalAlignment="Left" Margin="207,226,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="button_Report_Click"/>
         <TextBlock x:Name="textBlock_username" HorizontalAlignment="Left" Margin="228,51,0,0" TextWrapping="Wrap" Text="&lt;Username&gt;" VerticalAlignment="Top" Width="107"/>
-        <Button x:Name="button_BanUser" Content="Ban&#xD;&#xA;User" HorizontalAlignment="Left" Margin="271,226,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
         <Button x:Name="button_uploadPic" Content="Upload Picture" HorizontalAlignment="Left" Margin="31,151,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="textBox_name" HorizontalAlignment="Left" Height="23" Margin="228,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"/>
         <TextBox x:Name="textBox_dob" HorizontalAlignment="Left" Height="23" Margin="228,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"/>

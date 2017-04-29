@@ -13,20 +13,20 @@
         <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="36,46,0,0" VerticalAlignment="Top" Width="100"/>
         <Frame x:Name="frame" Content="" HorizontalAlignment="Left" Height="100" Margin="36,46,0,0" VerticalAlignment="Top" Width="100" BorderBrush="#FFF8AD56" BorderThickness="2"/>
         <Label x:Name="label" Content="Username:" HorizontalAlignment="Left" Margin="157,58,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Name:" HorizontalAlignment="Left" Margin="157,89,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1_Copy" Content="DOB:" HorizontalAlignment="Left" Margin="157,120,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1_Copy1" Content="Major:" HorizontalAlignment="Left" Margin="22,151,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1_Copy2" Content="Concentration:" HorizontalAlignment="Left" Margin="22,177,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content="Class of:" HorizontalAlignment="Left" Margin="157,151,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Name:" HorizontalAlignment="Left" Margin="179,89,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy" Content="DOB:" HorizontalAlignment="Left" Margin="186,120,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy1" Content="Major:" HorizontalAlignment="Left" Margin="179,151,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy2" Content="Concentration:" HorizontalAlignment="Left" Margin="156,177,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Class of:" HorizontalAlignment="Left" Margin="31,177,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button_ViewListings" Content="Listings by&#xD;&#xA;Trader" HorizontalAlignment="Left" Margin="31,226,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
         <Button x:Name="button_Contact" Content="Contact &#xD;&#xA;Trader" HorizontalAlignment="Left" Margin="111,226,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
         <Button x:Name="button_Report" Content="Issue&#xD;&#xA;Warning" HorizontalAlignment="Left" Margin="191,226,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="button_Report_Click"/>
         <TextBlock x:Name="textBlock_username" HorizontalAlignment="Left" Margin="239,63,0,0" TextWrapping="Wrap" Text="&lt;Username&gt;" VerticalAlignment="Top" Width="107"/>
         <TextBlock x:Name="textBlock_name" HorizontalAlignment="Left" Margin="239,94,0,0" TextWrapping="Wrap" Text="&lt;Full Name&gt;" VerticalAlignment="Top" Width="107"/>
         <TextBlock x:Name="textBlock_dob" HorizontalAlignment="Left" Margin="240,125,0,0" TextWrapping="Wrap" Text="&lt;DOB&gt;" VerticalAlignment="Top" Width="106"/>
-        <TextBlock x:Name="textBlock_concentration" HorizontalAlignment="Left" Margin="126,182,0,0" TextWrapping="Wrap" Text="&lt;Concentration&gt;" VerticalAlignment="Top" Width="106"/>
-        <TextBlock x:Name="textBlock_major" HorizontalAlignment="Left" Margin="71,156,0,0" TextWrapping="Wrap" Text="&lt;Major&gt;" VerticalAlignment="Top" Width="81"/>
-        <TextBlock x:Name="textBlock_classof" HorizontalAlignment="Left" Margin="239,156,0,0" TextWrapping="Wrap" Text="&lt;Class Of&gt;" VerticalAlignment="Top" Width="107"/>
+        <TextBlock x:Name="textBlock_concentration" HorizontalAlignment="Left" Margin="249,182,0,0" TextWrapping="Wrap" Text="&lt;Concentration&gt;" VerticalAlignment="Top" Width="96"/>
+        <TextBlock x:Name="textBlock_major" HorizontalAlignment="Left" Margin="240,156,0,0" TextWrapping="Wrap" Text="&lt;Major&gt;" VerticalAlignment="Top" Width="81"/>
+        <TextBlock x:Name="textBlock_classof" HorizontalAlignment="Left" Margin="89,182,0,0" TextWrapping="Wrap" Text="&lt;Class Of&gt;" VerticalAlignment="Top" Width="62"/>
         <Button x:Name="button_Report_Copy" Content="Ban&#xD;&#xA;User" HorizontalAlignment="Left" Margin="271,226,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
 
     </Grid>
