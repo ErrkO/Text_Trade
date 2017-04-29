@@ -16,10 +16,14 @@ public class ClassSchedule
     #region Properties
     public List<Course> Schedule
     {
+
         get
         {
             return this.schedule;
         }
+
+        set { this.schedule = value; }
+
     }
     #endregion
 
@@ -28,10 +32,59 @@ public class ClassSchedule
 	{
 	}
 
-	public virtual void AddClass(string cC, string cL)
+    public ClassSchedule(string str)  //constructor
+    {
+
+        Course tempcourse = new Course();
+
+        List<string> tempcc = new List<string>();
+        List<string> tempcl = new List<string>();
+
+        char seperator = ',';
+
+        string[] substr = str.Split(seperator);
+
+        for (int i = 0; i < substr.Length; i++)
+        {
+
+            if (i % 2 == 1)
+            {
+
+                tempcc.Add(substr[i]);
+
+            }
+
+            else
+            {
+
+                tempcl.Add(substr[i]);
+
+            }
+
+        }
+
+        for (int i = 0; i < substr.Length; i++)
+        {
+
+            tempcourse = new Course(tempcc[i], tempcl[i]);
+
+            AddClass(tempcourse);
+
+        }
+
+    }
+
+    public virtual void AddClass(string cC, string cL)
 	{
         this.schedule.Add(new Course(cC, cL));
 	}
+
+    public void AddClass(Course course)
+    {
+
+        this.schedule.Add(course);
+
+    }
 
     // you would probably need to create a predicate and search the list for the course
     // then you would call the remove function (it might be called something different)
@@ -48,6 +101,68 @@ public class ClassSchedule
 	{
             this.schedule.Remove(course);
 	}
+
+    public ClassSchedule FromString(string str)
+    {
+
+        ClassSchedule tempsched = new ClassSchedule();
+        Course tempcourse = new Course();
+
+        List<string> tempcc = new List<string>();
+        List<string> tempcl = new List<string>();
+
+        char seperator = ',';
+
+        string[] substr = str.Split(seperator);
+
+        for (int i = 0; i < substr.Length; i++)
+        {
+
+            if (i % 2 == 1)
+            {
+
+                tempcc.Add(substr[i]);
+
+            }
+
+            else
+            {
+
+                tempcl.Add(substr[i]);
+
+            }
+
+        }
+
+        for (int i = 0; i < substr.Length; i++)
+        {
+
+            tempcourse = new Course(tempcc[i], tempcl[i]);
+
+            tempsched.AddClass(tempcourse);
+
+        }
+
+        return tempsched;
+
+    }
+
+    public override string ToString()
+    {
+
+        string schedstr = "";
+
+        foreach (Course course in schedule)
+        {
+
+            schedstr += course.courseCode + "," + course.courseLevel;
+
+        }
+
+        return schedstr;
+
+    }
+
     #endregion
 }
 

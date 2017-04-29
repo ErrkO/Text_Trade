@@ -94,7 +94,7 @@ public class DataBase
     }
 
 
-    public List<Listing> SearchFor(string fieldname = null, string field = null,string fieldname2 = null, string field2 = null)
+    public List<Listing> SearchForListing(string fieldname = null, string field = null,string fieldname2 = null, string field2 = null)
     {
 
         List<Listing> listings = new List<Listing>();
@@ -160,8 +160,9 @@ public class DataBase
                     templisting.Author = reader.GetString(2);
                     templisting.Edition = reader.GetString(3);
                     templisting.Isbn = reader.GetString(4);
-                    templisting.CourseCode = reader.GetString(5);
-                    templisting.CourseLevel = reader.GetString(6);
+                    string CCode = reader.GetString(5);
+                    string CLevel = reader.GetString(6);
+                    templisting._Course = new Course(CCode, CLevel);
                     templisting.LastUsed = reader.GetString(7);
                     Condition conditionstring = (Condition)Enum.Parse(typeof(Condition), reader.GetString(8));
                     templisting.Condition = conditionstring;
@@ -182,6 +183,69 @@ public class DataBase
         }
 
         return listings;
+
+    }
+    
+    public List<Trader> SearchForTrader(int traderid = 0)
+    {
+
+        List<Trader> traders = new List<Trader>();
+
+        using (SqlConnection conn = new SqlConnection(ConnString))
+        {
+
+            string sql;
+
+            if (traderid == 0)
+            {
+
+                sql = "SELCT * FROM (TraderList)";
+
+            }
+
+            else
+            {
+
+                sql = "SELECT * FROM (TraderList) WHERE trader_id = @traderid";
+
+            }
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+
+                if (traderid != 0)
+                {
+
+                    command.Parameters.AddWithValue("traderid", traderid);
+
+                }
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    Trader temptrader = new Trader();
+
+                    if (reader.GetInt32(3) != 1)
+                    {
+
+                        temptrader.Trader_id = reader.GetInt32(0);
+                        temptrader.UserName = reader.GetString(1);
+                        temptrader.Class_Schedule = new ClassSchedule(reader.GetString(4));
+                        temptrader.Warnings = reader.GetInt32(5);
+
+                        traders.Add(temptrader);
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        return traders;
 
     } 
 

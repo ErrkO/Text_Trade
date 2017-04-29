@@ -20,7 +20,7 @@ public class Listing
     string author;
     string edition;
     string isbn;
-    Course class_course;
+    Course course;    
     Condition condition;
     string lastUsed;
     double price;
@@ -102,15 +102,15 @@ public class Listing
         }
     }
 
-	public Course Class_Course  //Hmm, Course has 2 fields, so should I explicitly return both fields or what? -Linh
+	public Course _Course  //Hmm, Course has 2 fields, so should I explicitly return both fields or what? -Linh
 	{
         get
         {
-            return this.class_course;
+            return this.course;
         }
         set
         {
-            this.class_course = value;
+            this.course = value;
         }
 	}
 
@@ -221,7 +221,7 @@ public class Listing
         this.author = author;
         this.edition = edition;
         this.isbn = isbn;
-        this.class_course = class_course;
+        this.course = class_course;
         this.condition = bookCondition;
         this.price = price;
         this.lastUsed = lastUsed;
@@ -236,7 +236,7 @@ public class Listing
         this.author = author;
         this.edition = edition;
         this.isbn = isbn;
-        this.class_course = class_course;
+        this.course = class_course;
         this.condition = bookCondition;
         this.price = price;
         this.lastUsed = lastUsed;
@@ -256,12 +256,12 @@ public class Listing
 
 	public virtual void UpdateCourseCode(Course class_course)
 	{
-        this.class_course.CourseCode = class_course.CourseCode;
+        this.course.CourseCode = class_course.CourseCode;
 	}
 
 	public virtual void UpdateCourseLevel(Course class_course)
 	{
-        this.class_course.CourseLevel = class_course.CourseLevel;
+        this.course.CourseLevel = class_course.CourseLevel;
 	}
 
 	public virtual void UpdateDescription(string description)
@@ -341,8 +341,8 @@ public class Listing
             command.Parameters.AddWithValue("author",this.author);
             command.Parameters.AddWithValue("edition",this.edition);
             command.Parameters.AddWithValue("isbn",this.isbn);
-            command.Parameters.AddWithValue("courseCode",this.courseCode);      //Also we implement Course object, instead of 2 strings
-            command.Parameters.AddWithValue("courseLevel",this.courseLevel);    //So update?
+            command.Parameters.AddWithValue("courseCode",this.course.CourseCode);      //Also we implement Course object, instead of 2 strings
+            command.Parameters.AddWithValue("courseLevel",this.course.CourseLevel);    //So update?
             command.Parameters.AddWithValue("lastUsed",this.lastUsed);
             command.Parameters.AddWithValue("condition",Convert.ToString(this.condition));
             command.Parameters.AddWithValue("description",this.description);
@@ -401,8 +401,9 @@ public class Listing
                     templisting.Author = reader.GetString(2);
                     templisting.Edition = reader.GetString(3);
                     templisting.Isbn = reader.GetString(4);
-                    templisting.CourseCode = reader.GetString(5);
-                    templisting.CourseLevel = reader.GetString(6);
+                    string CCode = reader.GetString(5);
+                    string CLevel = reader.GetString(6);
+                    templisting._Course = new Course(CCode, CLevel);
                     templisting.LastUsed = reader.GetString(7);
                     Condition conditionstring = (Condition)Enum.Parse(typeof(Condition), reader.GetString(8));
                     templisting.Condition =conditionstring;

@@ -52,7 +52,7 @@ public class TraderList : DataBase
 
             command.Parameters.AddWithValue("uname", trader.UserName);
             command.Parameters.AddWithValue("pword", trader.Password);
-            command.Parameters.AddWithValue("CSched", trader.Class_Schedule);
+            command.Parameters.AddWithValue("CSched", trader.Class_Schedule.ToString());
 
             if (trader.Trader_id == -1)
             {
