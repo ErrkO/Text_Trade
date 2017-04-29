@@ -64,6 +64,9 @@
     <Compile Include="Manage_Profile.xaml.cs">
       <DependentUpon>Manage_Profile.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manage_Schedule.xaml.cs">
+      <DependentUpon>Manage_Schedule.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Moderator_Home.xaml.cs">
       <DependentUpon>Moderator_Home.xaml</DependentUpon>
     </Compile>
@@ -154,6 +157,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Manage_Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manage_Schedule.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
