@@ -61,8 +61,14 @@
     <Compile Include="Listing_View.xaml.cs">
       <DependentUpon>Listing_View.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manage_Profile.xaml.cs">
+      <DependentUpon>Manage_Profile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Moderator_Home.xaml.cs">
       <DependentUpon>Moderator_Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Send_Email.xaml.cs">
+      <DependentUpon>Send_Email.xaml</DependentUpon>
     </Compile>
     <Compile Include="Trader_Profile_View_Mod.xaml.cs">
       <DependentUpon>Trader_Profile_View_Mod.xaml</DependentUpon>
@@ -144,11 +150,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Manage_Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Marketplace_View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Moderator_Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Send_Email.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
