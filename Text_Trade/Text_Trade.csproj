@@ -61,6 +61,9 @@
     <Compile Include="Listing_View.xaml.cs">
       <DependentUpon>Listing_View.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Moderator_Home.xaml.cs">
+      <DependentUpon>Moderator_Home.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Watch_List.xaml.cs">
       <DependentUpon>Watch_List.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Marketplace_View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Moderator_Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
