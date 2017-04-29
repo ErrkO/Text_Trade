@@ -97,7 +97,7 @@ public class Marketplace
 
         List<Listing> listings;
 
-        listings = db.SearchFor();
+        listings = db.SearchForListing();
 
         return listings;
 
@@ -108,7 +108,7 @@ public class Marketplace
 
         List<Listing> listings;
 
-        listings = db.SearchFor("author",author);
+        listings = db.SearchForListing("author",author);
 
         return listings;
 
@@ -119,7 +119,7 @@ public class Marketplace
 
         List<Listing> listings;
 
-        listings = db.SearchFor("courseCode",cC,"courseLevel",cL);
+        listings = db.SearchForListing("courseCode",cC,"courseLevel",cL);
 
         return listings;
 
@@ -130,7 +130,7 @@ public class Marketplace
 
         List<Listing> listings;
 
-        listings = db.SearchFor("isbn",isbn);
+        listings = db.SearchForListing("isbn",isbn);
 
         return listings;
 
@@ -141,7 +141,7 @@ public class Marketplace
 
         List<Listing> listings;
 
-        listings = db.SearchFor();
+        listings = db.SearchForListing();
 
         return listings;
 

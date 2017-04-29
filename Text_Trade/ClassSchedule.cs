@@ -33,6 +33,13 @@ public class ClassSchedule
         this.schedule.Add(new Course(cC, cL));
 	}
 
+    public void AddClass(Course course)
+    {
+
+        this.schedule.Add(course);
+
+    }
+
     // you would probably need to create a predicate and search the list for the course
     // then you would call the remove function (it might be called something different)
     // and you could either remove it based on the predicate call (imagine a function in
@@ -48,6 +55,68 @@ public class ClassSchedule
 	{
             this.schedule.Remove(course);
 	}
+
+    public ClassSchedule FromString(string str)
+    {
+
+        ClassSchedule tempsched = new ClassSchedule();
+        Course tempcourse = new Course();
+
+        List<string> tempcc = new List<string>();
+        List<string> tempcl = new List<string>();
+
+        char seperator = ',';
+
+        string[] substr = str.Split(seperator);
+
+        for (int i = 0; i < substr.Length; i++)
+        {
+
+            if (i % 2 == 1)
+            {
+
+                tempcc.Add(substr[i]);
+
+            }
+
+            else
+            {
+
+                tempcl.Add(substr[i]);
+
+            }
+
+        }
+
+        for (int i = 0; i < substr.Length; i++)
+        {
+
+            tempcourse = new Course(tempcc[i], tempcl[i]);
+
+            tempsched.AddClass(tempcourse);
+
+        }
+
+        return tempsched;
+
+    }
+
+    public override string ToString()
+    {
+
+        string schedstr = "";
+
+        foreach (Course course in schedule)
+        {
+
+            schedstr += course.courseCode + "," + course.courseLevel;
+
+        }
+
+        return schedstr;
+
+    }
+
     #endregion
 }
 

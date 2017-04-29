@@ -74,10 +74,12 @@ public class Moderator : Account
 
     }
 
-	public int SearchForUser(Trader trader)
+	public Trader SearchForUser(int traderid)
 	{
 
-        throw new System.NotImplementedException();
+        Trader temptrader = new Trader();
+
+        db.SearchForListing("TraderList")
 
 	}
 
