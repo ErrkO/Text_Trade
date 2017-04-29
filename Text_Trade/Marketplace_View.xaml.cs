@@ -37,5 +37,18 @@ namespace Text_Trade
             frm.Show();
             this.Close();
         }
+
+        private void Marketplace_View_Load(object sender, RoutedEventArgs e)
+        {
+            Marketplace marketView = new Marketplace();
+            List<Listing> listings = new List<Listing>();
+
+            listings = marketView.SearchAll();
+
+            for( int i = 0; i < listings.Count; i++)
+            {
+                resultsListBox.Items.Add(listings.ElementAt(i));
+            }
+        }
     }
 }

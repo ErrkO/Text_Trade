@@ -22,7 +22,7 @@ public class Course
         {
             return this.courseCode;
         }
-        /*private*/ set     //why we need to make the set's private?
+        set
         {
             this.courseCode = value;
         }
