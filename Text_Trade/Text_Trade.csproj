@@ -61,6 +61,33 @@
     <Compile Include="Listing_View.xaml.cs">
       <DependentUpon>Listing_View.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manage_Profile.xaml.cs">
+      <DependentUpon>Manage_Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Moderator_Home.xaml.cs">
+      <DependentUpon>Moderator_Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Send_Email.xaml.cs">
+      <DependentUpon>Send_Email.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Trader_Profile_View_Mod.xaml.cs">
+      <DependentUpon>Trader_Profile_View_Mod.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Trader_Profile_View_Trader.xaml.cs">
+      <DependentUpon>Trader_Profile_View_Trader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View_BanList.xaml.cs">
+      <DependentUpon>View_BanList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View_Reports_Listings.xaml.cs">
+      <DependentUpon>View_Reports_Listings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View_Reports_Users.xaml.cs">
+      <DependentUpon>View_Reports_Users.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View_UserList.xaml.cs">
+      <DependentUpon>View_UserList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Watch_List.xaml.cs">
       <DependentUpon>Watch_List.xaml</DependentUpon>
     </Compile>
@@ -123,7 +150,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Manage_Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Marketplace_View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Moderator_Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Send_Email.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,6 +171,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ManageListings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Trader_Profile_View_Mod.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Trader_Profile_View_Trader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View_BanList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View_Reports_Listings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View_Reports_Users.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View_UserList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
