@@ -94,7 +94,7 @@ public class DataBase
     }
 
 
-    public List<Listing> SearchFor(string fieldname = null, string field = null,string fieldname2 = null, string field2 = null)
+    public List<Listing> SearchForListing(string fieldname = null, string field = null,string fieldname2 = null, string field2 = null)
     {
 
         List<Listing> listings = new List<Listing>();
@@ -160,8 +160,9 @@ public class DataBase
                     templisting.Author = reader.GetString(2);
                     templisting.Edition = reader.GetString(3);
                     templisting.Isbn = reader.GetString(4);
-                    templisting.CourseCode = reader.GetString(5);
-                    templisting.CourseLevel = reader.GetString(6);
+                    string CCode = reader.GetString(5);
+                    string CLevel = reader.GetString(6);
+                    templisting._Course = new Course(CCode, CLevel);
                     templisting.LastUsed = reader.GetString(7);
                     Condition conditionstring = (Condition)Enum.Parse(typeof(Condition), reader.GetString(8));
                     templisting.Condition = conditionstring;
