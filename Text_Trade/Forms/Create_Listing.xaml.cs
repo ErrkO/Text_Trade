@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Text_Trade
 {
     /// <summary>
-    /// Interaction logic for Create_LIsting.xaml
+    /// Interaction logic for Create_Listing.xaml
     /// </summary>
     public partial class Create_Listing : Window
     {
