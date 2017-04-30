@@ -23,5 +23,15 @@ namespace Text_Trade
         {
             InitializeComponent();
         }
+
+        private void unbanButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void viewUser_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

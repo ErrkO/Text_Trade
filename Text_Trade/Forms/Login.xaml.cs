@@ -39,7 +39,7 @@ namespace Text_Trade
             TraderList userlist = new TraderList();
             userlist.CreateList();     
 
-            userlist.SearchForUser(); //To be continued when SearchForUser() is implemented
+          //  userlist.SearchForUser(); //To be continued when SearchForUser() is implemented
         }
     }
 }
