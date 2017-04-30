@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Ban List" Height="400" Width="300">
     <Window.Background>
-        <ImageBrush ImageSource="./Pictures/Text_Trade_background_big3.jpg" />
+        <ImageBrush ImageSource="../Pictures/Text_Trade_background_big3.jpg" />
     </Window.Background>
     <Grid>
         <Label x:Name="label" Content="Ban List" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top"/>

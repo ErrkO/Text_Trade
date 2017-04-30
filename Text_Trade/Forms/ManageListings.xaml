@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Sell List" Height="379.112" Width="310" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Foreground="Black">
     <Window.Background>
-        <ImageBrush ImageSource="./Pictures/Text_Trade_background_big3.jpg" />
+        <ImageBrush ImageSource="../Pictures/Text_Trade_background_big3.jpg" />
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>

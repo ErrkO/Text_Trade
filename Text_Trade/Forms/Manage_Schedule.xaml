@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Edit Schedule" Height="500" Width="320">
     <Window.Background>
-        <ImageBrush ImageSource="./Pictures/Text_Trade_background_big3.jpg" />
+        <ImageBrush ImageSource="../Pictures/Text_Trade_background_big3.jpg" />
     </Window.Background>
     <Grid>
         <Label x:Name="label" Content="Class Schedule" HorizontalAlignment="Left" Margin="95,25,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Stencil"/>
