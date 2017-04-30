@@ -23,5 +23,15 @@ namespace Text_Trade
         {
             InitializeComponent();
         }
+
+        private void clearButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void viewButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

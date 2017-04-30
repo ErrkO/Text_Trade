@@ -30,12 +30,11 @@ namespace Text_Trade
             string a = textBox_authors.Text;
             string ed = textBox_edition.Text;
             string i = textBox_isbn.Text;
-            string cC = comboBox_cC.SelectedItem.ToString();
-            string cL = textBox_cL.Text;
-            string cond = comboBox_condition.SelectedItem.ToString();
-            string p = textBox_price.Text;
+            Course course = new Course(comboBox_cC.SelectedItem.ToString(), textBox_cL.Text);
+            Condition cond = (Condition)comboBox_condition.SelectedValue;
+            double p = Convert.ToDouble(textBox_price.Text);
             string des = textBox_description.Text;
-            Listing l = new Listing(t, a, ed, i, cC, cL, cond, p, des);
+            Listing l = new Listing(t, a, ed, i, course, cond, p, des);
         }
     }
 }

@@ -23,5 +23,25 @@ namespace Text_Trade
         {
             InitializeComponent();
         }
+
+        private void issueWarningButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void contactButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void viewListingsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void banButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
