@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Forms\Ban_User.xaml.cs">
+      <DependentUpon>Ban_User.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Issue_Warning.xaml.cs">
       <DependentUpon>Issue_Warning.xaml</DependentUpon>
     </Compile>
@@ -100,6 +103,10 @@
     <Compile Include="Forms\Watch_List.xaml.cs">
       <DependentUpon>Watch_List.xaml</DependentUpon>
     </Compile>
+    <Page Include="Forms\Ban_User.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\Create_Account.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

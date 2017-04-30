@@ -35,6 +35,7 @@ namespace Text_Trade
             string cond = comboBox_condition.SelectedItem.ToString();
             string p = textBox_price.Text;
             string des = textBox_description.Text;
+            Listing l = new Listing(t, a, ed, i, cC, cL, cond, p, des);
         }
     }
 }
