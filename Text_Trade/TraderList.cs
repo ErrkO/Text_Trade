@@ -74,6 +74,7 @@ public class TraderList : DataBase
 
 	}
 
+
     public void CreateList()
     {
 
@@ -105,10 +106,16 @@ public class TraderList : DataBase
 
     }
 
-	public virtual TraderList SearchForUser()
+	public List<Trader> SearchForUser(int traderid)
 	{
-		throw new System.NotImplementedException();
-	}
+
+        List<Trader> traders = new List<Trader>();
+
+        traders = db.SearchForTrader(traderid);
+
+        return traders;
+
+    }
 
 }
 

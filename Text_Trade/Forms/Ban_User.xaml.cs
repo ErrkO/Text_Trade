@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Text_Trade
+namespace Text_Trade.Forms
 {
     /// <summary>
-    /// Interaction logic for Create_LIsting.xaml
+    /// Interaction logic for Ban_User.xaml
     /// </summary>
-    public partial class Create_Listing : Window
+    public partial class Ban_User : Window
     {
-        public Create_Listing()
+        public Ban_User()
         {
             InitializeComponent();
         }
