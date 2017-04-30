@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Report Trader" Height="310" Width="300">
     <Window.Background>
-        <ImageBrush ImageSource="./Pictures/Text_Trade_background_big3.jpg" />
+        <ImageBrush ImageSource="../Pictures/Text_Trade_background_big3.jpg" />
     </Window.Background>
     <Grid>
         <Label x:Name="label" Content="Report User" HorizontalAlignment="Center" Margin="84,21,88,0" VerticalAlignment="Top" FontSize="16" FontFamily="Stencil" Width="120"/>

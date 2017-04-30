@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Login" Height="364.474" Width="380">
     <Window.Background>
-        <ImageBrush ImageSource="./Pictures/Text_Trade_background_big2.jpg" />
+        <ImageBrush ImageSource="../Pictures/Text_Trade_background_big2.jpg" />
     </Window.Background>
     <Grid>
         <Label x:Name="label" Content="Username:" HorizontalAlignment="Left" Margin="38,102,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Vrinda"/>

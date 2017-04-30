@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Text Trade Marketplace" Height="500" Width="600" Loaded="Marketplace_View_Load">
     <Window.Background>
-        <ImageBrush ImageSource="./Pictures/Marketplace_View.jpg"/>
+        <ImageBrush ImageSource="../Pictures/Marketplace_View.jpg"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Listing View" Height="380" Width="380">
     <Window.Background>
-        <ImageBrush ImageSource="./Pictures/Text_Trade_background_big3.jpg" />
+        <ImageBrush ImageSource="../Pictures/Text_Trade_background_big3.jpg" />
     </Window.Background>
     <Grid>
         <Rectangle HorizontalAlignment="Left" Height="100" Margin="28,62,0,0" Stroke="#FFD19C5D" VerticalAlignment="Top" Width="100"/>

@@ -23,5 +23,18 @@ namespace Text_Trade
         {
             InitializeComponent();
         }
+
+        private void button_createListing_Click(object sender, RoutedEventArgs e)
+        {
+            string t = textBox_bookTitle.Text;
+            string a = textBox_authors.Text;
+            string ed = textBox_edition.Text;
+            string i = textBox_isbn.Text;
+            string cC = comboBox_cC.SelectedItem.ToString();
+            string cL = textBox_cL.Text;
+            string cond = comboBox_condition.SelectedItem.ToString();
+            string p = textBox_price.Text;
+            string des = textBox_description.Text;
+        }
     }
 }
