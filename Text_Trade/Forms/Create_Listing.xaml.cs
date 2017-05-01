@@ -32,10 +32,15 @@ namespace Text_Trade
             string i = textBox_isbn.Text;
             string cC = comboBox_cC.SelectedItem.ToString();
             string cL = textBox_cL.Text;
-            string cond = comboBox_condition.SelectedItem.ToString();
-            string p = textBox_price.Text;
+            Course _course = new global::Course(cC, cL);
+            string cond_string = comboBox_condition.SelectedItem.ToString();   //how to not get enum types
+            Condition _cond = (Condition)Enum.Parse(typeof(Condition), cond_string); //How to get enum type?
+            double p = Convert.ToDouble(textBox_price.Text);
             string des = textBox_description.Text;
-            Listing l = new Listing(t, a, ed, i, cC, cL, cond, p, des);
+            Listing l = new Listing(t, a, ed, i, _course, _cond, p, des);
+
+            l.CreateListing(l.Trader_id);
+            // Can someone takes a look to see if I write this code correctly?
         }
     }
 }

@@ -15,7 +15,7 @@ public class Listing
 {
     #region data fields 
     private int listing_id;
-    string listingTitle;    //newly added field - Linh
+    //string listingTitle;    //newly added field - Linh
     string title;
     string author;
     string edition;
@@ -43,7 +43,7 @@ public class Listing
 
     }
 
-    public string ListingTitle
+   /* public string ListingTitle
     {
         get
         {
@@ -53,7 +53,7 @@ public class Listing
         {
             this.listingTitle = value;
         }
-    }
+    }*/
     public string Title
 	{
 		get
@@ -214,9 +214,9 @@ public class Listing
 	{
 	}
 
-    public Listing(string listingTitle, string title, string author, string edition, string isbn,Course class_course, Condition bookCondition, double price, string lastUsed = null, Image picture = null, string description = null)
+    public Listing(/*string listingTitle,*/ string title, string author, string edition, string isbn,Course class_course, Condition bookCondition, double price, string lastUsed = null, Image picture = null, string description = null)
     {
-        this.listingTitle = listingTitle;
+        //this.listingTitle = listingTitle;
         this.title = title;
         this.author = author;
         this.edition = edition;
@@ -229,9 +229,9 @@ public class Listing
         this.description = description;
     }
 
-    public virtual void UpdateAll(string listingTitle, string title, string author, string edition, string isbn, Course class_course, Condition bookCondition, double price, string lastUsed, Image picture, string description)
+    public virtual void UpdateAll(/*string listingTitle,*/ string title, string author, string edition, string isbn, Course class_course, Condition bookCondition, double price, string lastUsed, Image picture, string description)
 	{
-        this.listingTitle = listingTitle;
+       // this.listingTitle = listingTitle;
         this.title = title;
         this.author = author;
         this.edition = edition;
@@ -299,10 +299,10 @@ public class Listing
         this.title = title;
 	}
 
-    public virtual void UpdateListingTitle(string listingTitle)
+  /*  public virtual void UpdateListingTitle(string listingTitle)
     {
         this.listingTitle = listingTitle;
-    }
+    }*/
     public void CreateListing(int trader_id)
     {
 
