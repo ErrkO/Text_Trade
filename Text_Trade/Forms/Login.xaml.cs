@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Text_Trade.Forms;
 
 namespace Text_Trade
 {
@@ -33,21 +34,28 @@ namespace Text_Trade
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-            Trader login = new Trader(usernameTextBox.Text, passwordBox.Password);
+            Trader login = new Trader();
             TraderList userlist = new TraderList();
-            List<Trader> searchResult = new List<Trader>();
-            searchResult = userlist.SearchForUser(login.Username);
+            List<Trader> searchResult = userlist.SearchForUser(usernameTextBox.Text);
 
-            for(int i = 0; i < searchResult.Count; i++)
+            for (int i = 0; i < searchResult.Count; i++)
             {
-                if(searchResult[i].Password == login.Password)
+
+                if (searchResult.Count == 0)
+                {
+
+                    throw new ArgumentException("Must have users in the database");
+
+                }
+
+                if (searchResult[i].Password == login.Password)
                 {
                     login = searchResult[i];
                     break;
                 }
             }
 
-            if(login.isModerator())
+            if (login.isModerator())
             {
                 Moderator_Home modhome = new Moderator_Home();
                 modhome.Show();
@@ -55,10 +63,11 @@ namespace Text_Trade
             }
             else
             {
-                TraderHome tradehome = new TraderHome();
+                TraderHome tradehome = new TraderHome(login);
                 tradehome.Show();
                 this.Close();
             }
+
         }
     }
 }
