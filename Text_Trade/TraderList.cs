@@ -33,7 +33,7 @@ public class TraderList : DataBase
             if (trader.Trader_id == -1)
             {
 
-                sql = "INSERT into [UserList] (username, password, deleted, classschedule) "
+                sql = "INSERT into [TraderList] (username, password, deleted, classschedule) "
                         + "VALUES ( @uname , @pword, 0, null )";
 
             }
@@ -41,7 +41,7 @@ public class TraderList : DataBase
             else
             {
 
-                sql = "INSERT into [UserList] (username, password, deleted, classschedule) "
+                sql = "INSERT into [TraderList] (username, password, deleted, classschedule) "//should be UPDATE statement instead
                         + "VALUES ( @uname , @pword, 0, null )"
                         + "WHERE trader_id = @trader_id";
 
