@@ -36,8 +36,14 @@ public class Trader : Account
     public int Trader_id
     {
 
-        get;
-        set;
+        get
+        {
+            return this.trader_id;
+        }
+        set
+        {
+            this.trader_id = value;
+        }
 
     }
 
@@ -74,15 +80,16 @@ public class Trader : Account
 
     }
 
-    public Trader(string username, string password)
-    {
-        this.username = username;
-        this.password = password;
-    }
-
     //constructor
-    public Trader(string uName, string pWord, string fName, string lName, string eMail) : base(uName, pWord, fName, lName, eMail)
+    public Trader(string uName, string pWord, string fName, string lName, string eMail, int traderid)
     {
+        this.username = uName;
+        this.password = pWord;
+        this.firstName = fName;
+        this.lastName = lName;
+        this.eMail = new Email(eMail);
+        this.trader_id = traderid;
+        this.moderator = false;
         ClassSchedule class_schedule = new ClassSchedule();
         ListingList watch_list = new ListingList();
         ListingList sell_list = new ListingList();
@@ -98,12 +105,6 @@ public class Trader : Account
 	{
             this.watch_list.AddToWatchList(a_listing); 
 	}
-
-    //the base class Account already has this method
-    /*public virtual void ChangePassword(string pass)
-	{
-		throw new System.NotImplementedException();
-	}*/
 
     public virtual void AddClass(string cC, string cL) //keyword "virtual" since the method will be redefined in ClassSchedule class?
     {
