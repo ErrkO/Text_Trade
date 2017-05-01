@@ -23,7 +23,6 @@ namespace Text_Trade
         public Marketplace_View()
         {
             InitializeComponent();
-            Marketplace_View_Load();    //so the function is triggered as soon as marketplace window opened?
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
@@ -40,7 +39,7 @@ namespace Text_Trade
             this.Close();
         }
 
-        private void Marketplace_View_Load(/*object sender, RoutedEventArgs e*/)    //are these parameters necessary?
+        private void Marketplace_View_Load(object sender, RoutedEventArgs e)    //are these parameters necessary?
         {
             Marketplace marketView = new Marketplace();
             //List<Listing> listings = new List<Listing>();
