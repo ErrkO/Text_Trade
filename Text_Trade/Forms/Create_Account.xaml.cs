@@ -35,5 +35,7 @@ namespace Text_Trade
         {
             Trader newTrader = new Trader(usernameBox.Text, passwordBox.Password, firstNameBox.Text, lastNameBox.Text, emailBox.Text, -1);
         }
+
+        
     }
 }
