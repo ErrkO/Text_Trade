@@ -43,5 +43,7 @@ namespace Text_Trade
 
             dblist.Add(newTrader);
         }
+
+        
     }
 }
