@@ -46,7 +46,7 @@ namespace Text_Trade
 
             
             // Can someone takes a look to see if I write this code correctly?
-\
+
         }
     }
 }
