@@ -31,5 +31,12 @@ namespace Text_Trade
             frm.Show();
             this.Close();
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Moderator_Home frm = new Moderator_Home();
+            frm.Show();
+            this.Close();
+        }
     }
 }

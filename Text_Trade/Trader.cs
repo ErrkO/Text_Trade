@@ -9,15 +9,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-// This class is modified by Linh.
-
 public class Trader : Account
 {
     #region data fields
    // each Trader is an Account, but has a class shedule, a watch list - list of listings of interest, and a sell list - list of listings posted for sale
     private ClassSchedule class_schedule;
     private WatchList watch_list;
-    private SellList sell_list;  
+    private SellList sell_list;
+    private int warnings;
+
     #endregion
 
     #region Property fields
@@ -28,17 +28,20 @@ public class Trader : Account
         {
             return this.class_schedule;
         }
+
+        set { this.class_schedule = value; }
 	}
 
-    public int Trader_id
+    public int Warnings
     {
 
-        get;
-        set;
+        get { return this.warnings; }
+
+        set { this.warnings = value; }
 
     }
 
-	public  WatchList Watch_List
+	public WatchList Watch_List
 	{
 		get
         {
@@ -53,26 +56,34 @@ public class Trader : Account
             return this.sell_list;
         }
     }
+
     #endregion
 
     #region methods
-    
+
     public Trader() : base()    //default constructor
     {
 
     }
 
-    //constructor
-    public Trader(string uName, string pWord, string fName, string lName, Email eMail) : base(uName, pWord, fName, lName, eMail)
+    public Trader(string uName, string pWord) : base(uName, pWord)
     {
-        ClassSchedule class_schedule = new ClassSchedule();
-        ListingList watch_list = new ListingList();
-        ListingList sell_list = new ListingList();
+        this.class_schedule = new ClassSchedule();
+        this.watch_list = new WatchList();
+        this.sell_list = new SellList();
     }
 
-    public void CreateListing(string title, string author, string edition, string isbn, string cC, string cL, Condition condition, double price)
+    //constructor
+    public Trader(string uName, string pWord, string fName, string lName, string eMail, int traderid = -1) : base(uName, pWord, fName, lName, eMail, traderid)
+    {
+        this.class_schedule = new ClassSchedule();
+        this.watch_list = new WatchList();
+        this.sell_list = new SellList();
+    }
+
+    public void CreateListing(/*string listingTitle,*/ string title, string author, string edition, string isbn,  Course class_course, Condition condition, double price)
 	{
-        Listing a_listing = new Listing(title, author, edition, isbn, cC, cL, condition, price);
+        Listing a_listing = new Listing(/*listingTitle,*/ title, author, edition, isbn, class_course, condition, price);
         this.sell_list.AddToSellList(a_listing);
 	}
 
@@ -80,12 +91,6 @@ public class Trader : Account
 	{
             this.watch_list.AddToWatchList(a_listing); 
 	}
-
-    //the base class Account already has this method
-    /*public virtual void ChangePassword(string pass)
-	{
-		throw new System.NotImplementedException();
-	}*/
 
     public virtual void AddClass(string cC, string cL) //keyword "virtual" since the method will be redefined in ClassSchedule class?
     {

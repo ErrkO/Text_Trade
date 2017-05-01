@@ -1,0 +1,132 @@
+﻿<Window x:Class="Text_Trade.Create_Listing"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Text_Trade"
+        mc:Ignorable="d"
+        Title="Create Listing" Height="470" Width="450">
+    <Window.Background>
+        <ImageBrush ImageSource="../Pictures/Create_Listing.jpg" />
+    </Window.Background>
+    <Grid x:Name="CreateListing">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="label" Content="Book Title:" HorizontalAlignment="Left" Margin="19,87,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.165,0.31" Foreground="#FFF9F8F8"/>
+        <Label x:Name="label1" Content="Author(s):" HorizontalAlignment="Left" Margin="19,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.179,-0.796" Foreground="#FFF7ECEC"/>
+        <Label x:Name="label2" Content="Edition:" HorizontalAlignment="Left" Margin="19,143,0,0" VerticalAlignment="Top" Foreground="#FFF1E0E0"/>
+        <Label x:Name="label3" Content="ISBN:" HorizontalAlignment="Left" Margin="228,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.01,0.585" Foreground="#FFF9EDED"/>
+        <Label x:Name="label4" Content="Course Code:&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,169,0,0" VerticalAlignment="Top" Height="29" Foreground="#FFF5F3F3"/>
+        <Label x:Name="label5" Content="Course Level:" HorizontalAlignment="Left" Margin="19,195,0,0" VerticalAlignment="Top" Foreground="#FFFDF7F7"/>
+        <Label x:Name="label6" Content="Condition:" HorizontalAlignment="Left" Margin="228,169,0,0" VerticalAlignment="Top" Height="29" Foreground="#FFF1E7E7" Grid.ColumnSpan="2"/>
+        <Label x:Name="label7" Content="Price:" HorizontalAlignment="Left" Margin="228,198,0,0" VerticalAlignment="Top" Foreground="#FFF9F4F4"/>
+        <TextBox x:Name="textBox_bookTitle" HorizontalAlignment="Left" Height="23" Margin="118,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2">
+            <TextBox.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="textBox_authors" HorizontalAlignment="Left" Height="23" Margin="118,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBox_edition" HorizontalAlignment="Left" Height="23" Margin="118,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+        <TextBox x:Name="textBox_isbn" HorizontalAlignment="Left" Height="23" Margin="12,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
+        <ComboBox x:Name="comboBox_cC" HorizontalAlignment="Left" Margin="118,171,0,0" VerticalAlignment="Top" Width="96">
+
+            <ComboBoxItem Content="AAST"></ComboBoxItem>
+            <ComboBoxItem Content="ACCT"></ComboBoxItem>
+            <ComboBoxItem Content="AGRI"></ComboBoxItem>
+            <ComboBoxItem Content="AHS"></ComboBoxItem>
+            <ComboBoxItem Content="APSU"></ComboBoxItem>
+            <ComboBoxItem Content="ART"></ComboBoxItem>
+            <ComboBoxItem Content="ASIA"></ComboBoxItem>
+            <ComboBoxItem Content="ASTR"></ComboBoxItem>
+            <ComboBoxItem Content="BIOL"></ComboBoxItem>
+            <ComboBoxItem Content="CCET"></ComboBoxItem>
+            <ComboBoxItem Content="CHEM"></ComboBoxItem>
+            <ComboBoxItem Content="CHET"></ComboBoxItem>
+            <ComboBoxItem Content="CHIN"></ComboBoxItem>
+            <ComboBoxItem Content="CLAS"></ComboBoxItem>
+            <ComboBoxItem Content="COMM"></ComboBoxItem>
+            <ComboBoxItem Content="CRJ"></ComboBoxItem>
+            <ComboBoxItem Content="CSCI"></ComboBoxItem>
+            <ComboBoxItem Content="DANC"></ComboBoxItem>
+            <ComboBoxItem Content="DIRV"></ComboBoxItem>
+            <ComboBoxItem Content="EC"></ComboBoxItem>
+            <ComboBoxItem Content="ECON"></ComboBoxItem>
+            <ComboBoxItem Content="EDUC"></ComboBoxItem>
+            <ComboBoxItem Content="ENGL"></ComboBoxItem>
+            <ComboBoxItem Content="ENGT"></ComboBoxItem>
+            <ComboBoxItem Content="FIN"></ComboBoxItem>
+            <ComboBoxItem Content="FREN"></ComboBoxItem>
+            <ComboBoxItem Content="GEOG"></ComboBoxItem>
+            <ComboBoxItem Content="GEOL"></ComboBoxItem>
+            <ComboBoxItem Content="GERM"></ComboBoxItem>
+            <ComboBoxItem Content="GREK"></ComboBoxItem>
+            <ComboBoxItem Content="GSS"></ComboBoxItem>
+            <ComboBoxItem Content="HHP"></ComboBoxItem>
+            <ComboBoxItem Content="HIST"></ComboBoxItem>
+            <ComboBoxItem Content="INTS"></ComboBoxItem>
+            <ComboBoxItem Content="JAPN"></ComboBoxItem>
+            <ComboBoxItem Content="LATN"></ComboBoxItem>
+            <ComboBoxItem Content="LDEV"></ComboBoxItem>
+            <ComboBoxItem Content="LING"></ComboBoxItem>
+            <ComboBoxItem Content="MAED"></ComboBoxItem>
+            <ComboBoxItem Content="MATH"></ComboBoxItem>
+            <ComboBoxItem Content="MGT"></ComboBoxItem>
+            <ComboBoxItem Content="MKT"></ComboBoxItem>
+            <ComboBoxItem Content="MSL"></ComboBoxItem>
+            <ComboBoxItem Content="MT"></ComboBoxItem>
+            <ComboBoxItem Content="MTEC"></ComboBoxItem>
+            <ComboBoxItem Content="MUS"></ComboBoxItem>
+            <ComboBoxItem Content="MURS"></ComboBoxItem>
+            <ComboBoxItem Content="PASS"></ComboBoxItem>
+            <ComboBoxItem Content="PHED"></ComboBoxItem>
+            <ComboBoxItem Content="PHIL"></ComboBoxItem>
+            <ComboBoxItem Content="PHYS"></ComboBoxItem>
+            <ComboBoxItem Content="PM"></ComboBoxItem>
+            <ComboBoxItem Content="POLS"></ComboBoxItem>
+            <ComboBoxItem Content="PSY"></ComboBoxItem>
+            <ComboBoxItem Content="PTMA"></ComboBoxItem>
+            <ComboBoxItem Content="RDG"></ComboBoxItem>
+            <ComboBoxItem Content="RLTN"></ComboBoxItem>
+            <ComboBoxItem Content="SCI"></ComboBoxItem>
+            <ComboBoxItem Content="SLA"></ComboBoxItem>
+            <ComboBoxItem Content="SOC"></ComboBoxItem>
+            <ComboBoxItem Content="SPAN"></ComboBoxItem>
+            <ComboBoxItem Content="SPED"></ComboBoxItem>
+            <ComboBoxItem Content="STAT"></ComboBoxItem>
+            <ComboBoxItem Content="SW"></ComboBoxItem>
+            <ComboBoxItem Content="THEA"></ComboBoxItem>
+            <ComboBoxItem Content="WGS"></ComboBoxItem>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBox_condition" HorizontalAlignment="Left" Margin="12,171,0,0" VerticalAlignment="Top" Width="96" Grid.Column="1">
+            <ComboBoxItem Content="New"></ComboBoxItem>
+            <ComboBoxItem Content="Like New"></ComboBoxItem>
+            <ComboBoxItem Content="Great"></ComboBoxItem>
+            <ComboBoxItem Content="Good"></ComboBoxItem>
+            <ComboBoxItem Content="Acceptable"></ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="textBox_cL" HorizontalAlignment="Left" Height="23" Margin="118,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+        <TextBox x:Name="textBox_price" HorizontalAlignment="Left" Height="23" Margin="12,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
+        <Label x:Name="label8" Content="Description:" HorizontalAlignment="Left" Margin="19,226,0,0" VerticalAlignment="Top" Foreground="#FFF1E7E7"/>
+        <TextBox x:Name="textBox_description" HorizontalAlignment="Left" Height="73" Margin="118,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2"/>
+        <Button x:Name="button_createListing" Content="Create Listing" HorizontalAlignment="Left" Margin="173,356,0,0" VerticalAlignment="Top" Width="103" Height="46" BorderThickness="2" FontSize="14" Click="button_createListing_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFD0E6AA"/>
+                    <GradientStop Color="#FFEED7B0" Offset="0.997"/>
+                    <GradientStop Color="#FFDBE0AC" Offset="0.425"/>
+                    <GradientStop Color="#FFDCDFAC" Offset="0.572"/>
+                    <GradientStop Color="#FFDEDDAC" Offset="0.558"/>
+                    <GradientStop Color="#FFDBE0AC" Offset="0.353"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="label9" Content="Enter all fields below to create a listing" HorizontalAlignment="Left" Margin="118,38,0,0" VerticalAlignment="Top" Width="276" FontSize="14" Foreground="#FFF3DFDF" Grid.ColumnSpan="2"/>
+        <Label x:Name="label10" Content="Upload Images:" HorizontalAlignment="Left" Margin="19,304,0,0" VerticalAlignment="Top" Foreground="#FFF5E1E1"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="118,304,0,0" VerticalAlignment="Top" Width="96"/>
+    </Grid>
+</Window>

@@ -74,10 +74,14 @@ public class Moderator : Account
 
     }
 
-	public int SearchForUser(Trader trader)
+	public List<Trader> SearchForUser(int traderid)
 	{
 
-        throw new System.NotImplementedException();
+        List<Trader> traders = new List<Trader>();
+
+        traders = db.SearchForTrader(traderid);
+
+        return traders;
 
 	}
 

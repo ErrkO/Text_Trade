@@ -17,14 +17,25 @@ public class TraderList : DataBase
 {
 
     private DataBase db = new DataBase();
-    private List<int> traderList = new List<int>();
+    private List<int> traderlist = new List<int>();
+
+    public List<int> Traderlist
+    {
+        get
+        {
+            return this.traderlist;
+        }
+        set
+        {
+            this.traderlist = value;
+        }
+    }
 
 	public virtual void Add(Trader trader) // this function probably needs to be moved to the trader class
 	{
 
         using (SqlConnection conn = new SqlConnection(db.ConnString))
         {
-
             //conn.ConnectionString = db.ConnString;
             conn.Open();
 
@@ -32,32 +43,34 @@ public class TraderList : DataBase
 
             if (trader.Trader_id == -1)
             {
-
-                sql = "INSERT into [UserList] (username, password, deleted, classschedule) "
-                        + "VALUES ( @uname , @pword, 0, @CSched"
-                        + "SELECT cast(scope_identity() as int)";
-
+                sql = "INSERT into [TraderList] (username, password, deleted, classschedule,warnings,firstname,lastname,email) "
+                        + "VALUES (@uname , @pword, 0,null,0,@fname,@lname,@mail)";
+                        //+ " SET trader_id = cast(SCOPE_IDENTITY() as int)";
             }
 
             else
             {
-
-                sql = "INSERT into [UserList] (username, password, deleted, classschedule) "
-                        + "VALUES ( @uname , @pword, 0, @CSched"
-                        + "WHERE trader_id = @trader_id";
-
+                sql = "INSERT into [TraderList] (trader_id, username, password, deleted, classschedule) "
+                        + "VALUES ( @id, @uname , @pword, 0, null )"
+                        + " SET IDENTITY_INSERT TraderList ON ";
             }
 
-            SqlCommand command = new SqlCommand(sql,conn);
 
-            command.Parameters.AddWithValue("uname", trader.UserName);
-            command.Parameters.AddWithValue("pword", trader.Password);
-            command.Parameters.AddWithValue("CSched", trader.Class_Schedule);
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+                command.Parameters.AddWithValue("id", trader.Trader_id);
+                command.Parameters.AddWithValue("uname", trader.Username);
+                command.Parameters.AddWithValue("pword", trader.Password);
+                command.Parameters.AddWithValue("fname", trader.FirstName);
+                command.Parameters.AddWithValue("lname", trader.LastName);
+                command.Parameters.AddWithValue("mail", trader._Email.ToString());
+
 
             if (trader.Trader_id == -1)
             {
 
-                trader.Trader_id = (int)command.ExecuteScalar();
+                 trader.Trader_id = Convert.ToInt32(command.ExecuteScalar());
 
             }
 
@@ -68,11 +81,12 @@ public class TraderList : DataBase
 
                 command.ExecuteNonQuery();
 
-            }
-
+            } 
+          }
         }
 
 	}
+
 
     public void CreateList()
     {
@@ -93,7 +107,7 @@ public class TraderList : DataBase
                     while (dbreader.Read())
                     {
 
-                        traderList.Add(Convert.ToInt32(dbreader.GetString(0)));
+                        traderlist.Add(Convert.ToInt32(dbreader.GetString(0)));
 
                     }
 
@@ -105,10 +119,38 @@ public class TraderList : DataBase
 
     }
 
-	public virtual TraderList SearchForUser()
+	public List<Trader> SearchForUser(int traderid)
 	{
-		throw new System.NotImplementedException();
-	}
+
+        List<Trader> traders = new List<Trader>();
+
+        traders = db.SearchForTrader(traderid);
+
+        return traders;
+
+    }
+
+    //Overloaded SearchForUser method using a string representing a username
+    public List<Trader> SearchForUser(string uName)
+    {
+        List<Trader> traders = new List<Trader>();
+
+        traders = db.SearchForTrader(uName);
+
+        return traders;
+    }
+
+    public bool UserExists(string uName)
+    {
+        List<Trader> traders = new List<Trader>();
+
+        traders = db.SearchForTrader(uName);
+
+        if (traders.Count > 0)
+            return true;
+        else
+            return false;
+    }
 
 }
 

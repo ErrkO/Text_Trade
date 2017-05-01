@@ -15,18 +15,20 @@ public class Listing
 {
     #region data fields 
     private int listing_id;
+
+    //string listingTitle;    //newly added field - Linh //Commented out for now so the program will run - Seth
+
     string title;
     string author;
     string edition;
     string isbn;
-    string courseCode;      //Why don't we just use a Course object here? "I agree we should just use a course object here" -Eric
-    string courseLevel;     //-------------------------------------------
+    Course course;    
     Condition condition;
     string lastUsed;
     double price;
     Image picture;  //? image type?
     string description;
-    int listinglife;
+    int listinglife;    //listinglife is an int?
     int deleted;
     int trader_id;
     // we need to add a varaible to store the listing life maybe an int or a datetime object - Eric
@@ -43,6 +45,19 @@ public class Listing
 
     }
 
+
+    /*public string ListingTitle
+
+    {
+        get
+        {
+            return this.listingTitle;
+        }
+        set
+        {
+            this.listingTitle = value;
+        }
+    }*/
     public string Title
 	{
 		get
@@ -91,29 +106,17 @@ public class Listing
         }
     }
 
-	public string CourseCode
+	public Course _Course  //Hmm, Course has 2 fields, so should I explicitly return both fields or what? -Linh
 	{
         get
         {
-            return this.courseCode;
+            return this.course;
         }
         set
         {
-            this.courseCode = value;
+            this.course = value;
         }
 	}
-
-	public string CourseLevel
-	{
-        get
-        {
-            return this.courseLevel;
-        }
-        set
-        {
-            this.courseLevel = value;
-        }
-    }
 
 	public string LastUsed
 	{
@@ -169,7 +172,7 @@ public class Listing
         }
     }
 
-    public int Deleted
+    public int Deleted  //?? shouldnt it be bool?
     {
 
         get { return this.deleted; }
@@ -178,7 +181,7 @@ public class Listing
 
     }
 
-    public int Trader_id
+    public int Trader_id    //we use int for trader_id?
     {
 
         get { return this.trader_id; }
@@ -187,7 +190,7 @@ public class Listing
 
     }
 
-    public int Listinglife
+    public int Listinglife  //int for listingLife?
     {
 
         get { return this.listinglife; }
@@ -203,14 +206,16 @@ public class Listing
 	{
 	}
 
-    public Listing(string title, string author, string edition, string isbn, string cC, string cL, Condition bookCondition, double price, string lastUsed = null, Image picture = null, string description = null)
+
+    public Listing(/*string listingTitle,*/ string title, string author, string edition, string isbn,Course class_course, Condition bookCondition, double price, string lastUsed = null, Image picture = null, string description = null)
+
     {
+        //this.listingTitle = listingTitle;
         this.title = title;
         this.author = author;
         this.edition = edition;
         this.isbn = isbn;
-        this.courseCode = cC;
-        this.courseLevel = cL;
+        this.course = class_course;
         this.condition = bookCondition;
         this.price = price;
         this.lastUsed = lastUsed;
@@ -218,14 +223,15 @@ public class Listing
         this.description = description;
     }
 
-    public virtual void UpdateAll(string title, string author, string edition, string isbn, string cC, string cL, Condition bookCondition, double price, string lastUsed, Image picture, string description)
+    public virtual void UpdateAll(/*string listingTitle,*/ string title, string author, string edition, string isbn, Course class_course, Condition bookCondition, double price, string lastUsed, Image picture, string description)
 	{
+
+       // this.listingTitle = listingTitle;
         this.title = title;
         this.author = author;
         this.edition = edition;
         this.isbn = isbn;
-        this.courseCode = cC;
-        this.courseLevel = cL;
+        this.course = class_course;
         this.condition = bookCondition;
         this.price = price;
         this.lastUsed = lastUsed;
@@ -243,14 +249,14 @@ public class Listing
         this.condition = bookCondition;
 	}
 
-	public virtual void UpdateCourseCode(string cC)
+	public virtual void UpdateCourseCode(Course class_course)
 	{
-        this.courseCode = cC;
+        this.course.CourseCode = class_course.CourseCode;
 	}
 
-	public virtual void UpdateCourseLevel(string cL)
+	public virtual void UpdateCourseLevel(Course class_course)
 	{
-        this.courseLevel = cL;
+        this.course.CourseLevel = class_course.CourseLevel;
 	}
 
 	public virtual void UpdateDescription(string description)
@@ -288,6 +294,12 @@ public class Listing
         this.title = title;
 	}
 
+  /*  public virtual void UpdateListingTitle(string listingTitle)
+    {
+
+        this.listingTitle = listingTitle;
+    }*/
+
     public void CreateListing(int trader_id)
     {
 
@@ -300,7 +312,7 @@ public class Listing
 
             if(this.listing_id == -1)
             {
-
+                //Database stuff - ask Eric to add one more field for Listing - string listingTitle - Linh
                 sql = "INSERT INTO Listings (title,author,edition,isbn,courseCode,courseLevel,lastUsed,condition,"
                         + " description,deleted,price,listinglife,trader_id)"
                         + " VALUES (@title,@author,@edition,@isbn,@courseCode,@courseLevel,@lastUsed,@condition,"
@@ -313,7 +325,7 @@ public class Listing
             {
 
                 sql = "UPDATE Listings "
-                        + " SET title = @title, author = @author, edition = @edition, isbn = @isbn, courseCode = =courseCode,"
+                        + " SET title = @title, author = @author, edition = @edition, isbn = @isbn, courseCode = courseCode,"
                         + " courseLevel = @courseLevel, lastUsed = @lastUsed, condition = @condition, description = @description,"
                         + " deleted = 0, price = @price, listing_id = @trader_id"
                         + " WHERE listinglife = @listinglife";
@@ -326,8 +338,8 @@ public class Listing
             command.Parameters.AddWithValue("author",this.author);
             command.Parameters.AddWithValue("edition",this.edition);
             command.Parameters.AddWithValue("isbn",this.isbn);
-            command.Parameters.AddWithValue("courseCode",this.courseCode);
-            command.Parameters.AddWithValue("courseLevel",this.courseLevel);
+            command.Parameters.AddWithValue("courseCode",this.course.CourseCode);      //Also we implement Course object, instead of 2 strings
+            command.Parameters.AddWithValue("courseLevel",this.course.CourseLevel);    //So update?
             command.Parameters.AddWithValue("lastUsed",this.lastUsed);
             command.Parameters.AddWithValue("condition",Convert.ToString(this.condition));
             command.Parameters.AddWithValue("description",this.description);
@@ -386,8 +398,9 @@ public class Listing
                     templisting.Author = reader.GetString(2);
                     templisting.Edition = reader.GetString(3);
                     templisting.Isbn = reader.GetString(4);
-                    templisting.CourseCode = reader.GetString(5);
-                    templisting.CourseLevel = reader.GetString(6);
+                    string CCode = reader.GetString(5);
+                    string CLevel = reader.GetString(6);
+                    templisting._Course = new Course(CCode, CLevel);
                     templisting.LastUsed = reader.GetString(7);
                     Condition conditionstring = (Condition)Enum.Parse(typeof(Condition), reader.GetString(8));
                     templisting.Condition =conditionstring;
