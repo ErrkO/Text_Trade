@@ -325,7 +325,7 @@ public class Listing
             {
 
                 sql = "UPDATE Listings "
-                        + " SET title = @title, author = @author, edition = @edition, isbn = @isbn, courseCode = =courseCode,"
+                        + " SET title = @title, author = @author, edition = @edition, isbn = @isbn, courseCode = courseCode,"
                         + " courseLevel = @courseLevel, lastUsed = @lastUsed, condition = @condition, description = @description,"
                         + " deleted = 0, price = @price, listing_id = @trader_id"
                         + " WHERE listinglife = @listinglife";
