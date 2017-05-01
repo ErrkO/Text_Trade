@@ -23,5 +23,10 @@ namespace Text_Trade.Forms
         {
             InitializeComponent();
         }
+
+        private void button_OK_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

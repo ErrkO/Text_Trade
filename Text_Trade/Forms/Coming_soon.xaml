@@ -11,7 +11,7 @@
     </Window.Background>
     <Grid>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="42,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Height="38" FontSize="16" Text="Stay tuned, Feature coming soon!"/>
-        <Button x:Name="button_OK" Content="OK" HorizontalAlignment="Left" Margin="124,119,0,0" VerticalAlignment="Top" Width="75" Height="26"/>
+        <Button x:Name="button_OK" Content="OK" HorizontalAlignment="Left" Margin="124,119,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="button_OK_Click"/>
 
     </Grid>
 </Window>

@@ -13,7 +13,6 @@
         <Label x:Name="label" Content="Username:" HorizontalAlignment="Left" Margin="38,102,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Vrinda"/>
         <Label x:Name="label1" Content="Password:" HorizontalAlignment="Left" Margin="38,145,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Vrinda"/>
         <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Height="26" Margin="138,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" BorderBrush="#FFEA961D" BorderThickness="2"/>
-        <TextBox x:Name="passwordTextBox" HorizontalAlignment="Left" Height="26" Margin="138,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" BorderBrush="#FFEA961D" BorderThickness="2"/>
         <CheckBox x:Name="checkBox_remember" Content="Remember me" HorizontalAlignment="Left" Margin="110,194,0,0" VerticalAlignment="Top"/>
         <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" Margin="213,194,0,0" VerticalAlignment="Top" Width="100" Height="36" RenderTransformOrigin="0.509,0.201" FontSize="16" FontFamily="Stencil" Click="loginButton_Click" Background="{x:Null}" BorderThickness="2" BorderBrush="#FFEA961D"/>
         <Label x:Name="label2" Content="Text Trade &#xD;&#xA;User Login" HorizontalAlignment="Left" Margin="112,31,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Stencil"/>
@@ -21,6 +20,7 @@
         <Label x:Name="label3" Content="Don't have an account yet?" HorizontalAlignment="Left" Margin="110,272,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label4" Content="Forget your username or password?" HorizontalAlignment="Left" Margin="63,298,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button_help" Content="Help" HorizontalAlignment="Left" Margin="268,302,0,0" VerticalAlignment="Top" Width="55" Background="{x:Null}" BorderThickness="1,0" BorderBrush="#FFEA961D"/>
+        <PasswordBox x:Name="passwordBox" PasswordChar="X" HorizontalAlignment="Left" Margin="138,145,0,0" VerticalAlignment="Top" Width="175" Height="26" BorderBrush="#FFEA961D" BorderThickness="2"/>
 
     </Grid>
 </Window>
