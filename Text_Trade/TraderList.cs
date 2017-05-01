@@ -121,6 +121,8 @@ public class TraderList : DataBase
     }
 
     //Overloaded SearchForUser method using a string representing a username
+    //Returns a list of traders with matching usernames
+    //Empty string will return list of all users
     public List<Trader> SearchForUser(string uName)
     {
         List<Trader> traders = new List<Trader>();
