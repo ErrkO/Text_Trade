@@ -24,13 +24,13 @@
         <ListBox x:Name="resultsListBox" HorizontalAlignment="Left" Height="179" Margin="35,251,0,0" VerticalAlignment="Top" Width="515" Grid.ColumnSpan="2" SelectionMode="Single">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
+                    <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Title}" />
                         <TextBlock Text="; " />
                         <TextBlock Text="{Binding Author}" />
                         <TextBlock Text="; " />
                         <TextBlock Text="{Binding Edition}" />
-                        <TextBlock Text=" --- " />
+                        <TextBlock Text=" --------------------- " />
                         <TextBlock Text="{Binding Price}" />
                     </StackPanel>
                 </DataTemplate>
