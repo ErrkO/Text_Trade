@@ -91,6 +91,9 @@
     <Compile Include="Forms\Trader_Profile_View_Trader.xaml.cs">
       <DependentUpon>Trader_Profile_View_Trader.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Username_Taken.xaml.cs">
+      <DependentUpon>Username_Taken.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\View_BanList.xaml.cs">
       <DependentUpon>View_BanList.xaml</DependentUpon>
     </Compile>
@@ -131,6 +134,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forms\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Username_Taken.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
