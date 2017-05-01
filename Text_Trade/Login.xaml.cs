@@ -47,8 +47,6 @@ namespace Text_Trade
                 }
             }
 
-            searchResult = null;
-
             if(login.isModerator())
             {
                 Moderator_Home modhome = new Moderator_Home();

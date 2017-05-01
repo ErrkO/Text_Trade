@@ -133,7 +133,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\Login.xaml">
+    <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,7 +162,7 @@
     <Compile Include="Email.cs" />
     <Compile Include="Listing.cs" />
     <Compile Include="ListingList.cs" />
-    <Compile Include="Forms\Login.xaml.cs">
+    <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Marketplace.cs" />

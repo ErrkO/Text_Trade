@@ -26,14 +26,17 @@ namespace Text_Trade
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
-            Login frm = new Login();
-            frm.Show();
+            Login loginWindow = new Login();
+            loginWindow.Show();
             this.Close();
         }
 
         private void createAccountButton_Click(object sender, RoutedEventArgs e)
         {
             Trader newTrader = new Trader(usernameBox.Text, passwordBox.Password, firstNameBox.Text, lastNameBox.Text, emailBox.Text, -1);
+            Login loginWindow = new Login();
+            loginWindow.Show();
+            this.Close();
         }
 
         
