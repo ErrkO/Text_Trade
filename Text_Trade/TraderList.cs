@@ -34,14 +34,15 @@ public class TraderList : DataBase
             {
 
                 sql = "INSERT into [TraderList] (username, password, deleted, classschedule) "
-                        + "VALUES ( @uname , @pword, 0, null )";
+                        + "VALUES ( @uname , @pword, 0, null )"
+                        + " SELECT cast(scope_identity() as int)";
 
             }
 
             else
             {
 
-                sql = "UPDATE [TraderList] (username, password, deleted, classschedule) "
+                sql = "INSERT into [TraderList] (username, password, deleted, classschedule) "
                         + "VALUES ( @uname , @pword, 0, null )"
                         + "WHERE trader_id = @trader_id";
 
@@ -121,8 +122,6 @@ public class TraderList : DataBase
     }
 
     //Overloaded SearchForUser method using a string representing a username
-    //Returns a list of traders with matching usernames
-    //Empty string will return list of all users
     public List<Trader> SearchForUser(string uName)
     {
         List<Trader> traders = new List<Trader>();
