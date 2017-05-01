@@ -23,6 +23,7 @@ namespace Text_Trade
         public Marketplace_View()
         {
             InitializeComponent();
+            Marketplace_View_Load();    //so the function is triggered as soon as marketplace window opened?
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
@@ -39,16 +40,16 @@ namespace Text_Trade
             this.Close();
         }
 
-        private void Marketplace_View_Load(object sender, RoutedEventArgs e)
+        private void Marketplace_View_Load(/*object sender, RoutedEventArgs e*/)    //are these parameters necessary?
         {
             Marketplace marketView = new Marketplace();
-            List<Listing> listings = new List<Listing>();
+            //List<Listing> listings = new List<Listing>();
 
-            listings = marketView.SearchAll();
+            marketView.SearchAll();
 
-            for( int i = 0; i < listings.Count; i++)
+            for( int i = 0; i < marketView.listings.Count; i++)
             {
-                resultsListBox.Items.Add(listings.ElementAt(i));
+                resultsListBox.Items.Add(marketView.listings.ElementAt(i));
             }
         }
 
@@ -61,6 +62,50 @@ namespace Text_Trade
         private void button_search_Click(object sender, RoutedEventArgs e)
         {
             Marketplace mkt = new Marketplace();
+            if (radioButton_byTitle.IsChecked == true)
+            {
+                mkt.SearchByBookTitle(textBox_search.Text);
+                //then how to display listings
+                //copy Seth's code from Marketplace_View_Load() not sureif works
+                /* for (int i = 0; i < mkt.listings.Count; i++)
+                 {
+                     resultsListBox.Items.Add(mkt.listings.ElementAt(i));
+                 }*/
+                resultsListBox.ItemsSource = mkt.listings;
+            }
+
+            if (radioButton_byAuthor.IsChecked == true)
+            {
+                mkt.SearchByAuthor(textBox_search.Text);
+                //then how to display listings
+               /* for (int i = 0; i < mkt.listings.Count; i++)
+                {
+                    resultsListBox.Items.Add(mkt.listings.ElementAt(i));
+                }*/
+            }
+
+            if (radioButton_byCourse.IsChecked == true)
+            {
+                string[] strArray = textBox_search.Text.Split();
+                mkt.SearchByCourse(strArray[0].Trim(), strArray[1].Trim());
+                //then how to display listings
+              /*  for (int i = 0; i < mkt.listings.Count; i++)
+                {
+                    resultsListBox.Items.Add(mkt.listings.ElementAt(i));
+                }*/
+            }
+
+            if (radioButton_byISBN.IsChecked == true)
+            {
+                mkt.SearchByISBN(textBox_search.Text);
+                //then how to display listings
+               /* for (int i = 0; i < mkt.listings.Count; i++)
+                {
+                    resultsListBox.Items.Add(mkt.listings.ElementAt(i));
+                }*/
+            }
+
+            resultsListBox.ItemsSource = mkt.listings;
         }
     }
 }
