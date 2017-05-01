@@ -191,8 +191,9 @@ public class DataBase
 
         List<Trader> traders = new List<Trader>();
 
-        using (SqlConnection conn = new SqlConnection(ConnString))
+        using (SqlConnection conn = new SqlConnection(CONNSTRING))
         {
+            conn.Open();
 
             string sql;
 
@@ -299,6 +300,7 @@ public class DataBase
 
                         temptrader.Trader_id = reader.GetInt32(0);
                         temptrader.Username = reader.GetString(1);
+                        temptrader.Password = reader.GetString(2);
                         temptrader.Class_Schedule = new ClassSchedule(reader.GetString(4));
                         temptrader.Warnings = reader.GetInt32(5);
 

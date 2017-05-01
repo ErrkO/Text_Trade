@@ -76,6 +76,18 @@ public class Account
         }
     }
 
+    public int Trader_id
+    {
+        get
+        {
+            return this.trader_id;
+        }
+        set
+        {
+            this.trader_id = value;
+        }
+    }
+
     #endregion
 
     #region methods
@@ -103,7 +115,7 @@ public class Account
     }
 
     //Constructor used for creating account object from database info
-    public Account(string uName, string pWord, string fName, string lName, string eMail, int traderid, bool mod)
+    public Account(string uName, string pWord, string fName, string lName, string eMail, int traderid, bool mod = false)
 	{
         this.username = uName;
         this.password = pWord;
