@@ -262,19 +262,20 @@ public class DataBase
         using (SqlConnection conn = new SqlConnection(ConnString))
         {
 
+            conn.Open();
             string sql;
 
             if (uName == "")
             {
 
-                sql = "SELECT * FROM (TraderList)";
+                sql = "SELECT * FROM TraderList";
 
             }
 
             else
             {
 
-                sql = "SELECT * FROM (TraderList) WHERE username = @uName";
+                sql = "SELECT * FROM TraderList WHERE username = @uName";
 
             }
 
@@ -311,6 +312,8 @@ public class DataBase
                 }
 
             }
+
+            conn.Close();
 
         }
 
