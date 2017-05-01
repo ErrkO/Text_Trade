@@ -25,7 +25,7 @@
         <TextBlock x:Name="textBlock_Condition" HorizontalAlignment="Left" Margin="87,203,0,0" TextWrapping="Wrap" Text="&lt;Cond&gt;" VerticalAlignment="Top"/>
         <Label x:Name="label5" Content="Time left:" HorizontalAlignment="Left" Margin="150,198,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_ListingLife" HorizontalAlignment="Left" Margin="217,203,0,0" TextWrapping="Wrap" Text="&lt;Remaining time&gt;" VerticalAlignment="Top"/>
-        <Button x:Name="button_ContactSeller" Content="Contact &#xD;&#xA;Seller" HorizontalAlignment="Left" Margin="139,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2"/>
+        <Button x:Name="button_ContactSeller" Content="Contact &#xD;&#xA;Seller" HorizontalAlignment="Left" Margin="139,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2" Click="button_ContactSeller_Click"/>
         <Button x:Name="button_AddWatchList" Content="Add to &#xD;&#xA;Watch List" HorizontalAlignment="Left" Margin="251,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2"/>
         <Label x:Name="label6" Content="Seller:" HorizontalAlignment="Left" Margin="150,92,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_SellerName" HorizontalAlignment="Left" Margin="217,97,0,0" TextWrapping="Wrap" Text="&lt;Seller username&gt;" VerticalAlignment="Top"/>

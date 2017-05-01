@@ -19,7 +19,7 @@ public class Marketplace
     public const int LISTINGLIFE = 30;
 
     private int listingLifetime;
-    private List<Listing> listings;
+    private List<Listing> listings; //?
     private DataBase db = new DataBase();
 
 	public int ListingLifeTime
@@ -103,7 +103,17 @@ public class Marketplace
 
 	}
 
-	public List<Listing> SearchByAuthor(string author)
+    public List<Listing> SearchByBookTitle(string title)        //newly added Radio button for search by book title option - Linh
+    {
+
+        List<Listing> listings;
+
+        listings = db.SearchForListing("title", title);
+
+        return listings;
+
+    }
+    public List<Listing> SearchByAuthor(string author)
 	{
 
         List<Listing> listings;

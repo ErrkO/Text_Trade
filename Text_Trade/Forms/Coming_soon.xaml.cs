@@ -12,21 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Text_Trade
+namespace Text_Trade.Forms
 {
     /// <summary>
-    /// Interaction logic for Listing_View.xaml
+    /// Interaction logic for Coming_soon.xaml
     /// </summary>
-    public partial class Listing_View : Window
+    public partial class Coming_soon : Window
     {
-        public Listing_View()
+        public Coming_soon()
         {
             InitializeComponent();
         }
 
-        private void button_ContactSeller_Click(object sender, RoutedEventArgs e)
+        private void button_OK_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

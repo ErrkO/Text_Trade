@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Text_Trade.Forms;
 
 namespace Text_Trade
 {
@@ -49,6 +50,17 @@ namespace Text_Trade
             {
                 resultsListBox.Items.Add(listings.ElementAt(i));
             }
+        }
+
+        private void button_filterResults_Click(object sender, RoutedEventArgs e)
+        {
+            Coming_soon frm = new Coming_soon();
+            frm.Show();
+        }
+
+        private void button_search_Click(object sender, RoutedEventArgs e)
+        {
+            Marketplace mkt = new Marketplace();
         }
     }
 }
