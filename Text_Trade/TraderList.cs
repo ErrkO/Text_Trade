@@ -33,8 +33,8 @@ public class TraderList : DataBase
             if (trader.Trader_id == -1)
             {
 
-                sql = "INSERT into [UserList] (username, password, deleted, classschedule) "
-                        + "VALUES ( @uname , @pword, 0, @CSched"
+                sql = "INSERT into [TraderList] (username, password, deleted, classschedule) "
+                        + "VALUES ( @uname , @pword, 0, @CSched ) "
                         + "SELECT cast(scope_identity() as int)";
 
             }
@@ -42,8 +42,8 @@ public class TraderList : DataBase
             else
             {
 
-                sql = "INSERT into [UserList] (username, password, deleted, classschedule) "
-                        + "VALUES ( @uname , @pword, 0, @CSched"
+                sql = "INSERT into [TraderList] (username, password, deleted, classschedule) "
+                        + "VALUES ( @uname , @pword, 0, @CSched ) "
                         + "WHERE trader_id = @trader_id";
 
             }
