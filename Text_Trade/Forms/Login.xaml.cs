@@ -26,20 +26,41 @@ namespace Text_Trade
 
         private void signUpButton_Click(object sender, RoutedEventArgs e)
         {
-            Create_Account frm = new Create_Account();
-            frm.Show();
+            Create_Account createaccount = new Create_Account();
+            createaccount.Show();
             this.Close();
         }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-            Trader login = new Trader(usernameTextBox.Text, passwordTextBox.Text);
-            login.UserName = usernameTextBox.Text;
-            login.Password = passwordTextBox.Text;
+            Trader login = new Trader(usernameTextBox.Text, passwordBox.Password);
             TraderList userlist = new TraderList();
-            userlist.CreateList();     
+            List<Trader> searchResult = new List<Trader>();
+            searchResult = userlist.SearchForUser(login.Username);
 
-          //  userlist.SearchForUser(); //To be continued when SearchForUser() is implemented
+            for(int i = 0; i < searchResult.Count; i++)
+            {
+                if(searchResult[i].Password == login.Password)
+                {
+                    login = searchResult[i];
+                    break;
+                }
+            }
+
+            searchResult = null;
+
+            if(login.isModerator())
+            {
+                Moderator_Home modhome = new Moderator_Home();
+                modhome.Show();
+                this.Close();
+            }
+            else
+            {
+                TraderHome tradehome = new TraderHome();
+                tradehome.Show();
+                this.Close();
+            }
         }
     }
 }
