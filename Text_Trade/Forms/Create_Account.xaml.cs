@@ -38,5 +38,7 @@ namespace Text_Trade
             Trader newTrader = new Trader(usernameBox.Text, passwordBox.Text, firstNameBox.Text, lastNameBox.Text, emailBox.Text, traderList.Count-1);
             dblist.Add(newTrader);
         }
+
+        
     }
 }
