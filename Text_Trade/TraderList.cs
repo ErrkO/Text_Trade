@@ -129,5 +129,17 @@ public class TraderList : DataBase
         return traders;
     }
 
+    public bool UserExists(string uName)
+    {
+        List<Trader> traders = new List<Trader>();
+
+        traders = db.SearchForTrader(uName);
+
+        if (traders.Count > 0)
+            return true;
+        else
+            return false;
+    }
+
 }
 
