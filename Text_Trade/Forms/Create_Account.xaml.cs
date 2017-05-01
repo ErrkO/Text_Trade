@@ -33,16 +33,10 @@ namespace Text_Trade
 
         private void createAccountButton_Click(object sender, RoutedEventArgs e)
         {
-            int id;
             TraderList dblist = new TraderList();
-            List<Trader> traderList = dblist.SearchForTrader(1);
+            //List<Trader> traderList = dblist.SearchForUser(0);
+            Trader newTrader = new Trader(usernameBox.Text, passwordBox.Password, firstNameBox.Text, lastNameBox.Text, emailBox.Text);
 
-            if (traderList.Count == 0)
-                id = 0;
-            else
-                id = traderList.Count - 1;
-
-            Trader newTrader = new Trader(usernameBox.Text, passwordBox.Text, firstNameBox.Text, lastNameBox.Text, emailBox.Text, id);
             dblist.Add(newTrader);
         }
     }
