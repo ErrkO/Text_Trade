@@ -19,7 +19,7 @@ public class Marketplace
     public const int LISTINGLIFE = 30;
 
     private int listingLifetime;
-    private List<Listing> listings;
+    public List<Listing> listings; //?
     private DataBase db = new DataBase();
 
 	public int ListingLifeTime
@@ -92,58 +92,68 @@ public class Marketplace
 		throw new System.NotImplementedException();
 	}
 
-	public List<Listing> SearchAll()
+	public void SearchAll()
 	{
 
-        List<Listing> listings;
+       // List<Listing> listings;
 
         listings = db.SearchForListing();
 
-        return listings;
+       // return listings;
 
 	}
 
-	public List<Listing> SearchByAuthor(string author)
+    public void SearchByBookTitle(string title)        //newly added Radio button for search by book title option - Linh
+    {
+
+       // List<Listing> listings;
+
+        listings = db.SearchForListing("title", title);
+
+        //return listings;
+
+    }
+    public void SearchByAuthor(string author)
 	{
 
-        List<Listing> listings;
+        //List<Listing> listings;
 
         listings = db.SearchForListing("author",author);
 
-        return listings;
+        //return listings;
 
     }
 
-	public List<Listing> SearchByCourse(string cC, string cL)
+	public void SearchByCourse(string cC, string cL)
 	{
 
-        List<Listing> listings;
+        //List<Listing> listings;
 
         listings = db.SearchForListing("courseCode",cC,"courseLevel",cL);
 
-        return listings;
+        //return listings;
 
     }
 
-	public List<Listing> SearchByISBN(string isbn)
+	public void SearchByISBN(string isbn)
 	{
 
-        List<Listing> listings;
+       // List<Listing> listings;
 
         listings = db.SearchForListing("isbn",isbn);
 
-        return listings;
+       // return listings;
 
     }
 
-	public List<Listing> SearchFromSchedule(ClassSchedule classSchedule)
+	public void SearchFromSchedule(ClassSchedule classSchedule)
 	{
 
-        List<Listing> listings;
+      //  List<Listing> listings;
 
         listings = db.SearchForListing();
 
-        return listings;
+       // return listings;
 
     }
 

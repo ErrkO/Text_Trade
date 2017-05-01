@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Create Listing" Height="470" Width="450">
     <Window.Background>
-        <ImageBrush ImageSource="./Pictures/Create_Listing.jpg" />
+        <ImageBrush ImageSource="../Pictures/Create_Listing.jpg" />
     </Window.Background>
     <Grid x:Name="CreateListing">
         <Grid.ColumnDefinitions>
@@ -112,7 +112,7 @@
         <TextBox x:Name="textBox_price" HorizontalAlignment="Left" Height="23" Margin="12,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
         <Label x:Name="label8" Content="Description:" HorizontalAlignment="Left" Margin="19,226,0,0" VerticalAlignment="Top" Foreground="#FFF1E7E7"/>
         <TextBox x:Name="textBox_description" HorizontalAlignment="Left" Height="73" Margin="118,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2"/>
-        <Button x:Name="button_createListing" Content="Create Listing" HorizontalAlignment="Left" Margin="173,356,0,0" VerticalAlignment="Top" Width="103" Height="46" BorderThickness="2" FontSize="14">
+        <Button x:Name="button_createListing" Content="Create Listing" HorizontalAlignment="Left" Margin="173,356,0,0" VerticalAlignment="Top" Width="103" Height="46" BorderThickness="2" FontSize="14" Click="button_createListing_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>

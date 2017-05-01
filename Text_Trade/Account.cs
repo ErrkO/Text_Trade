@@ -14,14 +14,16 @@ public class Account
     #region data fields 
     protected string username;
     protected string password;
-    protected Email email;
+    protected Email eMail;
     protected string firstName;
     protected string lastName;
+    protected int trader_id;
+    protected bool moderator;
     #endregion
 
     #region Property fields
 
-    public string UserName  //can't change username
+    public string Username  //can't change username
     {
         set
         {
@@ -50,7 +52,7 @@ public class Account
     {
         get    //cant change registered email
         {
-            return email;  // as of now this wont return anything you need 
+            return eMail;  // as of now this wont return anything you need 
                         //to call _Email.email to return the string containing the email 
                         //The above comment results in: cannot convert type string to Email -Seth
                         /* it gives you the error becuase the .email is of type string, if you want you can change this property to a string type or i can create a tostring
@@ -74,6 +76,18 @@ public class Account
         }
     }
 
+    public int Trader_id
+    {
+        get
+        {
+            return this.trader_id;
+        }
+        set
+        {
+            this.trader_id = value;
+        }
+    }
+
     #endregion
 
     #region methods
@@ -81,24 +95,35 @@ public class Account
 	{
 	}
 
-    //Constructor - only used username and password to create account object for login process
+    //Constructor - only uses username and password to create account object for login process
     public Account(string username, string password)
     {
         this.username = username;
         this.password = password;
-
     }
 
+    //Constructor used for creating new accounts
+    public Account(string uName, string pWord, string fName, string lName, string email)
+    {
+        this.username = uName;
+        this.password = pWord;
+        this.firstName = fName;
+        this.lastName = lName;
+        this.eMail = new Email(email);
+        this.trader_id = -1;
+        this.moderator = false;
+    }
 
-    // can you add this. before all the variables again here - Eric
-
-    public Account(string uName, string pWord, string fName, string lName, string eMail) //constructor
+    //Constructor used for creating account object from database info
+    public Account(string uName, string pWord, string fName, string lName, string eMail, int traderid, bool mod = false)
 	{
         this.username = uName;
         this.password = pWord;
         this.firstName = fName;
         this.lastName = lName;
-        this.email = new Email(eMail); //Changed the parameter in the constructor to string so that email can be added from Create_Account form
+        this.eMail = new Email(eMail);  //Changed the parameter in the constructor to string so that email can be added from Create_Account form
+        this.trader_id = traderid;
+        this.moderator = mod;           //Determines whether account is moderator or not
 	}
 
 	public void ChangePassword(string pass)  
@@ -106,6 +131,11 @@ public class Account
 	{
         this.password = pass;
 	}
+
+    public bool isModerator()
+    {
+        return this.moderator;
+    }
     #endregion
 }
 

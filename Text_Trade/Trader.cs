@@ -9,8 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-// This class is modified by Linh.
-
 public class Trader : Account
 {
     #region data fields
@@ -32,14 +30,6 @@ public class Trader : Account
 
         set { this.class_schedule = value; }
 	}
-
-    public int Trader_id
-    {
-
-        get;
-        set;
-
-    }
 
     public int Warnings
     {
@@ -74,23 +64,24 @@ public class Trader : Account
 
     }
 
-    public Trader(string username, string password)
-    {
-        this.username = username;
-        this.password = password;
-    }
-
-    //constructor
-    public Trader(string uName, string pWord, string fName, string lName, string eMail) : base(uName, pWord, fName, lName, eMail)
+    public Trader(string uName, string pWord) : base(uName, pWord)
     {
         ClassSchedule class_schedule = new ClassSchedule();
         ListingList watch_list = new ListingList();
         ListingList sell_list = new ListingList();
     }
 
-    public void CreateListing(string listingTitle, string title, string author, string edition, string isbn,  Course class_course, Condition condition, double price)
+    //constructor
+    public Trader(string uName, string pWord, string fName, string lName, string eMail, int traderid) : base(uName, pWord, fName, lName, eMail, traderid)
+    {
+        ClassSchedule class_schedule = new ClassSchedule();
+        ListingList watch_list = new ListingList();
+        ListingList sell_list = new ListingList();
+    }
+
+    public void CreateListing(/*string listingTitle,*/ string title, string author, string edition, string isbn,  Course class_course, Condition condition, double price)
 	{
-        Listing a_listing = new Listing(listingTitle, title, author, edition, isbn, class_course, condition, price);
+        Listing a_listing = new Listing(/*listingTitle,*/ title, author, edition, isbn, class_course, condition, price);
         this.sell_list.AddToSellList(a_listing);
 	}
 
@@ -98,12 +89,6 @@ public class Trader : Account
 	{
             this.watch_list.AddToWatchList(a_listing); 
 	}
-
-    //the base class Account already has this method
-    /*public virtual void ChangePassword(string pass)
-	{
-		throw new System.NotImplementedException();
-	}*/
 
     public virtual void AddClass(string cC, string cL) //keyword "virtual" since the method will be redefined in ClassSchedule class?
     {

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Text_Trade
 {
     /// <summary>
-    /// Interaction logic for Listing_View.xaml
+    /// Interaction logic for Ban_User.xaml
     /// </summary>
-    public partial class Listing_View : Window
+    public partial class Ban_User : Window
     {
-        public Listing_View()
+        public Ban_User()
         {
             InitializeComponent();
         }

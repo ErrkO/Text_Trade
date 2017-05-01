@@ -10,32 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Text_Trade
+namespace Text_Trade.Forms
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Coming_soon.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Coming_soon : Window
     {
-        public MainWindow()
+        public Coming_soon()
         {
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void button_OK_Click(object sender, RoutedEventArgs e)
         {
-            TraderHome frm = new TraderHome();
-            frm.Show();
-            this.Close();
-        }
-
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            Moderator_Home frm = new Moderator_Home();
-            frm.Show();
             this.Close();
         }
     }

@@ -1,0 +1,36 @@
+﻿<Window x:Class="Text_Trade.Listing_View"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Text_Trade"
+        mc:Ignorable="d"
+        Title="Listing View" Height="380" Width="380">
+    <Window.Background>
+        <ImageBrush ImageSource="../Pictures/Text_Trade_background_big3.jpg" />
+    </Window.Background>
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="28,62,0,0" Stroke="#FFD19C5D" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="95" Margin="28,62,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock x:Name="textBlock_Title" HorizontalAlignment="Left" Margin="157,67,0,0" TextWrapping="Wrap" Text="&lt;Listing Title&gt;" VerticalAlignment="Top" Width="212" Height="20"/>
+        <Label x:Name="label" Content="Author(s):" HorizontalAlignment="Left" Margin="150,118,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Edition:" HorizontalAlignment="Left" Margin="150,144,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="ISBN:" HorizontalAlignment="Left" Margin="150,172,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_Authors" HorizontalAlignment="Left" Margin="217,123,0,0" TextWrapping="Wrap" Text="&lt;Authors&gt;" VerticalAlignment="Top" Width="145"/>
+        <TextBlock x:Name="textBlock_Edition" HorizontalAlignment="Left" Margin="217,151,0,0" TextWrapping="Wrap" Text="&lt;Edition&gt;" VerticalAlignment="Top" Width="145"/>
+        <TextBlock x:Name="textBlock_ISBN" HorizontalAlignment="Left" Margin="217,177,0,0" TextWrapping="Wrap" Text="&lt;ISBN&gt;" VerticalAlignment="Top" Width="145"/>
+        <Label x:Name="label3" Content="Price:" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_Price" HorizontalAlignment="Left" Margin="87,172,0,0" TextWrapping="Wrap" Text="&lt;Price&gt;" VerticalAlignment="Top" RenderTransformOrigin="0.685,-1.528" Width="52"/>
+        <Label x:Name="label4" Content="Condition:" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_Condition" HorizontalAlignment="Left" Margin="87,203,0,0" TextWrapping="Wrap" Text="&lt;Cond&gt;" VerticalAlignment="Top"/>
+        <Label x:Name="label5" Content="Time left:" HorizontalAlignment="Left" Margin="150,198,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_ListingLife" HorizontalAlignment="Left" Margin="217,203,0,0" TextWrapping="Wrap" Text="&lt;Remaining time&gt;" VerticalAlignment="Top"/>
+        <Button x:Name="button_ContactSeller" Content="Contact &#xD;&#xA;Seller" HorizontalAlignment="Left" Margin="139,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2" Click="button_ContactSeller_Click"/>
+        <Button x:Name="button_AddWatchList" Content="Add to &#xD;&#xA;Watch List" HorizontalAlignment="Left" Margin="251,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2"/>
+        <Label x:Name="label6" Content="Seller:" HorizontalAlignment="Left" Margin="150,92,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_SellerName" HorizontalAlignment="Left" Margin="217,97,0,0" TextWrapping="Wrap" Text="&lt;Seller username&gt;" VerticalAlignment="Top"/>
+        <Button x:Name="button_ReportListing" Content="Report Listing" HorizontalAlignment="Left" Margin="200,321,0,0" VerticalAlignment="Top" Width="82" BorderThickness="2,0" Background="{x:Null}" BorderBrush="#FFEA961D"/>
+        <Button x:Name="button_ReportUser" Content="Report User" HorizontalAlignment="Left" Margin="287,321,0,0" VerticalAlignment="Top" Width="75" BorderThickness="2,0" Background="{x:Null}" BorderBrush="#FFEA961D"/>
+        <Button x:Name="button_ViewProfile" Content="View Seller&#xD;&#xA;Profile" HorizontalAlignment="Left" Margin="28,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2"/>
+    </Grid>
+</Window>

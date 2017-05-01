@@ -10,33 +10,32 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Text_Trade
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for View_UserList.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class View_UserList : Window
     {
-        public MainWindow()
+        public View_UserList()
         {
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void viewButton_Click(object sender, RoutedEventArgs e)
         {
-            TraderHome frm = new TraderHome();
-            frm.Show();
-            this.Close();
+
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void View_UserList_Loaded(object sender, RoutedEventArgs e)
         {
-            Moderator_Home frm = new Moderator_Home();
-            frm.Show();
-            this.Close();
+            List<Trader> userList = new List<Trader>();
+            TraderList dblist = new TraderList();
+            userList = dblist.SearchForUser(0);
+
+            listBox_reportList.ItemsSource = userList;
         }
     }
 }
