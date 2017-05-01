@@ -285,7 +285,7 @@ public class DataBase
                 if (uName != "")
                 {
 
-                    command.Parameters.AddWithValue("username", uName);
+                    command.Parameters.AddWithValue("uName", uName);
 
                 }
 
