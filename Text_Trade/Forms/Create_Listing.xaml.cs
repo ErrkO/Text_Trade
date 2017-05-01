@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Text_Trade
 {
     /// <summary>
-    /// Interaction logic for Create_LIsting.xaml
+    /// Interaction logic for Create_Listing.xaml
     /// </summary>
     public partial class Create_Listing : Window
     {
@@ -30,17 +30,23 @@ namespace Text_Trade
             string a = textBox_authors.Text;
             string ed = textBox_edition.Text;
             string i = textBox_isbn.Text;
-            string cC = comboBox_cC.SelectedItem.ToString();
-            string cL = textBox_cL.Text;
-            Course _course = new global::Course(cC, cL);
-            string cond_string = comboBox_condition.SelectedItem.ToString();   //how to not get enum types
-            Condition _cond = (Condition)Enum.Parse(typeof(Condition), cond_string); //How to get enum type?
+            Course course = new Course(comboBox_cC.SelectedItem.ToString(), textBox_cL.Text);
+            Condition cond = (Condition)comboBox_condition.SelectedValue;
             double p = Convert.ToDouble(textBox_price.Text);
             string des = textBox_description.Text;
-            Listing l = new Listing(t, a, ed, i, _course, _cond, p, des);
-
+            Listing l = new Listing(t, a, ed, i, course, cond, p, des);
             l.CreateListing(l.Trader_id);
+           
+            
+            //string cond_string = comboBox_condition.SelectedItem.ToString();   //how to not get enum types
+            //Condition _cond = (Condition)Enum.Parse(typeof(Condition), cond_string); //How to get enum type?
+            //double p = Convert.ToDouble(textBox_price.Text);
+            //string des = textBox_description.Text;
+            //Listing l = new Listing(t, a, ed, i, _course, _cond, p, des);
+
+            
             // Can someone takes a look to see if I write this code correctly?
+\
         }
     }
 }

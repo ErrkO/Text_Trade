@@ -23,5 +23,47 @@ namespace Text_Trade
         {
             InitializeComponent();
         }
+
+        private void viewUserListButton_Click(object sender, RoutedEventArgs e)
+        {
+            View_UserList frm = new View_UserList();
+            frm.Show();
+        }
+
+        private void viewUserReportsButton_Click(object sender, RoutedEventArgs e)
+        {
+            View_Reports_Users frm = new View_Reports_Users();
+            frm.Show();
+        }
+
+        private void searchMarketplaceButton_Click(object sender, RoutedEventArgs e)
+        {
+            Marketplace_View frm = new Marketplace_View();
+            frm.Show();
+        }
+
+        private void viewListingReportsButton_Click(object sender, RoutedEventArgs e)
+        {
+            View_Reports_Listings frm = new View_Reports_Listings();
+            frm.Show();
+        }
+
+        private void viewBanListButton_Click(object sender, RoutedEventArgs e)
+        {
+            View_BanList frm = new View_BanList();
+            frm.Show();
+        }
+
+        private void viewSystemStatsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void logOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            Login frm = new Login();
+            frm.Show();
+            this.Close();
+        }
     }
 }

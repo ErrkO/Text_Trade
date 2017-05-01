@@ -127,7 +127,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\MainWindow.xaml">
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -166,7 +166,7 @@
       <DependentUpon>ManageListings.xaml</DependentUpon>
     </Compile>
     <Compile Include="WatchList.cs" />
-    <Compile Include="Forms\MainWindow.xaml.cs">
+    <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -270,6 +270,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\Trader_Home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Text_Trade_background.jpg" />
+    <Resource Include="Pictures\Text_Trade_background_big.jpg" />
+    <Resource Include="Pictures\Text_Trade_background_big2.jpg" />
+    <Resource Include="Pictures\Text_Trade_background_big3.jpg" />
+    <Resource Include="Pictures\Text_Trade_background_small.jpg" />
+    <Resource Include="Pictures\Text_Trade_background_upleft.jpg" />
+    <Resource Include="Pictures\Text_Trade_Logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

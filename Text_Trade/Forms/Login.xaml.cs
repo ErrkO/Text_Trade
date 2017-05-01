@@ -37,9 +37,9 @@ namespace Text_Trade
             login.UserName = usernameTextBox.Text;
             login.Password = passwordTextBox.Text;
             TraderList userlist = new TraderList();
-            userlist.CreateList();
+            userlist.CreateList();     
 
-            userlist.SearchForUser(); //To be continued when SearchForUser() is implemented
+          //  userlist.SearchForUser(); //To be continued when SearchForUser() is implemented
         }
     }
 }

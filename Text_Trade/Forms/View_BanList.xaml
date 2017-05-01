@@ -12,8 +12,8 @@
     <Grid>
         <Label x:Name="label" Content="Ban List" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="listBox_reportList" HorizontalAlignment="Left" Height="264" Margin="24,41,0,0" VerticalAlignment="Top" Width="247" Background="#FFF7F6F6" BorderBrush="#FFEFAC54"/>
-        <Button x:Name="clearButton" Content="Unban" HorizontalAlignment="Left" Margin="45,330,0,0" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.344,-0.562" Click="deleteButton_Click"/>
-        <Button x:Name="viewButton" Content="View User" HorizontalAlignment="Left" Margin="169,330,0,0" VerticalAlignment="Top" Width="84" Click="viewButton_Click"/>
+        <Button x:Name="unbanButton" Content="Unban" HorizontalAlignment="Left" Margin="45,330,0,0" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.344,-0.562" Click="unbanButton_Click"/>
+        <Button x:Name="viewUser_Button" Content="View User" HorizontalAlignment="Left" Margin="169,330,0,0" VerticalAlignment="Top" Width="84" Click="viewUser_Button_Click"/>
 
     </Grid>
 </Window>

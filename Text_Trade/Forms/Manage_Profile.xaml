@@ -19,7 +19,7 @@
         <Label x:Name="label1_Copy2" Content="Concentration:" HorizontalAlignment="Left" Margin="159,190,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label3" Content="Class of:" HorizontalAlignment="Left" Margin="31,191,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button_cancel" Content="Cancel" HorizontalAlignment="Left" Margin="105,242,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
-        <Button x:Name="button_save" Content="Save&#xD;&#xA;Changes" HorizontalAlignment="Left" Margin="207,242,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="button_Report_Click"/>
+        <Button x:Name="button_save" Content="Save&#xD;&#xA;Changes" HorizontalAlignment="Left" Margin="207,242,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="button_Save_Click"/>
         <TextBlock x:Name="textBlock_username" HorizontalAlignment="Left" Margin="228,51,0,0" TextWrapping="Wrap" Text="&lt;Username&gt;" VerticalAlignment="Top" Width="107"/>
         <Button x:Name="button_uploadPic" Content="Upload Picture" HorizontalAlignment="Left" Margin="31,151,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="textBox_name" HorizontalAlignment="Left" Height="23" Margin="228,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"/>

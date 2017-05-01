@@ -17,11 +17,12 @@ public class Account
     protected Email email;
     protected string firstName;
     protected string lastName;
+    protected bool moderator;
     #endregion
 
     #region Property fields
 
-    public string UserName  //can't change username
+    protected string Username  //can't change username
     {
         set
         {
@@ -34,7 +35,7 @@ public class Account
         }
     }
 
-    public string Password
+    protected string Password
     {
         get
         {
@@ -46,7 +47,7 @@ public class Account
         }
     }
 
-    public Email _Email
+    protected Email _Email
     {
         get    //cant change registered email
         {
@@ -58,7 +59,7 @@ public class Account
         }
     }                   //To string would probably be easier, because the alternative wouldn't have an email object associated with the account anymore - Seth
 
-    public string FirstName //cant change name
+    protected string FirstName //cant change name
     {
         get
         {
@@ -66,7 +67,7 @@ public class Account
         }
     }
 
-    public string LastName  //cant change name
+    protected string LastName  //cant change name
     {
         get
         {
@@ -106,6 +107,11 @@ public class Account
 	{
         this.password = pass;
 	}
+
+    public bool isModerator()
+    {
+        return this.moderator;
+    }
     #endregion
 }
 
