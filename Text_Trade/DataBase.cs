@@ -199,7 +199,7 @@ public class DataBase
             if (traderid == 0)
             {
 
-                sql = "SELCT * FROM (TraderList)";
+                sql = "SELECT * FROM (TraderList)";
 
             }
 
@@ -231,7 +231,7 @@ public class DataBase
                     {
 
                         temptrader.Trader_id = reader.GetInt32(0);
-                        temptrader.UserName = reader.GetString(1);
+                        temptrader.Username = reader.GetString(1);
                         temptrader.Class_Schedule = new ClassSchedule(reader.GetString(4));
                         temptrader.Warnings = reader.GetInt32(5);
 
@@ -247,7 +247,74 @@ public class DataBase
 
         return traders;
 
-    } 
+    }
+
+
+    //overloaded SearchForTrader that uses a string representing the trader's username
+    //used for login process
+    //empty string will return list of all traders
+    public List<Trader> SearchForTrader(string uName)
+    {
+
+        List<Trader> traders = new List<Trader>();
+
+        using (SqlConnection conn = new SqlConnection(ConnString))
+        {
+
+            string sql;
+
+            if (uName == "")
+            {
+
+                sql = "SELECT * FROM (TraderList)";
+
+            }
+
+            else
+            {
+
+                sql = "SELECT * FROM (TraderList) WHERE username = @uName";
+
+            }
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+
+                if (uName != "")
+                {
+
+                    command.Parameters.AddWithValue("username", uName);
+
+                }
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    Trader temptrader = new Trader();
+
+                    if (reader.GetInt32(3) != 1)
+                    {
+
+                        temptrader.Trader_id = reader.GetInt32(0);
+                        temptrader.Username = reader.GetString(1);
+                        temptrader.Class_Schedule = new ClassSchedule(reader.GetString(4));
+                        temptrader.Warnings = reader.GetInt32(5);
+
+                        traders.Add(temptrader);
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        return traders;
+
+    }
 
 }
 
