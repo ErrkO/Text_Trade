@@ -50,7 +50,7 @@ public class TraderList : DataBase
 
             SqlCommand command = new SqlCommand(sql,conn);
 
-            command.Parameters.AddWithValue("uname", trader.UserName);
+            command.Parameters.AddWithValue("uname", trader.Username);
             command.Parameters.AddWithValue("pword", trader.Password);
             command.Parameters.AddWithValue("CSched", trader.Class_Schedule.ToString());
 
@@ -115,6 +115,16 @@ public class TraderList : DataBase
 
         return traders;
 
+    }
+
+    //Overloaded SearchForUser method using a string representing a username
+    public List<Trader> SearchForUser(string uName)
+    {
+        List<Trader> traders = new List<Trader>();
+
+        traders = db.SearchForTrader(uName);
+
+        return traders;
     }
 
 }
