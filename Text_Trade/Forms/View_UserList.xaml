@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Text_Trade"
         mc:Ignorable="d"
-        Title="User List" Height="400" Width="300">
+        Title="User List" Height="400" Width="300" Loaded="View_UserList_Loaded">
     <Window.Background>
         <ImageBrush ImageSource="../Pictures/Text_Trade_background_big3.jpg" />
     </Window.Background>

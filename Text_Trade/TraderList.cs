@@ -34,8 +34,7 @@ public class TraderList : DataBase
             {
 
                 sql = "INSERT into [UserList] (username, password, deleted, classschedule) "
-                        + "VALUES ( @uname , @pword, 0, @CSched"
-                        + "SELECT cast(scope_identity() as int)";
+                        + "VALUES ( @uname , @pword, 0, null )";
 
             }
 
@@ -43,31 +42,35 @@ public class TraderList : DataBase
             {
 
                 sql = "INSERT into [UserList] (username, password, deleted, classschedule) "
-                        + "VALUES ( @uname , @pword, 0, @CSched"
+                        + "VALUES ( @uname , @pword, 0, null )"
                         + "WHERE trader_id = @trader_id";
 
             }
 
-            SqlCommand command = new SqlCommand(sql,conn);
+            
 
-            command.Parameters.AddWithValue("uname", trader.Username);
-            command.Parameters.AddWithValue("pword", trader.Password);
-            command.Parameters.AddWithValue("CSched", trader.Class_Schedule.ToString());
-
-            if (trader.Trader_id == -1)
+            using (SqlCommand command = new SqlCommand(sql, conn))
             {
+                command.Parameters.AddWithValue("uname", trader.Username);
+                command.Parameters.AddWithValue("pword", trader.Password);
 
-                trader.Trader_id = (int)command.ExecuteScalar();
+                if (trader.Trader_id == -1)
+                {
 
-            }
+                    int tid = (int)command.ExecuteScalar();
 
-            else
-            {
+                    trader.Trader_id = tid;
 
-                command.Parameters.AddWithValue("trader_id", trader.Trader_id);
+                }
 
-                command.ExecuteNonQuery();
+                else
+                {
 
+                    command.Parameters.AddWithValue("trader_id", trader.Trader_id);
+
+                    command.ExecuteNonQuery();
+
+                } 
             }
 
         }
@@ -118,6 +121,8 @@ public class TraderList : DataBase
     }
 
     //Overloaded SearchForUser method using a string representing a username
+    //Returns a list of traders with matching usernames
+    //Empty string will return list of all users
     public List<Trader> SearchForUser(string uName)
     {
         List<Trader> traders = new List<Trader>();

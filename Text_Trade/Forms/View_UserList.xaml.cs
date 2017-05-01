@@ -28,5 +28,14 @@ namespace Text_Trade
         {
 
         }
+
+        private void View_UserList_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<Trader> userList = new List<Trader>();
+            TraderList dblist = new TraderList();
+            userList = dblist.SearchForUser(0);
+
+            listBox_reportList.ItemsSource = userList;
+        }
     }
 }
