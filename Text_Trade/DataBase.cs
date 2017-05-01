@@ -200,14 +200,14 @@ public class DataBase
             if (traderid == 0)
             {
 
-                sql = "SELECT * FROM (TraderList)";
+                sql = "SELECT * FROM TraderList";
 
             }
 
             else
             {
 
-                sql = "SELECT * FROM (TraderList) WHERE trader_id = @traderid";
+                sql = "SELECT * FROM TraderList WHERE trader_id = @traderid";
 
             }
 

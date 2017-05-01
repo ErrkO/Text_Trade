@@ -31,6 +31,7 @@ public class ClassSchedule
     public ClassSchedule()  //constructor
 	{
         schedule = new List<Course>();
+        schedule.Add(new Course());
 	}
 
     public ClassSchedule(string str)  //constructor
@@ -86,17 +87,6 @@ public class ClassSchedule
         this.schedule.Add(course);
 
     }
-
-    // you would probably need to create a predicate and search the list for the course
-    // then you would call the remove function (it might be called something different)
-    // and you could either remove it based on the predicate call (imagine a function in
-    // in a function) or you could set an iterator based on what the predicate returns
-    // and remove the position in the list
-
-    //testing in a separate project shows that the Remove() function will remove the first
-    //occurence of the value that it is passed without the need for a predicate or iterator
-
-    // that is good to hear, I vaguely remember needing one for a similar project i was doing, but if we dont need one then great - Eric
 
 	public virtual void RemoveClass(Course course)
 	{
@@ -156,7 +146,7 @@ public class ClassSchedule
         foreach (Course course in schedule)
         {
 
-            schedstr += course.courseCode + "," + course.courseLevel;
+            schedstr += course.courseCode + "," + course.courseLevel + " ";
 
         }
 
