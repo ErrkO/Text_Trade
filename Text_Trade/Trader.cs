@@ -9,8 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-// This class is modified by Linh.
-
 public class Trader : Account
 {
     #region data fields
@@ -32,20 +30,6 @@ public class Trader : Account
 
         set { this.class_schedule = value; }
 	}
-
-    public int Trader_id
-    {
-
-        get
-        {
-            return this.trader_id;
-        }
-        set
-        {
-            this.trader_id = value;
-        }
-
-    }
 
     public int Warnings
     {
@@ -80,16 +64,16 @@ public class Trader : Account
 
     }
 
-    //constructor
-    public Trader(string uName, string pWord, string fName, string lName, string eMail, int traderid)
+    public Trader(string uName, string pWord) : base(uName, pWord)
     {
-        this.username = uName;
-        this.password = pWord;
-        this.firstName = fName;
-        this.lastName = lName;
-        this.eMail = new Email(eMail);
-        this.trader_id = traderid;
-        this.moderator = false;
+        ClassSchedule class_schedule = new ClassSchedule();
+        ListingList watch_list = new ListingList();
+        ListingList sell_list = new ListingList();
+    }
+
+    //constructor
+    public Trader(string uName, string pWord, string fName, string lName, string eMail, int traderid) : base(uName, pWord, fName, lName, eMail, traderid)
+    {
         ClassSchedule class_schedule = new ClassSchedule();
         ListingList watch_list = new ListingList();
         ListingList sell_list = new ListingList();

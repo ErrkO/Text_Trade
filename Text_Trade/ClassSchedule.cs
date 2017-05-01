@@ -30,6 +30,7 @@ public class ClassSchedule
     #region methods
     public ClassSchedule()  //constructor
 	{
+        schedule = new List<Course>();
 	}
 
     public ClassSchedule(string str)  //constructor
