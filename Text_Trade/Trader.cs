@@ -72,7 +72,7 @@ public class Trader : Account
     }
 
     //constructor
-    public Trader(string uName, string pWord, string fName, string lName, string eMail, int traderid) : base(uName, pWord, fName, lName, eMail, traderid)
+    public Trader(string uName, string pWord, string fName, string lName, string eMail, int traderid = -1) : base(uName, pWord, fName, lName, eMail, traderid)
     {
         ClassSchedule class_schedule = new ClassSchedule();
         ListingList watch_list = new ListingList();
