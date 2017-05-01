@@ -58,9 +58,7 @@ public class TraderList : DataBase
                 if (trader.Trader_id == -1)
                 {
 
-                    int tid = (int)command.ExecuteScalar();
-
-                    trader.Trader_id = tid;
+                    trader.Trader_id = (int)command.ExecuteScalar();
 
                 }
 

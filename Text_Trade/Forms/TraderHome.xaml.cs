@@ -19,9 +19,18 @@ namespace Text_Trade
     /// </summary>
     public partial class TraderHome : Window
     {
-        public TraderHome()
+        public TraderHome(Trader trader = null)
         {
             InitializeComponent();
+
+            if (trader != null)
+            {
+
+                userLabel.Content = trader.Username;
+                userLabel.Content = "It doesnt work";
+
+            }
+
         }
 
         private void viewListingsButton_Click(object sender, RoutedEventArgs e)
