@@ -20,6 +20,9 @@ namespace Text_Trade
     /// </summary>
     public partial class TraderHome : Window
     {
+
+        Trader currtrad;
+
         public TraderHome(Trader trader = null)
         {
             InitializeComponent();
@@ -29,26 +32,28 @@ namespace Text_Trade
 
                 userLabel.Content = "Welcome: " + trader.FirstName + " " + trader.LastName;
 
+                currtrad = trader;
+
             }
 
         }
 
         private void viewListingsButton_Click(object sender, RoutedEventArgs e)
         {
-            Marketplace_View frm = new Marketplace_View();
+            Marketplace_View frm = new Marketplace_View(currtrad);
             frm.Show();
             this.Close();
         }
 
         private void manageListingsButton_Click(object sender, RoutedEventArgs e)
         {
-            ManageListings frm = new ManageListings();
+            ManageListings frm = new ManageListings(currtrad);
             frm.Show();
         }
 
         private void postListingButton_Click(object sender, RoutedEventArgs e)
         {
-            Create_Listing frm = new Create_Listing();
+            Create_Listing frm = new Create_Listing(currtrad);
             frm.Show();
         }
 

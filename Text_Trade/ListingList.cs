@@ -15,7 +15,7 @@ public class ListingList
 {
 
     public DataBase db = new DataBase();
-    public List<int> listinglist = new List<int>();
+    public List<Listing> listinglist = new List<Listing>();
 
     public List<Listing> listingList
 	{
@@ -33,10 +33,10 @@ public class ListingList
 
     }
 
-    public int SearchForListing(Listing listing)
+    public List<Listing> SearchForAllListingsFromTrader(int traderid)
     {
 
-        int listingId = listing.Listing_id;
+        //int listingId = listing.Listing_id;
 
         using (SqlConnection conn = new SqlConnection())
         {
@@ -44,10 +44,12 @@ public class ListingList
             conn.ConnectionString = db.ConnString;
             conn.Open();
 
-            string query = "SELECT  listing_id FROM ListingList WHERE any like " + listing.Listing_id;
+            string query = "SELECT * FROM ListingList WHERE trader_id = @traderid";
 
             using (SqlCommand command = new SqlCommand(query, conn))
             {
+
+                command.Parameters.AddWithValue("traderid", traderid);
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -55,7 +57,26 @@ public class ListingList
                     while (reader.Read())
                     {
 
-                        
+                        Listing templisting = new Listing();
+
+                        templisting.Listing_id = reader.GetInt32(0);
+                        templisting.Title = reader.GetString(1);
+                        templisting.Author = reader.GetString(2);
+                        templisting.Edition = reader.GetString(3);
+                        templisting.Isbn = reader.GetString(4);
+                        string CCode = reader.GetString(5);
+                        string CLevel = reader.GetString(6);
+                        templisting._Course = new Course(CCode, CLevel);
+                        templisting.LastUsed = reader.GetString(7);
+                        Condition conditionstring = (Condition)Enum.Parse(typeof(Condition), reader.GetString(8));
+                        templisting.Condition = conditionstring;
+                        templisting.Description = reader.GetString(9);
+                        templisting.Deleted = reader.GetInt32(10);
+                        templisting.Price = reader.GetInt32(11);
+                        templisting.Listinglife = reader.GetInt32(12);
+                        templisting.Trader_id = reader.GetInt32(13);
+
+                        listinglist.Add(templisting);
 
                     }
 
@@ -65,7 +86,7 @@ public class ListingList
 
         }
 
-        return listingId;
+        return listinglist;
 
     }
 
@@ -88,7 +109,7 @@ public class ListingList
                     while (dbreader.Read())
                     {
 
-                        listinglist.Add(Convert.ToInt32(dbreader.GetString(0)));
+                        //listinglist.Add(Convert.ToInt32(dbreader.GetString(0)));
 
                     }
 

@@ -14,7 +14,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="195" Margin="10,36,0,0" VerticalAlignment="Top" Width="272" Grid.ColumnSpan="2" >
+        <ListBox x:Name="ActiveListingsBox"  HorizontalAlignment="Left" Height="195" Margin="10,36,0,0" VerticalAlignment="Top" Width="272" Grid.ColumnSpan="2" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border Name="border" BorderBrush="Blue" BorderThickness="1" Padding="5" Margin="5">

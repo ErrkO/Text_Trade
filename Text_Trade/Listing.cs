@@ -206,7 +206,7 @@ public class Listing
 	}
 
 
-    public Listing(/*string listingTitle,*/ string title, string author, string edition, string isbn,Course class_course, Condition bookCondition, double price, string lastUsed = null, string description = null)
+    public Listing(/*string listingTitle,*/ string title, string author, string edition, string isbn,Course class_course, Condition bookCondition, double price, string lastUsed = null, string description = null, int listing_id = -1)
 
     {
         //this.listingTitle = listingTitle;
@@ -219,6 +219,7 @@ public class Listing
         this.price = price;
         this.lastUsed = lastUsed;
         this.description = description;
+        this.listing_id = listing_id;
     }
 
     public virtual void UpdateAll(/*string listingTitle,*/ string title, string author, string edition, string isbn, Course class_course, Condition bookCondition, double price, string lastUsed, string description)
@@ -308,8 +309,8 @@ public class Listing
                 sql = "INSERT INTO Listings (title,author,edition,isbn,courseCode,courseLevel,lastUsed,condition,"
                         + " description,deleted,price,listinglife,trader_id)"
                         + " VALUES (@title,@author,@edition,@isbn,@courseCode,@courseLevel,@lastUsed,@condition,"
-                        + " @description,0,@price,@trader_id"
-                        + " SELECT cast(scope_identity() as int)";
+                        + " @description,0,@price,30,@trader_id)"
+                        + " SELECT listing_id = cast(scope_identity() as int)";
 
             }
 
@@ -334,7 +335,16 @@ public class Listing
             command.Parameters.AddWithValue("courseLevel",this.course.CourseLevel);
             command.Parameters.AddWithValue("lastUsed",this.lastUsed);
             command.Parameters.AddWithValue("condition",Convert.ToString(this.condition));
-            command.Parameters.AddWithValue("description",this.description);
+            if (this.description != null)
+            {
+                command.Parameters.AddWithValue("description", this.description); 
+            }
+            else
+            {
+
+                command.Parameters.AddWithValue("description", " ");
+
+            }
             command.Parameters.AddWithValue("price",this.price);
             command.Parameters.AddWithValue("trader_id", trader_id);
             command.Parameters.AddWithValue("listing_id", this.Listing_id);
@@ -342,7 +352,7 @@ public class Listing
             if (listing_id == -1)
             {
 
-                listing_id = (int)command.ExecuteScalar();
+                listing_id = Convert.ToInt32(command.ExecuteScalar());
 
             }
 
