@@ -34,8 +34,8 @@ public class TraderList : DataBase
             {
 
                 sql = "INSERT into [TraderList] (username, password, deleted) "
-                        + "VALUES (@uname , @pword, 0)"
-                        + " SELECT scope_identity()";
+                        + "OUTPUT INSERTED.trader_id"
+                        + " VALUES (@uname , @pword, 0)";
 
             }
 
@@ -58,7 +58,7 @@ public class TraderList : DataBase
             if (trader.Trader_id == -1)
             {
 
-                trader.Trader_id = (int)command.ExecuteScalar();
+                 int tid = (int)command.ExecuteScalar();
 
             }
 
