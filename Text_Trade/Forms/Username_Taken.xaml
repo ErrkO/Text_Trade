@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="../Pictures/Text_Trade_background_big3.jpg" />
     </Window.Background>
     <Grid>
-        <Button x:Name="button" Content="OK" HorizontalAlignment="Left" Margin="112,122,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="okButton" Content="OK" HorizontalAlignment="Left" Margin="112,122,0,0" VerticalAlignment="Top" Width="75" Click="okButton_Click"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="56,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Height="38"><Run Text="This username is unavailable."/><LineBreak/><Run Text="Please pick a different username."/></TextBlock>
         <Label x:Name="label" Content="Username Taken" HorizontalAlignment="Left" Margin="80,35,0,0" VerticalAlignment="Top" Width="134" FontSize="14" FontFamily="Stencil"/>
 
