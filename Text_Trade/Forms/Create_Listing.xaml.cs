@@ -22,6 +22,7 @@ namespace Text_Trade
         public Create_Listing()
         {
             InitializeComponent();
+            comboBox_condition.ItemsSource = Enum.GetValues(typeof(Condition));
         }
 
         private void button_createListing_Click(object sender, RoutedEventArgs e)
