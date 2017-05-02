@@ -31,7 +31,7 @@ namespace Text_Trade
             string ed = textBox_edition.Text;
             string i = textBox_isbn.Text;
             Course course = new Course(comboBox_cC.SelectedItem.ToString(), textBox_cL.Text);
-            Condition cond = (Condition)comboBox_condition.SelectedValue;
+            Condition cond = (Condition)comboBox_condition.SelectedItem;
             double p = Convert.ToDouble(textBox_price.Text);
             string des = textBox_description.Text;
             Listing l = new Listing(t, a, ed, i, course, cond, p, des);

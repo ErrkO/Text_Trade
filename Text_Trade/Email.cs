@@ -65,7 +65,6 @@ public class Email
     {
 
         //this.email = email;
-
         this.e_Mail = new MailAddress(email);
 
     }
@@ -74,7 +73,6 @@ public class Email
     {
 
         //this.email = email;
-
         this.e_Mail = new MailAddress(email);
 
         if (outlook == true)
