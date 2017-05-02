@@ -59,7 +59,7 @@ namespace Text_Trade
 
         private void watchListButton_Click(object sender, RoutedEventArgs e)
         {
-            Watch_List frm = new Watch_List();
+            Coming_soon frm = new Coming_soon();
             frm.Show();
         }
 
