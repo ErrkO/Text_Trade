@@ -125,14 +125,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label x:Name="label9" Content="Enter all fields below to create a listing" HorizontalAlignment="Left" Margin="118,25,0,0" VerticalAlignment="Top" Width="276" FontSize="14" Foreground="#FFF3DFDF" Grid.ColumnSpan="2"/>
+        <Label x:Name="label9" Content="Enter all fields below to create a listing" HorizontalAlignment="Left" Margin="118,38,0,0" VerticalAlignment="Top" Width="276" FontSize="14" Foreground="#FFF3DFDF" Grid.ColumnSpan="2"/>
         <Label x:Name="label10" Content="Upload Images:" HorizontalAlignment="Left" Margin="19,304,0,0" VerticalAlignment="Top" Foreground="#FFF5E1E1"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="118,304,0,0" VerticalAlignment="Top" Width="96"/>
-        <TextBox x:Name="textbox_listingTitle" HorizontalAlignment="Left" Height="23" Margin="118,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="2">
-            <TextBox.Background>
-                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
-            </TextBox.Background>
-        </TextBox>
-        <Label x:Name="label11" Content="Listing Title:" HorizontalAlignment="Left" Margin="19,59,0,0" VerticalAlignment="Top" Foreground="#FFF7F4F4"/>
     </Grid>
 </Window>
