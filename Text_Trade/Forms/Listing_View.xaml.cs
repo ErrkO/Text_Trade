@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Text_Trade.Forms;
 
 namespace Text_Trade
 {
@@ -27,6 +28,23 @@ namespace Text_Trade
         private void button_ContactSeller_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void button_ViewProfile_Click(object sender, RoutedEventArgs e)
+        {
+            //need to differentiate Mod and Trader view also..
+            //For now implement the Trader view
+            Trader_Profile_View_Trader frm = new Trader_Profile_View_Trader();
+            TraderList tl = new TraderList();
+            List<Trader> lt = tl.SearchForUser(textBlock_SellerName.Text);
+            frm.DataContext = lt[0];
+            frm.Show();
+        }
+
+        private void button_AddWatchList_Click(object sender, RoutedEventArgs e)
+        {
+            Coming_soon frm = new Coming_soon();
+            frm.Show();
         }
     }
 }

@@ -26,11 +26,11 @@
         <Label x:Name="label5" Content="Time left:" HorizontalAlignment="Left" Margin="150,198,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_ListingLife" HorizontalAlignment="Left" Margin="217,203,0,0" TextWrapping="Wrap" Text="&lt;Remaining time&gt;" VerticalAlignment="Top"/>
         <Button x:Name="button_ContactSeller" Content="Contact &#xD;&#xA;Seller" HorizontalAlignment="Left" Margin="139,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2" Click="button_ContactSeller_Click"/>
-        <Button x:Name="button_AddWatchList" Content="Add to &#xD;&#xA;Watch List" HorizontalAlignment="Left" Margin="251,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2"/>
+        <Button x:Name="button_AddWatchList" Content="Add to &#xD;&#xA;Watch List" HorizontalAlignment="Left" Margin="251,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2" Click="button_AddWatchList_Click"/>
         <Label x:Name="label6" Content="Seller:" HorizontalAlignment="Left" Margin="150,92,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_SellerName" Text="{Binding Username}" HorizontalAlignment="Left" Margin="217,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
         <Button x:Name="button_ReportListing" Content="Report Listing" HorizontalAlignment="Left" Margin="200,321,0,0" VerticalAlignment="Top" Width="82" BorderThickness="2,0" Background="{x:Null}" BorderBrush="#FFEA961D"/>
         <Button x:Name="button_ReportUser" Content="Report User" HorizontalAlignment="Left" Margin="287,321,0,0" VerticalAlignment="Top" Width="75" BorderThickness="2,0" Background="{x:Null}" BorderBrush="#FFEA961D"/>
-        <Button x:Name="button_ViewProfile" Content="View Seller&#xD;&#xA;Profile" HorizontalAlignment="Left" Margin="28,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2"/>
+        <Button x:Name="button_ViewProfile" Content="View Seller&#xD;&#xA;Profile" HorizontalAlignment="Left" Margin="28,236,0,0" VerticalAlignment="Top" Width="92" Height="44" Background="#FFE4E4E4" BorderBrush="#FFEA961D" BorderThickness="2" Click="button_ViewProfile_Click"/>
     </Grid>
 </Window>
