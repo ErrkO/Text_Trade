@@ -26,22 +26,31 @@ namespace Text_Trade
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
-            Login frm = new Login();
-            frm.Show();
+            Login loginWindow = new Login();
+            loginWindow.Show();
             this.Close();
         }
 
         private void createAccountButton_Click(object sender, RoutedEventArgs e)
         {
-            Trader newTrader = new Trader(usernameBox.Text, passwordBox.Password, firstNameBox.Text, lastNameBox.Text, emailBox.Text, -1);
-
-            TraderList tl = new TraderList();
-
-            tl.Add(newTrader);
-
-            Login frm = new Login();
-            frm.Show();
-            this.Close();
+            int id = 0;
+            Username_Taken takenWindow = new Username_Taken();
+            TraderList userList = new TraderList();
+            if (userList.UserExists(usernameBox.Text))
+                takenWindow.Show();
+            else
+            {
+                userList.CreateList();
+                if (userList.Traderlist.Count == 0)
+                    id = 0;
+                else
+                    id = userList.Traderlist.Count - 1;
+                Trader newTrader = new Trader(usernameBox.Text, passwordBox.Password, firstNameBox.Text, lastNameBox.Text, emailBox.Text, id);
+                userList.Add(newTrader);
+                Login loginWindow = new Login();
+                loginWindow.Show();
+                this.Close();
+            }
         }
 
         

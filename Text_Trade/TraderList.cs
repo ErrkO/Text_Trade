@@ -17,14 +17,25 @@ public class TraderList : DataBase
 {
 
     private DataBase db = new DataBase();
-    private List<int> traderList = new List<int>();
+    private List<int> traderlist = new List<int>();
+
+    public List<int> Traderlist
+    {
+        get
+        {
+            return this.traderlist;
+        }
+        set
+        {
+            this.traderlist = value;
+        }
+    }
 
 	public virtual void Add(Trader trader) // this function probably needs to be moved to the trader class
 	{
 
         using (SqlConnection conn = new SqlConnection(db.ConnString))
         {
-
             //conn.ConnectionString = db.ConnString;
             conn.Open();
 
@@ -32,28 +43,24 @@ public class TraderList : DataBase
 
             if (trader.Trader_id == -1)
             {
-
                 sql = "INSERT into [TraderList] (username, password, deleted) "
                         + "VALUES (@uname , @pword, 0)"
                         + " SET trader_id = cast(SCOPE_IDENTITY() as int)";
-
             }
 
             else
             {
-
-                sql = "UPDATE [TraderList] (username, password, deleted) "
-                        + "VALUES ( @uname , @pword, 0 )"
-                        + "WHERE trader_id = @trader_id";
-
+                sql = "INSERT into [TraderList] (trader_id, username, password, deleted, classschedule) "
+                        + "VALUES ( @id, @uname , @pword, 0, null )";
             }
 
 
 
-            SqlCommand command = new SqlCommand(sql, conn);
-            
-            command.Parameters.AddWithValue("uname", trader.Username);
-            command.Parameters.AddWithValue("pword", trader.Password);
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+              command.Parameters.AddWithValue("id", trader.Trader_id);
+              command.Parameters.AddWithValue("uname", trader.Username);
+              command.Parameters.AddWithValue("pword", trader.Password);
 
             if (trader.Trader_id == -1)
             {
@@ -70,8 +77,7 @@ public class TraderList : DataBase
                 command.ExecuteNonQuery();
 
             } 
-            
-
+          }
         }
 
 	}
@@ -96,7 +102,7 @@ public class TraderList : DataBase
                     while (dbreader.Read())
                     {
 
-                        traderList.Add(Convert.ToInt32(dbreader.GetString(0)));
+                        traderlist.Add(Convert.ToInt32(dbreader.GetString(0)));
 
                     }
 
