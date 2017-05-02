@@ -106,5 +106,13 @@ namespace Text_Trade
 
             resultsListBox.ItemsSource = mkt.listings;
         }
+
+        private void resultListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Listing li = (Listing)resultsListBox.SelectedItem;
+            Listing_View lv = new Listing_View();
+            lv.DataContext = li;
+            lv.Show();
+        }
     }
 }
