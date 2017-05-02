@@ -33,10 +33,12 @@ public class ListingList
 
     }
 
-    public int SearchForListing(Listing listing)
+    public List<Listing> SearchForAllListingsFromTrader(int traderid)
     {
 
-        int listingId = listing.Listing_id;
+        //int listingId = listing.Listing_id;
+
+        Listing templisting = new Listing();
 
         using (SqlConnection conn = new SqlConnection())
         {
@@ -44,10 +46,12 @@ public class ListingList
             conn.ConnectionString = db.ConnString;
             conn.Open();
 
-            string query = "SELECT  listing_id FROM ListingList WHERE any like " + listing.Listing_id;
+            string query = "SELECT * FROM ListingList WHERE trader_id = @traderid";
 
             using (SqlCommand command = new SqlCommand(query, conn))
             {
+
+                command.Parameters.AddWithValue("traderid", traderid);
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -55,7 +59,27 @@ public class ListingList
                     while (reader.Read())
                     {
 
-                        
+                        templisting.Listing_id = reader.GetInt32(0);
+                        templisting.Title = reader.GetString(1);
+                        templisting.Author = reader.GetString(2);
+                        templisting.Edition = reader.GetString(3);
+                        templisting.Isbn = reader.GetString(4);
+                        templisting._Course.courseCode = reader.GetString(5);
+                        templisting._Course.courseLevel = reader.GetString(6);
+                        if (reader.GetString(7) == null)
+                        {
+
+                            templisting.LastUsed = " ";
+
+                        }
+
+                        else
+                        {
+
+                            templisting.LastUsed = reader.GetString(7);
+
+                        } 
+                        Condition
 
                     }
 

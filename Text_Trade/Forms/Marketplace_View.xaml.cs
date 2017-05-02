@@ -20,15 +20,25 @@ namespace Text_Trade
     /// </summary>
     public partial class Marketplace_View : Window
     {
-        public Marketplace_View()
+
+        Trader currtrad;
+
+        public Marketplace_View(Trader trader = null)
         {
             InitializeComponent();
+
+            if (trader != null)
+            {
+
+                this.currtrad = trader;
+
+            }
             
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
-            TraderHome frm = new TraderHome();
+            TraderHome frm = new TraderHome(currtrad);
             frm.Show();
             this.Close();
         }

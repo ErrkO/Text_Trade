@@ -19,10 +19,21 @@ namespace Text_Trade
     /// </summary>
     public partial class Create_Listing : Window
     {
-        public Create_Listing()
+
+        Trader currtrad;
+
+        public Create_Listing(Trader trader = null)
         {
             InitializeComponent();
             comboBox_condition.ItemsSource = Enum.GetValues(typeof(Condition)); //Binding Items of combobox with Enum values
+
+            if (trader != null)
+            {
+
+                currtrad = trader;
+
+            }
+
         }
 
         private void button_createListing_Click(object sender, RoutedEventArgs e)
@@ -31,6 +42,7 @@ namespace Text_Trade
             string a = textBox_authors.Text;
             string ed = textBox_edition.Text;
             string i = textBox_isbn.Text;
+            string last = " ";
 
             string[] strArray = comboBox_cC.SelectedItem.ToString().Split();    //to get 4 characters course code
             Course course = new Course(strArray[1].Trim(), textBox_cL.Text);    //since ToString() gives a bunch of gibberish
@@ -38,8 +50,12 @@ namespace Text_Trade
 
             double p = Convert.ToDouble(textBox_price.Text);
             string des = textBox_description.Text;
-            Listing l = new Listing(t, a, ed, i, course, cond, p, des);
-            l.CreateListing(l.Trader_id);
+            Listing l = new Listing(t, a, ed, i, course, cond, p, last,des);
+            l.CreateListing(currtrad.Trader_id);
+
+            TraderHome frm = new TraderHome(currtrad);
+            frm.Show();
+            this.Close();
            
             
 

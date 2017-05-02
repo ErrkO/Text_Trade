@@ -20,9 +20,45 @@ namespace Text_Trade
     /// </summary>
     public partial class ManageListings : Window
     {
-        public ManageListings()
+
+        Trader currtrad;
+        List<Listing> listings;
+        DataBase db;
+
+        public ManageListings(Trader trader = null)
         {
+
+            db = new DataBase();
+
+            List<Listing> templistings = new List<Listing>();
+
             InitializeComponent();
+
+            Binding title = new Binding();
+            Binding author = new Binding();
+            Binding edition = new Binding();
+            Binding price = new Binding();
+
+            if (trader != null)
+            {
+
+                this.currtrad = trader;
+
+                listings = db.SearchForListing("trader_id", Convert.ToString(currtrad.Trader_id));
+
+                ActiveListingsBox.DataContext = listings;
+
+                foreach (Listing listing in listings)
+                {
+
+                    ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, title);
+                    ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, author);
+                    ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, edition);
+                    ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, price);
+
+                }
+
+            }
 
         }
 
