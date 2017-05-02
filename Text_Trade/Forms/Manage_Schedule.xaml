@@ -179,7 +179,7 @@
             <ComboBoxItem Content="WGS"></ComboBoxItem>
 
         </ComboBox>
-        <ComboBox x:Name="comboBox_CC3" HorizontalAlignment="Left" Margin="93,194,0,0" VerticalAlignment="Top" Width="78">
+        <ComboBox x:Name="comboBox_CC3" HorizontalAlignment="Left" Margin="95,195,0,0" VerticalAlignment="Top" Width="78">
             <ComboBoxItem Content="AAST"></ComboBoxItem>
             <ComboBoxItem Content="ACCT"></ComboBoxItem>
             <ComboBoxItem Content="AGRI"></ComboBoxItem>
@@ -539,9 +539,9 @@
         <CheckBox x:Name="checkBox_Class6" Content="#6" HorizontalAlignment="Left" Margin="41,287,0,0" VerticalAlignment="Top" Height="22"/>
         <CheckBox x:Name="checkBox_Class7" Content="#7" HorizontalAlignment="Left" Margin="41,318,0,0" VerticalAlignment="Top" Height="22"/>
         <Label x:Name="label2" Content="Tip: Check in the boxes of classes for which&#xD;&#xA; you want to generate Book listings" HorizontalAlignment="Left" Margin="10,346,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.03,-0.14" Width="259" Height="46" Background="#FFF3F3F3"/>
-        <Button x:Name="button" Content="Search Book&#xD;&#xA;Listings" HorizontalAlignment="Left" Margin="27,397,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
-        <Button x:Name="button1" Content="Save&#xD;&#xA;Changes" HorizontalAlignment="Left" Margin="120,397,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
-        <Button x:Name="button2" Content="Cancel" HorizontalAlignment="Left" Margin="213,397,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
+        <Button x:Name="button_search" Content="Search Book&#xD;&#xA;Listings" HorizontalAlignment="Left" Margin="27,397,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
+        <Button x:Name="button_save" Content="Save&#xD;&#xA;Changes" HorizontalAlignment="Left" Margin="120,397,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="button_save_Click"/>
+        <Button x:Name="button_cancel" Content="Cancel" HorizontalAlignment="Left" Margin="213,397,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="button_cancel_Click"/>
 
     </Grid>
 </Window>

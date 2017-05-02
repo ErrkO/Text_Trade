@@ -23,5 +23,15 @@ namespace Text_Trade
         {
             InitializeComponent();
         }
+
+        private void button_cancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button_save_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

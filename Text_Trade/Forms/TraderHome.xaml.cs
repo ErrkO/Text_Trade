@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Text_Trade.Forms;
 
 namespace Text_Trade
 {
@@ -62,6 +63,18 @@ namespace Text_Trade
             Login frm = new Login();
             frm.Show();
             this.Close();
+        }
+
+        private void manageProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            Coming_soon frm = new Coming_soon();
+            frm.Show();
+        }
+
+        private void manageScheduleButton_Click(object sender, RoutedEventArgs e)
+        {
+            Manage_Schedule frm = new Manage_Schedule();
+            frm.Show(); //Hm what if schedule already created
         }
     }
 }
