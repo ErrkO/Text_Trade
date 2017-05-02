@@ -16,8 +16,6 @@ public class Listing
     #region data fields 
     private int listing_id;
 
-    //string listingTitle;    //newly added field - Linh //Commented out for now so the program will run - Seth
-
     string title;
     string author;
     string edition;
@@ -27,10 +25,9 @@ public class Listing
     string lastUsed;
     double price;
     string description;
-    int listinglife;    //listinglife is an int?
+    int listinglife;    
     int deleted;
     int trader_id;
-    // we need to add a varaible to store the listing life maybe an int or a datetime object - Eric
     private DataBase db = new DataBase();
     #endregion
 
@@ -206,10 +203,9 @@ public class Listing
 	}
 
 
-    public Listing(/*string listingTitle,*/ string title, string author, string edition, string isbn,Course class_course, Condition bookCondition, double price, string lastUsed = null, string description = null, int listing_id = -1)
+    public Listing(string title, string author, string edition, string isbn,Course class_course, Condition bookCondition, double price, string lastUsed = null, string description = null, int listing_id = -1)
 
     {
-        //this.listingTitle = listingTitle;
         this.title = title;
         this.author = author;
         this.edition = edition;
@@ -222,10 +218,9 @@ public class Listing
         this.listing_id = listing_id;
     }
 
-    public virtual void UpdateAll(/*string listingTitle,*/ string title, string author, string edition, string isbn, Course class_course, Condition bookCondition, double price, string lastUsed, string description)
+    public virtual void UpdateAll(string title, string author, string edition, string isbn, Course class_course, Condition bookCondition, double price, string lastUsed, string description)
 	{
 
-       // this.listingTitle = listingTitle;
         this.title = title;
         this.author = author;
         this.edition = edition;
@@ -287,12 +282,6 @@ public class Listing
         this.title = title;
 	}
 
-  /*  public virtual void UpdateListingTitle(string listingTitle)
-    {
-
-        this.listingTitle = listingTitle;
-    }*/
-
     public void CreateListing(int trader_id)
     {
 
@@ -305,7 +294,6 @@ public class Listing
 
             if(this.listing_id == -1)
             {
-                //Database stuff - ask Eric to add one more field for Listing - string listingTitle - Linh
                 sql = "INSERT INTO Listings (title,author,edition,isbn,courseCode,courseLevel,lastUsed,condition,"
                         + " description,deleted,price,listinglife,trader_id)"
                         + " VALUES (@title,@author,@edition,@isbn,@courseCode,@courseLevel,@lastUsed,@condition,"

@@ -251,7 +251,6 @@ public class DataBase
 
     }
 
-
     //overloaded SearchForTrader that uses a string representing the trader's username
     //used for login process
     //empty string will return list of all traders

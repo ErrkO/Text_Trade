@@ -34,7 +34,7 @@ public class Course
         {
             return this.courseLevel;
         }
-        /*private*/ set
+        set
         {
             this.courseLevel = value;
         }
@@ -68,4 +68,3 @@ public class Course
     #endregion
 
 }
-// Can't overload assignment operator in C#? 

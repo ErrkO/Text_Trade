@@ -53,8 +53,6 @@ namespace Text_Trade
             Listing l = new Listing(t, a, ed, i, course, cond, p, last,des);
             l.CreateListing(currtrad.Trader_id);
 
-            TraderHome frm = new TraderHome(currtrad);
-            frm.Show();
             this.Close();
            
             

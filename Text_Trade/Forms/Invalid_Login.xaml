@@ -12,7 +12,7 @@
     <Grid>
         <Label x:Name="label" Content="Invalid Login" HorizontalAlignment="Left" Margin="88,32,0,0" VerticalAlignment="Top" Width="129" FontSize="16" FontFamily="Stencil"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="21,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="261" FontSize="14"><Run Text="Your login information did not match our records. "/><LineBreak/><Run Text="Please try again or create a new account."/></TextBlock>
-        <Button x:Name="button" Content="OK" HorizontalAlignment="Left" Margin="112,152,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="okButton" Content="OK" HorizontalAlignment="Left" Margin="112,152,0,0" VerticalAlignment="Top" Width="75" Click="okButton_Click"/>
 
     </Grid>
 </Window>
