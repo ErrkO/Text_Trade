@@ -33,7 +33,7 @@ namespace Text_Trade
 
         private void createAccountButton_Click(object sender, RoutedEventArgs e)
         {
-            int id = 0;
+            //int id = 0;
             Username_Taken takenWindow = new Username_Taken();
             TraderList userList = new TraderList();
             if (userList.UserExists(usernameBox.Text))
@@ -41,11 +41,11 @@ namespace Text_Trade
             else
             {
                 userList.CreateList();
-                if (userList.Traderlist.Count == 0)
-                    id = 0;
-                else
-                    id = userList.Traderlist.Count - 1;
-                Trader newTrader = new Trader(usernameBox.Text, passwordBox.Password, firstNameBox.Text, lastNameBox.Text, emailBox.Text, id);
+                //if (userList.Traderlist.Count == 0)
+                //    id = 0;
+                //else
+                //    id = userList.Traderlist.Count - 1;
+                Trader newTrader = new Trader(usernameBox.Text, passwordBox.Password, firstNameBox.Text, lastNameBox.Text, emailBox.Text);
                 userList.Add(newTrader);
                 Login loginWindow = new Login();
                 loginWindow.Show();

@@ -14,7 +14,7 @@ using System.Data.SqlClient;
 public class DataBase
 {
 
-    private const string CONNSTRING = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Database\\TTDatabase.mdf;Integrated Security=True;Connect Timeout=30";
+    private const string CONNSTRING = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Database\\TTDB.mdf;Integrated Security=True;Connect Timeout=30";
 
     public virtual Marketplace Marketplace
     {
@@ -287,6 +287,8 @@ public class DataBase
 
                     command.Parameters.AddWithValue("uName", uName);
 
+                    command.ExecuteNonQuery();
+
                 }
 
                 SqlDataReader reader = command.ExecuteReader();
@@ -296,14 +298,24 @@ public class DataBase
 
                     Trader temptrader = new Trader();
 
-                    if (reader.GetInt32(3) != 1)
+                    temptrader.Trader_id = reader.GetInt32(0);
+                    temptrader.Username = reader.GetString(1);
+                    temptrader.Password = reader.GetString(2);
+                    temptrader.Deleted = reader.GetInt32(3);
+                    if (!reader.IsDBNull(4))
                     {
 
-                        temptrader.Trader_id = reader.GetInt32(0);
-                        temptrader.Username = reader.GetString(1);
-                        temptrader.Password = reader.GetString(2);
                         temptrader.Class_Schedule = new ClassSchedule(reader.GetString(4));
-                        temptrader.Warnings = reader.GetInt32(5);
+
+                    }
+                    temptrader.Warnings = reader.GetInt32(5);
+                    temptrader.FirstName = reader.GetString(6);
+                    temptrader.LastName = reader.GetString(7);
+                    //Email email = new Email(reader.GetString(8));
+                    //temptrader._Email = email;
+
+                    if (temptrader.Deleted == 0)
+                    {
 
                         traders.Add(temptrader);
 

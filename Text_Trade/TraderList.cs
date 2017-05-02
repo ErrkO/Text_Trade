@@ -43,24 +43,29 @@ public class TraderList : DataBase
 
             if (trader.Trader_id == -1)
             {
-                sql = "INSERT into [TraderList] (username, password, deleted) "
-                        + "VALUES (@uname , @pword, 0)"
-                        + " SET trader_id = cast(SCOPE_IDENTITY() as int)";
+                sql = "INSERT into [TraderList] (username, password, deleted, classschedule,warnings,firstname,lastname,email) "
+                        + "VALUES (@uname , @pword, 0,null,0,@fname,@lname,@mail)";
+                        //+ " SET trader_id = cast(SCOPE_IDENTITY() as int)";
             }
 
             else
             {
                 sql = "INSERT into [TraderList] (trader_id, username, password, deleted, classschedule) "
-                        + "VALUES ( @id, @uname , @pword, 0, null )";
+                        + "VALUES ( @id, @uname , @pword, 0, null )"
+                        + " SET IDENTITY_INSERT TraderList ON ";
             }
 
 
 
             using (SqlCommand command = new SqlCommand(sql, conn))
             {
-              command.Parameters.AddWithValue("id", trader.Trader_id);
-              command.Parameters.AddWithValue("uname", trader.Username);
-              command.Parameters.AddWithValue("pword", trader.Password);
+                command.Parameters.AddWithValue("id", trader.Trader_id);
+                command.Parameters.AddWithValue("uname", trader.Username);
+                command.Parameters.AddWithValue("pword", trader.Password);
+                command.Parameters.AddWithValue("fname", trader.FirstName);
+                command.Parameters.AddWithValue("lname", trader.LastName);
+                command.Parameters.AddWithValue("mail", trader._Email.ToString());
+
 
             if (trader.Trader_id == -1)
             {
