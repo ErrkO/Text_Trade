@@ -109,7 +109,7 @@ public class DataBase
             if (fieldname == null && field == null)
             {
 
-                sql = "SELCT * FROM (Listings)";
+                sql = "SELECT * FROM Listings";
 
             }
 
@@ -136,10 +136,11 @@ public class DataBase
 
             using (SqlCommand command = new SqlCommand(sql, conn))
             {
-
-                command.Parameters.AddWithValue("fieldname", fieldname);
-                command.Parameters.AddWithValue("field", field);
-
+                if (fieldname != null && field != null)
+                {
+                    command.Parameters.AddWithValue("fieldname", fieldname);
+                    command.Parameters.AddWithValue("field", field);
+                }
                 if (fieldname2 != null && field2 != null)
                 {
 
