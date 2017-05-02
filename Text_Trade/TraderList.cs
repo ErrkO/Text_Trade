@@ -34,8 +34,8 @@ public class TraderList : DataBase
             {
 
                 sql = "INSERT into [TraderList] (username, password, deleted) "
-                        + "OUTPUT INSERTED.trader_id"
-                        + " VALUES (@uname , @pword, 0)";
+                        + "VALUES (@uname , @pword, 0)"
+                        + " SET trader_id = cast(SCOPE_IDENTITY() as int)";
 
             }
 
@@ -58,7 +58,7 @@ public class TraderList : DataBase
             if (trader.Trader_id == -1)
             {
 
-                 int tid = (int)command.ExecuteScalar();
+                 trader.Trader_id = Convert.ToInt32(command.ExecuteScalar());
 
             }
 
