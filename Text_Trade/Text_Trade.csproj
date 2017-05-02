@@ -70,6 +70,9 @@
     <Compile Include="Forms\Listing_View.xaml.cs">
       <DependentUpon>Listing_View.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Manage_Profile.xaml.cs">
       <DependentUpon>Manage_Profile.xaml</DependentUpon>
     </Compile>
@@ -133,7 +136,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Login.xaml">
+    <Page Include="Forms\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,9 +165,6 @@
     <Compile Include="Email.cs" />
     <Compile Include="Listing.cs" />
     <Compile Include="ListingList.cs" />
-    <Compile Include="Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Marketplace.cs" />
     <Compile Include="Forms\Marketplace_View.xaml.cs">
       <DependentUpon>Marketplace_View.xaml</DependentUpon>

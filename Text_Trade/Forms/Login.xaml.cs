@@ -51,21 +51,23 @@ namespace Text_Trade
                 if (searchResult[i].Password == login.Password)
                 {
                     login = searchResult[i];
+
+                    if (login.isModerator())
+                    {
+                        Moderator_Home modhome = new Moderator_Home();
+                        modhome.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        TraderHome tradehome = new TraderHome(login);
+                        tradehome.Show();
+                        this.Close();
+                    }
+
                     break;
                 }
-            }
 
-            if (login.isModerator())
-            {
-                Moderator_Home modhome = new Moderator_Home();
-                modhome.Show();
-                this.Close();
-            }
-            else
-            {
-                TraderHome tradehome = new TraderHome(login);
-                tradehome.Show();
-                this.Close();
             }
 
         }
