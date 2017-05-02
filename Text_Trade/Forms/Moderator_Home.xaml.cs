@@ -19,9 +19,14 @@ namespace Text_Trade
     /// </summary>
     public partial class Moderator_Home : Window
     {
-        public Moderator_Home()
+        public Moderator_Home(Moderator currentUser = null)
         {
             InitializeComponent();
+
+            if(currentUser != null)
+            {
+                userLabel.Content = "Welcome: " + currentUser.FirstName + " " + currentUser.LastName;
+            }
         }
 
         private void viewUserListButton_Click(object sender, RoutedEventArgs e)

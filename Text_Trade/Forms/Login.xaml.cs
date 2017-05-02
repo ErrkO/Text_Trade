@@ -40,43 +40,37 @@ namespace Text_Trade
 
             if (searchResult.Count == 0)
             {
-
-                throw new ArgumentException("Must have users in the database");
-
+                Invalid_Login badLogin = new Invalid_Login();
+                badLogin.Show();
             }
-
-            for (int i = 0; i < searchResult.Count; i++)
+            else
             {
-
-                if (searchResult.Count == 0)
+                for (int i = 0; i < searchResult.Count; i++)
                 {
-
-                    throw new ArgumentException("Must have users in the database");
-
-                }
-
-                if (searchResult[i].Password == passwordBox.Password)
-                {
-                    login = searchResult[i];
-
-                    if (login.isModerator())
+                    if (searchResult[i].Password == passwordBox.Password)
                     {
-                        Moderator_Home modhome = new Moderator_Home();
-                        modhome.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-                        TraderHome tradehome = new TraderHome(login);
-                        tradehome.Show();
-                        this.Close();
+                        login = searchResult[i];
+
+                        if (login.isModerator())
+                        {
+                            Moderator mod = new Moderator(login.Username, login.Password, login.FirstName, login.LastName, login._Email.ToString(), login.Trader_id, login.isModerator());
+                            Moderator_Home modhome = new Moderator_Home(mod);
+                            modhome.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            TraderHome tradehome = new TraderHome(login);
+                            tradehome.Show();
+                            this.Close();
+                        }
+
+                        break;
                     }
 
-                    break;
                 }
 
             }
-
         }
     }
 }

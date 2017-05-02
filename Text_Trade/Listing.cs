@@ -26,7 +26,6 @@ public class Listing
     Condition condition;
     string lastUsed;
     double price;
-    Image picture;  //? image type?
     string description;
     int listinglife;    //listinglife is an int?
     int deleted;
@@ -207,7 +206,7 @@ public class Listing
 	}
 
 
-    public Listing(/*string listingTitle,*/ string title, string author, string edition, string isbn,Course class_course, Condition bookCondition, double price, string lastUsed = null, Image picture = null, string description = null)
+    public Listing(/*string listingTitle,*/ string title, string author, string edition, string isbn,Course class_course, Condition bookCondition, double price, string lastUsed = null, string description = null)
 
     {
         //this.listingTitle = listingTitle;
@@ -219,11 +218,10 @@ public class Listing
         this.condition = bookCondition;
         this.price = price;
         this.lastUsed = lastUsed;
-        this.picture = picture;
         this.description = description;
     }
 
-    public virtual void UpdateAll(/*string listingTitle,*/ string title, string author, string edition, string isbn, Course class_course, Condition bookCondition, double price, string lastUsed, Image picture, string description)
+    public virtual void UpdateAll(/*string listingTitle,*/ string title, string author, string edition, string isbn, Course class_course, Condition bookCondition, double price, string lastUsed, string description)
 	{
 
        // this.listingTitle = listingTitle;
@@ -235,7 +233,6 @@ public class Listing
         this.condition = bookCondition;
         this.price = price;
         this.lastUsed = lastUsed;
-        this.picture = picture;
         this.description = description;
     }
 
@@ -277,11 +274,6 @@ public class Listing
 	public virtual void UpdateLastUsed(string lastUsed)
 	{
         this.lastUsed = lastUsed;
-	}
-
-	public virtual void UpdatePicture(Image picture)
-	{
-        this.picture = picture;
 	}
 
 	public virtual void UpdatePrice(double price)
@@ -327,8 +319,8 @@ public class Listing
                 sql = "UPDATE Listings "
                         + " SET title = @title, author = @author, edition = @edition, isbn = @isbn, courseCode = courseCode,"
                         + " courseLevel = @courseLevel, lastUsed = @lastUsed, condition = @condition, description = @description,"
-                        + " deleted = 0, price = @price, listing_id = @trader_id"
-                        + " WHERE listinglife = @listinglife";
+                        + " deleted = 0, price = @price, trader_id = @trader_id"
+                        + " WHERE listingid = @listingid";
 
             }
 
@@ -338,13 +330,14 @@ public class Listing
             command.Parameters.AddWithValue("author",this.author);
             command.Parameters.AddWithValue("edition",this.edition);
             command.Parameters.AddWithValue("isbn",this.isbn);
-            command.Parameters.AddWithValue("courseCode",this.course.CourseCode);      //Also we implement Course object, instead of 2 strings
-            command.Parameters.AddWithValue("courseLevel",this.course.CourseLevel);    //So update?
+            command.Parameters.AddWithValue("courseCode",this.course.CourseCode);
+            command.Parameters.AddWithValue("courseLevel",this.course.CourseLevel);
             command.Parameters.AddWithValue("lastUsed",this.lastUsed);
             command.Parameters.AddWithValue("condition",Convert.ToString(this.condition));
             command.Parameters.AddWithValue("description",this.description);
             command.Parameters.AddWithValue("price",this.price);
-            command.Parameters.AddWithValue("trader_id",trader_id);
+            command.Parameters.AddWithValue("trader_id", trader_id);
+            command.Parameters.AddWithValue("listing_id", this.Listing_id);
 
             if (listing_id == -1)
             {

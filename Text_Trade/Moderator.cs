@@ -42,6 +42,11 @@ public class Moderator : Account
 
 	}
 
+    public Moderator(string uName, string pWord, string fName, string lName, string eMail, int traderid, bool mod) : base(uName, pWord, fName, lName, eMail, traderid, mod)
+    {
+
+    }
+
 	public void RemoveListing(Listing listing)
 	{
 
