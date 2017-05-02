@@ -23,6 +23,7 @@ namespace Text_Trade
         public Marketplace_View()
         {
             InitializeComponent();
+            
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)

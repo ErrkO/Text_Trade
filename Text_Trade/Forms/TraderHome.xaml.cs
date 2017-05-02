@@ -73,8 +73,11 @@ namespace Text_Trade
 
         private void manageScheduleButton_Click(object sender, RoutedEventArgs e)
         {
-            Manage_Schedule frm = new Manage_Schedule();
-            frm.Show(); //Hm what if schedule already created
+            Manage_Schedule frm = new Manage_Schedule();  
+            //if schedule already existed
+            // code
+            // if not, show blank form
+            frm.Show(); 
         }
     }
 }
