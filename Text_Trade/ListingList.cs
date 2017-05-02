@@ -35,9 +35,6 @@ public class ListingList
 
     public List<Listing> SearchForAllListingsFromTrader(int traderid)
     {
-
-        //int listingId = listing.Listing_id;
-
         using (SqlConnection conn = new SqlConnection())
         {
 

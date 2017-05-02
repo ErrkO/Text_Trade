@@ -33,15 +33,6 @@ public class Email
         
     }
 
- //   public string email
-	//{
-
-	//	get { return this.email; }
-
-	//	set { this.email = value; }
-
-	//}
-
     public string UserName
     {
 
@@ -64,7 +55,6 @@ public class Email
     public Email(string email)
     {
 
-        //this.email = email;
         this.e_Mail = new MailAddress(email);
 
     }
@@ -72,7 +62,6 @@ public class Email
     public Email(string email, bool outlook = false)
     {
 
-        //this.email = email;
         this.e_Mail = new MailAddress(email);
 
         if (outlook == true)

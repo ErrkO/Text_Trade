@@ -81,9 +81,9 @@ public class Trader : Account
         this.sell_list = new SellList();
     }
 
-    public void CreateListing(/*string listingTitle,*/ string title, string author, string edition, string isbn,  Course class_course, Condition condition, double price)
+    public void CreateListing(string title, string author, string edition, string isbn,  Course class_course, Condition condition, double price)
 	{
-        Listing a_listing = new Listing(/*listingTitle,*/ title, author, edition, isbn, class_course, condition, price);
+        Listing a_listing = new Listing(title, author, edition, isbn, class_course, condition, price);
         this.sell_list.AddToSellList(a_listing);
 	}
 
@@ -92,12 +92,11 @@ public class Trader : Account
             this.watch_list.AddToWatchList(a_listing); 
 	}
 
-    public virtual void AddClass(string cC, string cL) //keyword "virtual" since the method will be redefined in ClassSchedule class?
+    public virtual void AddClass(string cC, string cL)
     {
         Course a_course = new Course(cC, cL);
-       // Console.WriteLine("The course is " + a_course.CourseCode + " " + a_course.CourseLevel); //test
-       if (!this.class_schedule.schedule.Contains(a_course))   //if the shcedule hasnt have that class yet
-            this.class_schedule.AddClass(cC, cL);    //This will call the ClassSchedule AddClass method
+       if (!this.class_schedule.schedule.Contains(a_course))
+            this.class_schedule.AddClass(cC, cL);               //This will call the ClassSchedule AddClass method
     }
 
 	public virtual void RemoveClass(Course a_course)      //Changed from EditSchedule()
@@ -106,8 +105,8 @@ public class Trader : Account
 	}
 
     public void RemoveListing(Listing a_listing)
-    {                                                     // it shouldnt be virtual only the base class function needs to be virtual for inheritance and both trader and mod
-        this.sell_list.RemoveFromSellList(a_listing);     // inherit from account
+    {                                                    
+        this.sell_list.RemoveFromSellList(a_listing);     
     }
 
     public virtual void RemoveFromWatchList(Listing a_listing)
