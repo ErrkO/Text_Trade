@@ -123,14 +123,14 @@ public class DataBase
             else if (fieldname2 != null && field2 != null)
             {
 
-                sql = "SELCT * FROM (Listings) WHERE @fieldname = @field and @fieldname2 = @field2";
+                sql = "SELECT * FROM [Listings] WHERE @fieldname = @field and @fieldname2 = @field2";
 
             }
 
             else
             {
 
-                sql = "SELCT * FROM (Listings) WHERE @fieldname = @field"; 
+                sql = "SELECT * FROM [Listings] WHERE @fieldname = @field"; 
 
             }
 
