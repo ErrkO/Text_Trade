@@ -93,7 +93,7 @@ public class ClassSchedule
             this.schedule.Remove(course);
 	}
 
-    public ClassSchedule FromString(string str)
+    public ClassSchedule FromString(string str) //what isthis for?
     {
 
         ClassSchedule tempsched = new ClassSchedule();

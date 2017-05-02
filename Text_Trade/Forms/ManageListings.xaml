@@ -14,7 +14,23 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="195" Margin="10,36,0,0" VerticalAlignment="Top" Width="272" Grid.ColumnSpan="2" />
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="195" Margin="10,36,0,0" VerticalAlignment="Top" Width="272" Grid.ColumnSpan="2" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Name="border" BorderBrush="Blue" BorderThickness="1" Padding="5" Margin="5">
+                        <StackPanel Orientation="Horizontal" Margin="2" >
+                            <TextBlock Text="{Binding Title}" />
+                            <TextBlock Text="; " />
+                            <TextBlock Text="{Binding Author}" />
+                            <TextBlock Text="; " />
+                            <TextBlock Text="{Binding Edition}" />
+                            <TextBlock Text=" --------------------- " />
+                            <TextBlock Text="{Binding Price}" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <Label x:Name="Listings_Label" Content="Active Listings" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="85"/>
         <Button x:Name="deleteListingButton" Content="Delete Listing" HorizontalAlignment="Left" Height="25" Margin="41,307,0,0" VerticalAlignment="Top" Width="100" Click="deleteListingButton_Click"/>
         <Button x:Name="editListingButton" Content="Edit Listing" HorizontalAlignment="Left" Height="25" Margin="10,307,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1" Click="editListingButton_Click"/>
