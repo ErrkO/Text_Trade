@@ -31,9 +31,11 @@ namespace Text_Trade
             string a = textBox_authors.Text;
             string ed = textBox_edition.Text;
             string i = textBox_isbn.Text;
+
             string[] strArray = comboBox_cC.SelectedItem.ToString().Split();    //to get 4 characters course code
             Course course = new Course(strArray[1].Trim(), textBox_cL.Text);    //since ToString() gives a bunch of gibberish
             Condition cond = (Condition)comboBox_condition.SelectedItem;         
+
             double p = Convert.ToDouble(textBox_price.Text);
             string des = textBox_description.Text;
             Listing l = new Listing(t, a, ed, i, course, cond, p, des);

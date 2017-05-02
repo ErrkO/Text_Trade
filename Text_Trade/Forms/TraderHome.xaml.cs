@@ -27,7 +27,7 @@ namespace Text_Trade
             if (trader != null)
             {
 
-                userLabel.Content = "Welcome " + trader.FirstName + " " + trader.LastName;
+                userLabel.Content = "Welcome: " + trader.FirstName + " " + trader.LastName;
 
             }
 
