@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Text_Trade.Forms;
 
 namespace Text_Trade
 {
@@ -22,16 +23,24 @@ namespace Text_Trade
         public ManageListings()
         {
             InitializeComponent();
+
         }
 
         private void editListingButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Coming_soon frm = new Coming_soon();
+            frm.Show();
         }
 
         private void deleteListingButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (this.listBox.SelectedIndex != -1)   //meaning there is item selected in listBox
+            {
+                Trader usr = new Trader();  //how to refer to current Trader?
+                Listing li = (Listing)listBox.SelectedItem;
+                usr.Sell_List.RemoveFromSellList(li);
+                listBox.ItemsSource = usr.Sell_List.sell_list;
+            }
         }
     }
 }
