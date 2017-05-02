@@ -15,7 +15,7 @@ public class ListingList
 {
 
     public DataBase db = new DataBase();
-    public List<int> listinglist = new List<int>();
+    public List<Listing> listinglist = new List<Listing>();
 
     public List<Listing> listingList
 	{
@@ -38,8 +38,6 @@ public class ListingList
 
         //int listingId = listing.Listing_id;
 
-        Listing templisting = new Listing();
-
         using (SqlConnection conn = new SqlConnection())
         {
 
@@ -59,27 +57,26 @@ public class ListingList
                     while (reader.Read())
                     {
 
+                        Listing templisting = new Listing();
+
                         templisting.Listing_id = reader.GetInt32(0);
                         templisting.Title = reader.GetString(1);
                         templisting.Author = reader.GetString(2);
                         templisting.Edition = reader.GetString(3);
                         templisting.Isbn = reader.GetString(4);
-                        templisting._Course.courseCode = reader.GetString(5);
-                        templisting._Course.courseLevel = reader.GetString(6);
-                        if (reader.GetString(7) == null)
-                        {
+                        string CCode = reader.GetString(5);
+                        string CLevel = reader.GetString(6);
+                        templisting._Course = new Course(CCode, CLevel);
+                        templisting.LastUsed = reader.GetString(7);
+                        Condition conditionstring = (Condition)Enum.Parse(typeof(Condition), reader.GetString(8));
+                        templisting.Condition = conditionstring;
+                        templisting.Description = reader.GetString(9);
+                        templisting.Deleted = reader.GetInt32(10);
+                        templisting.Price = reader.GetInt32(11);
+                        templisting.Listinglife = reader.GetInt32(12);
+                        templisting.Trader_id = reader.GetInt32(13);
 
-                            templisting.LastUsed = " ";
-
-                        }
-
-                        else
-                        {
-
-                            templisting.LastUsed = reader.GetString(7);
-
-                        } 
-                        Condition
+                        listinglist.Add(templisting);
 
                     }
 
@@ -89,7 +86,7 @@ public class ListingList
 
         }
 
-        return listingId;
+        return listinglist;
 
     }
 
@@ -112,7 +109,7 @@ public class ListingList
                     while (dbreader.Read())
                     {
 
-                        listinglist.Add(Convert.ToInt32(dbreader.GetString(0)));
+                        //listinglist.Add(Convert.ToInt32(dbreader.GetString(0)));
 
                     }
 
