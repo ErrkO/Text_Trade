@@ -44,7 +44,7 @@ public class ListingList
             conn.ConnectionString = db.ConnString;
             conn.Open();
 
-            string query = "SELECT * FROM ListingList WHERE trader_id = @traderid";
+            string query = "SELECT * FROM Listings WHERE trader_id = @traderid";
 
             using (SqlCommand command = new SqlCommand(query, conn))
             {

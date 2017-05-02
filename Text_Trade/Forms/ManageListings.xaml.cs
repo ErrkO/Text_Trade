@@ -48,17 +48,19 @@ namespace Text_Trade
 
                 ActiveListingsBox.DataContext = listings;
 
-                foreach (Listing listing in listings)
-                {
+                //ActiveListingsBox.ItemsSource(listings);
 
-                    //ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, title);
-                    //ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, author);
-                    //ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, edition);
-                    //ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, price);
+                //foreach (Listing listing in listings)
+                //{
 
-                    ActiveListingsBox.Items.Add(listing);
+                //    //ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, title);
+                //    //ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, author);
+                //    //ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, edition);
+                //    //ActiveListingsBox.SetBinding(ListBox.ItemsSourceProperty, price);
 
-                }
+                //    ActiveListingsBox.ItemsSource(listings);
+
+                //}
 
             }
 

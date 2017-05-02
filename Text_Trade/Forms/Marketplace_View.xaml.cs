@@ -33,6 +33,8 @@ namespace Text_Trade
                 this.currtrad = trader;
 
             }
+
+            Fill_List_Box();
             
         }
 
@@ -111,6 +113,19 @@ namespace Text_Trade
             List<Trader> lt = tl.SearchForUser(li.Trader_id);   //look for username using trader_id
             lv.textBlock_SellerName.DataContext = lt[0];    //bind the Textblock to list of trader (ideally list consists of 1 object though)
             lv.Show();
+        }
+
+        public void Fill_List_Box()
+        {
+
+            Marketplace mkt = new Marketplace();
+
+            mkt.SearchAll();
+
+            int breakpls = 0;
+
+            resultsListBox.ItemsSource = mkt.listings;
+
         }
     }
 }

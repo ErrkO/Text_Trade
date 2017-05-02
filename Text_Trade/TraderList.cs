@@ -64,25 +64,26 @@ public class TraderList : DataBase
                 command.Parameters.AddWithValue("pword", trader.Password);
                 command.Parameters.AddWithValue("fname", trader.FirstName);
                 command.Parameters.AddWithValue("lname", trader.LastName);
-                command.Parameters.AddWithValue("mail", trader._Email.ToString());
+                string emstr = trader._Email.ToString();
+                command.Parameters.AddWithValue("mail", emstr);
 
 
-            if (trader.Trader_id == -1)
-            {
+                if (trader.Trader_id == -1)
+                {
 
-                 trader.Trader_id = Convert.ToInt32(command.ExecuteScalar());
+                    trader.Trader_id = Convert.ToInt32(command.ExecuteScalar());
 
+                }
+
+                else
+                {
+
+                    command.Parameters.AddWithValue("trader_id", trader.Trader_id);
+
+                    command.ExecuteNonQuery();
+
+                } 
             }
-
-            else
-            {
-
-                command.Parameters.AddWithValue("trader_id", trader.Trader_id);
-
-                command.ExecuteNonQuery();
-
-            } 
-          }
         }
 
 	}

@@ -102,6 +102,7 @@ public class DataBase
         using (SqlConnection conn = new SqlConnection(CONNSTRING))
         {
 
+
             conn.Open();
 
             string sql;
@@ -130,12 +131,12 @@ public class DataBase
             else
             {
 
-                sql = "SELECT * FROM [Listings] WHERE @fieldname = @field"; 
+                sql = "SELECT * FROM Listings WHERE @fieldname = @field"; 
 
             }
 
-            using (SqlCommand command = new SqlCommand(sql, conn))
-            {
+            SqlCommand command = new SqlCommand(sql, conn);
+            
 
                 command.Parameters.AddWithValue("fieldname", fieldname);
                 command.Parameters.AddWithValue("field", field);
@@ -148,35 +149,38 @@ public class DataBase
 
                 }
 
-                SqlDataReader reader = command.ExecuteReader();
+                
 
-                while (reader.Read())
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
+                    while (reader.Read())
+                    {
 
-                    Listing templisting = new Listing();
+                        Listing templisting = new Listing();
 
-                    templisting.Listing_id = reader.GetInt32(0);
-                    templisting.Title = reader.GetString(1);
-                    templisting.Author = reader.GetString(2);
-                    templisting.Edition = reader.GetString(3);
-                    templisting.Isbn = reader.GetString(4);
-                    string CCode = reader.GetString(5);
-                    string CLevel = reader.GetString(6);
-                    templisting._Course = new Course(CCode, CLevel);
-                    templisting.LastUsed = reader.GetString(7);
-                    Condition conditionstring = (Condition)Enum.Parse(typeof(Condition), reader.GetString(8));
-                    templisting.Condition = conditionstring;
-                    templisting.Description = reader.GetString(9);
-                    templisting.Deleted = reader.GetInt32(10);
-                    templisting.Price = reader.GetInt32(11);
-                    templisting.Listinglife = reader.GetInt32(12);
-                    templisting.Trader_id = reader.GetInt32(13);
+                        templisting.Listing_id = reader.GetInt32(0);
+                        templisting.Title = reader.GetString(1);
+                        templisting.Author = reader.GetString(2);
+                        templisting.Edition = reader.GetString(3);
+                        templisting.Isbn = reader.GetString(4);
+                        string CCode = reader.GetString(5);
+                        string CLevel = reader.GetString(6);
+                        templisting._Course = new Course(CCode, CLevel);
+                        templisting.LastUsed = reader.GetString(7);
+                        Condition conditionstring = (Condition)Enum.Parse(typeof(Condition), reader.GetString(8));
+                        templisting.Condition = conditionstring;
+                        templisting.Description = reader.GetString(9);
+                        templisting.Deleted = reader.GetInt32(10);
+                        templisting.Price = reader.GetInt32(11);
+                        templisting.Listinglife = reader.GetInt32(12);
+                        templisting.Trader_id = reader.GetInt32(13);
 
-                    listings.Add(templisting);
+                        listings.Add(templisting);
 
+                    } 
                 }
 
-            }
+            
 
             
 
@@ -186,7 +190,7 @@ public class DataBase
 
     }
     
-    public List<Trader> SearchForTrader(int traderid = 0)
+    public List<Trader> SearchForTrader(int traderid = -1)
     {
 
         List<Trader> traders = new List<Trader>();
@@ -197,7 +201,7 @@ public class DataBase
 
             string sql;
 
-            if (traderid == 0)
+            if (traderid == -1)
             {
 
                 sql = "SELECT * FROM TraderList";

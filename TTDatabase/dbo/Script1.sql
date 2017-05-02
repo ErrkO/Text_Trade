@@ -1,0 +1,1 @@
+﻿SELECT * FROM [Listings] WHERE trader_id = 1
