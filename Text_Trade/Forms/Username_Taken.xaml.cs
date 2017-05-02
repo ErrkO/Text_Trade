@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Text_Trade.Forms
+namespace Text_Trade
 {
     /// <summary>
     /// Interaction logic for Username_Taken.xaml

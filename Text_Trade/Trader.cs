@@ -17,6 +17,7 @@ public class Trader : Account
     private WatchList watch_list;
     private SellList sell_list;
     private int warnings;
+
     #endregion
 
     #region Property fields
@@ -55,10 +56,11 @@ public class Trader : Account
             return this.sell_list;
         }
     }
+
     #endregion
 
     #region methods
-    
+
     public Trader() : base()    //default constructor
     {
 
