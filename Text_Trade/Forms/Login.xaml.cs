@@ -55,7 +55,7 @@ namespace Text_Trade
 
                 }
 
-                if (searchResult[i].Password == login.Password)
+                if (searchResult[i].Password == passwordBox.Password)
                 {
                     login = searchResult[i];
 

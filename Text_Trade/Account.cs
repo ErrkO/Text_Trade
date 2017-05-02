@@ -19,6 +19,7 @@ public class Account
     protected string lastName;
     protected int trader_id;
     protected bool moderator;
+    private int deleted;
     #endregion
 
     #region Property fields
@@ -58,6 +59,8 @@ public class Account
                         /* it gives you the error becuase the .email is of type string, if you want you can change this property to a string type or i can create a tostring
                          method for the email class  - Eric*/ 
         }
+
+        set {this.eMail = value; }
     }                   //To string would probably be easier, because the alternative wouldn't have an email object associated with the account anymore - Seth
 
     public string FirstName //cant change name
@@ -66,6 +69,7 @@ public class Account
         {
             return this.firstName;
         }
+        set {this.firstName = value; }
     }
 
     public string LastName  //cant change name
@@ -74,6 +78,7 @@ public class Account
         {
             return this.lastName;
         }
+        set {this.lastName = value; }
     }
 
     public int Trader_id
@@ -86,6 +91,14 @@ public class Account
         {
             this.trader_id = value;
         }
+    }
+
+    public int Deleted
+    {
+
+        get {return this.deleted; }
+        set { this.deleted = value; }
+
     }
 
     #endregion
