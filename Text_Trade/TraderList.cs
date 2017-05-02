@@ -43,46 +43,41 @@ public class TraderList : DataBase
 
             if (trader.Trader_id == -1)
             {
+                sql = "INSERT into [TraderList] (username, password, deleted) "
+                        + "VALUES (@uname , @pword, 0)"
+                        + " SET trader_id = cast(SCOPE_IDENTITY() as int)";
+            }
 
-                sql = "insert into [TraderList] (username, password, deleted, classschedule) "
-                        + "values ( @uname , @pword, 0, null )"
-                        + " select cast(scope_identity() as int)";
+            else
+            {
+                sql = "INSERT into [TraderList] (trader_id, username, password, deleted, classschedule) "
+                        + "VALUES ( @id, @uname , @pword, 0, null )";
+            }
+
+
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+              command.Parameters.AddWithValue("id", trader.Trader_id);
+              command.Parameters.AddWithValue("uname", trader.Username);
+              command.Parameters.AddWithValue("pword", trader.Password);
+
+            if (trader.Trader_id == -1)
+            {
+
+                 trader.Trader_id = Convert.ToInt32(command.ExecuteScalar());
 
             }
 
             else
             {
 
-                sql = "INSERT into [TraderList] (trader_id, username, password, deleted, classschedule) "
-                        + "VALUES ( @id, @uname , @pword, 0, null )";
+                command.Parameters.AddWithValue("trader_id", trader.Trader_id);
 
-            }
+                command.ExecuteNonQuery();
 
-            
-
-            using (SqlCommand command = new SqlCommand(sql, conn))
-            {
-                command.Parameters.AddWithValue("id", trader.Trader_id);
-                command.Parameters.AddWithValue("uname", trader.Username);
-                command.Parameters.AddWithValue("pword", trader.Password);
-
-                if (trader.Trader_id == -1)
-                {
-
-                    trader.Trader_id = (int)command.ExecuteScalar();
-
-                }
-
-                else
-                {
-
-                    command.Parameters.AddWithValue("trader_id", trader.Trader_id);
-
-                    command.ExecuteNonQuery();
-
-                } 
-            }
-
+            } 
+          }
         }
 
 	}
