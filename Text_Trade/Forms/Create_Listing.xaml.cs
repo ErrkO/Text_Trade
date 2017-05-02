@@ -22,6 +22,7 @@ namespace Text_Trade
         public Create_Listing()
         {
             InitializeComponent();
+            comboBox_condition.ItemsSource = Enum.GetValues(typeof(Condition));
         }
 
         private void button_createListing_Click(object sender, RoutedEventArgs e)
@@ -31,7 +32,8 @@ namespace Text_Trade
             string ed = textBox_edition.Text;
             string i = textBox_isbn.Text;
             Course course = new Course(comboBox_cC.SelectedItem.ToString(), textBox_cL.Text);
-            Condition cond = (Condition)comboBox_condition.SelectedValue;
+            Condition cond = (Condition)comboBox_condition.SelectedItem;
+            //Condition cond = (Condition)Enum.Parse(typeof(Condition), comboBox_condition.SelectedItem.ToString() );
             double p = Convert.ToDouble(textBox_price.Text);
             string des = textBox_description.Text;
             Listing l = new Listing(t, a, ed, i, course, cond, p, des);

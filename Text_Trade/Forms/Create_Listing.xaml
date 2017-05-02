@@ -102,11 +102,6 @@
 
         </ComboBox>
         <ComboBox x:Name="comboBox_condition" HorizontalAlignment="Left" Margin="12,171,0,0" VerticalAlignment="Top" Width="96" Grid.Column="1">
-            <ComboBoxItem Content="New"></ComboBoxItem>
-            <ComboBoxItem Content="Like New"></ComboBoxItem>
-            <ComboBoxItem Content="Great"></ComboBoxItem>
-            <ComboBoxItem Content="Good"></ComboBoxItem>
-            <ComboBoxItem Content="Acceptable"></ComboBoxItem>
         </ComboBox>
         <TextBox x:Name="textBox_cL" HorizontalAlignment="Left" Height="23" Margin="118,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
         <TextBox x:Name="textBox_price" HorizontalAlignment="Left" Height="23" Margin="12,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
