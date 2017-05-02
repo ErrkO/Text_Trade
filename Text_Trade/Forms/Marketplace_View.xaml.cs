@@ -112,6 +112,9 @@ namespace Text_Trade
             Listing li = (Listing)resultsListBox.SelectedItem;
             Listing_View lv = new Listing_View();
             lv.DataContext = li;
+            TraderList tl = new TraderList();
+            List<Trader> lt = tl.SearchForUser(li.Trader_id);
+            lv.textBlock_SellerName.DataContext = lt[0];
             lv.Show();
         }
     }
