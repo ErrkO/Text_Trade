@@ -64,6 +64,9 @@
     <Compile Include="Forms\Coming_soon.xaml.cs">
       <DependentUpon>Coming_soon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Invalid_Login.xaml.cs">
+      <DependentUpon>Invalid_Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Issue_Warning.xaml.cs">
       <DependentUpon>Issue_Warning.xaml</DependentUpon>
     </Compile>
@@ -125,6 +128,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forms\Create_Listing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Invalid_Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

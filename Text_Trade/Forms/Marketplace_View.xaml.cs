@@ -45,7 +45,8 @@ namespace Text_Trade
             //List<Listing> listings = new List<Listing>();
 
             marketView.SearchAll();
-
+            
+            //Seth's code to display listings, havent tested
             for( int i = 0; i < marketView.listings.Count; i++)
             {
                 resultsListBox.Items.Add(marketView.listings.ElementAt(i));
@@ -54,7 +55,7 @@ namespace Text_Trade
 
         private void button_filterResults_Click(object sender, RoutedEventArgs e)
         {
-            Coming_soon frm = new Coming_soon();
+            Coming_soon frm = new Coming_soon();    //havent implemented, coming soon
             frm.Show();
         }
 
@@ -64,57 +65,40 @@ namespace Text_Trade
             if (radioButton_byTitle.IsChecked == true)
             {
                 mkt.SearchByBookTitle(textBox_search.Text);
-                //then how to display listings
-                //copy Seth's code from Marketplace_View_Load() not sureif works
-                /* for (int i = 0; i < mkt.listings.Count; i++)
-                 {
-                     resultsListBox.Items.Add(mkt.listings.ElementAt(i));
-                 }*/
-                resultsListBox.ItemsSource = mkt.listings;
+                //Is search by Book Title
+                
             }
 
             if (radioButton_byAuthor.IsChecked == true)
             {
                 mkt.SearchByAuthor(textBox_search.Text);
-                //then how to display listings
-               /* for (int i = 0; i < mkt.listings.Count; i++)
-                {
-                    resultsListBox.Items.Add(mkt.listings.ElementAt(i));
-                }*/
+                //If search by author
             }
 
             if (radioButton_byCourse.IsChecked == true)
             {
                 string[] strArray = textBox_search.Text.Split();
                 mkt.SearchByCourse(strArray[0].Trim(), strArray[1].Trim());
-                //then how to display listings
-              /*  for (int i = 0; i < mkt.listings.Count; i++)
-                {
-                    resultsListBox.Items.Add(mkt.listings.ElementAt(i));
-                }*/
+               //If search by course
             }
 
             if (radioButton_byISBN.IsChecked == true)
             {
                 mkt.SearchByISBN(textBox_search.Text);
-                //then how to display listings
-               /* for (int i = 0; i < mkt.listings.Count; i++)
-                {
-                    resultsListBox.Items.Add(mkt.listings.ElementAt(i));
-                }*/
+                //if search by isbn
             }
 
-            resultsListBox.ItemsSource = mkt.listings;
+            resultsListBox.ItemsSource = mkt.listings;  //data binding
         }
 
         private void resultListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Listing li = (Listing)resultsListBox.SelectedItem;
+            Listing li = (Listing)resultsListBox.SelectedItem;  //selected listing
             Listing_View lv = new Listing_View();
-            lv.DataContext = li;
+            lv.DataContext = li;    //data binding
             TraderList tl = new TraderList();
-            List<Trader> lt = tl.SearchForUser(li.Trader_id);
-            lv.textBlock_SellerName.DataContext = lt[0];
+            List<Trader> lt = tl.SearchForUser(li.Trader_id);   //look for username using trader_id
+            lv.textBlock_SellerName.DataContext = lt[0];    //bind the Textblock to list of trader (ideally list consists of 1 object though)
             lv.Show();
         }
     }
