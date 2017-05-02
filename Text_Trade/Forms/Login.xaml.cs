@@ -38,6 +38,13 @@ namespace Text_Trade
             TraderList userlist = new TraderList();
             List<Trader> searchResult = userlist.SearchForUser(usernameTextBox.Text);
 
+            if (searchResult.Count == 0)
+            {
+
+                throw new ArgumentException("Must have users in the database");
+
+            }
+
             for (int i = 0; i < searchResult.Count; i++)
             {
 

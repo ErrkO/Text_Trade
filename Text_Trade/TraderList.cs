@@ -33,44 +33,44 @@ public class TraderList : DataBase
             if (trader.Trader_id == -1)
             {
 
-                sql = "INSERT into [TraderList] (username, password, deleted, classschedule) "
-                        + "VALUES ( @uname , @pword, 0, null )"
-                        + " SELECT cast(scope_identity() as int)";
+                sql = "INSERT into [TraderList] (username, password, deleted) "
+                        + "VALUES (@uname , @pword, 0)"
+                        + " SELECT scope_identity()";
 
             }
 
             else
             {
 
-                sql = "INSERT into [TraderList] (username, password, deleted, classschedule) "
-                        + "VALUES ( @uname , @pword, 0, null )"
+                sql = "UPDATE [TraderList] (username, password, deleted) "
+                        + "VALUES ( @uname , @pword, 0 )"
                         + "WHERE trader_id = @trader_id";
 
             }
 
+
+
+            SqlCommand command = new SqlCommand(sql, conn);
             
+            command.Parameters.AddWithValue("uname", trader.Username);
+            command.Parameters.AddWithValue("pword", trader.Password);
 
-            using (SqlCommand command = new SqlCommand(sql, conn))
+            if (trader.Trader_id == -1)
             {
-                command.Parameters.AddWithValue("uname", trader.Username);
-                command.Parameters.AddWithValue("pword", trader.Password);
 
-                if (trader.Trader_id == -1)
-                {
+                trader.Trader_id = (int)command.ExecuteScalar();
 
-                    trader.Trader_id = (int)command.ExecuteScalar();
-
-                }
-
-                else
-                {
-
-                    command.Parameters.AddWithValue("trader_id", trader.Trader_id);
-
-                    command.ExecuteNonQuery();
-
-                } 
             }
+
+            else
+            {
+
+                command.Parameters.AddWithValue("trader_id", trader.Trader_id);
+
+                command.ExecuteNonQuery();
+
+            } 
+            
 
         }
 
